@@ -1,6 +1,6 @@
 <p>Metal Sonic belongs to SEGA</p>
 <p>This art goes along with a remix/cover I did of Sonic 4 ep.II's Metal Sonic Battle Theme, originally composed by Jun Senoue.</p>
-<audio controls>
+<audio controls oncontextmenu="return false;">
     <source src="personal/2024/12/29/mus.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
