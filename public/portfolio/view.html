@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Logan Foster" />
+    <meta
+      name="description"
+      content="For the life of me I can't figure out how to make these dynamic! Thanks, Neocities."
+    />
+    <meta property="og:title" content="RaccStarLogan - Portfolio Entry" />
+    <meta
+      property="og:description"
+      content="For the life of me I can't figure out how to make these dynamic! Thanks, Neocities."
+    />
+    <meta
+      property="og:image"
+      content="https://raccstarlogan.com/thumbnail.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:site" content="RaccStarLogan - Portfolio Entry" />
+    <meta name="twitter:title" content="RaccStarLogan - Portfolio Entry" />
+    <meta
+      name="twitter:description"
+      content="For the life of me I can't figure out how to make these dynamic! Thanks, Neocities."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image:src"
+      content="https://raccstarlogan.com/thumbnail.png"
+    />
+    <meta name="theme-color" content="#BF0030" />
+    <title>View</title>
+    <!-- i'm trying my best QmQ" -->
+    <link
+      href="https://raccstarlogan.com/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lexend:500"
+      rel="stylesheet"
+    />
+    <link
+      href="https://raccstarlogan.com/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <style>
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+      }
+
+      .image-container img {
+        max-width: 90vw;
+        max-height: 80vh;
+        border: 4px solid #c0e0ff;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="https://raccstarlogan.com/index"
+        ><img
+          src="https://raccstarlogan.com/headerlogo.png"
+          alt="RaccStarLogan Logo"
+          height="132px"
+      /></a>
+      <button class="menu-toggle">☰</button>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="https://raccstarlogan.com/index">Home</a></li>
+        <li>
+          <a href="https://raccstarlogan.com/social-links">Social Links</a>
+        </li>
+        <li>
+          <a href="https://toyhou.se/RaccStarLogan" target="_blank"
+            >Character List</a
+          >
+        </li>
+        <li>
+          <a href="https://ko-fi.com/raccstarlogan" target="_blank"
+            >Support Me</a
+          >
+        </li>
+        <li>
+          <a href="https://merch.raccstarlogan.com" target="_blank">Merch</a>
+        </li>
+        <li>
+          <a href="https://raccstarlogan.com/commission-form"
+            >Commission Form</a
+          >
+        </li>
+        <li><a href="https://raccstarlogan.com/portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="image-container">
+        <h2 id="title"></h2>
+        <img src="" alt="Viewing Image" id="viewed-image" />
+        <p id="desc"></p>
+      </div>
+      <button
+        class="back-button"
+        onclick="javascript:history.back()"
+        class="back-link"
+      >
+        ⬅ Go Back
+      </button>
+
+      <script>
+        async function findValidImagePath(folder) {
+          const extensions = [".png", ".jpg", ".jpeg", ".gif", ".webp"];
+
+          for (const ext of extensions) {
+            const path = `${folder}/img${ext}`;
+            try {
+              const res = await fetch(path, { method: "HEAD" });
+              // Check for fallback content-type (Neocities usually returns text/html on failure)
+              if (
+                res.ok &&
+                !res.headers.get("content-type")?.includes("text/html")
+              ) {
+                return path;
+              }
+            } catch (e) {
+              console.warn(`HEAD request failed for ${path}`);
+            }
+          }
+
+          return null;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get("type");
+        const date = params.get("date");
+
+        if (type && date) {
+          const folder = `${type}/${date}`;
+
+          findValidImagePath(folder).then((validPath) => {
+            if (validPath) {
+              document.getElementById("viewed-image").src = validPath;
+            } else {
+              document.getElementById("viewed-image").alt = "Image not found.";
+            }
+          });
+
+          const titleFile = `${folder}/title.txt`;
+          const descriptionFile = `${folder}/desc.txt`;
+
+          fetch(titleFile)
+            .then((res) => res.text())
+            .then((data) => {
+              if (data.includes("<!DOCTYPE html>"))
+                throw new Error("Title is fallback HTML");
+              document.title = data + " - View";
+              document.getElementById("title").innerText = data;
+            })
+            .catch((err) => {
+              console.error("Error loading title:", err);
+              document.title = "Untitled - View";
+            });
+
+          fetch(descriptionFile)
+            .then((res) => res.text())
+            .then((data) => {
+              if (data.includes("<!DOCTYPE html>"))
+                throw new Error("Description is fallback HTML");
+              document.getElementById("desc").innerHTML = data;
+            })
+            .catch((err) => {
+              console.error("Error loading description:", err);
+              document.getElementById("desc").innerText =
+                "No description available.";
+            });
+        } else {
+          document.querySelector("main").innerHTML =
+            "<p>Invalid link or missing parameters.</p><button onclick='window.history.back()'>⬅ Go Back</button>";
+        }
+      </script>
+    </main>
+    <footer>
+      <a href="https://neocities.org" target="_blank"
+        ><img src="https://raccstarlogan.com/neocities.png" height="24"
+      /></a>
+      <p>© RaccStarLogan 2019-2025</p>
+      <p><a href="mailto:contact@raccstarlogan.com">Contact Me</a></p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>
