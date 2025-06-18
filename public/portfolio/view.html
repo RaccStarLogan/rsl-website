@@ -62,7 +62,7 @@
       .image-container img {
         max-width: 90vw;
         max-height: 80vh;
-        background-color: #778AA9;
+        background-color: #778aa9;
         border: 4px solid #c0e0ff;
         box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
       }
@@ -191,6 +191,34 @@
             "<p>Invalid link or missing parameters.</p><button onclick='window.history.back()'>⬅ Go Back</button>";
         }
       </script>
+      <script>
+        if (type && date) {
+          fetch(`${type}/dates.json`)
+            .then((res) => res.json())
+            .then((dates) => {
+              const currentIndex = dates.indexOf(date);
+              const prevDate = dates[currentIndex - 1];
+              const nextDate = dates[currentIndex + 1];
+
+              if (prevDate) {
+                const prevLink = document.getElementById("prev-link");
+                prevLink.href = `view.html?type=${type}&date=${prevDate}`;
+                prevLink.style.display = "inline-block";
+              }
+
+              if (nextDate) {
+                const nextLink = document.getElementById("next-link");
+                nextLink.href = `view.html?type=${type}&date=${nextDate}`;
+                nextLink.style.display = "inline-block";
+              }
+            })
+            .catch((err) => console.error("Error loading navigation:", err));
+        }
+      </script>
+      <div id="nav-buttons">
+        <a id="prev-link" href="#" style="display: none">⬅ Previous</a>
+        <a id="next-link" href="#" style="display: none">Next ➡</a>
+      </div>
     </main>
     <footer>
       <a href="https://neocities.org" target="_blank"
