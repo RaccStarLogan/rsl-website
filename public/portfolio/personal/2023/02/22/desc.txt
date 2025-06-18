@@ -1,4 +1,4 @@
-<p>Fanart I made for <a href="https://bsky.app/profile/raeal.bsky.social">Raeal the Protogen</a> of him digging through my computer's System32 folder for RAM.</p>
-<p>Software Used: <a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint PRO</a>, Windows 10</p>
+<p>Fanart I made for <a href="https://bsky.app/profile/raeal.bsky.social"<a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint PRO</a>>Raeal the Protogen</a> of him digging through my computer's System32 folder for RAM.</p>
+<p>Software Used: <a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint</a> PRO, Windows 10</p>
 <p>Date Completed: February 22, 2023</p>
 <p>Time Spent: Unknown</p>

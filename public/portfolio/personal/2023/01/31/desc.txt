@@ -3,6 +3,7 @@
     <source src="personal/2023/01/31/mus.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
-<p>Software Used: </p>
-<p>Date Completed: </p>
-<p>Time Spent: </p>
+<a href="https://raccstarlog.bandcamp.com/track/going-nowhere" target="_blank">Download from Bandcamp here!</a>
+<p>Software Used: <a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint</a> PRO, <a href="https://www.image-line.com/fl-studio/" target="_blank">FL Studio 21</a></p>
+<p>Date Completed: January 31, 2023</p>
+<p>Time Spent: Art unknown, 13 hours 38 minutes on music</p>
