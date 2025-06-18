@@ -199,14 +199,14 @@
               if (prevDate) {
                 prevBtn.style.display = "inline-block";
                 prevBtn.onclick = () => {
-                  window.location.href = `view.html?type=${type}&date=${prevDate}`;
+                  window.location.href = `view?type=${type}&date=${prevDate}`;
                 };
               }
 
               if (nextDate) {
                 nextBtn.style.display = "inline-block";
                 nextBtn.onclick = () => {
-                  window.location.href = `view.html?type=${type}&date=${nextDate}`;
+                  window.location.href = `view?type=${type}&date=${nextDate}`;
                 };
               }
             })
