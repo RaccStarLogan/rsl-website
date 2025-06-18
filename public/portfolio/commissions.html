@@ -89,7 +89,7 @@
     </nav>
     <main>
       <h1 style="text-align: center">Commissions Gallery</h1>
-      <div id="gallery" class="gallery-grid"></div>
+      <div id="gallery-container"></div>
     </main>
     <footer>
       <a href="https://neocities.org" target="_blank"
@@ -109,44 +109,62 @@
       });
     </script>
     <script>
-      const TYPE = "commissions"; // copy and paste this to use in the other galleries
+      const TYPE = "personal";
 
       fetch(`${TYPE}/dates.json`)
         .then((res) => res.json())
         .then(async (dates) => {
-          const container = document.getElementById("gallery");
+          const container = document.getElementById("gallery-container");
+          const grouped = {};
 
           for (const date of dates.reverse()) {
-            const folder = `${TYPE}/${date}`;
-            const encodedDate = encodeURIComponent(date);
-            const thumbPath = `${folder}/thumb.jpg`;
-            const titlePath = `${folder}/title.txt`;
+            const [year] = date.split("/");
+            if (!grouped[year]) grouped[year] = [];
+            grouped[year].push(date);
+          }
 
-            let title = date;
-            try {
-              const titleRes = await fetch(titlePath);
-              const titleText = await titleRes.text();
-              if (!titleText.includes("<!DOCTYPE")) title = titleText.trim();
-            } catch {}
+          for (const year of Object.keys(grouped).sort((a, b) => b - a)) {
+            const yearHeader = document.createElement("h2");
+            yearHeader.textContent = year;
+            yearHeader.style.textAlign = "center";
+            container.appendChild(yearHeader);
 
-            const item = document.createElement("div");
-            item.className = "gallery-item";
+            const grid = document.createElement("div");
+            grid.className = "gallery-grid";
+            container.appendChild(grid);
 
-            const link = document.createElement("a");
-            link.href = `view?type=${TYPE}&date=${encodedDate}`;
+            for (const date of grouped[year]) {
+              const folder = `${TYPE}/${date}`;
+              const encodedDate = encodeURIComponent(date);
+              const thumbPath = `${folder}/thumb.jpg`;
+              const titlePath = `${folder}/title.txt`;
 
-            const img = document.createElement("img");
-            img.src = thumbPath;
-            img.alt = title;
+              let title = date;
+              try {
+                const titleRes = await fetch(titlePath);
+                const titleText = await titleRes.text();
+                if (!titleText.includes("<!DOCTYPE")) title = titleText.trim();
+              } catch {}
 
-            const label = document.createElement("div");
-            label.className = "label";
-            label.textContent = title;
+              const item = document.createElement("div");
+              item.className = "gallery-item";
 
-            link.appendChild(img);
-            link.appendChild(label);
-            item.appendChild(link);
-            container.appendChild(item);
+              const link = document.createElement("a");
+              link.href = `view?type=${TYPE}&date=${encodedDate}`;
+
+              const img = document.createElement("img");
+              img.src = thumbPath;
+              img.alt = title;
+
+              const label = document.createElement("div");
+              label.className = "label";
+              label.textContent = title;
+
+              link.appendChild(img);
+              link.appendChild(label);
+              item.appendChild(link);
+              grid.appendChild(item);
+            }
           }
         })
         .catch((err) => {
