@@ -245,7 +245,7 @@ li {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
   gap: 1rem;
   margin: 0 auto;
   justify-content: center;
@@ -293,13 +293,12 @@ li {
 }
 
 #gallery-container h2 {
-  box-align: center;
+  justify-items: center;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: #c0e0ff;
   border-bottom: 2px solid #3b436b;
-  display: inline-block;
   padding-bottom: 4px;
 }
 
