@@ -193,35 +193,27 @@
               const nextDate = dates[currentIndex + 1];
 
               if (prevDate) {
-                const prevLink = document.getElementById("prev-link");
-                prevLink.href = `view.html?type=${type}&date=${prevDate}`;
-                prevLink.style.display = "inline-block";
+                const prevBtn = document.getElementById("prev-btn");
+                prevBtn.style.display = "inline-block";
+                prevBtn.onclick = () => {
+                  window.location.href = `view.html?type=${type}&date=${prevDate}`;
+                };
               }
 
               if (nextDate) {
-                const nextLink = document.getElementById("next-link");
-                nextLink.href = `view.html?type=${type}&date=${nextDate}`;
-                nextLink.style.display = "inline-block";
+                const nextBtn = document.getElementById("next-btn");
+                nextBtn.style.display = "inline-block";
+                nextBtn.onclick = () => {
+                  window.location.href = `view.html?type=${type}&date=${nextDate}`;
+                };
               }
             })
             .catch((err) => console.error("Error loading navigation:", err));
         }
       </script>
       <div id="nav-buttons">
-        <button
-          id="prev-link"
-          onclick="location.href='#'"
-          style="display: none"
-        >
-          ⬅ Previous
-        </button>
-        <button
-          id="next-link"
-          onclick="location.href='#'"
-          style="display: none"
-        >
-          Next ➡
-        </button>
+        <button id="prev-link" style="display: none">⬅ Previous</button>
+        <button id="next-link" style="display: none">Next ➡</button>
       </div>
     </main>
     <footer>
