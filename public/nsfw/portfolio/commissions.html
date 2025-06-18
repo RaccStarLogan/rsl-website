@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Logan Foster" />
+    <meta
+      name="description"
+      content="Discover RaccStarLogan's commission work."
+    />
+    <meta
+      property="og:description"
+      content="Discover RaccStarLogan's commission work."
+    />
+    <meta
+      property="og:image"
+      content="https://raccstarlogan.com/thumbnail.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:site" content="RaccStarLogan - Commissions Portfolio" />
+    <meta
+      name="twitter:title"
+      content="RaccStarLogan - Commissions Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover RaccStarLogan's commission work."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image:src"
+      content="https://raccstarlogan.com/thumbnail.png"
+    />
+    <meta name="theme-color" content="#BF0030" />
+    <title>RaccStarLogan - Commissions Portfolio</title>
+    <!-- i'm trying my best QmQ" -->
+    <link
+      href="https://raccstarlogan.com/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lexend:500"
+      rel="stylesheet"
+    />
+    <link
+      href="https://raccstarlogan.com/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="https://raccstarlogan.com/index"
+        ><img
+          src="https://raccstarlogan.com/headerlogo.png"
+          alt="RaccStarLogan Logo"
+          height="132px"
+      /></a>
+      <button class="menu-toggle">☰</button>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="https://raccstarlogan.com/index">Home</a></li>
+        <li>
+          <a href="https://raccstarlogan.com/social-links">Social Links</a>
+        </li>
+        <li>
+          <a href="https://toyhou.se/RaccStarLogan" target="_blank"
+            >Character List</a
+          >
+        </li>
+        <li>
+          <a href="https://ko-fi.com/raccstarlogan" target="_blank"
+            >Support Me</a
+          >
+        </li>
+        <li><a href="https://shop.raccstarlogan.com">Merch</a></li>
+        <li>
+          <a href="https://raccstarlogan.com/commission-form"
+            >Commission Form</a
+          >
+        </li>
+        <li><a href="https://raccstarlogan.com/portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1 style="text-align: center">Commissions Gallery</h1>
+      <div id="gallery-container"></div>
+    </main>
+    <footer>
+      <a href="https://neocities.org" target="_blank"
+        ><img src="https://raccstarlogan.com/neocities.png" height="24"
+      /></a>
+      <p>© RaccStarLogan 2019-2024</p>
+      <p><a href="mailto:contact@raccstarlogan.com">Contact Me</a></p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+      });
+    </script>
+    <script>
+      const TYPE = "commissions";
+
+      fetch(`${TYPE}/dates.json`)
+        .then((res) => res.json())
+        .then(async (dates) => {
+          const container = document.getElementById("gallery-container");
+          const grouped = {};
+
+          for (const date of dates.reverse()) {
+            const [year] = date.split("/");
+            if (!grouped[year]) grouped[year] = [];
+            grouped[year].push(date);
+          }
+
+          for (const year of Object.keys(grouped).sort((a, b) => b - a)) {
+            const yearHeader = document.createElement("h2");
+            yearHeader.textContent = year;
+            yearHeader.style.textAlign = "center";
+            container.appendChild(yearHeader);
+
+            const grid = document.createElement("div");
+            grid.className = "gallery-grid";
+            container.appendChild(grid);
+
+            for (const date of grouped[year]) {
+              const folder = `${TYPE}/${date}`;
+              const encodedDate = encodeURIComponent(date);
+              const thumbPath = `${folder}/thumb.jpg`;
+              const titlePath = `${folder}/title.txt`;
+
+              let title = date;
+              try {
+                const titleRes = await fetch(titlePath);
+                const titleText = await titleRes.text();
+                if (!titleText.includes("<!DOCTYPE")) title = titleText.trim();
+              } catch {}
+
+              const item = document.createElement("div");
+              item.className = "gallery-item";
+
+              const link = document.createElement("a");
+              link.href = `view?type=${TYPE}&date=${encodedDate}`;
+
+              const img = document.createElement("img");
+              img.src = thumbPath;
+              img.alt = title;
+
+              const label = document.createElement("div");
+              label.className = "label";
+              label.textContent = title;
+
+              link.appendChild(img);
+              item.appendChild(link);
+              item.appendChild(label);
+              grid.appendChild(item);
+            }
+          }
+        })
+        .catch((err) => {
+          console.error("Failed to load gallery:", err);
+        });
+    </script>
+  </body>
+</html>
