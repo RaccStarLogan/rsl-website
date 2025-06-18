@@ -189,11 +189,15 @@
             .then((res) => res.json())
             .then((dates) => {
               const currentIndex = dates.indexOf(date);
+              if (currentIndex === -1) return;
+
               const prevDate = dates[currentIndex - 1];
               const nextDate = dates[currentIndex + 1];
 
+              const prevBtn = document.getElementById("prev-btn");
+              const nextBtn = document.getElementById("next-btn");
+
               if (prevDate) {
-                const prevBtn = document.getElementById("prev-btn");
                 prevBtn.style.display = "inline-block";
                 prevBtn.onclick = () => {
                   window.location.href = `view.html?type=${type}&date=${prevDate}`;
@@ -201,16 +205,18 @@
               }
 
               if (nextDate) {
-                const nextBtn = document.getElementById("next-btn");
                 nextBtn.style.display = "inline-block";
                 nextBtn.onclick = () => {
                   window.location.href = `view.html?type=${type}&date=${nextDate}`;
                 };
               }
             })
-            .catch((err) => console.error("Error loading navigation:", err));
+            .catch((err) =>
+              console.error("Error loading navigation buttons:", err)
+            );
         }
       </script>
+
       <div id="nav-buttons">
         <button id="prev-btn" type="button" style="display: none">
           ⬅ Previous
