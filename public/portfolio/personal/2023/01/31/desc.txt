@@ -1,4 +1,8 @@
-<p> </p>
+<p>Album artwork made for a Megalovania-adjacent track involving Jesper and Logan. Megalovania composed by Toby Fox.</p>
+<audio controls oncontextmenu="return false;">
+    <source src="personal/2023/01/31/mus.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 <p>Software Used: </p>
 <p>Date Completed: </p>
 <p>Time Spent: </p>

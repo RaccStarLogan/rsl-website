@@ -1,4 +1,4 @@
-<p> </p>
-<p>Software Used: </p>
-<p>Date Completed: </p>
-<p>Time Spent: </p>
+<p>Design sketch for <a href="https://toyhou.se/32947494">Jayce Silva</a>, an old character I made that I decided to put up for adoption on ToyHouse.</p>
+<p>Software Used: <a href="https://krita.org/en/" target="_blank">Krita</a></p>
+<p>Date Completed: October 23, 2021</p>
+<p>Time Spent: Unknown</p>

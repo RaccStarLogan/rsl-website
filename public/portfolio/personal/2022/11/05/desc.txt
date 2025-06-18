@@ -1,4 +1,4 @@
-<p> </p>
-<p>Software Used: </p>
-<p>Date Completed: </p>
-<p>Time Spent: </p>
+<p>This was a badge I made used to identify me at furry meetups/conventions.</p>
+<p>Software Used: <a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint PRO</a></p>
+<p>Date Completed: November 5, 2022</p>
+<p>Time Spent: Unknown</p>
