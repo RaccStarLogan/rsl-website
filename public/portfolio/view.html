@@ -182,8 +182,6 @@
           document.querySelector("main").innerHTML =
             "<p>Invalid link or missing parameters.</p><button onclick='window.history.back()'>⬅ Go Back</button>";
         }
-      </script>
-      <script>
         if (type && date) {
           fetch(`${type}/dates.json`)
             .then((res) => res.json())
