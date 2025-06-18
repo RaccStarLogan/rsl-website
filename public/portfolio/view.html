@@ -112,14 +112,6 @@
         <img src="" alt="Viewing Image" id="viewed-image" />
         <p id="desc"></p>
       </div>
-      <button
-        class="back-button"
-        onclick="javascript:history.back()"
-        class="back-link"
-      >
-        ⬅ Go Back
-      </button>
-
       <script>
         async function findValidImagePath(folder) {
           const extensions = [".png", ".jpg", ".jpeg", ".gif", ".webp"];
@@ -216,8 +208,20 @@
         }
       </script>
       <div id="nav-buttons">
-        <button id="prev-link" onclick="location.href='#'" style="display: none">⬅ Previous</button>
-        <button id="next-link" onclick="location.href='#'" style="display: none">Next ➡</button>
+        <button
+          id="prev-link"
+          onclick="location.href='#'"
+          style="display: none"
+        >
+          ⬅ Previous
+        </button>
+        <button
+          id="next-link"
+          onclick="location.href='#'"
+          style="display: none"
+        >
+          Next ➡
+        </button>
       </div>
     </main>
     <footer>
