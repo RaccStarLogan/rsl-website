@@ -92,10 +92,12 @@
       <a href="https://neocities.org" target="_blank"
         ><img src="https://raccstarlogan.com/neocities.png" height="24"
       /></a>
-      <p>© RaccStarLogan 2019-2024</p>
+      <p>© RaccStarLogan 2019-<span id="copyYear"></span>span></p>
       <p><a href="mailto:contact@raccstarlogan.com">Contact Me</a></p>
     </footer>
     <script>
+      document.getElementById("copyYear").textContent =
+        new Date().getFullYear();
       document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.querySelector(".menu-toggle");
         const navMenu = document.querySelector("nav ul");
