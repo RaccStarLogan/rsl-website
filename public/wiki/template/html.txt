@@ -1,0 +1,223 @@
+<!------------
+  WIKIA V3 (TH) by dvdexe/watergems
+  Do not remove this credit comment or claim code as yours.
+  Feel free to edit/franken/use as a base as much as you'd like,
+  just remember to credit when necessary.
+
+  This code uses anchors/id attributes. For information on how
+  they work, or if you're having trouble editing the code on
+  your own, try consulting W3Schools:
+  > https://www.w3schools.com/html/html_id.asp
+  
+  Color (Bootstrap): primary
+  Character links: @@characterID
+  ------------>
+
+<!----- INFOBOX START ----->
+<div
+  class="float-md-right ml-md-2 mb-2"
+  style="min-width: 20rem; max-width: 24.5rem"
+>
+  <div class="card card-outline-primary bg-faded">
+    <!-- CHARACTER NAME -->
+    <h2 class="card-primary card-header card-inverse text-center text-white">
+      Logan Foster
+    </h2>
+
+    <!-- IMAGE TAB SECTION // Nav buttons -->
+    <ul class="nav flex-wrap d-flex justify-content-center px-1 mx-auto pt-1">
+      <li class="nav-item px-1">
+        <a
+          class="nav-link btn btn-primary active"
+          data-toggle="tab"
+          href="#img1"
+          >Image 1</a
+        >
+      </li>
+      <!-- IMAGE 1 (DEFAULT) (Don't copy this one) -->
+      <li class="nav-item px-1">
+        <a class="nav-link btn btn-primary" data-toggle="tab" href="#img2"
+          >Image 2</a
+        >
+      </li>
+      <!-- IMAGE 2 -->
+      <!-- TO ADD MORE: Copy the entire <li> line above and paste it BEFORE the </ul> tag below. -->
+      <!-- Remember to change the 'href="#img2"' to #img3, #img4, etc. -->
+    </ul>
+    <!-- IMAGE TAB SECTION // Images -->
+    <div class="tab-content text-center p-2">
+      <div class="tab-pane width-auto active show" id="img1">
+        <img src="https://raccstarlogan.com/wiki/assets/NAMEHERE/1.png" />
+        <!-- IMAGE 1 (DEFAULT) (Don't copy this one) -->
+      </div>
+      <div class="tab-pane width-auto" id="img2">
+        <img src="https://raccstarlogan.com/wiki/assets/NAMEHERE/2.png" />
+        <!-- IMAGE 2 -->
+      </div>
+      <!-- TO ADD MORE: Copy the entire <div> line above and paste it BEFORE the </div> tag below. -->
+      <!-- Remember to change the 'id="img2"' to img3, img4, etc. AND change the direct image link. -->
+    </div>
+    <!-- END IMAGE TAB SECTION -->
+
+    <!-- IMPORTANT // If you want only ONE image in your infobox, DELETE the entire image tab section above, then delete ONLY the comment (green) tags from around the code block below. Change the direct image link as you wish.
+  <img src="https://raccstarlogan.com/wiki/assets/NAMEHERE.png" class="mx-auto pt-2 px-2" />
+-->
+    <!-- FIELDS SECTION -->
+    <!----- SUBHEADING ONE ----->
+    <h5 class="bg-primary text-white text-center py-2 mb-0 pl-4">Basic Info</h5>
+    <div class="mt-2">
+      <div class="row mb-2">
+        <div class="col-5 pl-4 font-weight-bold">List Example</div>
+        <div class="col-7 pr-4">
+          <ul class="px-3 mb-0">
+            <li>Item 1</li>
+            <li>Item 2</li>
+          </ul>
+        </div>
+        <div class="col-8 pl-4"><p>───────────────────────────────────</p></div>
+        <!-- Copy this line to make a line break. <hr> doesn't work properly. -->
+        <div class="col-5 pl-4 font-weight-bold">Single Line Example</div>
+        <div class="col-7 pr-4">Whatever</div>
+      </div>
+    </div>
+    <!------ END INFOBOX ------>
+  </div>
+</div>
+
+<!------ QUOTE ------>
+<div style="min-width: 20rem; max-width: 30rem">
+  <div class="card p-2 mb-2 bg-faded card-outline-default">
+    <span class="text-center mb-2">
+      <i class="fa-lg fas fa-quote-left float-left text-primary mt-1" />
+      <i class="fa-lg fas fa-quote-right float-right text-primary mt-1" />
+      I'm making a comeback!
+    </span>
+    <div class="text-right text-muted">― Logan</div>
+  </div>
+</div>
+
+<!------ INTRODUCTION ------>
+<p><b>NAME</b> and their description..</p>
+
+<!------ TABLE OF CONTENTS // Credit to @Pinky for toggle base code ------>
+<div
+  class="card bg-faded card-outline-default p-2 mt-2 mb-5"
+  style="width: 15rem"
+>
+  <a id="toc"></a>
+  <h6 class="p-2 mb-0 d-flex justify-content-between">
+    <span><i class="fa-solid fa-list pr-2" />Contents</span>
+    <small
+      >[<a class="px-1" data-toggle="collapse" href="#tocshow2">toggle</a
+      >]</small
+    >
+  </h6>
+  <ol class="collapse p-2 pt-0 pl-4 rounded-bottom mb-0" id="tocshow2">
+    <!----- TOC LINKS ----->
+    <li><a href="#appearance">Appearance</a></li>
+    <li><a href="#personality">Personality</a></li>
+    <li><a href="#history">History</a></li>
+    <li><a href="#abilities">Abilities</a></li>
+    <li><a href="#relationships">Relationships</a></li>
+    <li><a href="#trivia">Trivia</a></li>
+  </ol>
+</div>
+
+<!------ APPEARANCE ------>
+<div class="profile-fields-title mt-2">
+  <a id="appearance" />
+  <h2>
+    Appearance
+    <a href="#toc"><i style="font-size: 0.75em" class="fas fa-bars" /></a>
+  </h2>
+</div>
+<div
+  class="card border-top-0 border-right-0 border-left-0 rounded-0 mb-1"
+></div>
+<p>Describe appearance.</p>
+
+<!------ PERSONALITY ------>
+<div class="profile-fields-title mt-2">
+  <a id="personality" />
+  <h2>
+    Personality
+    <a href="#toc"><i style="font-size: 0.75em" class="fas fa-bars" /></a>
+  </h2>
+</div>
+<div
+  class="card border-top-0 border-right-0 border-left-0 rounded-0 mb-1"
+  style="height: 1px"
+></div>
+<p>Describe personality.</p>
+
+<!------ HISTORY ------>
+<div class="profile-fields-title mt-2">
+  <a id="history" />
+  <h2>
+    History
+    <a href="#toc"><i style="font-size: 0.75em" class="fas fa-bars" /></a>
+  </h2>
+</div>
+<div
+  class="card border-top-0 border-right-0 border-left-0 rounded-0 mb-1"
+  style="height: 1px"
+></div>
+<p>Describe history.</p>
+
+<!------ ABILITIES ------>
+<div class="profile-fields-title mt-2">
+  <a id="abilities" />
+  <h2>
+    Abilities
+    <a href="#toc"><i style="font-size: 0.75em" class="fas fa-bars" /></a>
+  </h2>
+</div>
+<div
+  class="card border-top-0 border-right-0 border-left-0 rounded-0 mb-1"
+  style="height: 1px"
+></div>
+<p>Describe any abilities they may have.</p>
+<h4 class="mb-1">Skillset</h4>
+<ul class="pl-4" id="trivia1">
+  <li>List of specific skills</li>
+  <li>Can be anything, really.</li>
+</ul>
+<h4 class="mb-1">Unique Abilities</h4>
+<ul class="pl-4" id="trivia1">
+  <li>
+    Any unique abilities they have.
+    <ul>
+      <li>Description of said ability.</li>
+    </ul>
+  </li>
+</ul>
+
+<!------ RELATIONSHIPS ------>
+<div class="profile-fields-title mt-2">
+  <a id="relationships" />
+  <h2>
+    Relationships
+    <a href="#toc"><i style="font-size: 0.75em" class="fas fa-bars" /></a>
+  </h2>
+</div>
+<div
+  class="card border-top-0 border-right-0 border-left-0 rounded-0 mb-1"
+  style="height: 1px"
+></div>
+<p>Refer to the "links" page.</p>
+
+<!----- TRIVIA ----->
+<div class="profile-fields-title mt-2">
+  <a id="trivia" />
+  <h2>
+    Trivia
+    <a href="#toc"><i style="font-size: 0.75em" class="fas fa-bars" /></a>
+  </h2>
+</div>
+<div
+  class="card border-top-0 border-right-0 border-left-0 rounded-0 mb-1"
+  style="height: 1px"
+></div>
+<ul class="pl-4" id="trivia1">
+  <li>List any fun facts.</li>
+</ul>
