@@ -3,6 +3,11 @@ body {
   background-color: #000;
 }
 
+.btn-primary,
+.badge {
+  background-color: #888
+}
+
 .btn-primary.active {
   background-color: #08f !important;
 }
