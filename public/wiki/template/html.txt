@@ -60,8 +60,22 @@
     <!-- END IMAGE TAB SECTION -->
 
     <!-- IMPORTANT // If you want only ONE image in your infobox, DELETE the entire image tab section above, then delete ONLY the comment (green) tags from around the code block below. Change the direct image link as you wish.
-  <img src="https://raccstarlogan.com/wiki/assets/NAMEHERE.png" class="mx-auto pt-2 px-2" />
--->
+    <img src="https://raccstarlogan.com/wiki/assets/NAMEHERE.png" class="mx-auto pt-2 px-2" />
+    -->
+    <!-- MUSIC SECTION -->
+    <!-- If you have a theme for this character remove this comment. Otherwise leave these lines commented.
+    <h5 class="bg-primary text-white text-center py-2 mb-0 pl-4">NAME's Theme</h5>
+    <div class="mt-2" style="padding:.25rem .5rem;">
+      <audio controls style="width:100%; align-self:center;">
+        <source src="https://raccstarlogan.com/wiki/assets/music/NAMEHERE.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div class="text-center mb-3">
+      <a href="https://open.spotify.com/album/ALBUMID" target="_blank">
+        <b>Listen on Spotify</b>
+      </a>
+    </div>
+    -->
     <!-- FIELDS SECTION -->
     <!----- SUBHEADING ONE ----->
     <h5 class="bg-primary text-white text-center py-2 mb-0 pl-4">Basic Info</h5>
