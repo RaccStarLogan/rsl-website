@@ -28,6 +28,7 @@ body {
 #content .img-thumbnail {
   background-color: #888;
   border: 4px solid #fff;
+  color: #fff !important;
 }
 
 #content .btn.btn-default {
