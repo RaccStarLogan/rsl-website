@@ -87,11 +87,18 @@
 <!------ QUOTE ------>
 <div style="min-width: 20rem; max-width: 30rem">
   <div class="card p-2 mb-2 bg-faded card-outline-default">
-    <span class="text-center mb-2">
+    <div class="text-center mb-2">
       <i class="fa-lg fas fa-quote-left float-left text-primary mt-1" />
       <i class="fa-lg fas fa-quote-right float-right text-primary mt-1" />
       Quote Here
-    </span>
+    </div>
+    <!-- If you have a voice line, add this line. Otherwise, remove it.
+    <div style="text-align: center;">
+      <audio controls style="width: 100%;">
+        <source src="https://raccstarlogan.com/wiki/assets/voices/NAMEHERE.mp3" type="audio/mpeg"/>
+      </audio>
+    </div>
+    -->
     <div class="text-right text-muted">― Source</div>
   </div>
 </div>
