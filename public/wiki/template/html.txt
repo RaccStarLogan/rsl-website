@@ -67,7 +67,7 @@
     <h5 class="bg-primary text-white text-center py-2 mb-0 pl-4">Basic Info</h5>
     <div class="mt-2">
       <div class="row mb-2">
-        <div class="col-5 pl-4 font-weight-bold">List Example</div>
+        <div class="col-5 pl-4 font-weight-bold">List</div>
         <div class="col-7 pr-4">
           <ul class="px-3 mb-0">
             <li>Item 1</li>
@@ -76,7 +76,7 @@
         </div>
         <div class="col-8 pl-4"><p>───────────────────────────────────</p></div>
         <!-- Copy this line to make a line break. <hr> doesn't work properly. -->
-        <div class="col-5 pl-4 font-weight-bold">Single Line Example</div>
+        <div class="col-5 pl-4 font-weight-bold">Single Line</div>
         <div class="col-7 pr-4">Whatever</div>
       </div>
     </div>
