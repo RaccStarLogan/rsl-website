@@ -21,7 +21,7 @@
   <div class="card card-outline-primary bg-faded">
     <!-- CHARACTER NAME -->
     <h2 class="card-primary card-header card-inverse text-center text-white">
-      Logan Foster
+      Character Name
     </h2>
 
     <!-- IMAGE TAB SECTION // Nav buttons -->
@@ -90,9 +90,9 @@
     <span class="text-center mb-2">
       <i class="fa-lg fas fa-quote-left float-left text-primary mt-1" />
       <i class="fa-lg fas fa-quote-right float-right text-primary mt-1" />
-      I'm making a comeback!
+      Quote Here
     </span>
-    <div class="text-right text-muted">― Logan</div>
+    <div class="text-right text-muted">― Source</div>
   </div>
 </div>
 
