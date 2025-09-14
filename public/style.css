@@ -70,6 +70,7 @@ header {
   border-bottom: 4px solid #c0e0ff;
   position: relative;
   z-index: 1000;
+
   a:hover {
     transform: scale(1);
   }
@@ -166,6 +167,7 @@ li {
   h1 {
     text-align: center;
   }
+
   p {
     text-align: center;
   }
@@ -177,14 +179,28 @@ li {
   align-self: center;
   gap: 6rem;
   text-align: center;
+
   p {
     text-decoration: underline;
   }
+
   ul {
     list-style: none;
     padding: 0;
   }
 }
+
+.bluesky-feed {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  overflow-y: auto;
+  border: 2px solid #c0e0ff;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #1c2240;
+}
+
 
 .dual-link {
   background-color: #1c2240;
@@ -314,6 +330,7 @@ footer {
   background-color: #400e1a;
   box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.4);
   border-top: 4px solid #a4203c;
+
   a {
     color: #ffbfcf;
   }
@@ -336,7 +353,8 @@ footer {
   }
 
   .menu-toggle {
-    display: block; /* Show on mobile */
+    display: block;
+    /* Show on mobile */
   }
 
   nav {
@@ -350,7 +368,8 @@ footer {
   }
 
   nav ul {
-    display: flex; /* Hide menu by default */
+    display: flex;
+    /* Hide menu by default */
     flex-direction: column;
     width: 100%;
     background-color: rgba(29, 51, 86, 0.6);
@@ -373,7 +392,8 @@ footer {
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.6);
     left: 0;
     width: 100%;
-    display: flex; /* Show menu when toggled */
+    display: flex;
+    /* Show menu when toggled */
   }
 
   nav ul li {
