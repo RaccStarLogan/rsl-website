@@ -1,5 +1,4 @@
-<p>This is something I made for a friend of mine, just a simple drawing of their character Pyla.</p>
-<p>Frankly, I don't exactly remember who this was for. If this is/was your character, please <a href="mailto:contact@raccstarlogan.com">contact me.</a></p>
+<p>This is something I made for <a href="https://www.instagram.com/iced_e33/" target="_blank">iced_e33</a>; just a simple drawing of their character Pyla.</p>
 <p>Software Used: <a href="https://krita.org/en/" target="_blank">Krita</a></p>
 <p>Date Completed: July 21, 2021</p>
 <p>Time Spent: Unknown</p>
