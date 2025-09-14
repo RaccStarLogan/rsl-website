@@ -111,26 +111,52 @@
     </section>
     <section class="widgets">
       <div class="bluesky-widget">
+        <h3 style="margin: 0;">BlueSky Feed</h3>
         <bsky-embed
           username="raccstarlogan.com"
           mode="dark"
           limit="5"
           link-target="_blank"
           link-image="true"
-          load-more="true"
-          disable-styles="false"
+          load-more="false"
           custom-styles="
             .border-slate-300 {
               border-color: #c0e0ff; border-bottom-width: 4px;
+            }
+            .block {
+              border: 4px solid #c0e0ff;
+              border-radius: 0 !important;
+              box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+              background-color: #1c2240;
             }
             .bluesky-feed {
               max-width: 600px;
               height: 400px;
             }
+            img:not(.w-14, .h-14, .w-4, .h-4, .mr-1, .rounded-full), video {
+              border: 4px solid #c0e0ff;
+              box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+              border-radius: 0 !important;
+            }
+            img.w-14.h-14 {
+              border-radius: 0 !important;
+              border: 4px solid #c0e0ff;
+              box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+            }
+            img.w-4.h-4.mr-1 {
+              border-radius: 0 !important;
+            }
+            span, a {
+              font-family: 'Lexend';
+              color: #c0e0ff !important;
+            }
           "
           disable-autoplay="true"
         >
         </bsky-embed>
+        <div style="text-align:center;">
+          <button onclick="window.open('https://bsky.raccstarlogan.com', '_blank');" style="margin: 1rem;">Check out more here!</button>
+        </div>
       </div>
     </section>
   </main>
