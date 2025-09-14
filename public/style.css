@@ -351,6 +351,11 @@ footer {
     padding: 1rem;
   }
 
+  header img {
+    max-width: 160px;
+    max-height: 66px;
+  }
+
   .menu-toggle {
     display: block;
     /* Show on mobile */
