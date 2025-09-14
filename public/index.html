@@ -83,43 +83,46 @@
     </section>
     <hr />
     <section class="about-me">
-      <h1>About Me</h1>
-      <p>
-        I've always had the urge to make stuff for as long as I can remember. Heck,
-        I've always dreamed of maiking my own animated show (as mentioned previously).
-        Besides, I would always draw my own little characters, make little song doodles,
-        and eventually I started to flesh out my characters a bit more and expand on them
-        so that I have some material to work off of other than just designs.
-      </p>
-      <p>
-        By high school, I was experimenting with digital art and music more seriously. I
-        got into remixing games like <i><a href="https://undertale.com/" target="_blank">Undertale</a></i>
-        and <i><a href="https://ninja-muffin24.itch.io/funkin" target="_blank">Friday Night Funkin'</a></i>,
-        which pushed me into developing my own sound and style.
-      </p>
-      <p>
-        These days, I'm focused on building my own creative worlds which I have yet to
-        fully reveal to the world. Hopefully you'll get to see them soon! 👀
-      </p>
-      <p>
-        Thanks for stopping by! Feel free to
-        <a href="https://raccstarlogan.com/portfolio">explore my portfolio</a>
-        and
-        <a href="https://raccstarlogan.com/social-links">connect with me on social media</a>
-        to see more of my work and stay updated on my creative journey.
-      </p>
-    </section>
-    <section class="widgets">
+      <div>
+        <h1>About Me</h1>
+        <p>
+          I've always had the urge to make stuff for as long as I can remember. Heck,
+          I've always dreamed of maiking my own animated show (as mentioned previously).
+          Besides, I would always draw my own little characters, make little song doodles,
+          and eventually I started to flesh out my characters a bit more and expand on them
+          so that I have some material to work off of other than just designs.
+        </p>
+        <p>
+          By high school, I was experimenting with digital art and music more seriously. I
+          got into remixing games like <i><a href="https://undertale.com/" target="_blank">Undertale</a></i>
+          and <i><a href="https://ninja-muffin24.itch.io/funkin" target="_blank">Friday Night Funkin'</a></i>,
+          which pushed me into developing my own sound and style.
+        </p>
+        <p>
+          These days, I'm focused on building my own creative worlds which I have yet to
+          fully reveal to the world. Hopefully you'll get to see them soon! 👀
+        </p>
+        <p>
+          Thanks for stopping by! Feel free to
+          <a href="https://raccstarlogan.com/portfolio">explore my portfolio</a>
+          and
+          <a href="https://raccstarlogan.com/social-links">connect with me on social media</a>
+          to see more of my work and stay updated on my creative journey.
+        </p>
+      </div>
       <div class="bluesky-widget">
-        <h3 style="margin: 0;">BlueSky Feed</h3>
-        <bsky-embed
-          username="raccstarlogan.com"
-          mode="dark"
-          limit="5"
-          link-target="_blank"
-          link-image="true"
-          load-more="false"
-          custom-styles="
+        <div class="bsky-header" style="display:flex;align-items:center;gap:8px;">
+          <svg fill="none" viewBox="0 0 64 57" width="28" style="width: 32px; height: 32px;">
+            <path fill="#c0e0ff"
+              d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z">
+            </path>
+          </svg>
+          <h3 style="margin: 0; text-decoration:underline; text-decoration-thickness: 4px; text-underline-offset: 12px;">
+            BlueSky Feed
+          </h3>
+        </div>
+        <bsky-embed username="raccstarlogan.com" mode="dark" limit="5" link-target="_blank" link-image="true"
+          load-more="false" custom-styles="
             .border-slate-300 {
               border-color: #c0e0ff; border-bottom-width: 4px;
             }
@@ -150,14 +153,15 @@
               font-family: 'Lexend';
               color: #c0e0ff !important;
             }
-          "
-          disable-autoplay="true"
-        >
+          " disable-autoplay="true">
         </bsky-embed>
         <div style="text-align:center;">
-          <button onclick="window.open('https://bsky.raccstarlogan.com', '_blank');" style="margin: 1rem;">Check out more here!</button>
+          <button onclick="window.open('https://bsky.raccstarlogan.com', '_blank');" style="margin: 1rem;">Check out
+            more here!</button>
         </div>
       </div>
+    </section>
+    <section class="widgets">
     </section>
   </main>
   <footer>

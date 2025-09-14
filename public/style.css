@@ -25,7 +25,7 @@ h3 {
 
 hr {
   border: none;
-  height: 2px;
+  height: 4px;
   background-color: #c0e0ff;
   margin: 2rem 0;
 }
@@ -143,9 +143,6 @@ li {
   margin-bottom: 1rem;
   padding: 1.5rem;
   border-radius: 8px;
-}
-
-.bio {
   display: flex;
   align-items: center;
   gap: 2rem;
