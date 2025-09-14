@@ -1,4 +1,4 @@
-<p> </p>
-<p>Software Used: </p>
-<p>Date Completed: </p>
-<p>Time Spent: </p>
+<p>An animation I made for my (at the time) friend, Noah, of his character Miles sleeping at a desk.</p>
+<p>Software Used: <a href="https://www.adobe.com/products/animate.html" target="_blank">Adobe Animate</a></p>
+<p>Date Completed: September 28, 2023</p>
+<p>Time Spent: Unknown</p>

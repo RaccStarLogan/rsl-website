@@ -1,4 +1,4 @@
-<p> </p>
-<p>Software Used: </p>
-<p>Date Completed: </p>
-<p>Time Spent: </p>
+<p>An animation I did of Tabi from <a href="https://gamebanana.com/mods/286388" target="_blank">Friday Night Funkin': Vs. Tabi EX Boyfriend</a> doing the Kazotsky Kick from Team Fortress 2. Got the idea from someone in the official Tabi discord server.</p>
+<p>Software Used: <a href="https://www.adobe.com/products/animate.html" target="_blank">Adobe Animate</a></p>
+<p>Date Completed: July 6, 2023</p>
+<p>Time Spent: Unknown</p>

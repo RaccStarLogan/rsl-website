@@ -1,4 +1,4 @@
-<p> </p>
-<p>Software Used: </p>
-<p>Date Completed: </p>
-<p>Time Spent: </p>
+<p>Something I made for my friend Gondaro254 for his birthday.</p>
+<p>Software Used: <a href="https://ibispaint.com/?lang=en-US" target="_blank">ibisPaint X</a></p>
+<p>Date Completed: April 27, 2023</p>
+<p>Time Spent: Unknown</p>
