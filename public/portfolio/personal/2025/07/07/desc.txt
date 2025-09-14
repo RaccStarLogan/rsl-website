@@ -1,6 +1,6 @@
 <p>Judas designed by <a href="https://vgen.co/constellist" target="_blank">constellist</a></p>
 <p>This is a theme I decided to make for my character Judas. I had a bit of trouble actually coming up with anything for a good chunk of working on the song, but once I had a better idea of who Judas was as a character, I could actually make something decent with that idea. Overall, I'm proud of how this turned out.</p>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4gtatMgy4fn83wF7Q977EY?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4gtatMgy4fn83wF7Q977EY?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <p>Software Used: <a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint</a> EX, <a href="https://www.image-line.com/fl-studio/" target="_blank">FL Studio 2024</a>, <a href="https://www.soundsonline.com/composercloud" target="_blank">EastWest ComposerCloud+</a>, <a href="https://impactsoundworks.com/product/shreddage-3-hydra/" target="_blank">Shreddage 3 Hydra</a></p>
 <p>Date Completed: July 7, 2025</p>
 <p>Time Spent: 12 hours 5 minutes on art, 8 hours 17 minutes on music</p>
