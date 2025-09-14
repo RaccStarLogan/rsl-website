@@ -188,6 +188,7 @@ li {
 }
 
 .bluesky-widget {
+  text-align: left;
   width: 100%;
   max-width: 600px;
   min-width: 400px;
