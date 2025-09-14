@@ -1,4 +1,4 @@
-<p> </p>
-<p>Software Used: </p>
-<p>Date Completed: </p>
-<p>Time Spent: </p>
+<p>Wanted to try and take a crack at drawing an immobile "blob".</p>
+<p>Software Used: <a href="https://ibispaint.com/?lang=en-US" target="_blank">ibisPaint X</a></p>
+<p>Date Completed: June 12, 2023</p>
+<p>Time Spent: Unknown</p>

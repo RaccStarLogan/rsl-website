@@ -1,4 +1,5 @@
-<p> </p>
-<p>Software Used: </p>
-<p>Date Completed: </p>
-<p>Time Spent: </p>
+<p>Fattytober challenge hosted by <a href="https://furaffinity.net/user/MistyMimi" target="_blank">MistyMimi</a></p>
+<p>Day 11 is "Lost Control."</p>
+<p>Software Used: <a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint</a> EX</p>
+<p>Date Completed: October 12, 2024</p>
+<p>Time Spent: Unknown</p>
