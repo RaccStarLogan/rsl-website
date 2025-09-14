@@ -263,7 +263,7 @@ li {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
   gap: 1rem;
   margin: 0 auto;
   justify-content: center;
