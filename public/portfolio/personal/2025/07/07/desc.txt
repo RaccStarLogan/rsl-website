@@ -6,6 +6,7 @@
     <source src="personal/2025/07/07/draft_240926.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+<br/>
 <iframe style="border: 0; max-width: 700px; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=3796492012/size=large/bgcol=333333/linkcol=9a64ff/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://raccstarlog.bandcamp.com/track/judas-theme">Judas&#39; Theme by RaccStarLogan</a></iframe>
 <p>Software Used: <a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint</a> EX, <a href="https://www.image-line.com/fl-studio/" target="_blank">FL Studio 2024</a>, <a href="https://www.soundsonline.com/composercloud" target="_blank">EastWest ComposerCloud+</a>, <a href="https://impactsoundworks.com/product/shreddage-3-hydra/" target="_blank">Shreddage 3 Hydra</a></p>
 <p>Date Completed: July 7, 2025</p>
