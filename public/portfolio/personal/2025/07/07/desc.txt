@@ -1,5 +1,11 @@
 <p>Judas designed by <a href="https://vgen.co/constellist" target="_blank">constellist</a></p>
 <p>This is a theme I decided to make for my character Judas. I had a bit of trouble actually coming up with anything for a good chunk of working on the song, but once I had a better idea of who Judas was as a character, I could actually make something decent with that idea. Overall, I'm proud of how this turned out.</p>
+<p>This particular song was originally gonna be in 4/4 but I ended up changing it to 3/4 since it fit Judas' vibe more. However, I do still have a draft saved of this before I made the decision to make it 3/4 and if you'd like to take a listen to that, you can listen to it here:</p>
+<h3>Judas' Theme - Draft from September 26, 2024</h3>
+<audio controls oncontextmenu="return false;">
+    <source src="personal/2025/07/07/draft_240926.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 <iframe style="border: 0; max-width: 700px; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=3796492012/size=large/bgcol=333333/linkcol=9a64ff/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://raccstarlog.bandcamp.com/track/judas-theme">Judas&#39; Theme by RaccStarLogan</a></iframe>
 <p>Software Used: <a href="https://www.clipstudio.net/en/purchase/" target="_blank">Clip Studio Paint</a> EX, <a href="https://www.image-line.com/fl-studio/" target="_blank">FL Studio 2024</a>, <a href="https://www.soundsonline.com/composercloud" target="_blank">EastWest ComposerCloud+</a>, <a href="https://impactsoundworks.com/product/shreddage-3-hydra/" target="_blank">Shreddage 3 Hydra</a></p>
 <p>Date Completed: July 7, 2025</p>
