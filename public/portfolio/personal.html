@@ -137,9 +137,9 @@
   </script>
   <script>
     async function fetchLastCommitDate() {
-      const owner = 'RaccStarLogan'; // Replace with your GitHub username
-      const repo = 'rsl-website'; // Replace with your repository name
-      const path = 'public/portfolio/personal/dates.json'; // Replace with the path to your JSON file in the repo
+      const owner = 'RaccStarLogan';
+      const repo = 'rsl-website';
+      const path = 'public/portfolio/personal/dates.json';
 
       try {
         const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?path=${path}&per_page=1`);
@@ -154,6 +154,33 @@
         console.error('Error fetching commit data:', error);
         document.getElementById('lastUpdated').textContent = 'Error';
       }
+    }
+
+    // Helper to format date like "Month DD, YYYY HH:MM:SS AM/PM CST"
+    function formatDate(date) {
+      const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      const month = months[date.getMonth()];
+      const day = String(date.getDate()).padStart(2, '0');
+      const year = date.getFullYear();
+
+      let hours = date.getHours();
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12; // convert 0 -> 12
+
+      return `${month} ${day}, ${year} ${hours}:${minutes}:${seconds} ${ampm} CST`;
+    }
+
+    // Convert to actual CST (UTC-6)
+    function toCST(date) {
+      const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
+      const cstDate = new Date(utc - (6 * 60 * 60 * 1000));
+      return formatDate(cstDate);
     }
 
     fetchLastCommitDate();
