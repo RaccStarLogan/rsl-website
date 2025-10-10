@@ -149,7 +149,7 @@
 
         if (commits.length > 0) {
           const commitDate = new Date(commits[0].commit.committer.date);
-          document.getElementById('lastUpdated').textContent = toCST(commitDate);
+          document.getElementById('lastUpdated').textContent = toCentral(commitDate);
         } else {
           document.getElementById('lastUpdated').textContent = 'Never';
         }
@@ -159,8 +159,26 @@
       }
     }
 
-    // Helper to format date like "Month DD, YYYY HH:MM:SS AM/PM CST"
-    function formatDate(date) {
+    // Convert date to Central Time with daylight savings awareness
+    function toCentral(date) {
+      // Central Time is UTC-6 standard, UTC-5 with daylight savings
+      const centralOffset = -6; // CST base offset
+      const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
+      const centralDate = new Date(utc + centralOffset * 60 * 60000);
+
+      // Detect daylight savings: compare Jan vs Jul offsets
+      const jan = new Date(centralDate.getFullYear(), 0, 1);
+      const jul = new Date(centralDate.getFullYear(), 6, 1);
+      const stdOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+      const isDST = centralDate.getTimezoneOffset() < stdOffset;
+
+      if (isDST) centralDate.setHours(centralDate.getHours() + 1); // adjust for CDT
+
+      return formatDate(centralDate, isDST ? 'CDT' : 'CST');
+    }
+
+    // Format date like "Month DD, YYYY HH:MM:SS AM/PM CST/CDT"
+    function formatDate(date, tz = 'CST') {
       const months = [
         "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
@@ -174,16 +192,9 @@
       const minutes = String(date.getMinutes()).padStart(2, '0');
       const seconds = String(date.getSeconds()).padStart(2, '0');
       const ampm = hours >= 12 ? 'PM' : 'AM';
-      hours = hours % 12 || 12; // convert 0 -> 12
+      hours = hours % 12 || 12;
 
-      return `${month} ${day}, ${year} ${hours}:${minutes}:${seconds} ${ampm} CST`;
-    }
-
-    // Convert to actual CST (UTC-6)
-    function toCST(date) {
-      const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
-      const cstDate = new Date(utc - (6 * 60 * 60 * 1000));
-      return formatDate(cstDate);
+      return `${month} ${day}, ${year} ${hours}:${minutes}:${seconds} ${ampm} ${tz}`;
     }
 
     fetchLastCommitDate();
