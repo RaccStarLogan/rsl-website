@@ -140,6 +140,17 @@ li {
   margin: 1rem 1rem;
 }
 
+article {
+  border: 4px solid #c0e0ff;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+  background-color: #1d3356;
+
+  header {
+    padding: 0;
+    z-index: 998;
+  }
+}
+
 .bio,
 .about-me {
   margin-bottom: 1rem;
@@ -261,12 +272,95 @@ li {
   min-height: 1vh;
 }
 
+.comm-cards-container {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
+}
+
+.comm-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.comm-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: 0 1rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.comm-card main {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 95% !important;
+
+  .sub {
+    margin: 0.5rem 0;
+  }
+}
+
+.comm-card .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: auto;
+  margin: 0.5rem;
+}
+
+.comm-card footer {
+  flex-direction: column;
+  padding: 1rem;
+  align-content: start;
+  align-items: stretch;
+  color: #ffbfcf;
+  background-color: #400e1a;
+  box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.4);
+  border-top: 4px solid #a4203c;
+
+  li {
+    list-style: none !important;
+  }
+
+  button {
+    width: 100%;
+    background-color: #a4203c;
+    color: #ffbfcf;
+    margin-top: 0.5rem;
+  }
+
+  button:hover {
+    background-color: #c73957;
+    color: #ffffff
+  }
+}
+
+.comm-card ul.meta {
+  margin: 0.5rem 0 0.75rem 1rem;
+  padding: 0;
+
+  li {
+    margin: 0.25rem 0 !important;
+  }
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
   gap: 1rem;
   margin: 0 auto;
   justify-content: center;
+}
+
+.comm-card .gallery-grid {
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .gallery-item {
@@ -321,7 +415,7 @@ li {
   padding-bottom: 4px;
 }
 
-footer {
+body>footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,6 +429,20 @@ footer {
 
   a {
     color: #ffbfcf;
+  }
+}
+
+/* Medium Screen Adjustments */
+@media (max-width: 1200px) {
+  .comm-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 800px) {
+  .comm-cards-container {
+    grid-template-columns: 1fr;
   }
 }
 
