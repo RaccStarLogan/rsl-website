@@ -5,4 +5,4 @@
 <p>Date Completed: October 26, 2025</p>
 <p>Time Spent: 1 hour 54 minutes</p>
 <p>I also decided I wanted to do a close-up shot for this piece as well. You can see that here:</p>
-<img src="commissions/2025/10/26/img2.png"/>
+<img src="2025/10/26/img2.png"/>
