@@ -532,7 +532,7 @@ body>footer {
     /* Hide menu by default */
     flex-direction: column;
     width: 100%;
-    background-color: rgba(29, 51, 86, 0.6);
+    background-color: #530f0f99;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.6);
