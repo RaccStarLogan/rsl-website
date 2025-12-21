@@ -13,10 +13,3 @@ Software Used: [Magma.com](https://magma.com/d/INRbzZpjoc/)
 Date Completed: October 8, 2025
 
 Time Spent: About 1 hour 50 minutes
-
-Timelapse:
-
-<video controls preload="metadata">
-    <source src="https://media.raccstarlogan.com/nsfw/portfolio/personal/2025/10/07/tl.mp4" type="video/mp4">
-    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/personal/2025/10/07/tl.mp4">Download</a>
-</video>
