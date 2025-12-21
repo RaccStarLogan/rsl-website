@@ -1,0 +1,7 @@
+This was drawn at around the time one of my (at the time) friends felt sort of self-conscious about his mascot character being mistreated, so he ended up scrapping the character, but let me draw this as a sort of send-off. We joked that this was the result of a liposuction procedure, with him needing the protogen armor to hold himself together.
+
+Software Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) PRO
+
+Date Completed: August 29, 2023
+
+Time Spent: Unknown

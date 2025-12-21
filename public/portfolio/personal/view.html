@@ -37,7 +37,7 @@
       text-align: center;
     }
 
-    .image-container img {
+    .image-container img, video {
       max-width: 90vw;
       max-height: 80vh;
       background-color: #778aa9;
@@ -112,6 +112,7 @@
           if (image.src.endsWith(".webp")) image.src = `${base}.png`;
           else if (image.src.endsWith(".png")) image.src = `${base}.jpg`;
           else if (image.src.endsWith(".jpg")) image.src = `${base}.jpeg`;
+          else if (image.src.endsWith(".jpeg")) image.src = `${base}.gif`;
           else {
             image.src = "/placeholder.png";
             image.alt = "Image not found.";

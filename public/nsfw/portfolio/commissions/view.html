@@ -36,7 +36,7 @@
       text-align: center;
     }
 
-    .image-container img {
+    .image-container img, video {
       max-width: 90vw;
       max-height: 80vh;
       background-color: #530f0f;
@@ -44,6 +44,7 @@
       box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -113,6 +114,7 @@
           if (image.src.endsWith(".webp")) image.src = `${base}.png`;
           else if (image.src.endsWith(".png")) image.src = `${base}.jpg`;
           else if (image.src.endsWith(".jpg")) image.src = `${base}.jpeg`;
+          else if (image.src.endsWith(".jpeg")) image.src = `${base}.gif`;
           else {
             image.src = "/placeholder.png";
             image.alt = "Image not found.";
@@ -121,7 +123,7 @@
         image.src = `${base}.webp`;
 
         // Metadata stays on your main site
-        const metaBase = `/portfolio/personal/${folder}`;
+        const metaBase = `/nsfw/portfolio/commissions/${folder}`;
         const titleFile = `${metaBase}/title.txt`;
         const descriptionFile = `${metaBase}/desc.md`;
 
@@ -149,7 +151,7 @@
           });
 
         // Nav buttons
-        fetch(`/portfolio/personal/dates.json`)
+        fetch(`/nsfw/portfolio/commissions/dates.json`)
           .then((res) => res.json())
           .then((dates) => {
             const currentIndex = dates.indexOf(date);

@@ -90,7 +90,7 @@
     });
   </script>
   <script>
-    const TYPE = "commissions";
+    const TYPE = "personal";
 
     fetch('dates.json')
       .then(res => {
@@ -120,7 +120,7 @@
           for (const date of grouped[year]) {
             const folder = `${date}`;
             const encodedDate = encodeURIComponent(date);
-            const thumbPath = `${folder}/thumb.jpg`;
+            const thumbPath = `https://media.raccstarlogan.com/nsfw/portfolio/personal/${folder}/thumb.jpg`;
             const titlePath = `${folder}/title.txt`;
 
             let title = date;
