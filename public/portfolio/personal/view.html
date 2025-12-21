@@ -45,6 +45,7 @@
       box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -92,23 +93,16 @@
     <div class="image-container">
       <h2 id="title"></h2>
       <img src="" alt="Viewing Image" id="viewed-image" />
-      <p id="desc"></p>
+      <div id="desc"></div>
     </div>
     <script>
       async function findValidImagePath(folder) {
         const extensions = [".png", ".jpg", ".jpeg", ".gif", ".webp"];
 
         for (const ext of extensions) {
-          const path = `${folder}/img${ext}`;
+          const path = `https://media.raccstarlogan.com/portfolio/personal/${folder}/img${ext}`;
           try {
             const res = await fetch(path, { method: "HEAD" });
-            // Check for fallback content-type (Neocities usually returns text/html on failure)
-            if (
-              res.ok &&
-              !res.headers.get("content-type")?.includes("text/html")
-            ) {
-              return path;
-            }
           } catch (e) {
             console.warn(`HEAD request failed for ${path}`);
           }
@@ -133,7 +127,7 @@
         });
 
         const titleFile = `${folder}/title.txt`;
-        const descriptionFile = `${folder}/desc.txt`;
+        const descriptionFile = `${folder}/desc.md`;
 
         fetch(titleFile)
           .then((res) => res.text())
@@ -147,18 +141,20 @@
             console.error("Error loading title:", err);
             document.title = "Untitled - View - RaccStarLogan";
           });
-
         fetch(descriptionFile)
           .then((res) => res.text())
-          .then((data) => {
-            if (data.includes("<!DOCTYPE html>"))
-              throw new Error("Description is fallback HTML");
-            document.getElementById("desc").innerHTML = data;
+          .then((md) => {
+            if (md.includes("<!DOCTYPE html>")) throw new Error("Description is fallback HTML");
+
+            // Convert markdown -> HTML
+            const html = marked.parse(md);
+
+            // IMPORTANT: marked outputs HTML, so use innerHTML
+            document.getElementById("desc").innerHTML = html;
           })
           .catch((err) => {
             console.error("Error loading description:", err);
-            document.getElementById("desc").innerText =
-              "No description available.";
+            document.getElementById("desc").innerText = "No description available.";
           });
       } else {
         document.querySelector("main").innerHTML =
@@ -207,8 +203,7 @@
     </div>
   </main>
   <footer>
-    <a href="https://neocities.org" target="_blank" rel="noopener noreferrer"><img src="/neocities.png"
-        height="24" /></a>
+    <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">Hosted by Cloudflare</a>
     <p>© RaccStarLogan 2019–<span id="copyYear"></span></p>
     <p><a href="mailto:contact@raccstarlogan.com">Contact Me</a></p>
     <p><a href="/confirm-age.html">18+ Page</a></p>

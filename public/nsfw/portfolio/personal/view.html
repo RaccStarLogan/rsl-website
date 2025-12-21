@@ -44,6 +44,7 @@
       box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -71,8 +72,7 @@
       <li><a href="/nsfw/portfolio">Portfolio</a></li>
     </ul>
   </nav>
-    <div
-      style="
+  <div style="
         text-align: center;
         position: sticky;
         top: 80px;
@@ -83,12 +83,11 @@
         color: #ffbfcf;
         font-size: 18px;
         z-index: 998;
-      "
-    >
-      <a href="https://ko-fi.com/raccstarlogan/goal?g=0" style="color: inherit">
-        Moving Out Fund — Click here to help
-      </a>
-    </div>
+      ">
+    <a href="https://ko-fi.com/raccstarlogan/goal?g=0" style="color: inherit">
+      Moving Out Fund — Click here to help
+    </a>
+  </div>
   <!-- FUCK THIS SHIT -->
   <main>
     <div class="image-container">
@@ -101,16 +100,9 @@
         const extensions = [".png", ".jpg", ".jpeg", ".gif", ".webp"];
 
         for (const ext of extensions) {
-          const path = `${folder}/img${ext}`;
+          const path = `https://media.raccstarlogan.com/nsfw/portfolio/personal${folder}/img${ext}`;
           try {
             const res = await fetch(path, { method: "HEAD" });
-            // Check for fallback content-type (Neocities usually returns text/html on failure)
-            if (
-              res.ok &&
-              !res.headers.get("content-type")?.includes("text/html")
-            ) {
-              return path;
-            }
           } catch (e) {
             console.warn(`HEAD request failed for ${path}`);
           }
@@ -212,8 +204,7 @@
     </div>
   </main>
   <footer>
-    <a href="https://neocities.org" target="_blank" rel="noopener noreferrer"><img src="/neocities.png"
-        height="24" /></a>
+    <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">Hosted by Cloudflare</a>
     <p>© RaccStarLogan 2019–<span id="copyYear"></span></p>
     <p><a href="mailto:contact@raccstarlogan.com">Contact Me</a></p>
     <p><a href="/index.html">Go Back to SFW Page</a></p>
