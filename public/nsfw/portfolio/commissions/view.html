@@ -97,77 +97,59 @@
       <p id="desc"></p>
     </div>
     <script>
-      async function findValidImagePath(folder) {
-        const extensions = [".png", ".jpg", ".jpeg", ".gif", ".webp"];
-
-        for (const ext of extensions) {
-          const path = `${folder}/img${ext}`;
-          try {
-            const res = await fetch(path, { method: "HEAD" });
-            // Check for fallback content-type (Neocities usually returns text/html on failure)
-            if (
-              res.ok &&
-              !res.headers.get("content-type")?.includes("text/html")
-            ) {
-              return path;
-            }
-          } catch (e) {
-            console.warn(`HEAD request failed for ${path}`);
-          }
-        }
-
-        return null;
-      }
-
       const params = new URLSearchParams(window.location.search);
       const date = params.get("date");
 
-      if (date) {
-        const folder = `${date}`;
+      if (!date) {
+        document.querySelector("main").innerHTML =
+          "<p>Invalid link or missing parameters.</p><button onclick='window.history.back()'>⬅ Go Back</button>";
+      } else {
+        const folder = date;
+        const image = document.getElementById("viewed-image");
+        const base = `https://media.raccstarlogan.com/nsfw/portfolio/commissions/${folder}/img`;
 
-        findValidImagePath(folder).then((validPath) => {
-          if (validPath) {
-            document.getElementById("viewed-image").src = validPath;
-          } else {
-            document.getElementById("viewed-image").src = "/placeholder.png";
-            document.getElementById("viewed-image").alt = "Image not found.";
+        // Image fallback chain (NO fetch -> no CORS issues)
+        image.onerror = () => {
+          if (image.src.endsWith(".webp")) image.src = `${base}.png`;
+          else if (image.src.endsWith(".png")) image.src = `${base}.jpg`;
+          else if (image.src.endsWith(".jpg")) image.src = `${base}.jpeg`;
+          else {
+            image.src = "/placeholder.png";
+            image.alt = "Image not found.";
           }
-        });
+        };
+        image.src = `${base}.webp`;
 
-        const titleFile = `${folder}/title.txt`;
-        const descriptionFile = `${folder}/desc.txt`;
+        // Metadata stays on your main site
+        const metaBase = `/portfolio/personal/${folder}`;
+        const titleFile = `${metaBase}/title.txt`;
+        const descriptionFile = `${metaBase}/desc.md`;
 
         fetch(titleFile)
           .then((res) => res.text())
           .then((data) => {
-            if (data.includes("<!DOCTYPE html>"))
-              throw new Error("Title is fallback HTML");
-            document.title = data + " - View - Jesper Skulldragon";
+            if (data.includes("<!DOCTYPE html>")) throw new Error("Title is fallback HTML");
+            document.title = `${data} - View - RaccStarLogan`;
             document.getElementById("title").innerText = data;
           })
           .catch((err) => {
             console.error("Error loading title:", err);
-            document.title = "Untitled - View - Jesper Skulldragon";
+            document.title = "Untitled - View - RaccStarLogan";
           });
 
         fetch(descriptionFile)
           .then((res) => res.text())
-          .then((data) => {
-            if (data.includes("<!DOCTYPE html>"))
-              throw new Error("Description is fallback HTML");
-            document.getElementById("desc").innerHTML = data;
+          .then((md) => {
+            if (md.includes("<!DOCTYPE html>")) throw new Error("Description is fallback HTML");
+            document.getElementById("desc").innerHTML = marked.parse(md);
           })
           .catch((err) => {
             console.error("Error loading description:", err);
-            document.getElementById("desc").innerText =
-              "No description available.";
+            document.getElementById("desc").innerText = "No description available.";
           });
-      } else {
-        document.querySelector("main").innerHTML =
-          "<p>Invalid link or missing parameters.</p><button onclick='window.history.back()'>⬅ Go Back</button>";
-      }
-      if (date) {
-        fetch(`dates.json`)
+
+        // Nav buttons
+        fetch(`/portfolio/personal/dates.json`)
           .then((res) => res.json())
           .then((dates) => {
             const currentIndex = dates.indexOf(date);
@@ -181,21 +163,15 @@
 
             if (prevDate) {
               prevBtn.style.display = "inline-block";
-              prevBtn.onclick = () => {
-                window.location.href = `view.html?date=${prevDate}`;
-              };
+              prevBtn.onclick = () => (window.location.href = `view.html?date=${prevDate}`);
             }
 
             if (nextDate) {
               nextBtn.style.display = "inline-block";
-              nextBtn.onclick = () => {
-                window.location.href = `view.html?date=${nextDate}`;
-              };
+              nextBtn.onclick = () => (window.location.href = `view.html?date=${nextDate}`);
             }
           })
-          .catch((err) =>
-            console.error("Error loading navigation buttons:", err)
-          );
+          .catch((err) => console.error("Error loading navigation buttons:", err));
       }
     </script>
     <!--
