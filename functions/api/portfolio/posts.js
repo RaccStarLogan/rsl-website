@@ -1,3 +1,10 @@
+if (!env.DB) {
+  return new Response(JSON.stringify({ ok: false, error: "Missing D1 binding DB in this environment" }), {
+    status: 500,
+    headers: { "content-type": "application/json; charset=utf-8" },
+  });
+}
+
 export async function onRequestGet({ env, request }) {
   const url = new URL(request.url);
 
