@@ -27,10 +27,14 @@ body {
     white-space: pre-line;
 }
 
-.hidden-message {
+.hidden-message, .hidden-message a {
     margin-top: 12px;
     font-size: 10px;
     color: #000;
+}
+
+.hidden-message:hover, .hidden-message a:hover {
+    color: #111;
 }
 
 .back {
