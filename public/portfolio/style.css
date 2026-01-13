@@ -1,0 +1,189 @@
+.portfolio-page {
+  background-color: #1c2240;
+  color: #c0e0ff;
+}
+
+.portfolio-home {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 2.5rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 2rem;
+  padding: 2rem;
+  border: 4px solid #c0e0ff;
+  background: #1d3356;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.hero-copy {
+  text-align: left;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin: 0 0 0.75rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+}
+
+.lead {
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+  max-width: 38ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-actions a {
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+}
+
+.hero-actions .pill {
+  background: #a4203c;
+  color: #ffbfcf;
+}
+
+.hero-actions .ghost {
+  background: #778aa9;
+  color: #1c2240;
+}
+
+.hero-card {
+  background: #1c2240;
+  border: 2px solid #c0e0ff;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+  text-align: right;
+}
+
+.hero-stat {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.hero-stat .label {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.hero-stat .value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-card {
+  background: #1d3356;
+  border: 4px solid #c0e0ff;
+  padding: 1.6rem;
+  display: grid;
+  gap: 1rem;
+  min-height: 220px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.portfolio-card:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portfolio-card p {
+  margin: 0;
+}
+
+.card-cta {
+  font-weight: 600;
+}
+
+.portfolio-card.commissions {
+  border-left: 6px solid #a4203c;
+}
+
+.portfolio-card.personal {
+  border-left: 6px solid #a4203c;
+}
+
+.portfolio-card.projects {
+  border-left: 6px solid #a4203c;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-home {
+    padding: 2rem 0 3rem;
+  }
+
+  .hero {
+    padding: 2rem;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-actions a {
+    width: fit-content;
+  }
+
+  .hero-copy,
+  .hero-card {
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .hero-card {
+    margin-right: 0;
+  }
+}

@@ -20,11 +20,12 @@
   <title>Portfolio - Jesper Skulldragon</title>
   <!-- i'm trying my best QmQ" -->
   <link href="/nsfw/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="https://fonts.googleapis.com/css?family=Lexend:500" rel="stylesheet" />
   <link href="/nsfw/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
-<body>
+<body class="portfolio-page">
   <header>
     <a href="/nsfw"><img src="/nsfw/headerlogo.png" alt="Jesper Skulldragon Logo" height="132px" /></a>
     <button class="menu-toggle">☰</button>
@@ -49,18 +50,66 @@
       <li><a href="/nsfw/portfolio">Portfolio</a></li>
     </ul>
   </nav>
-<main>
-    <p>
-      This is a temporary layout. Hopefully I'll actually remember to update it eventually.
-    </p>
-    <ul>
-      <li>
-        <a href="commissions">Commissions</a>
-      </li>
-      <li>
-        <a href="personal">Personal</a>
-      </li>
-    </ul>
+  <main class="portfolio-home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Pick your serving</h1>
+        <p class="lead">
+          Welcome to the dark side.
+          <br>
+          Don't be surprised if you see anything weird.
+        </p>
+        <div class="hero-actions">
+          <a class="pill" href="commissions">Explore commissions</a>
+          <a class="ghost" href="personal">Personal work</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-stat">
+          <span class="label">Recent Work</span>
+          <span class="value">Website polishing</span>
+        </div>
+        <div class="hero-stat">
+          <span class="label">Main Focus</span>
+          <span class="value">Redrift pre-production</span>
+        </div>
+        <div class="hero-stat">
+          <span class="label">Availability</span>
+          <span class="value">Practically open</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-grid">
+      <a class="portfolio-card commissions" href="commissions">
+        <div class="card-header">
+          <h2>Commissions</h2>
+          <span class="tag">The Buffet</span>
+        </div>
+        <p>
+          My previous commission work. If you want me to draw your character fat, here's where to start.
+          <br>
+          Or, y'know. I could just. Draw them fucking. If you want.
+          <br>But where's the fun in that?
+        </p>
+        <span class="card-cta">View commissions -></span>
+      </a>
+      <a class="portfolio-card personal" href="personal">
+        <div class="card-header">
+          <h2>Personal</h2>
+          <span class="tag">Fat Fuck Central</span>
+        </div>
+        <p>
+          My freak shit. Let's see if you can match my freak.
+          <br>
+          Assuming you even have enough space in your stomach.
+          <br>
+          Which I doubt you do.
+        </p>
+        <span class="card-cta">View personal work -></span>
+      </a>
+    </section>
   </main>
   <footer>
     <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">Hosted by Cloudflare</a>
@@ -72,6 +121,3 @@
 </body>
 
 </html>
-
-
-
