@@ -14,7 +14,6 @@ It serves as my little hub for art, music, characters, and whatever else I feel 
 ## What’s Inside
 - Static HTML, CSS, and a few small scripts (nothing too complicated)
 - Pages for my characters, commissions, portfolio, and other projects
-- File hosting for use on other sites ([ToyHou.se](https://toyhou.se/RaccStarLogan), [ArtFight](https://artfight.net/~RaccStarLogan), etc.)
 - Some fun extras
 
 ## Running Locally
