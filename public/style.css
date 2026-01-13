@@ -395,8 +395,8 @@ button:focus-visible {
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: 0 auto;
   justify-content: center;
@@ -415,6 +415,7 @@ button:focus-visible {
   aspect-ratio: 1 / 1;
   position: relative;
   text-align: center;
+  flex: 0 0 150px;
 }
 
 .gallery-item img {
@@ -449,7 +450,7 @@ button:focus-visible {
   opacity: 1;
 }
 
-#gallery-container h2 {
+.gallery h2 {
   justify-items: center;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
@@ -457,6 +458,12 @@ button:focus-visible {
   color: #c0e0ff;
   border-bottom: 4px solid #c0e0ff;
   padding-bottom: 4px;
+  text-align: center;
+}
+
+#lastUpdated .creator-time {
+  opacity: 0.7;
+  font-size: 0.9em;
 }
 
 body>footer {

@@ -49,23 +49,7 @@
       <li><a href="/portfolio">Portfolio</a></li>
     </ul>
   </nav>
-  <div style="
-        text-align: center;
-        position: sticky;
-        top: 80px;
-        padding: 0.5rem 0;
-        background-color: #400e1a;
-        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-        border-bottom: 4px solid #a4203c;
-        color: #ffbfcf;
-        font-size: 18px;
-        z-index: 998;
-      ">
-    <a href="https://ko-fi.com/raccstarlogan/goal?g=0" style="color: inherit">
-      Moving Out Fund — Click here to help
-    </a>
-  </div>
-  <main>
+<main>
     <section class="links-list" aria-label="Link Directories">
       <section class="links-col">
         <h2>Music</h2>
@@ -167,58 +151,9 @@
     <p><a href="mailto:contact@raccstarlogan.com">Contact Me</a></p>
     <p><a href="/confirm-age.html">18+ Page</a></p>
   </footer>
-  <script>
-    document.getElementById("copyYear").textContent =
-      new Date().getFullYear();
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navMenu = document.querySelector("nav ul");
-
-      menuToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("show");
-      });
-    });
-    // Click-to-toggle dropdowns with ARIA + keyboard support
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    function closeAll(except) {
-      dropdowns.forEach(dd => {
-        if (dd !== except) {
-          dd.removeAttribute('data-open');
-          const btn = dd.querySelector('.dual-link');
-          if (btn) btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    dropdowns.forEach(dd => {
-      const btn = dd.querySelector('.dual-link');
-      const panel = dd.querySelector('.dropdown-content');
-
-      if (!btn || !panel) return;
-
-      btn.addEventListener('click', e => {
-        const open = dd.getAttribute('data-open') === 'true';
-        closeAll(dd);
-        dd.setAttribute('data-open', String(!open));
-        btn.setAttribute('aria-expanded', String(!open));
-      });
-
-      // Close on Escape
-      dd.addEventListener('keydown', e => {
-        if (e.key === 'Escape') {
-          closeAll();
-          btn.focus();
-        }
-      });
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', e => {
-      if (!e.target.closest('.dropdown')) closeAll();
-    });
-  </script>
+  <script src="scripts/global.js"></script>
 
 </body>
 
 </html>
+

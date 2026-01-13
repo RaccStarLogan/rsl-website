@@ -22,13 +22,14 @@
   <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="https://fonts.googleapis.com/css?family=Lexend:500" rel="stylesheet" />
-  <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="favicon.png" rel="icon" type="image/png" />
 </head>
 
 <body>
   <header>
     <a href="/index.html"><img src="/headerlogo.svg" alt="RaccStarLogan Logo" height="132px" /></a>
+    <a href="https://scytheful.awesnap.dev" target="_blank"><img src="images/logo.png" alt="Scytheful Logo" height="132px" /></a>
     <button class="menu-toggle">☰</button>
   </header>
   <nav>
@@ -47,25 +48,9 @@
       <li>
         <a href="/commissions.html">Commissions</a>
       </li>
-      <li><a href="/portfolio.html">Portfolio</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
     </ul>
   </nav>
-  <div style="
-        text-align: center;
-        position: sticky;
-        top: 80px;
-        padding: 0.5rem 0;
-        background-color: #400e1a;
-        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-        border-bottom: 4px solid #a4203c;
-        color: #ffbfcf;
-        font-size: 18px;
-        z-index: 998;
-      ">
-    <a href="https://ko-fi.com/raccstarlogan/goal?g=0" style="color: inherit">
-      Moving Out Fund — Click here to help
-    </a>
-  </div>
   <main>
     <h1>Hi! I'm working on it! Excuse the mess...</h1>
     <p>
@@ -172,24 +157,12 @@
     </p>
   </main>
   <footer>
-    <a href="https://neocities.org" target="_blank" rel="noopener noreferrer"><img src="/neocities.png"
-        height="24" /></a>
+    <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">Hosted by Cloudflare</a>
     <p>© RaccStarLogan 2019–<span id="copyYear"></span></p>
     <p><a href="mailto:contact@raccstarlogan.com">Contact Me</a></p>
     <p><a href="/confirm-age.html">18+ Page</a></p>
   </footer>
-  <script>
-    document.getElementById("copyYear").textContent =
-      new Date().getFullYear();
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navMenu = document.querySelector("nav ul");
-
-      menuToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("show");
-      });
-    });
-  </script>
+  <script src="/scripts/global.js"></script>
 </body>
 
 </html>
