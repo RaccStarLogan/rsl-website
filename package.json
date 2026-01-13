@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "aws4fetch": "^1.0.20",
+    "better-sqlite3": "^12.6.0",
+    "node-fetch": "^3.3.2"
+  }
+}

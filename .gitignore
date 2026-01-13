@@ -398,3 +398,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# SQL databases except what's in migrations/
+*.sql
+!migrations/*.sql
+
+# Wrangler local state
+.wrangler/

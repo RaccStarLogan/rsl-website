@@ -17,6 +17,8 @@ It serves as my little hub for art, music, characters, and whatever else I feel 
 - Pages for my characters, commissions, portfolio, and other projects
 - Some fun extras
 
+Node is used primarily for maintenance scripts.
+
 ## Running Locally
 Not sure why you'd want to do this, but just open `public/index.html`.
 
