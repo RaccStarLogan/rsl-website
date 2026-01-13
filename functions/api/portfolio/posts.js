@@ -1,7 +1,7 @@
 export async function onRequestGet({ env }) {
   const info = {
     hasDB: !!env.DB,
-    hasR2: !!env.RSL_PORTFOLIO,
+    hasR2: !!env.R2_PORTFOLIO,
   };
 
   if (!env.DB) {
