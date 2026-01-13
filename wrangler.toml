@@ -1,0 +1,11 @@
+name = "rsl-website"
+compatibility_date = "2026-01-13"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "rsl_portfolio"
+database_id = "57fe2783-5c7b-4227-aa21-62972714acf7"
+migrations_dir = "migrations"
+
+# NOTE: This file contains no secrets.
+# Credentials are stored as Cloudflare secrets.
