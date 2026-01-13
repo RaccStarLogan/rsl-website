@@ -2,7 +2,8 @@
 
 ![Logo](https://raccstarlogan.com/headerlogo.svg)
 
-This is the source code for my personal site: [raccstarlogan.com](https://raccstarlogan.com), hosted on [Cloudflare](https://www.cloudflare.com)
+This is the source code for my personal site: [raccstarlogan.com](https://raccstarlogan.com), hosted on [Cloudflare](https://www.cloudflare.com).
+
 It serves as my little hub for art, music, characters, and whatever else I feel like putting online.
 
 ## ⚠️ WARNING ⚠️
