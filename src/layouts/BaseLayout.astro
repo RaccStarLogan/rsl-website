@@ -1,5 +1,7 @@
 ---
 const { title = "RaccStarLogan" } = Astro.props;
+import { Image } from "astro:assets";
+import headerlogo from "../assets/headerlogo.svg";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +18,7 @@ const { title = "RaccStarLogan" } = Astro.props;
       <nav class="navbar">
         <div class="logo-section">
           <a href="/">
-            <img src="/headerlogo.svg" alt="RaccStarLogan Logo" class="logo" height="92" />
+            <Image src={headerlogo} alt="RaccStarLogan Logo" class="logo" height="92" />
           </a>
         </div>
         <ul class="nav-links">
