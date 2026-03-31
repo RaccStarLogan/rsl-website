@@ -31,7 +31,7 @@ This will start the dev server at `localhost:4321`.
 
 ## Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of this Astro project, you'll see the following folders and files:
 
 ```
 /
@@ -49,6 +49,7 @@ Inside of your Astro project, you'll see the following folders and files:
     └── pages/
         ├── index.astro
         └── links.astro
+...so on and so forth.
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
