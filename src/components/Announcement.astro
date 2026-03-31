@@ -1,0 +1,11 @@
+---
+const { text, link } = Astro.props;
+---
+
+<div class="announcement">
+    {link ? (
+        <a href={link}>{text}</a>
+    ) : (
+        <p>{text}</p>
+    )}
+</div>

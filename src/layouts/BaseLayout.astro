@@ -2,6 +2,8 @@
 const { title = "RaccStarLogan" } = Astro.props;
 import { Image } from "astro:assets";
 import headerlogo from "../assets/headerlogo.svg";
+import Announcement from "../components/Announcement.astro";
+const showAnnouncement = true; // Set to true to show the announcement banner
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -14,11 +16,14 @@ import headerlogo from "../assets/headerlogo.svg";
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    {showAnnouncement && (
+      <Announcement text="V3 is currently in alpha! Expect bugs." />
+    )}
     <header>
       <nav class="navbar">
         <div class="logo-section">
           <a href="/">
-            <Image src={headerlogo} alt="RaccStarLogan Logo" class="logo" height="92" />
+            <Image src={headerlogo} alt="RaccStarLogan Logo" class="logo" height="92" loading="eager" />
           </a>
         </div>
         <ul class="nav-links">
