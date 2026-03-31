@@ -16,14 +16,14 @@ const { text, link } = Astro.props;
 
     if (!banner || !closeButton) return;
 
-    if (localStorage.getItem("announcementClosed") === "true") {
+    if (sessionStorage.getItem("announcementClosed") === "true") {
       banner.style.display = "none";
       return;
     }
 
     closeButton.addEventListener("click", () => {
       banner.style.display = "none";
-      localStorage.setItem("announcementClosed", "true");
+      sessionStorage.setItem("announcementClosed", "true");
     });
   });
 </script>
