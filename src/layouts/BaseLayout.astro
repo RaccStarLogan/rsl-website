@@ -1,0 +1,47 @@
+---
+const { title = "RaccStarLogan" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-section">
+          <a href="/">
+            <img src="/headerlogo.svg" alt="RaccStarLogan Logo" class="logo" height="92" />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/links">Links</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/commissions">Commissions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <li><p>V3 ALPHA TESTING!!!</p></li>
+      <li><p>-</p></li>
+      <li><p>&copy; 2019-2026 RaccStarLogan</p></li>
+      <li><p>-</p></li>
+      <li><p>All rights reserved</p></li>
+      <li><p>-</p></li>
+      <li><a href="mailto:contact@raccstarlogan.com">Contact</a></li>
+      <li><p>-</p></li>
+      <li><a href="/confirm-age">18+ Page</a></li>
+    </footer>
+  </body>
+</html>
