@@ -13,59 +13,51 @@ It serves as my little hub for art, music, characters, and whatever else I feel 
 - Viewer discretion is advised.
 
 ## What’s Inside
-- Static HTML, CSS, and a few small scripts (nothing too complicated)
+- Built with Astro for static site generation
 - Pages for my characters, commissions, portfolio, and other projects
 - Some fun extras
 
-Node is used primarily for maintenance scripts.
-
 ## Running Locally
-Not sure why you'd want to do this, but just open `public/index.html`.
-
-If you’d like to clone it anyway:
+Not sure why you'd want to do this, but here's how:
 
 ```bash
 git clone https://github.com/RaccStarLogan/rsl-website.git
-cd rsl-website/public
-open index.html
+cd rsl-website
+npm install
+npm run dev
 ```
 
-Thank you for taking the time to look in here! If you notice any issues, feel free to let me know through an [Issues report](https://github.com/RaccStarLogan/rsl-website/issues).
+This will start the dev server at `localhost:4321`.
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1F3HIY)
-
-# Astro ReadMe
-
-# Astro Starter Kit: Minimal
-
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
+## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
-```text
+```
 /
+├── astro.config.mjs
+├── package.json
+├── tsconfig.json
 ├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   └── style.css
+└── src/
+    ├── assets/
+    ├── components/
+    │   └── Announcement.astro
+    ├── layouts/
+    │   └── BaseLayout.astro
+    └── pages/
+        ├── index.astro
+        └── links.astro
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Components are in `src/components/`, layouts in `src/layouts/`, and static assets in `public/`.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Commands
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -73,9 +65,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+Thank you for taking the time to look in here! If you notice any issues, feel free to let me know through an [Issues report](https://github.com/RaccStarLogan/rsl-website/issues).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1F3HIY)
