@@ -190,3 +190,10 @@ footer a {
     cursor: pointer;
     line-height: 1;
 }
+
+.article-section {
+    margin: 1rem 10%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}

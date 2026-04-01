@@ -3,17 +3,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import placeholder from "../assets/placeholder.png";
 ---
-
-<BaseLayout title="Home - RaccStarLogan">
+<!-- Load Base Layout -->
+<BaseLayout title="Home - RaccStarLogan" description="Howdy! I'm RaccStarLogan, a raccoon on the internet that does stuff and people think that's cool :3">
+  <!-- Introduction -->
   <section class="hero">
     <div class="hero-content">
       <h2>Howdy!</h2>
       <p>I'm RaccStarLogan, a raccoon on the internet that does stuff and people think that's cool :3</p>
     </div>
   </section>
-
   <hr>
-
+  <!-- About Me -->
   <section class="content-section">
     <div class="portrait">
       <img
@@ -27,7 +27,6 @@ import placeholder from "../assets/placeholder.png";
         on VGen.
       </p>
     </div>
-
     <div class="about">
       <h2>About Me</h2>
       <p>I'm just a guy on the internet that likes making things for people, whether it be art, music, or just some random bullshit.</p>
@@ -36,9 +35,8 @@ import placeholder from "../assets/placeholder.png";
       <p>Also if you haven't figured it out yet, yes I'm a furry :3</p>
     </div>
   </section>
-
   <hr>
-
+  <!-- Latest Stuff -->
   <section class="widgets">
     <h2>Latest Stuff</h2>
     <div class="widget-grid">
@@ -48,7 +46,6 @@ import placeholder from "../assets/placeholder.png";
         <p>TITLE</p>
         <a href="/portfolio">View Gallery</a>
       </article>
-
       <article class="widget-card">
         <h3>Latest Music</h3>
         <Image src={placeholder} alt="Latest music cover" />
@@ -57,9 +54,8 @@ import placeholder from "../assets/placeholder.png";
       </article>
     </div>
   </section>
-
   <hr>
-
+  <!-- Contact Information -->
   <section class="hero">
     <div class="contact">
       <h2>Contact Me</h2>
@@ -70,6 +66,5 @@ import placeholder from "../assets/placeholder.png";
       </p>
     </div>
   </section>
-
   <br />
 </BaseLayout>
