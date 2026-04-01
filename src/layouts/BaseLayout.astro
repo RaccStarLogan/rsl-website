@@ -1,24 +1,48 @@
 ---
-const { title = "RaccStarLogan" } = Astro.props;
+// Metadata for the page, with defaults
+const {
+    title = "RaccStarLogan",
+    description = "RaccStarLogan's personal website",
+    image = "/default-embed.png",
+    url = "https://raccstarlogan.com"
+} = Astro.props;
+// Imports
 import { Image } from "astro:assets";
 import headerlogo from "../assets/headerlogo.svg";
 import Announcement from "../components/Announcement.astro";
 const showAnnouncement = true; // Set to true to show the announcement banner
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    <!-- Favicon and Stylesheet -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <!-- Announcement Banner -->
     {showAnnouncement && (
       <Announcement text="V3 is currently in Alpha! Expect bugs." />
     )}
+    <!-- Header and Navigation -->
     <header>
       <nav class="navbar">
         <div class="logo-section">
@@ -26,6 +50,7 @@ const showAnnouncement = true; // Set to true to show the announcement banner
             <Image src={headerlogo} alt="RaccStarLogan Logo" class="logo" height="92" loading="eager" />
           </a>
         </div>
+        <!-- Navigation Links -->
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/links">Links</a></li>
@@ -36,11 +61,11 @@ const showAnnouncement = true; // Set to true to show the announcement banner
         </ul>
       </nav>
     </header>
-
+    <!-- Main Content -->
     <main>
       <slot />
     </main>
-
+    <!-- Footer -->
     <footer>
       <li><p>V3 ALPHA TESTING!!!</p></li>
       <li><p>-</p></li>
