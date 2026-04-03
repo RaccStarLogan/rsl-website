@@ -56,10 +56,10 @@ async function pathExists(filePath) {
 async function moveNsfwOutputToRoot() {
   const nsfwExists = await pathExists(NSFW_OUTPUT_DIR);
   if (!nsfwExists) {
-    return 0;
+    return { movedFiles: 0, conflictFiles: 0, hadNsfwOutput: false };
   }
 
-  const moved = { count: 0 };
+  const moved = { count: 0, conflicts: 0 };
 
   async function moveDirContents(fromDir, toDir) {
     await mkdir(toDir, { recursive: true });
@@ -71,14 +71,12 @@ async function moveNsfwOutputToRoot() {
 
       if (entry.isDirectory()) {
         await moveDirContents(fromPath, toPath);
-        await rm(fromPath, { recursive: true, force: true });
         continue;
       }
 
       if (await pathExists(toPath)) {
-        throw new Error(
-          `[strip-nsfw-prefix] Cannot move ${fromPath} -> ${toPath} because the destination already exists.`
-        );
+        moved.conflicts += 1;
+        continue;
       }
 
       await mkdir(path.dirname(toPath), { recursive: true });
@@ -88,9 +86,15 @@ async function moveNsfwOutputToRoot() {
   }
 
   await moveDirContents(NSFW_OUTPUT_DIR, DIST_DIR);
-  await rm(NSFW_OUTPUT_DIR, { recursive: true, force: true });
+  if (moved.conflicts === 0) {
+    await rm(NSFW_OUTPUT_DIR, { recursive: true, force: true });
+  }
 
-  return moved.count;
+  return {
+    movedFiles: moved.count,
+    conflictFiles: moved.conflicts,
+    hadNsfwOutput: true
+  };
 }
 
 function stripNsfwPrefix(content) {
@@ -111,8 +115,9 @@ async function main() {
     return;
   }
 
-  const movedFiles = await moveNsfwOutputToRoot();
-  const files = await walkFiles(DIST_DIR);
+  const moveResult = await moveNsfwOutputToRoot();
+  const shouldRewrite = moveResult.conflictFiles === 0 && moveResult.movedFiles > 0;
+  const files = shouldRewrite ? await walkFiles(DIST_DIR) : [];
   let changedFiles = 0;
 
   for (const filePath of files) {
@@ -129,8 +134,14 @@ async function main() {
     }
   }
 
+  if (moveResult.conflictFiles > 0) {
+    console.warn(
+      `[strip-nsfw-prefix] Skipped ${moveResult.conflictFiles} conflicting file move(s). Keeping /nsfw output and skipping URL rewrite.`
+    );
+  }
+
   console.log(
-    `[strip-nsfw-prefix] Moved ${movedFiles} file(s) from /nsfw output and updated ${changedFiles} file(s).`
+    `[strip-nsfw-prefix] Moved ${moveResult.movedFiles} file(s) from /nsfw output and updated ${changedFiles} file(s).`
   );
 }
 
