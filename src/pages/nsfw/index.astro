@@ -1,0 +1,70 @@
+---
+import NSFWLayout from "../../layouts/NSFWLayout.astro";
+import { Image } from "astro:assets";
+import placeholder from "../../assets/placeholder.png";
+---
+<!-- Load Base Layout -->
+<NSFWLayout title="Home - Jesper Skulldragon" description="Howdy! I'm Jesper Skulldragon, a raccoon on the internet that does stuff and people think that's cool :3">
+  <!-- Introduction -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Howdy!</h2>
+      <p>I'm Jesper Skulldragon, a fatass dragon on the internet that does stuff and people think that's cool :3</p>
+    </div>
+  </section>
+  <hr>
+  <!-- About Me -->
+  <section class="content-section">
+    <div class="portrait">
+      <img
+        src="https://media.raccstarlogan.com/nsfw/dragon.png"
+        alt="Illustration of Jesper Skulldragon"
+        class="portrait"
+      />
+      <p class="caption">
+        Illustration by
+        <a href="https://furaffinity.net/user/oshyfriend" target="_blank" rel="noopener noreferrer">OshyFriend</a>
+        on FurAffinity.
+      </p>
+    </div>
+    <div class="about">
+      <h2>About Me</h2>
+      <p>I'm just a guy on the internet that likes making things for people, whether it be art, music, or just some random bullshit.</p>
+      <p>I'm based in San Antonio, TX, and ever since I was little, I've always been interested in technology and creativity. That might just be the autism speaking, but this is genuinely my life and I am enjoying the hell out of it!</p>
+      <p>I'm self-taught in the majority of the things I do, and I take pride in that. I do tend to bounce between projects from time to time, but that's part of how I do things, so. Yeah.</p>
+      <p>Also if you haven't figured it out yet, yes I'm a furry :3</p>
+    </div>
+  </section>
+  <hr>
+  <!-- Latest Stuff -->
+  <section class="widgets">
+    <h2>Latest Stuff</h2>
+    <div class="widget-grid">
+      <article class="widget-card">
+        <h3>Latest Art</h3>
+        <Image src={placeholder} alt="Latest art preview" />
+        <p>TITLE</p>
+        <a href="/portfolio">View Gallery</a>
+      </article>
+      <article class="widget-card">
+        <h3>Latest Music</h3>
+        <Image src={placeholder} alt="Latest music cover" />
+        <p>ALBUM TITLE</p>
+        <a href="/music">Listen Now</a>
+      </article>
+    </div>
+  </section>
+  <hr>
+  <!-- Contact Information -->
+  <section class="hero">
+    <div class="contact">
+      <h2>Contact Me</h2>
+      <p>
+        If you want to contact me, the best way to do so is through Discord (@racc.star.logan)
+        or Telegram (@RaccStarLogan), but I'm also available via email at
+        <a href="mailto:contact@raccstarlogan.com">contact@raccstarlogan.com</a>.
+      </p>
+    </div>
+  </section>
+  <br />
+</NSFWLayout>

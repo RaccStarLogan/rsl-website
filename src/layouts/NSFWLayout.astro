@@ -1,15 +1,17 @@
 ---
 // Metadata for the page, with defaults
 const {
-    title = "RaccStarLogan",
-    description = "RaccStarLogan's personal website",
+    title = "Jesper Skulldragon",
+    description = "Jesper Skulldragon's personal website",
     image = "/default-embed.png",
-    url = "https://raccstarlogan.com"
+    url = "https://nsfw.raccstarlogan.com"
 } = Astro.props;
 // Imports
 import { Image } from "astro:assets";
-import headerlogo from "../assets/headerlogo.svg";
+import headerlogo from "../assets/nsfw/headerlogo.png";
+import RTA from "../assets/nsfw/rta.png";
 import Announcement from "../components/Announcement.astro";
+import AgeConfirmationDialog from "../components/AgeConfirmationDialog.astro";
 const showAnnouncement = true; // Set to true to show the announcement banner
 ---
 
@@ -34,11 +36,11 @@ const showAnnouncement = true; // Set to true to show the announcement banner
     <meta property="twitter:image" content={image} />
     <slot name="head" />
     <!-- Favicon and Stylesheet -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/nsfw/favicon.ico" />
+    <link rel="stylesheet" href="/nsfw/style.css" />
   </head>
   <body>
+    <AgeConfirmationDialog />
     <!-- Announcement Banner -->
     {showAnnouncement && (
       <Announcement text="V3 is currently in Alpha! Expect bugs." />
@@ -47,18 +49,17 @@ const showAnnouncement = true; // Set to true to show the announcement banner
     <header>
       <nav class="navbar">
         <div class="logo-section">
-          <a href="/">
-            <Image src={headerlogo} alt="RaccStarLogan Logo" class="logo" height="92" loading="eager" />
+          <a href="/nsfw/">
+            <Image src={headerlogo} alt="Jesper Skulldragon Logo" class="logo" height="92" loading="eager" />
           </a>
         </div>
         <!-- Navigation Links -->
         <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/links">Links</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/commissions">Commissions</a></li>
-          <li><a href="https://shop.raccstarlogan.com">Merch</a></li>
-          <li><a href="/wiki">Wiki</a></li>
+          <li><a href="/nsfw/">Home</a></li>
+          <li><a href="/nsfw/links">Links</a></li>
+          <li><a href="/nsfw/portfolio">Portfolio</a></li>
+          <li><a href="/nsfw/commissions">Commissions</a></li>
+          <li><a href="/nsfw/wiki">Wiki</a></li>
         </ul>
       </nav>
     </header>
@@ -74,9 +75,10 @@ const showAnnouncement = true; // Set to true to show the announcement banner
       <li><p>-</p></li>
       <li><p>All rights reserved</p></li>
       <li><p>-</p></li>
+      <li><a href="https://www.rtalabel.org/index.html" target="_blank" rel="noopener noreferrer"><Image src={RTA} alt="RTA Label" /></a></li>
       <li><a href="mailto:contact@raccstarlogan.com">Contact</a></li>
       <li><p>-</p></li>
-      <li><a href="/nsfw">18+ Page</a></li>
+      <li><a href="https://raccstarlogan.com">SFW Page</a></li>
     </footer>
   </body>
 </html>
