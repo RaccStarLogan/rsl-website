@@ -1,0 +1,202 @@
+/* Wiki-specific styles - modular for page-specific use */
+
+/* CSS Variables for customization */
+:root {
+  --wiki-primary-color: #8db9ff;
+  --wiki-secondary-color: #c0e0ff;
+  --wiki-accent-color: #a8d6ff;
+  --wiki-text-primary: #c0e0ff;
+  --wiki-text-secondary: #9ed2ff;
+  --wiki-text-accent: #a8d6ff;
+  --wiki-bg-primary: rgba(28, 34, 64, 0.6);
+  --wiki-bg-secondary: rgba(44, 60, 100, 0.7);
+  --wiki-bg-tertiary: rgba(20, 30, 55, 0.4);
+  --wiki-bg-hover: rgba(42, 75, 146, 0.4);
+  --wiki-border-width: 4px;
+  --wiki-border-radius: 0;
+  --wiki-warning-color: #f4b367;
+  --wiki-success-color: #7cc67f;
+  --wiki-font-family: "Lexend", sans-serif;
+  --wiki-body-bg-color: #1c2240;
+    --link-color: #c0e0ff;
+}
+
+body {
+    font-family: var(--wiki-font-family);
+    background-color: var(--wiki-body-bg-color);
+    color: var(--wiki-text-primary);
+}
+
+.wiki-page-grid a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.wiki-page-grid a:hover {
+    color: #ffffff;
+}
+
+.wiki-infobox {
+    border: var(--wiki-border-width) solid var(--wiki-primary-color);
+    border-radius: var(--wiki-border-radius);
+    background: var(--wiki-bg-primary);
+    padding: 0.9rem 1rem;
+    margin: 0.75rem 0;
+}
+
+.wiki-infobox,
+.wiki-toc-wrapper,
+table {
+    display: flow-root;
+}
+
+.wiki-infobox-title {
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+    color: var(--wiki-text-accent);
+}
+
+.wiki-infobox--warning { border-color: var(--wiki-warning-color); }
+.wiki-infobox--success { border-color: var(--wiki-success-color); }
+.wiki-infobox--info { border-color: var(--wiki-primary-color); }
+
+.wiki-accordion summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--wiki-text-primary);
+}
+
+.wiki-accordion-content {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: none;
+}
+
+.wiki-page-grid {
+    display: block;
+    margin: 1rem 10%;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.wiki-sidebar {
+    float: right;
+    border: var(--wiki-border-width) solid var(--wiki-secondary-color);
+    background: var(--wiki-bg-primary);
+    padding: 1.2rem;
+    border-radius: var(--wiki-border-radius);
+    max-width: 360px;
+    width: 360px;
+    box-sizing: border-box;
+    margin: 0 0 1.5rem 1.5rem;
+    shape-outside: margin-box;
+}
+
+.wiki-sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.wiki-sidebar ul {
+    padding-left: 1.15rem;
+}
+
+
+.article-section {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+th,
+td {
+    border: var(--wiki-border-width) solid var(--wiki-primary-color);
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.6rem 0.9rem;
+}
+
+th {
+    background: var(--wiki-bg-secondary);
+    color: var(--wiki-text-primary);
+}
+
+tr:nth-child(even) {
+    background: var(--wiki-bg-tertiary);
+}
+
+table {
+    width: auto;
+    max-width: 100%;
+    clear: both;
+    border-collapse: collapse;
+}
+
+.wiki-toc-wrapper {
+    display: block;
+    margin: 1rem 0;
+    max-width: 360px;
+}
+
+.wiki-toc {
+    margin: 0;
+}
+
+.wiki-toc-details {
+    border: var(--wiki-border-width) solid var(--wiki-secondary-color);
+    background: var(--wiki-bg-primary);
+    padding: 0.5rem;
+    border-radius: var(--wiki-border-radius);
+}
+
+.wiki-toc-details summary {
+    margin: 0;
+    padding: 0.35rem 0.5rem;
+    font-weight: 700;
+    color: var(--wiki-text-primary);
+    cursor: pointer;
+    list-style: none;
+}
+
+.wiki-toc-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.wiki-toc-details[open] summary::after {
+    content: "▲";
+    float: right;
+}
+
+.wiki-toc-details summary::after {
+    content: "▼";
+    float: right;
+}
+
+#wiki-toc {
+    margin-top: 0.4rem;
+}
+
+#wiki-toc a {
+    display: block;
+    width: 100%;
+    color: var(--wiki-text-secondary);
+    text-decoration: none;
+    margin: 0.15rem 0;
+    padding: 0.3rem 0.5rem;
+    border-left: var(--wiki-border-width) solid transparent;
+}
+
+#wiki-toc a:hover {
+    background: var(--wiki-bg-hover);
+    color: #ffffff;
+    border-left-color: var(--wiki-secondary-color);
+}
+
+#wiki-toc a.h3 {
+    margin-left: 0.6rem;
+    font-size: 0.95rem;
+}
+

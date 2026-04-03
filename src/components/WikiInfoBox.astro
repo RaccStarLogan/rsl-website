@@ -1,0 +1,8 @@
+---
+const { title = "Info", variant = "info" } = Astro.props;
+const variantClass = `wiki-infoboxwiki-${variant}`;
+---
+<div class={`wiki-infobox wiki-infobox--${variant}`}>
+  <div class="wiki-infobox-title">{title}</div>
+  <div class="wiki-infobox-content"><slot/></div>
+</div>
