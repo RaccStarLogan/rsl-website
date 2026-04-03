@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import WikiTOC from "../components/WikiTOC.astro";
 import WikiInfoBox from "../components/WikiInfoBox.astro";
 import WikiAccordion from "../components/WikiAccordion.astro";
+import { wikiEntries } from "../data/wikiEntries";
+
+const featuredEntries = [...wikiEntries]
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 3);
 ---
 
 <!-- Load Base Layout -->
 <BaseLayout
   title="Wiki - RaccStarLogan"
-  description="A collection of information about me, my work, and other random stuff."
+  description="A simple place to browse characters and other bits of the world around them."
 >
   <link rel="stylesheet" href="/wiki.css" />
   <div class="wiki-page-grid">
@@ -27,78 +31,67 @@ import WikiAccordion from "../components/WikiAccordion.astro";
     </aside>
 
     <main id="wiki-content" class="article-section">
-      <h1>Wiki Framework Demo</h1>
+      <h1>Welcome to the RSL Wiki</h1>
 
-      <WikiInfoBox title="Note" variant="info">
-        This is an info box. Use <strong>variant="warning"</strong>, <strong
-          >success</strong
-        >, etc. for style.
+      <WikiInfoBox title="What this is" variant="info">
+        This is a simple index for the people, stories, and bits of worldbuilding
+        collected across the site. If you want to look around, this is the place
+        to start.
       </WikiInfoBox>
 
-      <div class="wiki-toc-wrapper"><WikiTOC /></div>
+      <div class="wiki-toc-wrapper">
+        <aside class="wiki-toc">
+          <details class="wiki-toc-details">
+            <summary>Table of Contents</summary>
+            <nav id="wiki-toc" aria-label="Wiki subpages">
+              {
+                wikiEntries.map((page) => (
+                  <a href={page.href}>{page.label}</a>
+                ))
+              }
+            </nav>
+          </details>
+        </aside>
+      </div>
 
-      <h2 id="section-1">Section 1: Intro</h2>
-      <p>Use headings with id, or allow the TOC script to autogenerate ids.</p>
+      <h2 id="getting-started">Getting Started</h2>
+      <p>
+        The table of contents above links to each page in the wiki. Pick a name,
+        click through, and browse from there.
+      </p>
 
-      <WikiAccordion summary="Click to expand details">
-        <p>Accordion-style collapse/expand for longer details.</p>
+      <WikiAccordion summary="What you will find here">
+        <p>
+          Most of the pages here are character profiles, but this section can also
+          grow into a home for relationship notes, setting details, and anything
+          else tied to the project.
+        </p>
         <ul>
-          <li>Item A</li>
-          <li>Item B</li>
+          <li>Character pages collect the basics in one place.</li>
+          <li>Some pages may focus more on story context or setting notes.</li>
+          <li>The list will keep growing over time.</li>
         </ul>
       </WikiAccordion>
 
-      <h2 id="section-table">Table</h2>
-      <table>
+      <h2 id="featured-index">Featured Index</h2>
+      <table aria-label="Featured wiki entries">
         <thead>
           <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
+            <th>Entry</th>
+            <th>Type</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-          </tr>
+          {
+            featuredEntries.map((entry) => (
+              <tr>
+                <td><a href={entry.href}>{entry.label}</a></td>
+                <td>{entry.meta.type}</td>
+              </tr>
+            ))
+          }
         </tbody>
       </table>
-
-      <h2 id="section-tags">Tags (Custom Components)</h2>
-      <p>
-        With this style, you can create a markdown-like syntax in MDX or
-        Astroweb MVC by reusing these components as tags.
-      </p>
-
-      <h2 id="section-lorem">Lorem Ipsum Overflow</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-        pretium leo a tellus pharetra, in dignissim erat luctus. Sed eu urna sed
-        elit pellentesque scelerisque. Nulla facilisi. Maecenas aliquet quam nec
-        nunc porta, ut fermentum neque bibendum. Phasellus porttitor, ligula sed
-        aliquet sagittis, dui orci venenatis dui, nec dictum lacus nisi vitae
-        lectus. Quisque maximus odio in dui laoreet, a egestas felis
-        scelerisque. Donec congue blandit ligula, non ornare tellus tristique
-        quis. Cras vulputate tellus id augue ultricies, vitae bibendum nisl
-        aliquet. Donec non posuere purus. Cras eget feugiat nulla.
-      </p>
-      <p>
-        Fusce vitae urna justo. Vestibulum eleifend lectus a consequat pulvinar.
-        Praesent mollis lectus vitae tincidunt vestibulum. Vivamus scelerisque
-        suscipit mauris at maximus. In quis tortor eu ex sollicitudin pulvinar.
-        Nulla consectetur, neque sed pretium hendrerit, augue sapien porttitor
-        ipsum, ut congue quam sapien eget dolor. Duis pretium tellus vitae elit
-        dictum, sit amet egestas erat semper. Sed eu ullamcorper lectus. Nullam
-        nec augue ipsum.
-      </p>
-      <p>
-        Praesent bibendum enim vel leo sodales, vel vulputate arcu rutrum.
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-        cubilia curae; Duis rhoncus urna vitae risus cursus, ut dignissim ex
-        sagittis. Aliquam erat volutpat. Integer in dolor justo. Integer eget ex
-        nunc. Curabitur non nisl at elit dapibus efficitur id sed eros. Donec
-        sed libero velit. Nulla facilisi.
-      </p>
     </main>
   </div>
 </BaseLayout>

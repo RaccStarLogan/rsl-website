@@ -3,11 +3,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import WikiTOC from "../../components/WikiTOC.astro";
 import WikiInfoBox from "../../components/WikiInfoBox.astro";
 import WikiAccordion from "../../components/WikiAccordion.astro";
+import { getWikiEntry } from "../../data/wikiEntries";
+
+const wikiEntry = getWikiEntry("azrian-harborne");
 ---
 <!-- Load Base Layout -->
 <BaseLayout title="Wiki - RaccStarLogan" description="A collection of information about me, my work, and other random stuff.">
+  <meta slot="head" name="wiki:type" content={wikiEntry.meta.type.toLowerCase()} />
+  <meta slot="head" name="wiki:tags" content={wikiEntry.meta.tags.join(",")} />
   <link rel="stylesheet" href="/wiki.css" />
-  <link rel="stylesheet" href="/wiki/styles/azrian-harborne.css" />
+  <link rel="stylesheet" href={wikiEntry.stylesheet} />
   <div class="wiki-page-grid">
     <aside class="wiki-sidebar">
       <h2>Info box</h2>

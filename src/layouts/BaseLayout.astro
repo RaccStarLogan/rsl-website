@@ -32,6 +32,7 @@ const showAnnouncement = true; // Set to true to show the announcement banner
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
+    <slot name="head" />
     <!-- Favicon and Stylesheet -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
