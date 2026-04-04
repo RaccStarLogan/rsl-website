@@ -1,0 +1,54 @@
+/* Leo wiki page overrides: intentionally loud and ugly, but readable */
+
+:root {
+	--wiki-primary-color: #4d5dff;
+	--wiki-secondary-color: #b12dff;
+	--wiki-accent-color: #ff36c7;
+	--wiki-text-primary: #e9deff;
+	--wiki-text-secondary: #d1b8ff;
+	--wiki-text-accent: #ffd8ff;
+	--wiki-bg-primary: #1d0d4a;
+	--wiki-bg-secondary: #2a1166;
+	--wiki-bg-tertiary: #3b0f78;
+	--wiki-bg-hover: #5a1799;
+	--wiki-warning-color: #ff4fc8;
+	--wiki-success-color: #6a7dff;
+	--wiki-gallery-tab-color: #6a2cff;
+	--wiki-gallery-tab-hover-color: #8c3dff;
+	--wiki-gallery-tab-active-color: #ff36c7;
+	--wiki-font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+	--wiki-body-bg-color: #130735;
+	--link-color: #9ab7ff;
+}
+
+body {
+	background-image:
+		repeating-linear-gradient(
+			-45deg,
+			rgba(80, 90, 255, 0.35) 0,
+			rgba(80, 90, 255, 0.35) 10px,
+			rgba(255, 54, 199, 0.3) 10px,
+			rgba(255, 54, 199, 0.3) 20px
+		);
+}
+
+.wiki-sidebar,
+.wiki-infobox,
+.wiki-toc-details,
+table,
+th,
+td {
+	border-style: dashed;
+}
+
+.wiki-sidebar h2,
+#wiki-content h1,
+#wiki-content h2 {
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	text-shadow: 1px 1px 0 #ffffff;
+}
+
+.wiki-gallery-tab {
+	font-weight: 700;
+}

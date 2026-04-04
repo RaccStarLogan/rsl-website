@@ -16,6 +16,9 @@
   --wiki-border-radius: 0;
   --wiki-warning-color: #f4b367;
   --wiki-success-color: #7cc67f;
+    --wiki-gallery-tab-color: #A4203C;
+    --wiki-gallery-tab-hover-color: #BE284B;
+    --wiki-gallery-tab-active-color: #0080FF;
   --wiki-font-family: "Lexend", sans-serif;
   --wiki-body-bg-color: #1c2240;
     --link-color: #c0e0ff;
@@ -59,6 +62,82 @@ table {
 .wiki-infobox--warning { border-color: var(--wiki-warning-color); }
 .wiki-infobox--success { border-color: var(--wiki-success-color); }
 .wiki-infobox--info { border-color: var(--wiki-primary-color); }
+
+.wiki-gallery {
+    background: transparent;
+    padding: 0;
+    margin: 0.9rem 0;
+}
+
+.wiki-gallery-title {
+    display: none;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.wiki-gallery-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+    margin-bottom: 0.65rem;
+    padding: 0.5rem;
+}
+
+.wiki-gallery-tab {
+    flex: 0 0 auto;
+    border: 0;
+    background: var(--wiki-gallery-tab-color);
+    color: #ffffff;
+    padding: 0.35rem 0.45rem;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.wiki-gallery-tab:hover,
+.wiki-gallery-tab:focus-visible {
+    background: var(--wiki-gallery-tab-hover-color);
+    outline: none;
+}
+
+.wiki-gallery-tab.is-active {
+    background: var(--wiki-gallery-tab-active-color);
+    color: #ffffff;
+}
+
+.wiki-gallery-panels {
+    margin: 0;
+}
+
+.wiki-gallery-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.wiki-gallery-panel[hidden] {
+    display: none !important;
+}
+
+.wiki-gallery-image {
+    width: auto;
+    max-width: 100%;
+    max-height: 700px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    border: 0;
+}
+
+.wiki-gallery-caption {
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+    color: var(--wiki-text-secondary);
+}
 
 .wiki-accordion summary {
     cursor: pointer;
@@ -131,7 +210,6 @@ tr:nth-child(even) {
 table {
     width: auto;
     max-width: 100%;
-    clear: both;
     border-collapse: collapse;
 }
 

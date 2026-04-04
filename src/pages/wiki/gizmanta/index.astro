@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import WikiTOC from "../../../components/WikiTOC.astro";
+import WikiInfoBox from "../../../components/WikiInfoBox.astro";
+import WikiAccordion from "../../../components/WikiAccordion.astro";
+import WikiGallery from "../../../components/WikiGallery.astro";
+import { getWikiEntry } from "../../../data/wikiEntries";
+
+const wikiEntry = getWikiEntry("gizmanta");
+---
+<!-- Load Base Layout -->
+<BaseLayout title="Wiki - RaccStarLogan" description="A collection of information about me, my work, and other random stuff.">
+  <meta slot="head" name="wiki:type" content={wikiEntry.meta.type.toLowerCase()} />
+  <meta slot="head" name="wiki:tags" content={wikiEntry.meta.tags.join(",")} />
+  <link rel="stylesheet" href="/wiki.css" />
+  <link rel="stylesheet" href={wikiEntry.stylesheet} />
+  <div class="wiki-page-grid">
+    <aside class="wiki-sidebar">
+      <h2>Info box</h2>
+      <WikiGallery 
+        ariaLabel="Gizmanta Gallery"
+        images={[
+            {
+                src: "https://media.raccstarlogan.com/wiki/assets/gizmanta.png",
+                alt: "Gizmanta the Protogen",
+                caption: "Gizmanta is a raccoon-like protogen with a brown blazer and pearl-white armor. He has red and blue accents."
+            }
+        ]} />
+      <WikiInfoBox title="Quick facts" variant="info">
+        Add quick profile facts for Gizmanta here.
+      </WikiInfoBox>
+      <h2>More links</h2>
+      <ul>
+        <li><a href={wikiEntry.href + "/gallery"}>Gallery</a></li>
+        {wikiEntry.referencePackUrl && (
+          <li><a href={wikiEntry.referencePackUrl} download>{wikiEntry.referencePackLabel ?? "Download References (.zip)"}</a></li>
+        )}
+      </ul>
+    </aside>
+
+    <main id="wiki-content" class="article-section">
+    <h1>Gizmanta</h1>
+
+    <WikiInfoBox title="Note" variant="info">
+      This page is a placeholder. Add lore, design notes, and relationships as you build them out.
+    </WikiInfoBox>
+
+    <div class="wiki-toc-wrapper"><WikiTOC /></div>
+
+    <h2 id="overview">Overview</h2>
+    <p>Starter profile page for Gizmanta.</p>
+
+    <WikiAccordion summary="Ideas to add later">
+      <ul>
+        <li>Core personality and role</li>
+        <li>Visual design details</li>
+        <li>Key story moments</li>
+      </ul>
+    </WikiAccordion>
+  </main>
+</div>
+</BaseLayout>

@@ -3,6 +3,8 @@ export type WikiEntry = {
   href: string;
   label: string;
   stylesheet: string;
+  referencePackUrl?: string;
+  referencePackLabel?: string;
   meta: {
     type: string;
     tags: string[];
@@ -15,6 +17,8 @@ export const wikiEntries: WikiEntry[] = [
     href: "/wiki/logan-foster",
     label: "Logan Foster",
     stylesheet: "/wiki/styles/logan-foster.css",
+    referencePackUrl: "https://media.raccstarlogan.com/wiki/references/logan-foster.zip",
+    referencePackLabel: "Download References (.zip)",
     meta: { type: "Character", tags: ["character"] }
   },
   {
@@ -22,6 +26,8 @@ export const wikiEntries: WikiEntry[] = [
     href: "/wiki/jesper-foster",
     label: "Jesper Foster",
     stylesheet: "/wiki/styles/jesper-foster.css",
+    referencePackUrl: "https://media.raccstarlogan.com/wiki/references/jesper-foster.zip",
+    referencePackLabel: "Download References (.zip)",
     meta: { type: "Character", tags: ["character"] }
   },
   {
@@ -29,6 +35,8 @@ export const wikiEntries: WikiEntry[] = [
     href: "/wiki/jason-skank",
     label: "Jason Skank",
     stylesheet: "/wiki/styles/jason-skank.css",
+    referencePackUrl: "https://media.raccstarlogan.com/wiki/references/jason-skank.zip",
+    referencePackLabel: "Download References (.zip)",
     meta: { type: "Character", tags: ["character"] }
   },
   {
@@ -36,6 +44,8 @@ export const wikiEntries: WikiEntry[] = [
     href: "/wiki/zeke-harborne",
     label: "Zeke Harborne",
     stylesheet: "/wiki/styles/zeke-harborne.css",
+    referencePackUrl: "https://media.raccstarlogan.com/wiki/references/zeke-harborne.zip",
+    referencePackLabel: "Download References (.zip)",
     meta: { type: "Character", tags: ["character"] }
   },
   {
@@ -148,6 +158,20 @@ export const wikiEntries: WikiEntry[] = [
     href: "/wiki/landon-gutz",
     label: "Landon Gutz",
     stylesheet: "/wiki/styles/landon-gutz.css",
+    meta: { type: "Character", tags: ["character"] }
+  },
+  {
+    slug: "gizmanta",
+    href: "/wiki/gizmanta",
+    label: "Gizmanta",
+    stylesheet: "/wiki/styles/gizmanta.css",
+    meta: { type: "Character", tags: ["character"] }
+  },
+  {
+    slug: "leo",
+    href: "/wiki/leo",
+    label: "Leo",
+    stylesheet: "/wiki/styles/leo.css",
     meta: { type: "Character", tags: ["character"] }
   }
 ];
