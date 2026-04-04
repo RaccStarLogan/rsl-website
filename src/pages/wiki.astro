@@ -7,6 +7,36 @@ import { wikiEntries } from "../data/wikiEntries";
 const featuredEntries = [...wikiEntries]
   .sort(() => Math.random() - 0.5)
   .slice(0, 3);
+
+const typeOrder = ["Character", "Location"];
+const groupedEntries = wikiEntries.reduce((map, entry) => {
+  const type = entry.meta.type?.trim() || "Other";
+
+  if (!map.has(type)) {
+    map.set(type, []);
+  }
+
+  map.get(type)?.push(entry);
+  return map;
+}, new Map<string, typeof wikiEntries>());
+
+const tocGroups = [...groupedEntries.entries()]
+  .map(([type, entries]) => [
+    type,
+    [...entries].sort((a, b) => a.label.localeCompare(b.label))
+  ] as const)
+  .sort(([a], [b]) => {
+    const indexA = typeOrder.indexOf(a);
+    const indexB = typeOrder.indexOf(b);
+    const rankA = indexA === -1 ? Number.MAX_SAFE_INTEGER : indexA;
+    const rankB = indexB === -1 ? Number.MAX_SAFE_INTEGER : indexB;
+
+    if (rankA !== rankB) {
+      return rankA - rankB;
+    }
+
+    return a.localeCompare(b);
+  });
 ---
 
 <!-- Load Base Layout -->
@@ -44,11 +74,19 @@ const featuredEntries = [...wikiEntries]
           <details class="wiki-toc-details">
             <summary>Table of Contents</summary>
             <nav id="wiki-toc" aria-label="Wiki subpages">
-              {
-                wikiEntries.map((page) => (
-                  <a href={page.href}>{page.label}</a>
-                ))
-              }
+              {tocGroups.map(([type, entries]) => (
+                <details class="wiki-toc-group">
+                  <summary>
+                    {type}
+                    <span class="wiki-toc-count"> ({entries.length})</span>
+                  </summary>
+                  <div class="wiki-toc-group-links">
+                    {entries.map((page) => (
+                      <a href={page.href}>{page.label}</a>
+                    ))}
+                  </div>
+                </details>
+              ))}
             </nav>
           </details>
         </aside>

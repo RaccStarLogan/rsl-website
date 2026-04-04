@@ -265,6 +265,38 @@ table {
     margin-top: 0.4rem;
 }
 
+#wiki-toc .wiki-toc-group {
+    margin: 0.3rem 0;
+    border: 2px solid var(--wiki-bg-hover);
+    background: var(--wiki-bg-tertiary);
+}
+
+#wiki-toc .wiki-toc-group > summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--wiki-text-primary);
+    padding: 0.35rem 0.5rem;
+    list-style: none;
+}
+
+#wiki-toc .wiki-toc-group > summary::-webkit-details-marker {
+    display: none;
+}
+
+#wiki-toc .wiki-toc-group[open] > summary::after {
+    content: "▲";
+    float: right;
+}
+
+#wiki-toc .wiki-toc-group > summary::after {
+    content: "▼";
+    float: right;
+}
+
+#wiki-toc .wiki-toc-group-links {
+    padding: 0 0.35rem 0.35rem;
+}
+
 #wiki-toc a {
     display: block;
     width: 100%;
@@ -284,4 +316,9 @@ table {
 #wiki-toc a.h3 {
     margin-left: 0.6rem;
     font-size: 0.95rem;
+}
+
+.wiki-toc-count {
+    color: var(--wiki-text-secondary);
+    font-weight: 400;
 }
