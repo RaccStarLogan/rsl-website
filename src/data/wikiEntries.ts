@@ -173,6 +173,76 @@ export const wikiEntries: WikiEntry[] = [
     label: "Leo",
     stylesheet: "/wiki/styles/leo.css",
     meta: { type: "Character", tags: ["character"] }
+  },
+  {
+    slug: "upa",
+    href: "/wiki/upa",
+    label: "United Provinces of Avalona",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "texaria",
+    href: "/wiki/texaria",
+    label: "Texaria",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "san-bandera",
+    href: "/wiki/san-bandera",
+    label: "San Bandera",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "kallas",
+    href: "/wiki/kallas",
+    label: "Kallas",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "ashford",
+    href: "/wiki/ashford",
+    label: "Ashford",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "eastunder-valley",
+    href: "/wiki/eastunder-valley",
+    label: "EastUnder Valley",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "southport",
+    href: "/wiki/southport",
+    label: "SouthPort",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "northpoint",
+    href: "/wiki/northpoint",
+    label: "NorthPoint",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "ambertrail",
+    href: "/wiki/ambertrail",
+    label: "AmberTrail",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "crossline",
+    href: "/wiki/crossline",
+    label: "CrossLine",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
   }
 ];
 
