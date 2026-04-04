@@ -16,5 +16,5 @@
   --wiki-success-color: #7cc67f !important;
   --wiki-font-family: "Lexend", sans-serif !important;
   --wiki-body-bg-color: #1c2240 !important;
-    --link-color: #c0e0ff !important;
+    --link-color: var(--wiki-primary-color) !important;
 }

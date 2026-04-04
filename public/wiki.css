@@ -2,26 +2,26 @@
 
 /* CSS Variables for customization */
 :root {
-  --wiki-primary-color: #8db9ff;
-  --wiki-secondary-color: #c0e0ff;
-  --wiki-accent-color: #a8d6ff;
-  --wiki-text-primary: #c0e0ff;
-  --wiki-text-secondary: #9ed2ff;
-  --wiki-text-accent: #a8d6ff;
-  --wiki-bg-primary: rgba(28, 34, 64, 0.6);
-  --wiki-bg-secondary: rgba(44, 60, 100, 0.7);
-  --wiki-bg-tertiary: rgba(20, 30, 55, 0.4);
-  --wiki-bg-hover: rgba(42, 75, 146, 0.4);
-  --wiki-border-width: 4px;
-  --wiki-border-radius: 0;
-  --wiki-warning-color: #f4b367;
-  --wiki-success-color: #7cc67f;
+    --wiki-primary-color: #8db9ff;
+    --wiki-secondary-color: #c0e0ff;
+    --wiki-accent-color: #a8d6ff;
+    --wiki-text-primary: #c0e0ff;
+    --wiki-text-secondary: #9ed2ff;
+    --wiki-text-accent: #a8d6ff;
+    --wiki-bg-primary: rgba(28, 34, 64, 0.6);
+    --wiki-bg-secondary: rgba(44, 60, 100, 0.7);
+    --wiki-bg-tertiary: rgba(20, 30, 55, 0.4);
+    --wiki-bg-hover: rgba(42, 75, 146, 0.4);
+    --wiki-border-width: 4px;
+    --wiki-border-radius: 0;
+    --wiki-warning-color: #f4b367;
+    --wiki-success-color: #7cc67f;
     --wiki-gallery-tab-color: #A4203C;
     --wiki-gallery-tab-hover-color: #BE284B;
     --wiki-gallery-tab-active-color: #0080FF;
-  --wiki-font-family: "Lexend", sans-serif;
-  --wiki-body-bg-color: #1c2240;
-    --link-color: #c0e0ff;
+    --wiki-font-family: "Lexend", sans-serif;
+    --wiki-body-bg-color: #1c2240;
+    --link-color: var(--wiki-primary-color);
 }
 
 body {
@@ -31,12 +31,12 @@ body {
 }
 
 .wiki-page-grid a {
-    color: var(--link-color);
+    color: var(--link-color) !important;
     text-decoration: none;
 }
 
 .wiki-page-grid a:hover {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .wiki-infobox {
@@ -59,9 +59,17 @@ table {
     color: var(--wiki-text-accent);
 }
 
-.wiki-infobox--warning { border-color: var(--wiki-warning-color); }
-.wiki-infobox--success { border-color: var(--wiki-success-color); }
-.wiki-infobox--info { border-color: var(--wiki-primary-color); }
+.wiki-infobox--warning {
+    border-color: var(--wiki-warning-color);
+}
+
+.wiki-infobox--success {
+    border-color: var(--wiki-success-color);
+}
+
+.wiki-infobox--info {
+    border-color: var(--wiki-primary-color);
+}
 
 .wiki-gallery {
     background: transparent;
@@ -277,4 +285,3 @@ table {
     margin-left: 0.6rem;
     font-size: 0.95rem;
 }
-
