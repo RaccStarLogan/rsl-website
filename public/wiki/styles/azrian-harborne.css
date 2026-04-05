@@ -1,20 +1,23 @@
 /* CSS Variables for customization */
 :root {
-  --wiki-primary-color: #8db9ff !important;
-  --wiki-secondary-color: #c0e0ff !important;
-  --wiki-accent-color: #a8d6ff !important;
-  --wiki-text-primary: #c0e0ff !important;
-  --wiki-text-secondary: #9ed2ff !important;
-  --wiki-text-accent: #a8d6ff !important;
-  --wiki-bg-primary: rgba(28, 34, 64, 0.6) !important;
-  --wiki-bg-secondary: rgba(44, 60, 100, 0.7) !important;
-  --wiki-bg-tertiary: rgba(20, 30, 55, 0.4) !important;
-  --wiki-bg-hover: rgba(42, 75, 146, 0.4) !important;
+  --wiki-primary-color: #70e5ff !important;
+  --wiki-secondary-color: #c7f5ff !important;
+  --wiki-accent-color: #a8f2ff !important;
+  --wiki-text-primary: #c7f5ff !important;
+  --wiki-text-secondary: #9ef0ff !important;
+  --wiki-text-accent: #a8f2ff !important;
+  --wiki-bg-primary: #22434999 !important;
+  --wiki-bg-secondary: #224349b3 !important;
+  --wiki-bg-tertiary: #141e37b3 !important;
+  --wiki-bg-hover: #2a4b92b3 !important;
   --wiki-border-width: 4px !important;
   --wiki-border-radius: 0 !important;
   --wiki-warning-color: #f4b367 !important;
   --wiki-success-color: #7cc67f !important;
   --wiki-font-family: "Lexend", sans-serif !important;
-  --wiki-body-bg-color: #1c2240 !important;
-    --link-color: var(--wiki-primary-color) !important;
+  --wiki-body-bg-color: #101820 !important;
+  --link-color: var(--wiki-primary-color) !important;
+  --wiki-gallery-tab-color: #1ecbe1 !important;
+  --wiki-gallery-tab-hover-color: #31f1ff !important;
+  --wiki-gallery-tab-active-color: #5ef9f5 !important;
 }
