@@ -1,34 +1,39 @@
 /* Leo wiki page overrides: intentionally loud and ugly, but readable */
 
 :root {
-	--wiki-primary-color: #4d5dff !important;
-	--wiki-secondary-color: #b12dff !important;
-	--wiki-accent-color: #ff36c7 !important;
-	--wiki-text-primary: #e9deff !important;
-	--wiki-text-secondary: #d1b8ff !important;
-	--wiki-text-accent: #ffd8ff !important;
-	--wiki-bg-primary: #1d0d4a !important;
-	--wiki-bg-secondary: #2a1166 !important;
-	--wiki-bg-tertiary: #3b0f78 !important;
-	--wiki-bg-hover: #5a1799 !important;
-	--wiki-warning-color: #ff4fc8 !important;
-	--wiki-success-color: #6a7dff !important;
-	--wiki-gallery-tab-color: #6a2cff !important;
-	--wiki-gallery-tab-hover-color: #8c3dff !important;
-	--wiki-gallery-tab-active-color: #ff36c7 !important;
+	--wiki-primary-color: #7b43ff !important;
+	--wiki-secondary-color: #6a5b8f !important;
+	--wiki-accent-color: #63e6ff !important;
+	--wiki-text-primary: #f0ebff !important;
+	--wiki-text-secondary: #b8abd6 !important;
+	--wiki-text-accent: #fff0fb !important;
+	--wiki-bg-primary: #202443 !important;
+	--wiki-bg-secondary: #5a487c !important;
+	--wiki-bg-tertiary: #7d6ba5 !important;
+	--wiki-bg-hover: #aa7cff !important;
+	--wiki-warning-color: #63e6ff !important;
+	--wiki-success-color: #8a5dff !important;
+	--wiki-gallery-tab-color: #7b43ff !important;
+	--wiki-gallery-tab-hover-color: #aa7cff !important;
+	--wiki-gallery-tab-active-color: #63e6ff !important;
 	--wiki-font-family: "Comic Sans MS", "Trebuchet MS", sans-serif !important;
-	--wiki-body-bg-color: #130735 !important;
-	--link-color: var(--wiki-primary-color) !important;
+	--wiki-body-bg-color: #202443 !important;
+	--link-color: var(--wiki-accent-color) !important;
 }
 
 body {
+	color: #f0ebff !important;
+	background-color: #202443 !important;
 	background-image:
+		radial-gradient(circle at top left, rgba(99, 230, 255, 0.2), transparent 32%),
 		repeating-linear-gradient(
 			-45deg,
-			rgba(80, 90, 255, 0.35) 0,
-			rgba(80, 90, 255, 0.35) 10px,
-			rgba(255, 54, 199, 0.3) 10px,
-			rgba(255, 54, 199, 0.3) 20px
+			rgba(123, 67, 255, 0.42) 0,
+			rgba(123, 67, 255, 0.42) 12px,
+			rgba(99, 230, 255, 0.32) 12px,
+			rgba(99, 230, 255, 0.32) 22px,
+			rgba(255, 240, 251, 0.12) 22px,
+			rgba(255, 240, 251, 0.12) 26px
 		);
 }
 
@@ -46,7 +51,7 @@ td {
 #wiki-content h2 {
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
-	text-shadow: 1px 1px 0 #ffffff;
+	text-shadow: 2px 2px 0 rgba(99, 230, 255, 0.75);
 }
 
 .wiki-gallery-tab {
