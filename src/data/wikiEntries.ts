@@ -243,6 +243,41 @@ export const wikiEntries: WikiEntry[] = [
     label: "CrossLine",
     stylesheet: "/wiki/styles/location.css",
     meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "austyn",
+    href: "/wiki/austyn",
+    label: "Austyn",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Location", tags: ["Location"] }
+  },
+  {
+    slug: "aps",
+    href: "/wiki/aps",
+    label: "Ashford Paranormal Society",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Organization", tags: ["Organization"] }
+  },
+  {
+    slug: "larries",
+    href: "/wiki/larries",
+    label: "Larrie's Chicken Fingers",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Business", tags: ["Business"] }
+  },
+  {
+    slug: "pearbys",
+    href: "/wiki/pearbys",
+    label: "Pearby's",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Business", tags: ["Business"] }
+  },
+  {
+    slug: "redrift",
+    href: "/wiki/redrift",
+    label: "REDRIFT",
+    stylesheet: "/wiki/styles/location.css",
+    meta: { type: "Universe", tags: ["Universe"] }
   }
 ];
 

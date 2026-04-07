@@ -8,7 +8,7 @@ const featuredEntries = [...wikiEntries]
   .sort(() => Math.random() - 0.5)
   .slice(0, 3);
 
-const typeOrder = ["Character", "Location"];
+const typeOrder = ["Universe", "Character", "Location", "Business", "Organization"];
 const groupedEntries = wikiEntries.reduce((map, entry) => {
   const type = entry.meta.type?.trim() || "Other";
 
