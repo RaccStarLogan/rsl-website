@@ -322,3 +322,18 @@ table {
     color: var(--wiki-text-secondary);
     font-weight: 400;
 }
+
+.link-button {
+    background: none;
+    border: none;
+    color: var(--link-color);
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+.link-button:hover {
+    color: #ffffff;
+}

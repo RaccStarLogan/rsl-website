@@ -47,21 +47,38 @@ const tocGroups = [...groupedEntries.entries()]
   <link rel="stylesheet" href="/wiki.css" />
   <div class="wiki-page-grid">
     <aside class="wiki-sidebar">
-      <h2>Info box</h2>
-      <WikiInfoBox title="Quick facts" variant="info">
-        Use this area for quick metadata, related links, or a summary box like a
-        wiki info panel.
+      <h2>Quick Stuff</h2>
+
+      <WikiInfoBox title="At a Glance" variant="info">
+        <dl>
+          <dt>Total Entries</dt>
+          <dd>{wikiEntries.length}</dd>
+          <dt>Types</dt>
+          <dd>{tocGroups.length}</dd>
+        </dl>
       </WikiInfoBox>
-      <h2>More links</h2>
+      
+      <h2>Explore More</h2>
       <ul>
-        <li><a href="/links">Links</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/commissions">Commissions</a></li>
+        <li><button id="random-entry-btn" class="link-button" title="Jump to a random wiki entry">
+          Random Page
+        </button></li>
+        <li><a href="https://github.com/RaccStarLogan/rsl-website">Page Source</a></li>
       </ul>
     </aside>
 
+    <script define:vars={{ wikiEntriesData: wikiEntries }}>
+      const entries = wikiEntriesData;
+      document.getElementById('random-entry-btn')?.addEventListener('click', () => {
+        if (entries && entries.length > 0) {
+          const randomEntry = entries[Math.floor(Math.random() * entries.length)];
+          window.location.href = randomEntry.href;
+        }
+      });
+    </script>
+
     <main id="wiki-content" class="article-section">
-      <h1>Welcome to the RaccStarLogan Wiki</h1>
+      <h1>Welcome to the RaccStarLogan Wiki!</h1>
 
       <WikiInfoBox title="What this is" variant="info">
         This is a simple index for the people, stories, and bits of worldbuilding
