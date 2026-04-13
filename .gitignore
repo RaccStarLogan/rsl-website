@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# wrangler cache
+.wrangler/
+
+# admin panel stuff
+scripts/admin*

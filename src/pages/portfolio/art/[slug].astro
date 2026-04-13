@@ -1,0 +1,51 @@
+---
+import { marked } from "marked";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getPortfolioItemWithNav } from "../../../lib/portfolio/repository";
+
+const slug = Astro.params.slug;
+const result = slug
+  ? await getPortfolioItemWithNav("art", slug, "sfw", Astro.locals)
+  : null;
+const item = result?.item ?? null;
+const newerSlug = result?.newerSlug ?? null;
+const olderSlug = result?.olderSlug ?? null;
+const basePath = "/portfolio/art";
+
+if (!item) {
+  Astro.response.status = 404;
+}
+---
+
+<BaseLayout
+  title={item ? `${item.title} - Art Portfolio` : "Entry Not Found"}
+  description={item?.summary ?? "Portfolio entry not found."}
+>
+  <link rel="stylesheet" href="/portfolio.css" />
+
+  {
+    item ? (
+      <article class="portfolio-item-page">
+        <h1>{item.title}</h1>
+        <img src={item.mediaUrl || item.thumbnailUrl} alt={item.title} class="portfolio-item-thumb" />
+        <div class="portfolio-item-description" set:html={marked.parse(item.description)} />
+        <div class="portfolio-item-footer">
+          <p class="portfolio-meta">{item.isPersonal ? "Personal" : "Commission"}{item.commissionType ? ` | ${item.commissionType}` : ""}</p>
+          <p class="portfolio-tags">{item.tags.map((tag) => `#${tag}`).join(" ")}</p>
+          {item.externalUrl && <p><a href={item.externalUrl} target="_blank" rel="noopener noreferrer">External Link</a></p>}
+        </div>
+        <nav class="portfolio-item-nav">
+          {newerSlug ? <a href={`${basePath}/${newerSlug}`} class="portfolio-nav-btn">Newer</a> : <span class="portfolio-nav-btn disabled">Newer</span>}
+          <a href={basePath} class="portfolio-nav-btn">Main Gallery</a>
+          {olderSlug ? <a href={`${basePath}/${olderSlug}`} class="portfolio-nav-btn">Older</a> : <span class="portfolio-nav-btn disabled">Older</span>}
+        </nav>
+      </article>
+    ) : (
+      <section class="portfolio-item-page">
+        <h1>Entry not found</h1>
+        <p>This entry does not exist or is not available in this section.</p>
+        <p><a href="/portfolio/art">Back to Art Gallery</a></p>
+      </section>
+    )
+  }
+</BaseLayout>

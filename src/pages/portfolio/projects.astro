@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCards from "../../components/ProjectCards.astro";
+---
+
+<BaseLayout title="Portfolio Projects - RaccStarLogan" description="Large scale project portfolio.">
+  <link rel="stylesheet" href="/portfolio.css" />
+
+  <div class="portfolio-page">
+    <section class="portfolio-hero">
+      <h1>Big Scale Projects</h1>
+      <p>Each project card opens a dedicated project page.</p>
+      <nav class="portfolio-jump-links" aria-label="Portfolio navigation">
+        <a href="/portfolio">All Sections</a>
+        <a href="/portfolio/art">Art</a>
+        <a href="/portfolio/music">Music</a>
+      </nav>
+    </section>
+
+    <ProjectCards
+      title="Big Scale Projects"
+      description="WORK IN PROGRESS"
+      visibility="sfw"
+      linkPrefix="/projects"
+    />
+  </div>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import NSFWLayout from "../../../../layouts/NSFWLayout.astro";
+import PortfolioGallery from "../../../../components/PortfolioGallery.astro";
+---
+
+<NSFWLayout title="Portfolio Art - Jesper Skulldragon" description="NSFW art portfolio with filters.">
+  <link rel="stylesheet" href="/portfolio.css" />
+
+  <div class="portfolio-page">
+    <section class="portfolio-hero">
+      <h1>Art Portfolio</h1>
+      <p>Thumbnail gallery view. Hover for title, click for full info.</p>
+      <nav class="portfolio-jump-links" aria-label="Portfolio navigation">
+        <a href="/nsfw/portfolio">All Sections</a>
+        <a href="/nsfw/portfolio/music">Music</a>
+        <a href="/nsfw/portfolio/projects">Big Scale Projects</a>
+      </nav>
+    </section>
+
+    <PortfolioGallery
+      title="Art Gallery"
+      description="Hover a thumbnail to see title. Click to open full details."
+      kind="art"
+      visibility="nsfw"
+      detailBasePath="/nsfw/portfolio/art"
+      containerId="art-gallery-nsfw"
+    />
+  </div>
+</NSFWLayout>

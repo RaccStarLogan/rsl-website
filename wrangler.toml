@@ -1,0 +1,8 @@
+name = "rsl-website"
+compatibility_date = "2026-04-13"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "PORTFOLIO_DB"
+database_name = "v3_portfolio"
+database_id = "87fd65b2-747b-477d-b5d9-70663e4b961b"
