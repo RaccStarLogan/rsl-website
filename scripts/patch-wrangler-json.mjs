@@ -3,7 +3,7 @@
  *
  * The Astro Cloudflare adapter generates a wrangler.json with entries that
  * break Cloudflare Pages deployments:
- *   - "pages_build_output_dir" creates a reserved ASSETS binding conflict
+ *   - "assets" block with binding "ASSETS" conflicts with Pages' auto-provided ASSETS binding
  *   - "triggers: {}" is invalid (expects { crons: [...] } or omitted)
  *   - "kv_namespaces" may contain bindings without an "id" (e.g. SESSION)
  *
@@ -19,8 +19,9 @@ try {
   const raw = await readFile(CONFIG_PATH, "utf-8");
   const config = JSON.parse(raw);
 
-  // Remove pages_build_output_dir (causes reserved ASSETS binding conflict)
-  delete config.pages_build_output_dir;
+  // Remove assets block — Pages auto-provides the ASSETS binding;
+  // having it explicit causes "The name 'ASSETS' is reserved in Pages projects"
+  delete config.assets;
 
   // Remove empty triggers object
   if (config.triggers && Object.keys(config.triggers).length === 0) {
@@ -38,7 +39,7 @@ try {
   await writeFile(CONFIG_PATH, JSON.stringify(config), "utf-8");
 
   const removed = [];
-  if (raw.includes("pages_build_output_dir")) removed.push("pages_build_output_dir");
+  if (raw.includes('"assets"')) removed.push("assets");
   if (raw.includes('"triggers"')) removed.push("triggers");
   if (raw.includes('"SESSION"')) removed.push("SESSION kv binding");
   console.log(`[patch-wrangler-json] Cleaned: ${removed.join(", ") || "nothing to patch"}`);
