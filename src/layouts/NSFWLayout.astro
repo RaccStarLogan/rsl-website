@@ -7,7 +7,6 @@ const {
     url = "https://nsfw.raccstarlogan.com"
 } = Astro.props;
 // Imports
-import { Image } from "astro:assets";
 import headerlogo from "../assets/nsfw/headerlogo.png";
 import RTA from "../assets/nsfw/RTA.png";
 import Announcement from "../components/Announcement.astro";
@@ -50,7 +49,7 @@ const showAnnouncement = true; // Set to true to show the announcement banner
       <nav class="navbar">
         <div class="logo-section">
           <a href="/nsfw/">
-            <Image src={headerlogo} alt="Jesper Skulldragon Logo" class="logo" height="92" loading="eager" />
+            <img src={headerlogo.src} alt="Jesper Skulldragon Logo" class="logo" height="92" width={headerlogo.width} loading="eager" />
           </a>
         </div>
         <!-- Navigation Links -->
@@ -75,7 +74,7 @@ const showAnnouncement = true; // Set to true to show the announcement banner
       <li><p>-</p></li>
       <li><p>All rights reserved</p></li>
       <li><p>-</p></li>
-      <li><a href="https://www.rtalabel.org/index.html" target="_blank" rel="noopener noreferrer"><Image src={RTA} alt="RTA Label" /></a></li>
+      <li><a href="https://www.rtalabel.org/index.html" target="_blank" rel="noopener noreferrer"><img src={RTA.src} alt="RTA Label" width={RTA.width} height={RTA.height} /></a></li>
       <li><p>-</p></li>
       <li><a href="mailto:contact@raccstarlogan.com">Contact</a></li>
       <li><p>-</p></li>

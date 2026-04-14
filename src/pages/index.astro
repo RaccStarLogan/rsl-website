@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
 import placeholder from "../assets/placeholder.png";
 ---
 <!-- Load Base Layout -->
@@ -42,13 +41,13 @@ import placeholder from "../assets/placeholder.png";
     <div class="widget-grid">
       <article class="widget-card">
         <h3>Latest Art</h3>
-        <Image src={placeholder} alt="Latest art preview" />
+        <img src={placeholder.src} alt="Latest art preview" width={placeholder.width} height={placeholder.height} />
         <p>TITLE</p>
         <a href="/portfolio">View Gallery</a>
       </article>
       <article class="widget-card">
         <h3>Latest Music</h3>
-        <Image src={placeholder} alt="Latest music cover" />
+        <img src={placeholder.src} alt="Latest music cover" width={placeholder.width} height={placeholder.height} />
         <p>ALBUM TITLE</p>
         <a href="/music">Listen Now</a>
       </article>
