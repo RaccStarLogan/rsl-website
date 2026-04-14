@@ -3,10 +3,11 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 Write-Host "Building..." -ForegroundColor Cyan
-npm run build
+# Run only astro build (skip the Pages patcher which restructures dist/)
+npx astro build
 if ($LASTEXITCODE -ne 0) { exit 1 }
 
-# For local wrangler dev, also strip pages_build_output_dir to avoid ASSETS conflict
+# Patch generated config for local wrangler dev
 $raw = Get-Content dist/server/wrangler.json -Raw
 $raw -replace '"pages_build_output_dir":"[^"]*",?' | Set-Content dist/server/wrangler.json -NoNewline
 

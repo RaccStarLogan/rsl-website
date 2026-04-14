@@ -1,56 +1,64 @@
 /**
- * Post-build patcher for dist/server/wrangler.json
+ * Post-build patcher for Cloudflare Pages deployment.
  *
- * The Astro Cloudflare adapter generates a wrangler.json with entries that
- * break Cloudflare Pages deployments:
- *   - "assets" block with binding "ASSETS" conflicts with Pages' auto-provided ASSETS binding
- *   - "triggers: {}" is invalid (expects { crons: [...] } or omitted)
- *   - "kv_namespaces" may contain bindings without an "id" (e.g. SESSION)
+ * The Astro Cloudflare adapter outputs a Workers-style config (main + assets)
+ * in dist/server/wrangler.json, but our Cloudflare dashboard project is Pages.
  *
- * This script strips those problematic entries after build.
+ * Pages expects:
+ *   - Static assets at the root of the output dir (pages_build_output_dir)
+ *   - Worker code in a _worker.js/ directory with an index.js entry
+ *   - No "main", "rules", "no_bundle", or explicit "assets" binding in config
+ *
+ * This script restructures dist/ after the Astro build:
+ *   1. Copies dist/client/* → dist/          (static assets at root)
+ *   2. Copies dist/server/* → dist/_worker.js/  (worker bundle)
+ *   3. Creates dist/_worker.js/index.js shim → re-exports entry.mjs
+ *   4. Removes the .wrangler/deploy/config.json redirect so Pages uses wrangler.toml
+ *   5. Cleans up dist/client/ and dist/server/ to avoid exposing source
  */
 
-import { readFile, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const CONFIG_PATH = path.resolve(process.cwd(), "dist/server/wrangler.json");
+const DIST = path.resolve(process.cwd(), "dist");
+const CLIENT = path.join(DIST, "client");
+const SERVER = path.join(DIST, "server");
+const WORKER = path.join(DIST, "_worker.js");
+const REDIRECT = path.resolve(process.cwd(), ".wrangler/deploy/config.json");
 
-try {
-  const raw = await readFile(CONFIG_PATH, "utf-8");
-  const config = JSON.parse(raw);
-
-  // Remove assets block — Pages auto-provides the ASSETS binding
-  delete config.assets;
-
-  // Remove Worker-only fields that Pages doesn't support
-  delete config.main;
-  delete config.rules;
-  delete config.no_bundle;
-
-  // Remove empty triggers object
-  if (config.triggers && Object.keys(config.triggers).length === 0) {
-    delete config.triggers;
-  }
-
-  // Remove kv_namespaces entries that have no id (e.g. auto-generated SESSION)
-  if (Array.isArray(config.kv_namespaces)) {
-    config.kv_namespaces = config.kv_namespaces.filter((ns) => ns.id);
-    if (config.kv_namespaces.length === 0) {
-      delete config.kv_namespaces;
-    }
-  }
-
-  await writeFile(CONFIG_PATH, JSON.stringify(config), "utf-8");
-
-  const removed = [];
-  if (raw.includes('"assets"')) removed.push("assets");
-  if (raw.includes('"triggers"')) removed.push("triggers");
-  if (raw.includes('"SESSION"')) removed.push("SESSION kv binding");
-  console.log(`[patch-wrangler-json] Cleaned: ${removed.join(", ") || "nothing to patch"}`);
-} catch (err) {
-  if (err.code === "ENOENT") {
-    console.log("[patch-wrangler-json] No dist/server/wrangler.json found, skipping.");
-  } else {
-    throw err;
-  }
+// 1. Copy static assets from dist/client/ → dist/
+const clientItems = await readdir(CLIENT);
+for (const item of clientItems) {
+  await cp(path.join(CLIENT, item), path.join(DIST, item), { recursive: true });
 }
+console.log(`[patch] Copied ${clientItems.length} static asset(s) to dist/`);
+
+// 2. Copy worker from dist/server/ → dist/_worker.js/
+await mkdir(WORKER, { recursive: true });
+const serverItems = await readdir(SERVER);
+for (const item of serverItems) {
+  await cp(path.join(SERVER, item), path.join(WORKER, item), { recursive: true });
+}
+console.log(`[patch] Copied worker to dist/_worker.js/`);
+
+// 3. Create index.js shim that re-exports the Astro entry
+await writeFile(
+  path.join(WORKER, "index.js"),
+  `export { default } from "./entry.mjs";\n`
+);
+console.log(`[patch] Created dist/_worker.js/index.js`);
+
+// 4. Remove the redirect config so Pages uses wrangler.toml directly
+try {
+  await rm(REDIRECT);
+  console.log(`[patch] Removed .wrangler/deploy/config.json redirect`);
+} catch {
+  // redirect config may not exist locally
+}
+
+// 5. Clean up original directories to avoid exposing source
+await rm(CLIENT, { recursive: true });
+await rm(SERVER, { recursive: true });
+console.log(`[patch] Cleaned up dist/client/ and dist/server/`);
+
+console.log(`[patch] Done — dist/ is now Pages-ready`);
