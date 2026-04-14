@@ -19,9 +19,13 @@ try {
   const raw = await readFile(CONFIG_PATH, "utf-8");
   const config = JSON.parse(raw);
 
-  // Remove assets block — Pages auto-provides the ASSETS binding;
-  // having it explicit causes "The name 'ASSETS' is reserved in Pages projects"
+  // Remove assets block — Pages auto-provides the ASSETS binding
   delete config.assets;
+
+  // Remove Worker-only fields that Pages doesn't support
+  delete config.main;
+  delete config.rules;
+  delete config.no_bundle;
 
   // Remove empty triggers object
   if (config.triggers && Object.keys(config.triggers).length === 0) {
