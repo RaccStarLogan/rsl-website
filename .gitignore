@@ -28,3 +28,6 @@ pnpm-debug.log*
 
 # admin panel stuff
 scripts/admin*
+
+# just in case
+dist*
