@@ -1,0 +1,155 @@
+.commissions-page {
+  margin: 2rem 10%;
+  display: grid;
+  gap: 2rem;
+}
+
+.commissions-hero,
+.commissions-panel {
+  background: #1d3356;
+  border: 4px solid #c0e0ff;
+  padding: 1.5rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+.commissions-hero h1,
+.commissions-panel h2,
+.commissions-panel h3 {
+  margin-top: 0;
+}
+
+.commissions-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.commissions-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.commissions-btn {
+  display: inline-block;
+  background: #a4203c;
+  padding: 0.4rem 0.9rem;
+  color: #c0e0ff;
+  text-decoration: none;
+}
+
+.commissions-btn:hover {
+  color: #ffffff;
+}
+
+.commissions-btn-muted {
+  background: #132a52;
+}
+
+.commissions-steps {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.commissions-steps p {
+  margin: 0;
+}
+
+.commissions-cards {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.commissions-pricing-group+.commissions-pricing-group {
+  margin-top: 1.25rem;
+}
+
+.commissions-pricing-group-title {
+  margin-bottom: 0.9rem;
+}
+
+.commissions-card {
+  border: 4px solid #c0e0ff;
+  background: rgba(10, 19, 40, 0.9);
+  padding: 1.1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 1rem;
+  align-items: start;
+}
+
+.commissions-card-main>p:last-child {
+  margin-bottom: 0;
+}
+
+.commissions-price {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.commissions-old-price {
+  margin-left: 0.55rem;
+  opacity: 0.75;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.commissions-sale-label {
+  margin: 0 0 0.5rem;
+  color: #ffbfcf;
+}
+
+.commissions-card-examples {
+  margin-top: 0;
+  display: grid;
+  gap: 0.65rem;
+  justify-items: end;
+}
+
+.commissions-example-thumb-link {
+  display: block;
+  line-height: 0;
+}
+
+.commissions-example-thumb-link img {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 4px solid #c0e0ff;
+  display: block;
+}
+
+.commissions-example-empty {
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .commissions-page {
+    margin: 1rem;
+  }
+
+  .commissions-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .commissions-card {
+    grid-template-columns: 1fr;
+  }
+
+  .commissions-card-examples {
+    margin-top: 1rem;
+    justify-items: start;
+  }
+
+  .commissions-example-thumb-link img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
