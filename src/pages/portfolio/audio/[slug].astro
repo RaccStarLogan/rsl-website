@@ -1,0 +1,102 @@
+---
+import { marked } from "marked";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getPortfolioItemWithNav } from "../../../lib/portfolio/repository";
+
+const slug = Astro.params.slug;
+const result = slug
+  ? await getPortfolioItemWithNav("audio", slug, "sfw", Astro.locals)
+  : null;
+const item = result?.item ?? null;
+const newerSlug = result?.newerSlug ?? null;
+const olderSlug = result?.olderSlug ?? null;
+const basePath = "/portfolio/audio";
+// Render `mediaUrl` when present; otherwise fall back to thumbnail.
+const mediaSrc = item?.mediaUrl || item?.thumbnailUrl || "";
+const isMediaUrlImage =
+  Boolean(item?.mediaUrl) &&
+  /\.(apng|avif|gif|jpe?g|png|svg|webp|bmp)(?:[?#].*)?$/i.test(item.mediaUrl ?? "");
+
+if (!item) {
+  Astro.response.status = 404;
+}
+---
+
+<BaseLayout
+  title={item ? `${item.title} - Audio Portfolio` : "Entry Not Found"}
+  description={item?.summary ?? "Portfolio entry not found."}
+>
+  <link rel="stylesheet" href="/portfolio.css" />
+
+  {
+    item ? (
+      <article class="portfolio-item-page">
+        <h1>{item.title}</h1>
+        <img
+          src={mediaSrc}
+          alt={item.title}
+          class="portfolio-item-thumb"
+          data-media-image={isMediaUrlImage ? "true" : "false"}
+        />
+        <div class="portfolio-item-description" set:html={marked.parse(item.description)} />
+        <div class="portfolio-item-footer">
+          <p class="portfolio-meta">{item.isPersonal ? "Personal" : "Commission"}{item.commissionType ? ` | ${item.commissionType}` : ""}</p>
+          <p class="portfolio-tags">{item.tags.map((tag) => `#${tag}`).join(" ")}</p>
+          {item.externalUrl && <p><a href={item.externalUrl} target="_blank" rel="noopener noreferrer">External Link</a></p>}
+        </div>
+        <nav class="portfolio-item-nav">
+          {newerSlug ? <a href={`${basePath}/${newerSlug}`} class="portfolio-nav-btn">Newer</a> : <span class="portfolio-nav-btn disabled">Newer</span>}
+          <a href={basePath} class="portfolio-nav-btn">Main Gallery</a>
+          {olderSlug ? <a href={`${basePath}/${olderSlug}`} class="portfolio-nav-btn">Older</a> : <span class="portfolio-nav-btn disabled">Older</span>}
+        </nav>
+      </article>
+    ) : (
+      <section class="portfolio-item-page">
+        <h1>Entry not found</h1>
+        <p>This entry does not exist or is not available in this section.</p>
+        <p><a href="/portfolio/audio">Back to Audio Gallery</a></p>
+      </section>
+    )
+  }
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const img = document.querySelector('.portfolio-item-thumb[data-media-image="true"]');
+    if (!img) return;
+
+    const fitSmallMediaImage = () => {
+      const parent = img.parentElement;
+      if (!parent || !img.naturalWidth || !img.naturalHeight) return;
+
+      // Only shrink when the browser would upscale a small source image.
+      const isUpscaled = img.naturalWidth < img.clientWidth || img.naturalHeight < img.clientHeight;
+      if (!isUpscaled) return;
+
+      const shortestSide = Math.min(img.naturalWidth, img.naturalHeight);
+      const scale = 200 / shortestSide;
+      let targetWidth = Math.round(img.naturalWidth * scale);
+      let targetHeight = Math.round(img.naturalHeight * scale);
+
+      const parentWidth = parent.clientWidth;
+      if (targetWidth > parentWidth) {
+        const ratio = parentWidth / targetWidth;
+        targetWidth = Math.round(targetWidth * ratio);
+        targetHeight = Math.round(targetHeight * ratio);
+      }
+
+      img.style.width = `${targetWidth}px`;
+      img.style.height = `${targetHeight}px`;
+      img.style.maxWidth = "100%";
+      img.style.marginInline = "auto";
+    };
+
+    if (img.complete) {
+      fitSmallMediaImage();
+    } else {
+      img.addEventListener("load", fitSmallMediaImage, { once: true });
+    }
+
+    window.addEventListener("resize", fitSmallMediaImage);
+  })();
+</script>

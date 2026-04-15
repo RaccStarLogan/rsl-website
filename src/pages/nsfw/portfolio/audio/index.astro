@@ -3,12 +3,12 @@ import NSFWLayout from "../../../../layouts/NSFWLayout.astro";
 import PortfolioGallery from "../../../../components/PortfolioGallery.astro";
 ---
 
-<NSFWLayout title="Portfolio Music - Jesper Skulldragon" description="NSFW music portfolio with filters.">
+<NSFWLayout title="Portfolio Audio - Jesper Skulldragon" description="NSFW audio portfolio with filters.">
   <link rel="stylesheet" href="/nsfw/portfolio.css" />
 
   <div class="portfolio-page">
     <section class="portfolio-hero">
-      <h1>Music Portfolio</h1>
+      <h1>Audio Portfolio</h1>
       <p>Thumbnail gallery view. Hover for title, click for full info.</p>
       <nav class="portfolio-jump-links" aria-label="Portfolio navigation">
         <a href="/nsfw/portfolio">All Sections</a>
@@ -18,12 +18,12 @@ import PortfolioGallery from "../../../../components/PortfolioGallery.astro";
     </section>
 
     <PortfolioGallery
-      title="Music Gallery"
+      title="Audio Gallery"
       description="Hover a thumbnail to see title. Click to open full details."
-      kind="music"
+      kind="audio"
       visibility="nsfw"
-      detailBasePath="/nsfw/portfolio/music"
-      containerId="music-gallery-nsfw"
+      detailBasePath="/nsfw/portfolio/audio"
+      containerId="audio-gallery-nsfw"
     />
   </div>
 </NSFWLayout>

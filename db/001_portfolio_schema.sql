@@ -2,7 +2,7 @@ PRAGMA foreign_keys = ON;
 
 CREATE TABLE IF NOT EXISTS portfolio_items (
   id TEXT PRIMARY KEY,
-  kind TEXT NOT NULL CHECK (kind IN ('art', 'music', 'project')),
+  kind TEXT NOT NULL CHECK (kind IN ('art', 'audio', 'project', 'music')),
   visibility TEXT NOT NULL CHECK (visibility IN ('sfw', 'nsfw', 'both')),
   title TEXT NOT NULL,
   slug TEXT NOT NULL UNIQUE,
@@ -30,11 +30,24 @@ CREATE TABLE IF NOT EXISTS project_sections (
   FOREIGN KEY (item_id) REFERENCES portfolio_items(id) ON DELETE CASCADE
 );
 
-CREATE INDEX IF NOT EXISTS idx_portfolio_items_kind_visibility
-  ON portfolio_items (kind, visibility, published_at DESC);
+CREATE TABLE IF NOT EXISTS commission_pricing (
+  id TEXT PRIMARY KEY,
+  category TEXT NOT NULL DEFAULT 'art' CHECK (category IN ('art', 'audio')),
+  label TEXT NOT NULL,
+  price TEXT NOT NULL,
+  details TEXT NOT NULL,
+  sale_price TEXT,
+  sale_label TEXT,
+  is_active INTEGER NOT NULL DEFAULT 1 CHECK (is_active IN (0, 1)),
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 
-CREATE INDEX IF NOT EXISTS idx_portfolio_items_slug
-  ON portfolio_items (slug);
+CREATE INDEX IF NOT EXISTS idx_portfolio_items_kind_visibility ON portfolio_items (kind, visibility, published_at DESC);
 
-CREATE INDEX IF NOT EXISTS idx_project_sections_item_sort
-  ON project_sections (item_id, sort_order, id);
+CREATE INDEX IF NOT EXISTS idx_portfolio_items_slug ON portfolio_items (slug);
+
+CREATE INDEX IF NOT EXISTS idx_project_sections_item_sort ON project_sections (item_id, sort_order, id);
+
+CREATE INDEX IF NOT EXISTS idx_commission_pricing_sort ON commission_pricing (is_active, sort_order, id);

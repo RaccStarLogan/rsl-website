@@ -1,4 +1,5 @@
-export type PortfolioKind = "art" | "music" | "project";
+// `music` remains in the union as a legacy alias while data migrates to `audio`.
+export type PortfolioKind = "art" | "audio" | "music" | "project";
 
 export type PortfolioVisibility = "sfw" | "nsfw" | "both";
 
@@ -49,4 +50,16 @@ export interface ItemQueryOptions {
   commission?: "all" | "only" | "exclude";
   commissionType?: string | null;
   tags?: string[];
+}
+
+export interface CommissionPricingTier {
+  id: string;
+  category: "art" | "audio";
+  label: string;
+  price: string;
+  details: string;
+  salePrice: string | null;
+  saleLabel: string | null;
+  isActive: boolean;
+  sortOrder: number;
 }

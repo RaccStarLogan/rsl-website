@@ -1,5 +1,6 @@
-import type { PortfolioItem, ProjectSection } from "./types";
+import type { CommissionPricingTier, PortfolioItem, ProjectSection } from "./types";
 
+// Fallback data used when D1 is unavailable (local/dev safety net).
 export const defaultPortfolioItems: PortfolioItem[] = [
   {
     id: "art-001",
@@ -41,7 +42,7 @@ export const defaultPortfolioItems: PortfolioItem[] = [
   },
   {
     id: "music-001",
-    kind: "music",
+    kind: "audio",
     visibility: "both",
     title: "Solar Rail",
     slug: "solar-rail",
@@ -60,7 +61,7 @@ export const defaultPortfolioItems: PortfolioItem[] = [
   },
   {
     id: "music-002",
-    kind: "music",
+    kind: "audio",
     visibility: "sfw",
     title: "San Bandera Theme Pack",
     slug: "san-bandera-theme-pack",
@@ -122,5 +123,63 @@ export const defaultProjectSections: ProjectSection[] = [
     body:
       "Core tracking is stable. Next steps are admin tools and tighter media integrations.",
     sortOrder: 2
+  }
+];
+
+export const defaultCommissionPricing: CommissionPricingTier[] = [
+  {
+    id: "sketch",
+    category: "art",
+    label: "Sketch",
+    price: "Starting at $30",
+    details: "Quick concept or rough illustration with light cleanup.",
+    salePrice: null,
+    saleLabel: null,
+    isActive: true,
+    sortOrder: 0
+  },
+  {
+    id: "full-color",
+    category: "art",
+    label: "Full Color",
+    price: "Starting at $80",
+    details: "Polished artwork with color, shading, and high-resolution export.",
+    salePrice: null,
+    saleLabel: null,
+    isActive: true,
+    sortOrder: 1
+  },
+  {
+    id: "commercial-license",
+    category: "art",
+    label: "Commercial License",
+    price: "Custom Quote",
+    details: "Usage rights for merch, branding, or paid distribution projects.",
+    salePrice: null,
+    saleLabel: null,
+    isActive: true,
+    sortOrder: 2
+  },
+  {
+    id: "music-composition",
+    category: "audio",
+    label: "Music Composition",
+    price: "Starting at $40 / minute",
+    details: "Original instrumental composition with mixing/mastering included.",
+    salePrice: null,
+    saleLabel: null,
+    isActive: true,
+    sortOrder: 100
+  },
+  {
+    id: "voice-acting",
+    category: "audio",
+    label: "Voice Acting",
+    price: "Starting at $20 / 100 words",
+    details: "Voice-over or character lines. Final quote depends on usage and revisions.",
+    salePrice: null,
+    saleLabel: null,
+    isActive: true,
+    sortOrder: 200
   }
 ];

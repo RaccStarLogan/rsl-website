@@ -21,12 +21,14 @@ function parseTags(url: URL): string[] {
 
 export const GET: APIRoute = async ({ request, locals }) => {
   const url = new URL(request.url);
-  const kind = getSingleParam(url, "kind");
+  // Accept legacy `music` query values and normalize to `audio`.
+  const rawKind = getSingleParam(url, "kind");
+  const kind = rawKind === "music" ? "audio" : rawKind;
   const visibility = getSingleParam(url, "visibility") === "nsfw" ? "nsfw" : "sfw";
 
-  if (kind !== "art" && kind !== "music" && kind !== "project") {
+  if (kind !== "art" && kind !== "audio" && kind !== "project") {
     return new Response(
-      JSON.stringify({ error: "kind must be one of art, music, or project" }),
+      JSON.stringify({ error: "kind must be one of art, audio, or project" }),
       { status: 400, headers: { "content-type": "application/json" } }
     );
   }
@@ -53,6 +55,7 @@ export const GET: APIRoute = async ({ request, locals }) => {
 
   const [items, filters] = await Promise.all([
     listPortfolioItems(options, locals),
+    // Projects don't use commission-type/tag filters.
     kind === "project" ? Promise.resolve({ commissionTypes: [], tags: [] }) : getGalleryFilters(kind, visibility, locals)
   ]);
 

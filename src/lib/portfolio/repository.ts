@@ -1,6 +1,7 @@
-import { defaultPortfolioItems, defaultProjectSections } from "./defaultData";
+import { defaultCommissionPricing, defaultPortfolioItems, defaultProjectSections } from "./defaultData";
 import { getPortfolioDB } from "./d1";
 import type {
+  CommissionPricingTier,
   GalleryFilters,
   ItemQueryOptions,
   PortfolioItem,
@@ -11,7 +12,7 @@ import type {
 
 type Row = {
   id: string;
-  kind: "art" | "music" | "project";
+  kind: "art" | "audio" | "music" | "project";
   visibility: "sfw" | "nsfw" | "both";
   title: string;
   slug: string;
@@ -36,10 +37,38 @@ type ProjectSectionRow = {
   sort_order: number;
 };
 
+type CommissionPricingRow = {
+  id: string;
+  category: "art" | "audio" | "music" | "voice-acting" | null;
+  label: string;
+  price: string;
+  details: string;
+  sale_price: string | null;
+  sale_label: string | null;
+  is_active: number;
+  sort_order: number;
+};
+
+function normalizeKind(kind: string | null | undefined): "art" | "audio" | "music" | "project" {
+  // Legacy rows and URLs may still say "music"; treat them as "audio" everywhere.
+  if (kind === "music") return "audio";
+  if (kind === "audio" || kind === "art" || kind === "project") return kind;
+  return "art";
+}
+
+function normalizeCommissionType(
+  commissionType: string | null
+): string | null {
+  if (!commissionType) {
+    return null;
+  }
+  return commissionType;
+}
+
 function toItem(row: Row): PortfolioItem {
   return {
     id: row.id,
-    kind: row.kind,
+    kind: normalizeKind(row.kind),
     visibility: row.visibility,
     title: row.title,
     slug: row.slug,
@@ -49,7 +78,7 @@ function toItem(row: Row): PortfolioItem {
     logoUrl: row.logo_url,
     mediaUrl: row.media_url,
     externalUrl: row.external_url,
-    commissionType: row.commission_type,
+    commissionType: normalizeCommissionType(row.commission_type),
     isCommission: Boolean(row.is_commission),
     isPersonal: Boolean(row.is_personal),
     tags: parseTags(row.tags_json),
@@ -114,9 +143,10 @@ function sortInMemory(items: PortfolioItem[], sort: PortfolioSort = "newest"): P
 
 function applyInMemoryFilters(items: PortfolioItem[], options: ItemQueryOptions): PortfolioItem[] {
   const normalizedTags = options.tags?.map((tag) => tag.toLowerCase()) ?? [];
+  const requestedKind = normalizeKind(options.kind);
 
   const filtered = items.filter((item) => {
-    if (item.kind !== options.kind) {
+    if (normalizeKind(item.kind) !== requestedKind) {
       return false;
     }
 
@@ -140,7 +170,8 @@ function applyInMemoryFilters(items: PortfolioItem[], options: ItemQueryOptions)
       return false;
     }
 
-    if (options.commissionType && item.commissionType !== options.commissionType) {
+    const normalizedCommissionType = normalizeCommissionType(item.commissionType);
+    if (options.commissionType && normalizedCommissionType !== options.commissionType) {
       return false;
     }
 
@@ -162,13 +193,24 @@ export async function listPortfolioItems(
   locals?: unknown
 ): Promise<PortfolioItem[]> {
   const db = getPortfolioDB(locals);
+  const requestedKind = normalizeKind(options.kind);
 
   if (!db) {
+    // Keep behavior consistent when D1 is not bound (dev fallback).
     return applyInMemoryFilters(defaultPortfolioItems, options);
   }
 
-  const whereParts: string[] = ["kind = ?", "(visibility = ? OR visibility = 'both')"];
-  const params: unknown[] = [options.kind, options.visibility];
+  const whereParts: string[] = ["(visibility = ? OR visibility = 'both')"];
+  const params: unknown[] = [options.visibility];
+
+  if (requestedKind === "audio") {
+    // Query both values while older rows are still stored as "music".
+    whereParts.unshift("(kind = ? OR kind = ?)");
+    params.unshift("audio", "music");
+  } else {
+    whereParts.unshift("kind = ?");
+    params.unshift(requestedKind);
+  }
 
   if (options.personal === "only") {
     whereParts.push("is_personal = 1");
@@ -227,11 +269,12 @@ export async function listPortfolioItems(
 }
 
 export async function getGalleryFilters(
-  kind: "art" | "music",
+  kind: "art" | "audio" | "music",
   visibility: "sfw" | "nsfw",
   locals?: unknown
 ): Promise<GalleryFilters> {
   const db = getPortfolioDB(locals);
+  const normalizedKind = normalizeKind(kind);
 
   if (!db) {
     const items = applyInMemoryFilters(defaultPortfolioItems, {
@@ -243,7 +286,11 @@ export async function getGalleryFilters(
     });
 
     const commissionTypes = Array.from(
-      new Set(items.map((item) => item.commissionType).filter((value): value is string => Boolean(value)))
+      new Set(
+        items
+          .map((item) => normalizeCommissionType(item.commissionType))
+          .filter((value): value is string => Boolean(value))
+      )
     ).sort((a, b) => a.localeCompare(b));
 
     const tags = Array.from(new Set(items.flatMap((item) => item.tags))).sort((a, b) =>
@@ -253,10 +300,13 @@ export async function getGalleryFilters(
     return { commissionTypes, tags };
   }
 
+  const commissionTypeWhere =
+    // Audio pages should surface filter options from both legacy and new kinds.
+    normalizedKind === "audio" ? "(kind = ? OR kind = ?)" : "kind = ?";
   const commissionTypeSql = `
     SELECT DISTINCT commission_type
     FROM portfolio_items
-    WHERE kind = ?
+    WHERE ${commissionTypeWhere}
       AND commission_type IS NOT NULL
       AND (visibility = ? OR visibility = 'both')
     ORDER BY commission_type COLLATE NOCASE ASC
@@ -265,19 +315,23 @@ export async function getGalleryFilters(
   const tagsSql = `
     SELECT tags_json
     FROM portfolio_items
-    WHERE kind = ?
+    WHERE ${commissionTypeWhere}
       AND (visibility = ? OR visibility = 'both')
   `;
 
+  const kindParams = normalizedKind === "audio" ? ["audio", "music"] : [normalizedKind];
   const [commissionTypeResult, tagsResult] = await Promise.all([
-    db.prepare(commissionTypeSql).bind(kind, visibility).all<{ commission_type: string }>(),
-    db.prepare(tagsSql).bind(kind, visibility).all<{ tags_json: string }>()
+    db.prepare(commissionTypeSql).bind(...kindParams, visibility).all<{ commission_type: string }>(),
+    db.prepare(tagsSql).bind(...kindParams, visibility).all<{ tags_json: string }>()
   ]);
 
-  const commissionTypes = (commissionTypeResult.results ?? [])
-    .map((row) => row.commission_type)
-    .filter((value) => typeof value === "string")
-    .sort((a, b) => a.localeCompare(b));
+  const commissionTypes = Array.from(
+    new Set(
+      (commissionTypeResult.results ?? [])
+        .map((row) => normalizeCommissionType(row.commission_type))
+        .filter((value): value is string => typeof value === "string")
+    )
+  ).sort((a, b) => a.localeCompare(b));
 
   const tags = Array.from(
     new Set(
@@ -307,17 +361,18 @@ export async function listProjectCards(
 }
 
 export async function getPortfolioItemDetail(
-  kind: "art" | "music",
+  kind: "art" | "audio" | "music",
   slug: string,
   visibility: "sfw" | "nsfw",
   locals?: unknown
 ): Promise<PortfolioItem | null> {
   const db = getPortfolioDB(locals);
+  const normalizedKind = normalizeKind(kind);
 
   if (!db) {
     const item = defaultPortfolioItems.find(
       (entry) =>
-        entry.kind === kind &&
+        normalizeKind(entry.kind) === normalizedKind &&
         entry.slug === slug &&
         (entry.visibility === "both" || entry.visibility === visibility)
     );
@@ -325,6 +380,7 @@ export async function getPortfolioItemDetail(
     return item ?? null;
   }
 
+  const kindWhere = normalizedKind === "audio" ? "(kind = ? OR kind = ?)" : "kind = ?";
   const itemSql = `
     SELECT
       id,
@@ -344,13 +400,14 @@ export async function getPortfolioItemDetail(
       tags_json,
       published_at
     FROM portfolio_items
-    WHERE kind = ?
+    WHERE ${kindWhere}
       AND slug = ?
       AND (visibility = ? OR visibility = 'both')
     LIMIT 1
   `;
 
-  const itemRow = await db.prepare(itemSql).bind(kind, slug, visibility).first<Row>();
+  const kindParams = normalizedKind === "audio" ? ["audio", "music"] : [normalizedKind];
+  const itemRow = await db.prepare(itemSql).bind(...kindParams, slug, visibility).first<Row>();
   if (!itemRow) {
     return null;
   }
@@ -443,18 +500,20 @@ export interface ItemNavigation {
 }
 
 export async function getPortfolioItemWithNav(
-  kind: "art" | "music",
+  kind: "art" | "audio" | "music",
   slug: string,
   visibility: "sfw" | "nsfw",
   locals?: unknown
 ): Promise<ItemNavigation | null> {
   const db = getPortfolioDB(locals);
+  const normalizedKind: "art" | "audio" | "music" =
+    kind === "music" ? "audio" : kind;
 
   if (!db) {
     const all = defaultPortfolioItems
       .filter(
         (entry) =>
-          entry.kind === kind &&
+          normalizeKind(entry.kind) === normalizedKind &&
           (entry.visibility === "both" || entry.visibility === visibility)
       )
       .sort((a, b) => {
@@ -472,12 +531,13 @@ export async function getPortfolioItemWithNav(
     };
   }
 
-  const item = await getPortfolioItemDetail(kind, slug, visibility, locals);
+  const item = await getPortfolioItemDetail(normalizedKind, slug, visibility, locals);
   if (!item) return null;
 
+  const kindWhere = normalizedKind === "audio" ? "(kind = ? OR kind = ?)" : "kind = ?";
   const newerSql = `
     SELECT slug FROM portfolio_items
-    WHERE kind = ? AND (visibility = ? OR visibility = 'both')
+    WHERE ${kindWhere} AND (visibility = ? OR visibility = 'both')
       AND (published_at > ? OR (published_at = ? AND id > ?))
     ORDER BY published_at ASC, id ASC
     LIMIT 1
@@ -485,15 +545,16 @@ export async function getPortfolioItemWithNav(
 
   const olderSql = `
     SELECT slug FROM portfolio_items
-    WHERE kind = ? AND (visibility = ? OR visibility = 'both')
+    WHERE ${kindWhere} AND (visibility = ? OR visibility = 'both')
       AND (published_at < ? OR (published_at = ? AND id < ?))
     ORDER BY published_at DESC, id DESC
     LIMIT 1
   `;
 
+  const kindParams = normalizedKind === "audio" ? ["audio", "music"] : [normalizedKind];
   const [newerRow, olderRow] = await Promise.all([
-    db.prepare(newerSql).bind(kind, visibility, item.publishedAt, item.publishedAt, item.id).first<{ slug: string }>(),
-    db.prepare(olderSql).bind(kind, visibility, item.publishedAt, item.publishedAt, item.id).first<{ slug: string }>(),
+    db.prepare(newerSql).bind(...kindParams, visibility, item.publishedAt, item.publishedAt, item.id).first<{ slug: string }>(),
+    db.prepare(olderSql).bind(...kindParams, visibility, item.publishedAt, item.publishedAt, item.id).first<{ slug: string }>(),
   ]);
 
   return {
@@ -501,4 +562,77 @@ export async function getPortfolioItemWithNav(
     newerSlug: newerRow?.slug ?? null,
     olderSlug: olderRow?.slug ?? null,
   };
+}
+
+export async function listCommissionPricing(locals?: unknown): Promise<CommissionPricingTier[]> {
+  const db = getPortfolioDB(locals);
+
+  if (!db) {
+    return defaultCommissionPricing
+      .filter((tier) => tier.isActive)
+      .sort((a, b) => a.sortOrder - b.sortOrder);
+  }
+
+  function normalizeCategory(
+    category: CommissionPricingRow["category"] | undefined
+  ): CommissionPricingTier["category"] {
+    // Map old category values into the current two-bucket pricing UI.
+    if (category === "art") return "art";
+    if (category === "audio" || category === "music" || category === "voice-acting") {
+      return "audio";
+    }
+    return "art";
+  }
+
+  try {
+    const sql = `
+      SELECT id, category, label, price, details, sale_price, sale_label, is_active, sort_order
+      FROM commission_pricing
+      WHERE is_active = 1
+      ORDER BY sort_order ASC, id ASC
+    `;
+
+    const result = await db.prepare(sql).all<CommissionPricingRow>();
+    return (result.results ?? []).map((row) => ({
+      id: row.id,
+      category: normalizeCategory(row.category),
+      label: row.label,
+      price: row.price,
+      details: row.details,
+      salePrice: row.sale_price,
+      saleLabel: row.sale_label,
+      isActive: Boolean(row.is_active),
+      sortOrder: row.sort_order
+    }));
+  } catch {
+    // Backward compatibility for DBs that haven't added commission_pricing.category yet.
+    const legacySql = `
+      SELECT id, label, price, details, sale_price, sale_label, is_active, sort_order
+      FROM commission_pricing
+      WHERE is_active = 1
+      ORDER BY sort_order ASC, id ASC
+    `;
+    const legacyResult = await db.prepare(legacySql).all<{
+      id: string;
+      label: string;
+      price: string;
+      details: string;
+      sale_price: string | null;
+      sale_label: string | null;
+      is_active: number;
+      sort_order: number;
+    }>();
+
+    return (legacyResult.results ?? []).map((row) => ({
+      id: row.id,
+      category: "art",
+      label: row.label,
+      price: row.price,
+      details: row.details,
+      salePrice: row.sale_price,
+      saleLabel: row.sale_label,
+      isActive: Boolean(row.is_active),
+      sortOrder: row.sort_order
+    }));
+  }
 }
