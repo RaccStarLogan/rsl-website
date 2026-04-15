@@ -11,6 +11,11 @@ const item = result?.item ?? null;
 const newerSlug = result?.newerSlug ?? null;
 const olderSlug = result?.olderSlug ?? null;
 const basePath = "/portfolio/art";
+// Render `mediaUrl` when present; otherwise fall back to thumbnail.
+const mediaSrc = item?.mediaUrl || item?.thumbnailUrl || "";
+const isMediaUrlImage =
+  Boolean(item?.mediaUrl) &&
+  /\.(apng|avif|gif|jpe?g|png|svg|webp|bmp)(?:[?#].*)?$/i.test(item?.mediaUrl ?? "");
 
 if (!item) {
   Astro.response.status = 404;
@@ -27,7 +32,12 @@ if (!item) {
     item ? (
       <article class="portfolio-item-page">
         <h1>{item.title}</h1>
-        <img src={item.mediaUrl || item.thumbnailUrl} alt={item.title} class="portfolio-item-thumb" />
+        <img
+          src={mediaSrc}
+          alt={item.title}
+          class="portfolio-item-thumb"
+          data-media-image={isMediaUrlImage ? "true" : "false"}
+        />
         <div class="portfolio-item-description" set:html={marked.parse(item.description)} />
         <div class="portfolio-item-footer">
           <p class="portfolio-meta">{item.isPersonal ? "Personal" : "Commission"}{item.commissionType ? ` | ${item.commissionType}` : ""}</p>
@@ -49,3 +59,44 @@ if (!item) {
     )
   }
 </BaseLayout>
+
+<script is:inline>
+  (() => {
+    const img = document.querySelector<HTMLImageElement>('.portfolio-item-thumb[data-media-image="true"]');
+    if (!img) return;
+
+    const fitSmallMediaImage = () => {
+      const parent = img.parentElement;
+      if (!parent || !img.naturalWidth || !img.naturalHeight) return;
+
+      // Only shrink when the browser would upscale a small source image.
+      const isUpscaled = img.naturalWidth < img.clientWidth || img.naturalHeight < img.clientHeight;
+      if (!isUpscaled) return;
+
+      const shortestSide = Math.min(img.naturalWidth, img.naturalHeight);
+      const scale = 200 / shortestSide;
+      let targetWidth = Math.round(img.naturalWidth * scale);
+      let targetHeight = Math.round(img.naturalHeight * scale);
+
+      const parentWidth = parent.clientWidth;
+      if (targetWidth > parentWidth) {
+        const ratio = parentWidth / targetWidth;
+        targetWidth = Math.round(targetWidth * ratio);
+        targetHeight = Math.round(targetHeight * ratio);
+      }
+
+      img.style.width = `${targetWidth}px`;
+      img.style.height = `${targetHeight}px`;
+      img.style.maxWidth = "100%";
+      img.style.marginInline = "auto";
+    };
+
+    if (img.complete) {
+      fitSmallMediaImage();
+    } else {
+      img.addEventListener("load", fitSmallMediaImage, { once: true });
+    }
+
+    window.addEventListener("resize", fitSmallMediaImage);
+  })();
+</script>
