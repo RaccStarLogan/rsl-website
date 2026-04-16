@@ -28,6 +28,7 @@ pnpm-debug.log*
 
 # admin panel stuff
 scripts/admin*
+scripts/run-admin-sync.*
 
 # just in case
 dist*
