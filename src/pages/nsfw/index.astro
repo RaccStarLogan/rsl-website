@@ -1,6 +1,35 @@
 ---
 import NSFWLayout from "../../layouts/NSFWLayout.astro";
 import placeholder from "../../assets/placeholder.png";
+import { listPortfolioItems } from "../../lib/portfolio/repository";
+
+const visibility = "nsfw" as const;
+const [artItems, audioItems] = await Promise.all([
+  listPortfolioItems(
+    {
+      kind: "art",
+      visibility,
+      sort: "newest",
+      personal: "all",
+      commission: "all",
+    },
+    Astro.locals,
+  ),
+  listPortfolioItems(
+    {
+      kind: "audio",
+      visibility,
+      commissionType: "Music",
+      sort: "newest",
+      personal: "all",
+      commission: "all",
+    },
+    Astro.locals,
+  ),
+]);
+
+const latestArt = artItems[0] ?? null;
+const latestAudio = audioItems[0] ?? null;
 ---
 <!-- Load Base Layout -->
 <NSFWLayout title="Home - Jesper Skulldragon" description="Howdy! I'm Jesper Skulldragon, a raccoon on the internet that does stuff and people think that's cool :3">
@@ -41,15 +70,31 @@ import placeholder from "../../assets/placeholder.png";
     <div class="widget-grid">
       <article class="widget-card">
         <h3>Latest Art</h3>
-        <img src={placeholder.src} alt="Latest art preview" width={placeholder.width} height={placeholder.height} />
-        <p>TITLE</p>
-        <a href="/portfolio">View Gallery</a>
+        <img
+          src={latestArt?.thumbnailUrl ?? placeholder.src}
+          alt={latestArt ? `${latestArt.title} thumbnail` : "Latest art preview placeholder"}
+          width={placeholder.width}
+          height={placeholder.height}
+        />
+        <p>{latestArt?.title ?? "No art piece published yet."}</p>
+        <p>{latestArt?.summary ?? "Check back soon for new art uploads."}</p>
+        <a href={latestArt ? `/nsfw/portfolio/art/${latestArt.slug}` : "/nsfw/portfolio/art"}>
+          {latestArt ? "Open Piece" : "View Gallery"}
+        </a>
       </article>
       <article class="widget-card">
         <h3>Latest Music</h3>
-        <img src={placeholder.src} alt="Latest music cover" width={placeholder.width} height={placeholder.height} />
-        <p>ALBUM TITLE</p>
-        <a href="/music">Listen Now</a>
+        <img
+          src={latestAudio?.thumbnailUrl ?? placeholder.src}
+          alt={latestAudio ? `${latestAudio.title} cover art` : "Latest audio cover placeholder"}
+          width={placeholder.width}
+          height={placeholder.height}
+        />
+        <p>{latestAudio?.title ?? "No audio release published yet."}</p>
+        <p>{latestAudio?.summary ?? "Check back soon for new music and audio uploads."}</p>
+        <a href={latestAudio ? `/nsfw/portfolio/audio/${latestAudio.slug}` : "/nsfw/portfolio/audio"}>
+          {latestAudio ? "Listen Now" : "Browse Audio"}
+        </a>
       </article>
     </div>
   </section>
