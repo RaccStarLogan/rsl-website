@@ -1,6 +1,6 @@
 -- Migrated from db/old-nsfw-export.sql
 -- Visibility: nsfw
--- 63 rows
+-- 64 rows
 
 INSERT INTO
     portfolio_items (
@@ -2457,4 +2457,43 @@ VALUES
         1,
         '["badge","furry","flat-color","halfbody","character","fatfur","jesper-foster","skulldragon","raccoon","cat","monster","redrift"]',
         '2026-03-08T20:59:03Z'
+    );
+
+INSERT INTO
+    portfolio_items (
+        id,
+        kind,
+        visibility,
+        title,
+        slug,
+        summary,
+        description,
+        thumbnail_url,
+        logo_url,
+        media_url,
+        external_url,
+        commission_type,
+        is_commission,
+        is_personal,
+        tags_json,
+        published_at
+    )
+VALUES
+    (
+        'NSFW-P-A-2026-04-16',
+        'art',
+        'nsfw',
+        'Jesper Skulldragon PNG-Tuber',
+        'jsd-png-tuber',
+        'Jesper Skulldragon PNG-tuber',
+        replace('PNG-tuber I decided to make for my appearances on (SnaccoRacco''s Joystick streams)[https://joystick.tv/u/snaccoracco].\n\nSoftware Used: (Clip Studio Paint)[https://www.clipstudio.net/en/purchase/] EX\n\nTime Spent: 3 hours 46 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2026/04/16/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2026/04/16/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        'https://media.raccstarlogan.com/nsfw/art/2026/04/16/thumb.jpg',
+        NULL,
+        'https://media.raccstarlogan.com/nsfw/art/2026/04/16/img.gif',
+        NULL,
+        'PNG-Tuber',
+        0,
+        1,
+        '["art","clip-studio-paint-ex","jesper-foster","skulldragon","cat","monster","raccoon","png-tuber","halfbody","flat-color","animated","personal","fatfur"]',
+        '2026-04-16T00:00:00Z'
     );
