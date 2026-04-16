@@ -1,6 +1,6 @@
 -- Migrated from db/old-sfw-export.sql
 -- Visibility: sfw
--- 121 rows
+-- 122 rows
 
 INSERT INTO
     portfolio_items (
@@ -4719,4 +4719,43 @@ VALUES
         1,
         '["emotes","raccoon","logan-foster","personal","art","commission","redrift"]',
         '2025-08-05T00:00:00Z'
+    );
+
+INSERT INTO
+    portfolio_items (
+        id,
+        kind,
+        visibility,
+        title,
+        slug,
+        summary,
+        description,
+        thumbnail_url,
+        logo_url,
+        media_url,
+        external_url,
+        commission_type,
+        is_commission,
+        is_personal,
+        tags_json,
+        published_at
+    )
+VALUES
+    (
+        'DUMMY',
+        'art',
+        'sfw',
+        'DUMMY',
+        'dummy',
+        'DUMMY',
+        'DUMMY ENTRY',
+        '',
+        NULL,
+        NULL,
+        NULL,
+        NULL,
+        0,
+        1,
+        '[]',
+        '1970-01-01t00:00:00Z'
     );
