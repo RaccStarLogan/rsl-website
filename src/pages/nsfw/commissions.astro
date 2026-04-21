@@ -3,21 +3,6 @@ import NSFWLayout from "../../layouts/NSFWLayout.astro";
 import { listCommissionPricing, listPortfolioItems } from "../../lib/portfolio/repository";
 import type { CommissionPricingTier, PortfolioItem } from "../../lib/portfolio/types";
 
-const steps = [
-  {
-    title: "1. Send Details",
-    body: "Share your idea, references, deadline, and budget range.",
-  },
-  {
-    title: "2. Confirm Scope",
-    body: "I reply with availability, price quote, and delivery timeline.",
-  },
-  {
-    title: "3. Production + Revisions",
-    body: "After approval, I create your piece and send progress updates.",
-  },
-];
-
 const visibility = "nsfw" as const;
 const [artItems, audioItems, pricingTiers] = await Promise.all([
   listPortfolioItems(
@@ -107,20 +92,6 @@ const pricingByCategory = categoryOrder
           >Terms of Service</a
         >
       </div>
-    </section>
-
-    <section class="commissions-panel" id="process">
-      <h2>How It Works</h2>
-      <ol class="commissions-steps">
-        {
-          steps.map((step) => (
-            <li>
-              <h3>{step.title}</h3>
-              <p>{step.body}</p>
-            </li>
-          ))
-        }
-      </ol>
     </section>
 
     <section class="commissions-panel" id="pricing">
