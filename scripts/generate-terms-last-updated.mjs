@@ -14,10 +14,13 @@ const termsFiles = {
   nsfwAdditional: "src/pages/nsfw/terms/additional.astro",
 };
 
+const localTimeZone = process.env.TERMS_TIME_ZONE || "America/Chicago";
+
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
+  timeZone: localTimeZone,
 });
 
 function getLastUpdatedLabel(filePath) {
