@@ -54,6 +54,27 @@ a:hover {
     color: white;
 }
 
+.hero p a,
+.article-section a {
+    color: #f6d3dc;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #c0e0ff;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.18em;
+    background: linear-gradient(180deg, transparent 0%, transparent 72%, rgba(192, 224, 255, 0.22) 72%, rgba(192, 224, 255, 0.22) 100%);
+    transition: color 0.2s ease, text-decoration-color 0.2s ease, background 0.2s ease;
+}
+
+.hero p a:hover,
+.hero p a:focus-visible,
+.article-section a:hover,
+.article-section a:focus-visible {
+    color: white;
+    text-decoration-color: #ffffff;
+    background: linear-gradient(180deg, transparent 0%, transparent 64%, rgba(255, 255, 255, 0.18) 64%, rgba(255, 255, 255, 0.18) 100%);
+}
+
 footer {
     list-style: none;
     display: flex;
