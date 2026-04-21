@@ -1,11 +1,15 @@
 ---
 import NSFWLayout from "../../../layouts/NSFWLayout.astro";
+import { termsLastUpdated } from "../../../data/termsLastUpdated";
 ---
 <!-- Load Base Layout -->
     <NSFWLayout title="Additional Terms - Jesper Skulldragon" description="Additional terms that apply to NSFW commissions. Please read them carefully.">
     <section class="hero">
         <h1>Additional Terms for NSFW Commissions</h1>
         <p>These additional terms apply to all NSFW commissions. By commissioning me for NSFW content, you agree to the following:</p>
+        {termsLastUpdated.nsfwAdditional && (
+            <p style="margin-top: 0.75rem; opacity: 0.8; font-size: 0.95rem;">Last updated: {termsLastUpdated.nsfwAdditional}</p>
+        )}
     </section>
 
     <section class="article-section">
@@ -21,13 +25,11 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                 </ul>
             </li>
             <li>Case By Case:
-                <li>
-                    <ul>
-                        <li>Extreme content (such as healthplay, heavily detailed gore, etc.)</li>
-                        <li>Established Intellectual Properties (must provide proof of ownership or permission)</li>
-                        <li>Anything else not listed here (remember, always feel free to ask!)</li>
-                    </ul>
-                </li>
+                <ul>
+                    <li>Extreme content (such as healthplay, heavily detailed gore, etc.)</li>
+                    <li>Established Intellectual Properties (must provide proof of ownership or permission)</li>
+                    <li>Anything else not listed here (remember, always feel free to ask!)</li>
+                </ul>
             </li>
             <li>Not Allowed:
                 <ul>
@@ -50,11 +52,12 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                 <ul>
                     <li>Even if this website is hosted under the raccstarlogan domain, I still want to keep SFW and NSFW content separated.</li>
                     <li>I reserve the right to issue DMCA takedowns if anything happens after completion.</li>
-                    <li>I usually try to post my works on e621 regardless, but if you are uncomfortable with this, please let me know. I forget to half the time anyways.</li>
+                    <li>I usually try to post my works on e621 regardless, but if you are uncomfortable with this, please let me know.</li>
+                    <li>If you find that your commission isn't listed, you are fine to post it yourself with the correct tag.</li>
                 </ul>
             </li>
             <li>You may not post or use my NSFW works in places where minors might be exposed to them (e.g., YouTube or TikTok videos with no age restriction, non-NSFW Discord servers).</li>
-            <li>I reserve the right to modify or update these terms at any time.</li>
+            <li>These terms may be updated at any time without prior notice. The version in effect when your commission is accepted will apply to that commission unless otherwise agreed.</li>
             <li>I reserve the right to refuse any commission with or without explanation.</li>
         </ul>
 
@@ -66,3 +69,4 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
             <li>If you have any questions, feel free to ask.</li>
         </ul>
     </section>
+</NSFWLayout>

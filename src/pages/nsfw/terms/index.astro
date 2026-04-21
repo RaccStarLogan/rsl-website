@@ -1,18 +1,22 @@
 ---
 import NSFWLayout from "../../../layouts/NSFWLayout.astro";
+import { termsLastUpdated } from "../../../data/termsLastUpdated";
 ---
 <!-- Load Base Layout -->
     <NSFWLayout title="Terms of Service - Jesper Skulldragon" description="By commissioning me, you agree to the following Terms of Service. Please read them carefully.">
     <section class="hero">
         <h1>Commission Terms of Service</h1>
         <p>By commissioning me, you agree to the following Terms of Service.</p>
+        {termsLastUpdated.nsfw && (
+            <p style="margin-top: 0.75rem; opacity: 0.8; font-size: 0.95rem;">Last updated: {termsLastUpdated.nsfw}</p>
+        )}
     </section>
 
     <section class="article-section">
         <h2>General</h2>
         <ul>
             <li>I reserve the right to decline any commission for any reason, with or without explanation.</li>
-            <li>These terms may be updated at any time without prior notice.</li>
+            <li>These terms may be updated at any time without prior notice. The version in effect when your commission is accepted will apply to that commission unless otherwise agreed.</li>
             <li>You must be 18+ to commission me.</li>
         </ul>
 
@@ -51,14 +55,14 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
             <li>Completion time varies depending on complexity and queue.</li>
             <li>I may provide a start estimate, but it is not guaranteed.</li>
             <li>Rush orders may include an additional fee.</li>
-            <li>If a commission is not completed within one year, it will be canceled.</li>
+            <li>If a commission is not completed within one year, it will be refunded based on the stage of completion.</li>
         </ul>
 
         <h2>Refund Policy</h2>
         <ul>
             <li>If I cancel a commission, a refund will be issued based on progress.</li>
             <li>If you cancel before work begins, you will receive a full refund.</li>
-            <li>No refunds once significant progress has been made.</li>
+            <li>No refunds will be issued once the final stage of completion has already been started.</li>
             <li>For artwork: partial refunds may be issued after linework depending on completion stage.</li>
             <li>For voice, sound design, or music: no refunds once work has begun.</li>
         </ul>
@@ -91,7 +95,7 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
         <p>For any questions or inquiries:</p>
         <ul>
         <li>Discord: @racc.star.logan</li>
-        <li>Telegram: <a href="https://t.me/RaccStarLogan" target="_blank">@RaccStarLogan</a></li>
+        <li>Telegram: <a href="https://t.me/RaccStarLogan" target="_blank" rel="noopener noreferrer">@RaccStarLogan</a></li>
         <li>Email: <a href="mailto:contact@raccstarlogan.com">contact@raccstarlogan.com</a></li>
         </ul>
     </section>
