@@ -441,7 +441,7 @@
       "visibility": "both",
       "sortOrder": 1,
       "publishedAt": "2026-04-16T09:42:44.285Z",
-      "updatedAt": "2026-04-21T11:04:00.650Z",
+      "updatedAt": "2026-04-30T05:19:01.966Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-JF-CLTH",
@@ -454,7 +454,7 @@
         },
         {
           "id": "WIKI-IMG-JF-NUDE",
-          "imageUrl": "https://media.raccstarlogan.com/wiki/assets/chr/jf/2.png",
+          "imageUrl": "https://media.raccstarlogan.com/wiki/assets/char/jf/2.png",
           "imageAlt": "Jesper Foster Nude",
           "tabLabel": "Nude",
           "caption": "Jesper has a lot of scars underneath his clothing as a result of various incidents during his earlier years of being undead.",
@@ -463,7 +463,7 @@
         },
         {
           "id": "WIKI-IMG-JF-NSFW",
-          "imageUrl": "https://media.raccstarlogan.com/nsfw/wiki/chr/jf/1.png",
+          "imageUrl": "https://media.raccstarlogan.com/nsfw/wiki/char/jf/1.png",
           "imageAlt": "Jesper Foster NSFW",
           "tabLabel": "NSFW",
           "caption": "TBA",
@@ -1226,7 +1226,7 @@
       "visibility": "both",
       "sortOrder": 2,
       "publishedAt": "2026-04-20T05:36:44.465Z",
-      "updatedAt": "2026-04-22T08:46:44.028Z",
+      "updatedAt": "2026-04-30T05:19:31.963Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-JS-CLTH",
@@ -1239,7 +1239,7 @@
         },
         {
           "id": "WIKI-IMG-JS-NUDE",
-          "imageUrl": "https://media.raccstarlogan.com/wiki/assets/char/jf/2.png",
+          "imageUrl": "https://media.raccstarlogan.com/wiki/assets/char/js/2.png",
           "imageAlt": "Jason Skank Nude",
           "tabLabel": "Nude",
           "caption": "Underneath Jason's jacket, you can see his gills. and scars. It's unclear where his gills actually are, but they are on his chest.",
@@ -4016,7 +4016,7 @@
       "visibility": "both",
       "sortOrder": 10,
       "publishedAt": "2026-04-20T10:57:31.279Z",
-      "updatedAt": "2026-04-30T02:38:03.739Z",
+      "updatedAt": "2026-04-30T05:21:36.908Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-KF-MAIN",
@@ -4324,7 +4324,7 @@
         "primaryTxt": "#d9c8b5",
         "secondaryTxt": "#f0b775",
         "accentTxt": "#f0b775",
-        "primaryBg": "#5d4a7c99",
+        "primaryBg": "#5e4a7c99",
         "secondaryBg": "#7c6250b3",
         "tertiaryBg": "#3e312866",
         "hoverBg": "#6d564666",
