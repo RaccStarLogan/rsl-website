@@ -11,6 +11,7 @@ import path from "node:path";
 
 const DIST_DIR = path.resolve(process.cwd(), "dist");
 const NSFW_OUTPUT_DIR = path.join(DIST_DIR, "nsfw");
+// Only rewrite file types that are expected to contain URL strings.
 const TARGET_EXTENSIONS = new Set([
   ".html",
   ".css",
@@ -19,6 +20,7 @@ const TARGET_EXTENSIONS = new Set([
   ".webmanifest"
 ]);
 
+// Supported URL contexts where "/nsfw" can appear in build output.
 const URL_PREFIX_PATTERNS = [
   /(href\s*=\s*["'])\/nsfw\//gi,
   /(href\s*=\s*["'])\/nsfw(?=(["']))/gi,
@@ -32,6 +34,7 @@ const URL_PREFIX_PATTERNS = [
   /(url\(\s*["']?)\/nsfw(?=(\s*["']?\)))/gi
 ];
 
+// Recursive file walker for post-build rewrite pass.
 async function walkFiles(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = await Promise.all(
@@ -75,6 +78,7 @@ async function moveNsfwOutputToRoot() {
       }
 
       if (await pathExists(toPath)) {
+        // Keep existing root files unchanged when a name collision occurs.
         moved.conflicts += 1;
         continue;
       }
@@ -87,6 +91,7 @@ async function moveNsfwOutputToRoot() {
 
   await moveDirContents(NSFW_OUTPUT_DIR, DIST_DIR);
   if (moved.conflicts === 0) {
+    // Only remove the source tree when we completed a full conflict-free move.
     await rm(NSFW_OUTPUT_DIR, { recursive: true, force: true });
   }
 
@@ -98,6 +103,7 @@ async function moveNsfwOutputToRoot() {
 }
 
 function stripNsfwPrefix(content) {
+  // Apply all rewrite patterns so links/assets/forms/css urls are normalized.
   return URL_PREFIX_PATTERNS.reduce((updated, pattern) => {
     return updated.replace(pattern, "$1/");
   }, content);
@@ -116,6 +122,7 @@ async function main() {
   }
 
   const moveResult = await moveNsfwOutputToRoot();
+  // Skip rewrites if moves conflicted to avoid partial/ambiguous output states.
   const shouldRewrite = moveResult.conflictFiles === 0 && moveResult.movedFiles > 0;
   const files = shouldRewrite ? await walkFiles(DIST_DIR) : [];
   let changedFiles = 0;

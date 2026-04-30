@@ -1,9 +1,0 @@
-/* Shared placeholder styling for location wiki pages. */
-.wiki-page-grid {
-  --location-accent: #4f6d7a;
-}
-
-.article-section h1 {
-  border-bottom: 2px solid var(--location-accent);
-  padding-bottom: 0.25rem;
-}

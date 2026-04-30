@@ -1,0 +1,13 @@
+---
+import NSFWLayout from "../../../../layouts/NSFWLayout.astro";
+
+const slug = Astro.params.slug?.trim() ?? "";
+---
+
+<NSFWLayout title={`Gallery - ${slug || "Wiki Entry"}`} description="Gallery page placeholder.">
+  <main class="article-section">
+    <h1>Gallery</h1>
+    <p>Gallery page placeholder for <strong>{slug || "this entry"}</strong>.</p>
+  </main>
+</NSFWLayout>
+

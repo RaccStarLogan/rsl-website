@@ -1,0 +1,11 @@
+body.april-fools-mode,
+body.april-fools-mode button,
+body.april-fools-mode input,
+body.april-fools-mode select,
+body.april-fools-mode textarea {
+    font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}
+
+body.april-fools-mode .wiki-page-grid {
+    --wiki-font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}

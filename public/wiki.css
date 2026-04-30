@@ -39,6 +39,24 @@ body {
     color: #ffffff !important;
 }
 
+/* Override global article link decorators on wiki pages. */
+.wiki-page-grid .article-section a,
+.wiki-page-grid .article-section a:visited {
+    color: var(--link-color) !important;
+    text-decoration: none !important;
+    text-decoration-color: transparent !important;
+    background: none !important;
+    font-weight: inherit;
+}
+
+.wiki-page-grid .article-section a:hover,
+.wiki-page-grid .article-section a:focus-visible {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-decoration-color: transparent !important;
+    background: none !important;
+}
+
 .wiki-infobox {
     border: var(--wiki-border-width) solid var(--wiki-primary-color);
     border-radius: var(--wiki-border-radius);
@@ -83,13 +101,30 @@ table {
     font-size: 1rem;
 }
 
+.wiki-gallery-tabs-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.wiki-gallery-tabs-wrap.is-overflowing {
+    grid-template-columns: auto 1fr auto;
+}
+
 .wiki-gallery-tabs {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     gap: 0.35rem;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0;
     padding: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--wiki-primary-color) transparent;
 }
 
 .wiki-gallery-tab {
@@ -336,4 +371,94 @@ table {
 
 .link-button:hover {
     color: #ffffff;
+}
+
+.wiki-gallery-scroll {
+    border: 0;
+    background: var(--wiki-bg-secondary);
+    color: var(--wiki-text-primary);
+    width: 1.9rem;
+    height: 1.9rem;
+    cursor: pointer;
+    font: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.wiki-gallery-tabs-wrap:not(.is-overflowing) .wiki-gallery-scroll {
+    display: none;
+}
+
+.wiki-gallery-scroll:hover:not(:disabled),
+.wiki-gallery-scroll:focus-visible:not(:disabled) {
+    background: var(--wiki-bg-hover);
+    color: #ffffff;
+    outline: none;
+}
+
+.wiki-gallery-scroll:disabled {
+    opacity: 0.45;
+    cursor: default;
+}
+
+.wiki-gallery-tabs::-webkit-scrollbar {
+    height: 8px;
+}
+
+.wiki-gallery-tabs::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.wiki-gallery-tabs::-webkit-scrollbar-thumb {
+    background: var(--wiki-primary-color);
+    border-radius: 8px;
+}
+
+.wiki-trivia-list {
+    margin: 0.4rem 0 1rem 1.1rem;
+    padding: 0;
+}
+
+.wiki-trivia-list li {
+    margin: 0.3rem 0;
+}
+
+.wiki-relationships-list {
+    margin: 0.4rem 0 1rem 1.1rem;
+    padding: 0;
+}
+
+.wiki-relationships-list li {
+    margin: 0.35rem 0;
+}
+
+.wiki-relationship-icon {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 0.05rem;
+    object-fit: contain;
+}
+
+.wiki-relationship-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.wiki-relationship-icon--fallback {
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--wiki-primary-color);
+    border-radius: 50%;
+    font-size: 0.72rem;
+    line-height: 1;
+    color: var(--wiki-text-primary);
+}
+
+.wiki-quote-box {
+    max-width: min(640px, 100%);
 }

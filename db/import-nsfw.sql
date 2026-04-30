@@ -1,6 +1,6 @@
 -- Migrated from db/old-nsfw-export.sql
 -- Visibility: nsfw
--- 64 rows
+-- 65 rows
 
 INSERT INTO
     portfolio_items (
@@ -2496,4 +2496,43 @@ VALUES
         1,
         '["art","clip-studio-paint-ex","jesper-foster","skulldragon","cat","monster","raccoon","png-tuber","halfbody","flat-color","animated","personal","fatfur"]',
         '2026-04-16T00:00:00Z'
+    );
+
+INSERT INTO
+    portfolio_items (
+        id,
+        kind,
+        visibility,
+        title,
+        slug,
+        summary,
+        description,
+        thumbnail_url,
+        logo_url,
+        media_url,
+        external_url,
+        commission_type,
+        is_commission,
+        is_personal,
+        tags_json,
+        published_at
+    )
+VALUES
+    (
+        'NSFW-C-A-2026-04-28',
+        'art',
+        'nsfw',
+        'Hadren Skulldragon',
+        'hadren-skulldragon',
+        'Hadren Skulldragon',
+        replace('Commission for [Hadern ★ Hadwads](https://bsky.app/profile/hadernhadwads.bsky.social) of his skulldragon, redesigning it.\n\nThe process for this commission involved a lot of back-and-forth, and I really appreciated how particular Hadern was about what he wanted. I’d encourage anyone commissioning me to be just as attentive to detail and accuracy. I value that level of input, and I’d much rather create something you’re truly happy with than deliver something that falls short.\n\nAnyways, the dialogue was added in as a bit of an inside joke because I kept skimping out on proportions by accident. This was a fun commission to tackle, and I learned a lot with this one.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 29, 2025\n\nTime Spent: 8 hours\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2026/04/28/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2026/04/28/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        'https://media.raccstarlogan.com/nsfw/portfolio/2026/04/28/thumb.jpg',
+        NULL,
+        'https://media.raccstarlogan.com/nsfw/portfolio/2026/04/28/img.png',
+        NULL,
+        'Shaded',
+        1,
+        0,
+        '["skulldragon","art","commission","bird","hadren","fatfur","redesign","fullbody","shaded"]',
+        '2026-04-28T21:54:00Z'
     );

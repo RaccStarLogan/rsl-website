@@ -1,0 +1,14 @@
+---
+const { html = "", tag = "div", class: className = "" } = Astro.props;
+const elementId = `trusted-html-${Math.random().toString(36).slice(2, 10)}`;
+const safeTag = typeof tag === "string" && /^[a-z][a-z0-9-]*$/i.test(tag) ? tag : "div";
+const serializedHtml = JSON.stringify(String(html));
+---
+
+<Fragment set:html={`<${safeTag} id="${elementId}" class="${className}"></${safeTag}>`} />
+<script is:inline define:vars={{ elementId, serializedHtml }}>
+  const target = document.getElementById(elementId);
+  if (target) {
+    target.innerHTML = JSON.parse(serializedHtml);
+  }
+</script>

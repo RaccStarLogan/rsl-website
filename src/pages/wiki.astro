@@ -2,7 +2,28 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import WikiInfoBox from "../components/WikiInfoBox.astro";
 import WikiAccordion from "../components/WikiAccordion.astro";
-import { wikiEntries } from "../data/wikiEntries";
+import { getWikiEntryHref, listWikiEntries } from "../lib/wiki/repository";
+
+const wikiEntries = await listWikiEntries(
+  {
+    visibility: "sfw",
+    sort: "az"
+  },
+  Astro.locals
+);
+
+const newestTimestamp = wikiEntries.reduce((latest, entry) => {
+  const candidate = Date.parse(entry.updatedAt ?? entry.publishedAt);
+  return Number.isFinite(candidate) ? Math.max(latest, candidate) : latest;
+}, Number.NEGATIVE_INFINITY);
+const lastUpdatedLabel =
+  Number.isFinite(newestTimestamp)
+    ? new Date(newestTimestamp).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      })
+    : "Unknown";
 
 const featuredEntries = [...wikiEntries]
   .sort(() => Math.random() - 0.5)
@@ -10,7 +31,7 @@ const featuredEntries = [...wikiEntries]
 
 const typeOrder = ["Universe", "Character", "Location", "Business", "Organization"];
 const groupedEntries = wikiEntries.reduce((map, entry) => {
-  const type = entry.meta.type?.trim() || "Other";
+  const type = entry.entryType?.trim() || "Other";
 
   if (!map.has(type)) {
     map.set(type, []);
@@ -55,6 +76,8 @@ const tocGroups = [...groupedEntries.entries()]
           <dd>{wikiEntries.length}</dd>
           <dt>Types</dt>
           <dd>{tocGroups.length}</dd>
+          <dt>Last Updated</dt>
+          <dd>{lastUpdatedLabel}</dd>
         </dl>
       </WikiInfoBox>
       
@@ -72,7 +95,7 @@ const tocGroups = [...groupedEntries.entries()]
       document.getElementById('random-entry-btn')?.addEventListener('click', () => {
         if (entries && entries.length > 0) {
           const randomEntry = entries[Math.floor(Math.random() * entries.length)];
-          window.location.href = randomEntry.href;
+          window.location.href = `/wiki/${randomEntry.slug}`;
         }
       });
     </script>
@@ -99,7 +122,7 @@ const tocGroups = [...groupedEntries.entries()]
                   </summary>
                   <div class="wiki-toc-group-links">
                     {entries.map((page) => (
-                      <a href={page.href}>{page.label}</a>
+                      <a href={getWikiEntryHref(page, "sfw")}>{page.label}</a>
                     ))}
                   </div>
                 </details>
@@ -140,8 +163,8 @@ const tocGroups = [...groupedEntries.entries()]
           {
             featuredEntries.map((entry) => (
               <tr>
-                <td><a href={entry.href}>{entry.label}</a></td>
-                <td>{entry.meta.type}</td>
+                <td><a href={getWikiEntryHref(entry, "sfw")}>{entry.label}</a></td>
+                <td>{entry.entryType}</td>
               </tr>
             ))
           }

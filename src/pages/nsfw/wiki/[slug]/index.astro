@@ -1,0 +1,248 @@
+---
+import NSFWLayout from "../../../../layouts/NSFWLayout.astro";
+import WikiInfoBox from "../../../../components/WikiInfoBox.astro";
+import WikiGallery from "../../../../components/WikiGallery.astro";
+import WikiTOC from "../../../../components/WikiTOC.astro";
+import TrustedHtmlFragment from "../../../../components/TrustedHtmlFragment.astro";
+import { renderMarkdown, renderMarkdownInline } from "../../../../lib/markdown";
+import { getWikiEntryBySlug, getWikiEntryHref } from "../../../../lib/wiki/repository";
+import { getWikiRelationshipIcon, styleableRelationshipInlineSvg } from "../../../../lib/wiki/icons";
+
+const slug = Astro.params.slug?.trim() ?? "";
+const entry = slug ? await getWikiEntryBySlug(slug, "nsfw", Astro.locals) : null;
+
+if (!entry) {
+  return Astro.redirect("/nsfw/wiki");
+}
+
+const isUnfinishedEntry = entry.visibility === "none";
+const renderedIntro = entry.intro.trim() ? renderMarkdown(entry.intro) : "";
+const renderedQuoteText = entry.quote ? renderMarkdownInline(entry.quote.quoteText) : "";
+const renderedQuoteAttribution = entry.quote?.attribution
+  ? renderMarkdownInline(entry.quote.attribution)
+  : renderMarkdownInline(entry.label);
+const renderedQuoteVoiceCredit = entry.quote?.voiceCredit
+  ? renderMarkdownInline(entry.quote.voiceCredit)
+  : "";
+function getTriviaItems(sectionBody: string): string[] {
+  const lines = sectionBody.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+  const bulletItems = lines
+    .map((line) => line.match(/^[-*]\s+(.+)$/)?.[1] ?? line.match(/^\d+\.\s+(.+)$/)?.[1] ?? null)
+    .filter((item): item is string => Boolean(item));
+  if (bulletItems.length > 0) return bulletItems;
+  return lines;
+}
+const themeVars = [
+  ["--wiki-primary-color", entry.theme.primaryClr],
+  ["--wiki-secondary-color", entry.theme.secondaryClr],
+  ["--wiki-accent-color", entry.theme.accentClr],
+  ["--wiki-text-primary", entry.theme.primaryTxt],
+  ["--wiki-text-secondary", entry.theme.secondaryTxt],
+  ["--wiki-text-accent", entry.theme.accentTxt],
+  ["--wiki-bg-primary", entry.theme.primaryBg],
+  ["--wiki-bg-secondary", entry.theme.secondaryBg],
+  ["--wiki-bg-tertiary", entry.theme.tertiaryBg],
+  ["--wiki-bg-hover", entry.theme.hoverBg],
+  ["--wiki-warning-color", entry.theme.warningClr],
+  ["--wiki-gallery-tab-color", entry.theme.tabClr],
+  ["--wiki-gallery-tab-hover-color", entry.theme.tabHover],
+  ["--wiki-gallery-tab-active-color", entry.theme.tabActive],
+  ["--wiki-font-family", entry.theme.font],
+  ["--wiki-body-bg-color", entry.theme.bodyClr]
+].filter(([, value]) => Boolean(value)) as Array<[string, string]>;
+const themeCss = `:root {\n${themeVars.map(([key, value]) => `  ${key}: ${value};`).join("\n")}\n}\n${entry.theme.customCss ?? ""}`;
+---
+
+<NSFWLayout title={`${entry.label} - Wiki - Jesper Skulldragon`} description={entry.summary}>
+  <link rel="stylesheet" href="/wiki.css" />
+  {entry.theme.fontUrl && <link rel="stylesheet" href={entry.theme.fontUrl} />}
+  <style is:inline set:html={themeCss} />
+  <div class="wiki-page-grid">
+    <aside class="wiki-sidebar">
+      <h2>Info Box</h2>
+      {entry.infoImages.length > 0 && (
+        <WikiGallery
+          ariaLabel={`${entry.label} sidebar images`}
+          images={entry.infoImages.map((image) => ({
+            src: image.imageUrl,
+            alt: image.imageAlt,
+            label: image.tabLabel ?? undefined,
+            caption: image.caption ?? undefined,
+            captionHtml: image.caption ? renderMarkdownInline(image.caption) : undefined
+          }))}
+        />
+      )}
+      {entry.infoSong && (
+        <WikiInfoBox variant="info" hideTitle={true}>
+          <audio controls style="width: 100%;">
+            <source src={entry.infoSong.audioUrl} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          {entry.infoSong.streamUrl && (
+            <p class="wiki-gallery-caption">
+              <a href={entry.infoSong.streamUrl} target="_blank" rel="noopener noreferrer">
+                {entry.infoSong.streamLabel ?? "Stream"}
+              </a>
+            </p>
+          )}
+        </WikiInfoBox>
+      )}
+      {entry.infoRows.length > 0 && (
+        <table>
+          <tbody>
+            {entry.infoRows.map((row) => (
+              <tr>
+                <th>{row.rowLabel}</th>
+                <td>
+                  {row.rowFormat === "text" ? (
+                    row.rowValue
+                  ) : row.rowFormat === "html" ? (
+                    <TrustedHtmlFragment html={row.rowValue} />
+                  ) : (
+                    <div set:html={renderMarkdown(row.rowValue)} />
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+      <br />
+      <h2>More Links</h2>
+      <ul>
+        <li><a href="/nsfw/wiki">Back to NSFW Wiki Index</a></li>
+        {entry.infoLinks.map((link) => (
+          <li>
+            <a
+              href={link.url}
+              download={link.isDownload ? true : undefined}
+              target={link.url.startsWith("http") ? "_blank" : undefined}
+              rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+
+    <main id="wiki-content" class="article-section">
+      <h1>{entry.label}</h1>
+      {isUnfinishedEntry && (
+        <WikiInfoBox title="Unfinished Page" variant="warning">
+          <p>This wiki page is unfinished and may be incomplete, inaccurate, or missing sections.</p>
+        </WikiInfoBox>
+      )}
+      {entry.quote && (
+        <WikiInfoBox title="Quote" variant="info" class="wiki-quote-box">
+          <p><span aria-hidden="true">"</span><span set:html={renderedQuoteText} /><span aria-hidden="true">"</span></p>
+          {entry.quote.audioUrl && (
+            <audio controls style="width: 100%;">
+              <source src={entry.quote.audioUrl} type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          )}
+          {(entry.quote.attribution || entry.quote.voiceCredit) && (
+            <p class="wiki-gallery-caption">
+              - <span set:html={renderedQuoteAttribution} />
+              {entry.quote.voiceCredit && (
+                <>
+                  {", "}
+                  <span set:html={renderedQuoteVoiceCredit} />
+                </>
+              )}
+            </p>
+          )}
+        </WikiInfoBox>
+      )}
+      {renderedIntro && <div set:html={renderedIntro} />}
+      <div class="wiki-toc-wrapper"><WikiTOC /></div>
+      {entry.sections.map((section, index) => {
+        const sectionId = (section.sectionKey || section.sectionTitle || `section-${index + 1}`)
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "");
+        const isTriviaSection = section.sectionKey.trim().toLowerCase() === "trivia";
+        const isTodoPlaceholder = section.sectionBody.trim().toUpperCase() === "TODO";
+        const triviaItems = isTriviaSection ? getTriviaItems(section.sectionBody) : [];
+        return (
+          <>
+            <h2 id={sectionId}>{section.sectionTitle}</h2>
+            {isTodoPlaceholder ? (
+              <WikiInfoBox title="Unfinished Section" variant="warning">
+                <p>This section has not been filled out yet.</p>
+              </WikiInfoBox>
+            ) : isTriviaSection ? (
+              <ul class="wiki-trivia-list">
+                {triviaItems.map((item) => (
+                  <li set:html={renderMarkdownInline(item)} />
+                ))}
+              </ul>
+            ) : section.sectionFormat === "text" ? (
+              <p>{section.sectionBody}</p>
+            ) : section.sectionFormat === "html" ? (
+              <TrustedHtmlFragment html={section.sectionBody} />
+            ) : (
+              <div set:html={renderMarkdown(section.sectionBody)} />
+            )}
+          </>
+        );
+      })}
+      {entry.relationships.length > 0 && (
+        <>
+          <h2 id="relationships">Relationships</h2>
+          <ul class="wiki-relationships-list">
+            {entry.relationships.map((relationship) => (
+              <li>
+                {(() => {
+                  const inlineSvg = relationship.relatedIconSvg
+                    ? styleableRelationshipInlineSvg(relationship.relatedIconSvg)
+                    : "";
+                  const iconSrc = getWikiRelationshipIcon(relationship.relatedSlug);
+                  return (
+                    <>
+                      <a href={`/nsfw/wiki/${relationship.relatedSlug}`}>
+                        {inlineSvg ? (
+                          <span
+                            class="wiki-relationship-icon"
+                            aria-hidden="true"
+                            set:html={inlineSvg}
+                          />
+                        ) : iconSrc ? (
+                          <img
+                            class="wiki-relationship-icon"
+                            src={iconSrc}
+                            alt=""
+                            aria-hidden="true"
+                            width="32"
+                            height="32"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <span class="wiki-relationship-icon wiki-relationship-icon--fallback" aria-hidden="true">?</span>
+                        )}
+                        {relationship.relatedLabel}
+                      </a>
+                    </>
+                  );
+                })()}
+                {`: ${relationship.relationLabel}`}
+                {relationship.notes ? ` - ${relationship.notes}` : ""}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {entry.triviaItems.length > 0 && (
+        <>
+          <h2 id="trivia">Trivia</h2>
+          <ul class="wiki-trivia-list">
+            {entry.triviaItems.map((item) => (
+              <li set:html={renderMarkdownInline(item.itemText)} />
+            ))}
+          </ul>
+        </>
+      )}
+    </main>
+  </div>
+</NSFWLayout>

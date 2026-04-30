@@ -51,24 +51,42 @@ const galleryId = `wiki-gallery-${Math.random().toString(36).slice(2, 10)}`;
 <section class="wiki-gallery" data-wiki-gallery id={galleryId}>
   {title && <h3 class="wiki-gallery-title">{title}</h3>}
 
-    {showTabs && (
-    <div class="wiki-gallery-tabs" role="tablist" aria-label={ariaLabel}>
-      {renderedImages.map((image, index) => (
-        <button
-          type="button"
-          class={`wiki-gallery-tab${index === safeInitialIndex ? " is-active" : ""}`}
-          role="tab"
-          aria-selected={index === safeInitialIndex ? "true" : "false"}
-          aria-controls={`${galleryId}-panel-${index}`}
-          id={`${galleryId}-tab-${index}`}
-          data-gallery-tab
-          data-index={index}
-        >
-          {image.label ?? `Image ${index + 1}`}
-        </button>
-      ))}
+  {showTabs && (
+    <div class="wiki-gallery-tabs-wrap">
+      <button
+        type="button"
+        class="wiki-gallery-scroll wiki-gallery-scroll--prev"
+        data-gallery-scroll="prev"
+        aria-label="Scroll gallery tabs left"
+      >
+        &#9664;
+      </button>
+      <div class="wiki-gallery-tabs" role="tablist" aria-label={ariaLabel}>
+        {renderedImages.map((image, index) => (
+          <button
+            type="button"
+            class={`wiki-gallery-tab${index === safeInitialIndex ? " is-active" : ""}`}
+            role="tab"
+            aria-selected={index === safeInitialIndex ? "true" : "false"}
+            aria-controls={`${galleryId}-panel-${index}`}
+            id={`${galleryId}-tab-${index}`}
+            data-gallery-tab
+            data-index={index}
+          >
+            {image.label ?? `Image ${index + 1}`}
+          </button>
+        ))}
+      </div>
+      <button
+        type="button"
+        class="wiki-gallery-scroll wiki-gallery-scroll--next"
+        data-gallery-scroll="next"
+        aria-label="Scroll gallery tabs right"
+      >
+        &#9654;
+      </button>
     </div>
-    )}
+  )}
 
     <div class="wiki-gallery-panels">
       {renderedImages.map((image, index) => (
@@ -97,6 +115,10 @@ const galleryId = `wiki-gallery-${Math.random().toString(36).slice(2, 10)}`;
 
     const tabs = Array.from(gallery.querySelectorAll("[data-gallery-tab]"));
     const panels = Array.from(gallery.querySelectorAll("[data-gallery-panel]"));
+    const tabsWrap = gallery.querySelector(".wiki-gallery-tabs-wrap");
+    const tabsRow = gallery.querySelector(".wiki-gallery-tabs");
+    const prevScrollButton = gallery.querySelector("[data-gallery-scroll='prev']");
+    const nextScrollButton = gallery.querySelector("[data-gallery-scroll='next']");
     if (tabs.length === 0 || panels.length === 0) return;
 
     const setActive = (index) => {
@@ -109,6 +131,35 @@ const galleryId = `wiki-gallery-${Math.random().toString(36).slice(2, 10)}`;
 
       panels.forEach((panel, panelIndex) => {
         panel.hidden = panelIndex !== index;
+      });
+
+      tabs[index]?.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center"
+      });
+    };
+
+    const updateScrollButtons = () => {
+      if (!tabsRow || !prevScrollButton || !nextScrollButton) return;
+      const maxLeft = tabsRow.scrollWidth - tabsRow.clientWidth;
+      const left = Math.max(0, tabsRow.scrollLeft);
+      prevScrollButton.disabled = left <= 1;
+      nextScrollButton.disabled = left >= maxLeft - 1;
+    };
+
+    const updateOverflowState = () => {
+      if (!tabsWrap || !tabsRow) return;
+      const isOverflowing = tabsRow.scrollWidth > tabsRow.clientWidth + 1;
+      tabsWrap.classList.toggle("is-overflowing", isOverflowing);
+    };
+
+    const scrollTabs = (direction) => {
+      if (!tabsRow) return;
+      const amount = Math.max(120, Math.floor(tabsRow.clientWidth * 0.6));
+      tabsRow.scrollBy({
+        left: direction === "next" ? amount : -amount,
+        behavior: "smooth"
       });
     };
 
@@ -135,5 +186,21 @@ const galleryId = `wiki-gallery-${Math.random().toString(36).slice(2, 10)}`;
         tabs[activeIndex].focus();
       });
     });
+
+    if (prevScrollButton) {
+      prevScrollButton.addEventListener("click", () => scrollTabs("prev"));
+    }
+    if (nextScrollButton) {
+      nextScrollButton.addEventListener("click", () => scrollTabs("next"));
+    }
+    if (tabsRow) {
+      tabsRow.addEventListener("scroll", updateScrollButtons, { passive: true });
+      window.addEventListener("resize", () => {
+        updateOverflowState();
+        updateScrollButtons();
+      }, { passive: true });
+    }
+    updateOverflowState();
+    updateScrollButtons();
   });
 </script>

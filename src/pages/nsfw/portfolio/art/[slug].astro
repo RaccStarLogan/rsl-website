@@ -1,6 +1,6 @@
 ---
-import { marked } from "marked";
 import NSFWLayout from "../../../../layouts/NSFWLayout.astro";
+import { renderMarkdown } from "../../../../lib/markdown";
 import { getPortfolioItemWithNav } from "../../../../lib/portfolio/repository";
 
 const slug = Astro.params.slug;
@@ -38,7 +38,7 @@ if (!item) {
           class="portfolio-item-thumb"
           data-media-image={isMediaUrlImage ? "true" : "false"}
         />
-        <div class="portfolio-item-description" set:html={marked.parse(item.description)} />
+        <div class="portfolio-item-description" set:html={renderMarkdown(item.description)} />
         <div class="portfolio-item-footer">
           <p class="portfolio-meta">{item.isPersonal ? "Personal" : "Commission"}{item.commissionType ? ` | ${item.commissionType}` : ""}</p>
           <p class="portfolio-tags">{item.tags.map((tag) => `#${tag}`).join(" ")}</p>
