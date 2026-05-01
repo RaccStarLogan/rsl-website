@@ -58,6 +58,7 @@ const themeCss = `:root {\n${themeVars.map(([key, value]) => `  ${key}: ${value}
   {entry.theme.fontUrl && <link rel="stylesheet" href={entry.theme.fontUrl} />}
   <style is:inline set:html={themeCss} />
   <div class="wiki-page-grid">
+    <h1 class="wiki-page-title">{entry.label}</h1>
     <aside class="wiki-sidebar">
       <h2>Info Box</h2>
       {entry.infoImages.length > 0 && (
@@ -127,7 +128,6 @@ const themeCss = `:root {\n${themeVars.map(([key, value]) => `  ${key}: ${value}
     </aside>
 
     <main id="wiki-content" class="article-section">
-      <h1>{entry.label}</h1>
       {isUnfinishedEntry && (
         <WikiInfoBox title="Unfinished Page" variant="warning">
           <p>This wiki page is unfinished and may be incomplete, inaccurate, or missing sections.</p>

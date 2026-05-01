@@ -16,7 +16,7 @@
 
 .portfolio-page header p,
 .project-page header p {
-    z-index: auto;
+  z-index: auto;
 }
 
 .portfolio-hero {
@@ -73,7 +73,7 @@
   gap: 0.4rem;
 }
 
-.portfolio-filters > label {
+.portfolio-filters>label {
   align-content: start;
 }
 
@@ -352,34 +352,33 @@
   justify-content: center;
   gap: 0;
   margin-top: 1.5rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  flex-direction: row;
 }
 
 .portfolio-nav-btn {
-  display: inline-block;
+  white-space: nowrap;
   padding: 0.5rem 1.2rem;
-  background: #4a2a1a;
+  background: #530f0f;
   color: #ffd699;
   text-decoration: none;
   font-size: 0.9rem;
-  border: 1px solid #755;
+  border: 4px solid #ff9500;
   cursor: pointer;
   transition: background 0.15s;
 }
 
-.portfolio-nav-btn:first-child {
-  border-radius: 4px 0 0 4px;
-}
-
-.portfolio-nav-btn:last-child {
-  border-radius: 0 4px 4px 0;
-}
-
 .portfolio-nav-btn:not(:first-child) {
-  border-left: none;
+  border-left: 1px solid;
+}
+
+.portfolio-nav-btn:not(:last-child) {
+  border-right: 1px solid;
 }
 
 .portfolio-nav-btn:hover:not(.disabled) {
-  background: #6a3a2a;
+  background: #a4203c;
 }
 
 .portfolio-nav-btn.disabled {
@@ -393,6 +392,7 @@
 }
 
 @media (max-width: 900px) {
+
   .portfolio-page,
   .project-page,
   .portfolio-item-page {

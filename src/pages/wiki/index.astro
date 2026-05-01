@@ -1,8 +1,8 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import WikiInfoBox from "../components/WikiInfoBox.astro";
-import WikiAccordion from "../components/WikiAccordion.astro";
-import { getWikiEntryHref, listWikiEntries } from "../lib/wiki/repository";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WikiInfoBox from "../../components/WikiInfoBox.astro";
+import WikiAccordion from "../../components/WikiAccordion.astro";
+import { getWikiEntryHref, listWikiEntries } from "../../lib/wiki/repository";
 
 const wikiEntries = await listWikiEntries(
   {
@@ -67,6 +67,7 @@ const tocGroups = [...groupedEntries.entries()]
 >
   <link rel="stylesheet" href="/wiki.css" />
   <div class="wiki-page-grid">
+    <h1 class="wiki-page-title">Welcome to the RaccStarLogan Wiki!</h1>
     <aside class="wiki-sidebar">
       <h2>Quick Stuff</h2>
 
@@ -101,8 +102,6 @@ const tocGroups = [...groupedEntries.entries()]
     </script>
 
     <main id="wiki-content" class="article-section">
-      <h1>Welcome to the RaccStarLogan Wiki!</h1>
-
       <WikiInfoBox title="What this is" variant="info">
         This is a simple index for the people, stories, and bits of worldbuilding
         collected across the site. If you want to look around, this is the place

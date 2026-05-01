@@ -1,8 +1,8 @@
 ---
-import NSFWLayout from "../../layouts/NSFWLayout.astro";
-import WikiInfoBox from "../../components/WikiInfoBox.astro";
-import WikiAccordion from "../../components/WikiAccordion.astro";
-import { getWikiEntryBySlug, getWikiEntryHref, listWikiEntries } from "../../lib/wiki/repository";
+import NSFWLayout from "../../../layouts/NSFWLayout.astro";
+import WikiInfoBox from "../../../components/WikiInfoBox.astro";
+import WikiAccordion from "../../../components/WikiAccordion.astro";
+import { getWikiEntryBySlug, getWikiEntryHref, listWikiEntries } from "../../../lib/wiki/repository";
 
 const wikiEntries = await listWikiEntries(
   {
@@ -111,6 +111,7 @@ const tocGroups = [...groupedEntries.entries()]
   {jesperTheme.fontUrl && <link rel="stylesheet" href={jesperTheme.fontUrl} />}
   <style is:inline set:html={themeCss} />
   <div class="wiki-page-grid">
+  <h1 class="wiki-page-title">Welcome to the RSL NSFW Wiki!</h1>
     <aside class="wiki-sidebar">
       <h2>Quick Stuff</h2>
       <WikiInfoBox title="At a Glance" variant="info">
@@ -143,7 +144,6 @@ const tocGroups = [...groupedEntries.entries()]
     </script>
 
     <main id="wiki-content" class="article-section">
-      <h1>Welcome to the RSL NSFW Wiki</h1>
 
       <WikiInfoBox title="What this is" variant="info">
         This is a simple index for the people, stories, and bits of worldbuilding
