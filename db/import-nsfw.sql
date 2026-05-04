@@ -1,6 +1,6 @@
 -- Migrated from db/old-nsfw-export.sql
 -- Visibility: nsfw
--- 65 rows
+-- 66 rows
 
 INSERT INTO
     portfolio_items (
@@ -2535,4 +2535,43 @@ VALUES
         0,
         '["skulldragon","art","commission","bird","hadren","fatfur","redesign","fullbody","shaded"]',
         '2026-04-28T21:54:00Z'
+    );
+
+INSERT INTO
+    portfolio_items (
+        id,
+        kind,
+        visibility,
+        title,
+        slug,
+        summary,
+        description,
+        thumbnail_url,
+        logo_url,
+        media_url,
+        external_url,
+        commission_type,
+        is_commission,
+        is_personal,
+        tags_json,
+        published_at
+    )
+VALUES
+    (
+        'NSFW-C-A-2026-05-02',
+        'art',
+        'nsfw',
+        '[AT] Warm Embrace',
+        'warm-embrace',
+        '[AT] Warm Embrace',
+        replace('Art trade with [Cotydelon](https://www.furaffinity.net/user/cotydelon) featuring his partner [Lito](https://www.furaffinity.net/user/jeslito)!\n\nView Cotydelon''s part [here](https://www.furaffinity.net/view/64884156/)!\n\nThis was fun as hell especially considering I wanted to draw these two for a while and finally have a reason to\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: May 2, 2025\n\nTime Spent: 5 hours\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2026/05/02/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2026/05/02/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        'https://media.raccstarlogan.com/nsfw/portfolio/art/05/02/thumb.jpg',
+        NULL,
+        'https://media.raccstarlogan.com/nsfw/portfolio/art/05/02/img.png',
+        NULL,
+        'Rendered',
+        1,
+        0,
+        '["trade","fullbody","art","skulldragon","fatfur","lito","plant","character","clip-studio-paint-ex","dragon","furry","gay","gift"]',
+        '2026-05-02T00:00:00Z'
     );
