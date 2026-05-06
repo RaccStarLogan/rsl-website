@@ -7,7 +7,7 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
 
     <div class="commissions-form">
         <h1>Commission Form</h1>
-        <form method="POST" action="/api/submit">
+        <form id="commission-form">
             <input type="hidden" name="nsfw" value="true">
             <div class="form-section" id="name-section">
                 <label for="name">
@@ -159,7 +159,7 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                     font-size: 14px;
                     opacity: 0.8;
                 ">
-                    Submitting your request, please wait... <span class="spinner"></span>
+                    Submitting your request, this may take a moment... <span class="spinner"></span>
                 </div>
                 <p id="error-message" style="color: red; display: none;"></p>
             </div>
