@@ -1,0 +1,304 @@
+---
+import NSFWLayout from "../../../layouts/NSFWLayout.astro";
+---
+
+<NSFWLayout title="Commission Form - Jesper Skulldragon">
+    <link rel="stylesheet" href="/commissions.css">
+    <div class="commissions-form">
+        <h1>Commission Form</h1>
+        <form method="POST" action="/submit">
+            <div class="form-section" id="name-section">
+                <label for="name">
+                    Name/Username
+                    <input type="text" name="name" required>
+                </label>
+            </div>
+            <div class="form-section" id="contact-section">
+                <label for="contact">
+                    Preferred Contact Method
+                    <select name="contact-method" required>
+                        <option value="email">Email</option>
+                        <option value="discord">Discord</option>
+                        <option value="telegram">Telegram</option>
+                        <option value="other">Other...</option>
+                    </select>
+                    <input type="text" name="contact-details" placeholder="Your email/username/etc" required>
+                </label>
+            </div>
+            <div class="form-section" id="category-section">
+                <label for="category">
+                    Category
+                    <select name="category" required>
+                        <option value="art">Art</option>
+                        <option value="audio">Audio</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </label>
+            </div>
+            <!-- TODO: make this automated via API -->
+            <div class="form-section" id="type-section">
+                <label for="type">
+                    Commission Type
+                    <!-- ART TYPES -->
+                    <select id="type-art" name="type">
+                        <option value="doodle">Doodle ($10+)</option>
+                        <option value="sketch">Sketch ($20+)</option>
+                        <option value="flat">Flat Color ($40+)</option>
+                        <option value="shaded">Shaded ($60+)</option>
+                        <option value="rendered">Rendered ($90+)</option>
+                        <option value="emote">Emote ($20 each)</option>
+                        <option value="sticker">Sticker ($30 each)</option>
+                        <option value="icon">Icon ($40)</option>
+                        <option value="badge">Badge ($50 + shipping)</option>
+                        <option value="pngtuber">PNG-Tuber ($60+)</option>
+                        <option value="reference">Reference Sheet ($100+)</option>
+                    </select>
+                    <!-- AUDIO TYPES -->
+                    <select id="type-audio" hidden="">
+                        <option value="music">Music Composition ($250+)</option>
+                        <option value="sound">Sound Design ($50+)</option>
+                        <option value="voice">Voice Acting ($20+ per line)</option>
+                    </select>
+                    <!-- CUSTOM has no type selector -->
+                </label>
+            </div>
+            <div class="form-section" id="addons-section">
+                <label for="addons">
+                    Add-ons (Select all that apply)
+                    <!-- category = art -->
+                    <div class="addon">
+                        <label>
+                            <input type="checkbox" name="addon-xtra-chars">
+                            Extra Character(s) (+50% base price)
+                        </label>
+                    </label>
+                    <input type="number" name="xtra-char-count" min="1">
+                </div>
+                <div class="addon">
+                    <label>
+                        <input type="checkbox" name="addon-bg">
+                        Detailed Background (+$15-60 depending on complexity)
+                    </label>
+                </div>
+                <div class="addon">
+                    <label>
+                        <input type="checkbox" name="addon-seq">
+                        Sequential Parts (+25% base price per additional part)
+                    </label>
+                    <input type="number" name="seq-part-count" min="1">
+                </div>
+                <div class="addon">
+                    <label>
+                        <input type="checkbox" name="addon-anim">
+                        Animation (+100% base price, may vary depending on length
+                        and complexity)
+                    </label>
+                </div>
+                <!-- global -->
+                 <div class="addon">
+                    <label>
+                        <input type="checkbox" name="addon-commercial">
+                        Commercial License (+100% total price)
+                    </label>
+                </div>
+                <div class="addon">
+                    <label>
+                        <input type="checkbox" name="addon-rush">
+                        Rush Fee (varies by deadline and queue)
+                    </label>
+                    <input type="date" name="rush-deadline">
+                </div>
+            </label>
+        </div>
+        <div class="form-section" id="refs-section">
+            <label for="refs">
+                <div>Reference(s)</div>
+                <textarea name="ref-links" placeholder="Paste links to relevant references if needed"></textarea>
+                <div class="subtext">
+                    ToyHou.se or VSona links work! 
+                    Otherwise use <a href="https://drive.google.com">Google Drive</a>, 
+                    <a href="https://filegarden.com">FileGarden</a>, 
+                    or any other file sharing service. 
+                    Make sure your references are properly shared!</div>
+                </label>
+                <div class="form-section" id="details-section">
+                    <label for="details">
+                        Details
+                        <textarea name="details" required></textarea>
+                    </label>
+                </div>
+                <div class="form-section">
+                    <label for="payment">
+                        Payment Method
+                        <select name="payment-method" required>
+                            <option value="paypal">PayPal Invoice</option>
+                            <option value="stripe">Stripe Invoice</option>
+                        </select>
+                        <input type="email" name="payment-email" placeholder="Email to send invoice to" required>
+                    </label>
+                </div>
+                <div class="form-section" id="tos-section">
+                    <label for="agree-tos">
+                        <input type="checkbox" name="tos" required>
+                        I have read and agree to the <a href="/terms">Terms of Service</a>.
+                    </label>
+                </div>
+                <div class="form-section" id="finalize-section">
+                    <label for="subtotal">
+                        Estimated Subtotal:
+                        <h2 id="subtotal-amount">$<span id="subtotal">10.00</span></h2>
+                    </label>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script lang="js">
+        document.addEventListener("DOMContentLoaded", () => {
+            const categorySelect =
+                document.querySelector('[name="category"]');
+            const artSelect = document.getElementById("type-art");
+            const audioSelect = document.getElementById("type-audio");
+
+            function updateTypeDropdown() {
+                const category = categorySelect.value; // ← THIS MUST BE FIRST
+
+                // Reset Names
+                artSelect.removeAttribute("name");
+                audioSelect.removeAttribute("name");
+
+                // Hide All
+                artSelect.hidden = true;
+                audioSelect.hidden = true;
+
+                if (category === "art") {
+                    artSelect.hidden = false;
+                    artSelect.setAttribute("name", "type");
+                }
+
+                if (category === "audio") {
+                    audioSelect.hidden = false;
+                    audioSelect.setAttribute("name", "type");
+                }
+
+                // Custom = no type selector
+            }
+
+            categorySelect.addEventListener("change", updateTypeDropdown);
+            updateTypeDropdown();
+        });
+    </script> <script lang="js">
+        document.addEventListener("DOMContentLoaded", () => {
+            const prices = {
+                art: {
+                    doodle: 10,
+                    sketch: 20,
+                    flat: 40,
+                    shaded: 60,
+                    rendered: 90,
+                    emote: 20,
+                    sticker: 30,
+                    icon: 40,
+                    badge: 50,
+                    pngtuber: 60,
+                    reference: 100,
+                },
+                audio: {
+                    music: 250,
+                    sound: 50,
+                    voice: 20,
+                },
+                addons: {
+                    extraChar: 0.5,
+                    detailedBg: 15,
+                    sequentialPart: 0.25,
+                    animation: 1,
+                    commercialLicense: 1,
+                    rushFee: 0.5,
+                },
+            };
+
+            const artSelect = document.getElementById("type-art");
+            const audioSelect = document.getElementById("type-audio");
+
+            function calculateSubtotal() {
+                const category =
+                    document.querySelector('[name="category"]').value;
+
+                let type = null;
+                if (!artSelect.hidden) type = artSelect.value;
+                if (!audioSelect.hidden) type = audioSelect.value;
+
+                let subtotal = 0;
+
+                // Base price
+                if (
+                    category !== "custom" &&
+                    type &&
+                    prices[category][type]
+                ) {
+                    subtotal = prices[category][type];
+                }
+
+                const base = subtotal;
+
+                // Extra characters
+                if (
+                    document.querySelector('[name="addon-xtra-chars"]')
+                        .checked
+                ) {
+                    const count = Number(
+                        document.querySelector('[name="xtra-char-count"]')
+                            .value || 0,
+                    );
+                    subtotal += base * prices.addons.extraChar * count;
+                }
+
+                // Background
+                if (document.querySelector('[name="addon-bg"]').checked) {
+                    subtotal += prices.addons.detailedBg;
+                }
+
+                // Sequential parts
+                if (document.querySelector('[name="addon-seq"]').checked) {
+                    const count = Number(
+                        document.querySelector('[name="seq-part-count"]')
+                            .value || 0,
+                    );
+                    subtotal += base * prices.addons.sequentialPart * count;
+                }
+
+                // Animation
+                if (document.querySelector('[name="addon-anim"]').checked) {
+                    subtotal += base * prices.addons.animation;
+                }
+
+                // Commercial license
+                if (
+                    document.querySelector('[name="addon-commercial"]')
+                        .checked
+                ) {
+                    subtotal += subtotal * prices.addons.commercialLicense;
+                }
+
+                // Rush fee
+                if (document.querySelector('[name="addon-rush"]').checked) {
+                    subtotal += subtotal * prices.addons.rushFee;
+                }
+
+                document.getElementById("subtotal").textContent =
+                    subtotal.toFixed(2);
+            }
+
+            // Recalculate whenever anything changes
+            document
+                .querySelectorAll("input, select, textarea")
+                .forEach((el) => {
+                    el.addEventListener("input", calculateSubtotal);
+                    el.addEventListener("change", calculateSubtotal);
+                });
+
+            calculateSubtotal();
+        });
+    </script>
+</NSFWLayout>

@@ -1,4 +1,5 @@
-.commissions-page {
+.commissions-page,
+.commissions-form {
   margin: 2rem 10%;
   display: grid;
   gap: 2rem;
@@ -33,15 +34,20 @@
   margin-top: 1rem;
 }
 
-.commissions-btn {
+.commissions-btn,
+button {
   display: inline-block;
   background: #a4203c;
   padding: 0.4rem 0.9rem;
   color: #c0e0ff;
   text-decoration: none;
+  border: none;
+  font-family: inherit;
+  max-width: 130px;
 }
 
-.commissions-btn:hover {
+.commissions-btn:hover,
+button:hover {
   color: #ffffff;
 }
 
@@ -130,8 +136,81 @@
   opacity: 0.85;
 }
 
+.form-section {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#addons-section .addon {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row;
+  
+}
+
+textarea {
+  width: 100%;
+}
+
+textarea,
+input,
+select {
+  border: 2px solid #c0e0ff;
+  background: #0b1130;
+  color: #c0e0ff;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  top: 6px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #4a6cff;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  font-size: 0.9rem;
+  position: absolute;
+  top: -3px;
+  left: 2px;
+}
+
+input[type=number] {
+  position: relative;
+  top: 6px;
+  width: 50px;
+  font-size: 0.9rem;
+}
+
+/* idk how to style the damn spinners so they will look scuffed, sorry guys */
+
+.subtext {
+  font-size: 0.8rem;
+  color: #a0c0ff
+}
+
+.subtext a {
+  color: #c0e0ff;
+}
+
+.subtext a:hover {
+  color: white;
+}
+
 @media (max-width: 900px) {
-  .commissions-page {
+  .commissions-page,
+  .commissions-form {
     margin: 1rem;
   }
 

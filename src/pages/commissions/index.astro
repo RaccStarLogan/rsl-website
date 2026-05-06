@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { listCommissionPricing, listPortfolioItems } from "../lib/portfolio/repository";
-import type { CommissionPricingTier, PortfolioItem } from "../lib/portfolio/types";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { listCommissionPricing, listPortfolioItems } from "../../lib/portfolio/repository";
+import type { CommissionPricingTier, PortfolioItem } from "../../lib/portfolio/types";
 
 const visibility = "sfw" as const;
 // Load samples used by pricing cards so each tier can show a recent example.
@@ -77,12 +77,14 @@ const pricingByCategory = categoryOrder
 >
   <link rel="stylesheet" href="/commissions.css" />
 
+  <h1>/!\ WARNING: This form is currently non-functional. Please contact me via <a href="mailto:contact@raccstarlogan.com" target="_blank" rel="noopener noreferrer">email</a> or through either <a href="https://t.me/RaccStarLogan" target="_blank" rel="noopener noreferrer">Telegram</a> or Discord (@racc.star.logan) to discuss commission requests.</h1>
+
   <div class="commissions-page">
     <section class="commissions-hero">
       <p class="commissions-eyebrow">Open for Work</p>
       <h1>Commissions</h1>
       <p>
-        Thanks for your interest. This page covers the process, what I offer,
+        Thanks for your interest! This page covers what to expect from me, what I offer,
         and how to reach out with your request.
       </p>
       <div class="commissions-actions">
@@ -98,6 +100,7 @@ const pricingByCategory = categoryOrder
 
     <section class="commissions-panel" id="pricing">
       <h2>Pricing</h2>
+      <p>Prices are listed in USD.</p>
       {
         pricingByCategory.map((group) => (
           <div class="commissions-pricing-group">
@@ -149,9 +152,29 @@ const pricingByCategory = categoryOrder
                 );
               })}
             </div>
+            <br />
+            {
+              group.category === "art" && (
+                <div class="commissions-addons">
+                  <h3 class="commissions-pricing-group-title">Art Add-Ons</h3>
+                  <ul class="commissions-addons-list">
+                    <li><strong>Extra Character(s):</strong> +50% base price</li>
+                    <li><strong>Detailed Background:</strong> +$15-60 depending on complexity</li>
+                    <li><strong>Sequential Parts:</strong> +25% base price per additional part</li>
+                  </ul>
+                </div>
+              )
+            }
           </div>
         ))
       }
+      <div class="commissions-addons">
+        <h3 class="commissions-pricing-group-title">Global Add-Ons</h3>
+        <ul class="commissions-addons-list">
+          <li><strong>Commercial License:</strong> +100% total price</li>
+          <li><strong>Rush Fee:</strong> varies by deadline and queue</li>
+        </ul>
+      </div>
       <p class="asterisk">* May incur additional fees.</p>
     </section>
 
@@ -166,8 +189,8 @@ const pricingByCategory = categoryOrder
         Include: project type, references, deadline, intended use, and any style
         notes.
       </p>
-      <a class="commissions-btn" href="mailto:raccstarlogan@gmail.com"
-        >Email Me</a
+      <a class="commissions-btn" href="/commissions/form"
+        >Fill Out the Form</a
       >
     </section>
   </div>

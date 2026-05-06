@@ -1,7 +1,7 @@
 ---
-import NSFWLayout from "../../layouts/NSFWLayout.astro";
-import { listCommissionPricing, listPortfolioItems } from "../../lib/portfolio/repository";
-import type { CommissionPricingTier, PortfolioItem } from "../../lib/portfolio/types";
+import NSFWLayout from "../../../layouts/NSFWLayout.astro";
+import { listCommissionPricing, listPortfolioItems } from "../../../lib/portfolio/repository";
+import type { CommissionPricingTier, PortfolioItem } from "../../../lib/portfolio/types";
 
 const visibility = "nsfw" as const;
 const [artItems, audioItems, pricingTiers] = await Promise.all([
@@ -164,8 +164,8 @@ const pricingByCategory = categoryOrder
         Include: project type, references, deadline, intended use, and any style
         notes.
       </p>
-      <a class="commissions-btn" href="mailto:raccstarlogan@gmail.com"
-        >Email Me</a
+      <a class="commissions-btn" href="/nsfw/commissions/form"
+        >Fill out the Form</a
       >
     </section>
   </div>
