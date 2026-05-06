@@ -4,9 +4,11 @@ import { env } from "cloudflare:workers";
 export const POST: APIRoute = async ({ request }) => {
   const form = await request.formData();
 
+  // Detect SFW vs NSFW based on URL
   const url = new URL(request.url);
   const isNSFW = url.pathname.includes("/nsfw/");
 
+  // Build commission object exactly how the bot expects it
   const commission = {
     source: isNSFW ? "NSFW" : "SFW",
     name: form.get("name"),
@@ -32,12 +34,17 @@ export const POST: APIRoute = async ({ request }) => {
     subtotal: form.get("subtotal") || null
   };
 
-  await fetch(env.BOT_ENDPOINT + "/commission", {
+  // Send to Render bot
+  const response = await fetch(env.BOT_ENDPOINT + "/commission", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(commission)
   });
 
+  // If the bot errors, surface it
+  if (!response.ok) {
+    return new Response("Bot error", { status: 500 });
+  }
+
   return new Response("OK", { status: 200 });
 };
-// I AM LOSING MY FUCKING MIND WHY WON'T THIS WORK
