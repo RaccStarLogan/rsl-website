@@ -45,6 +45,8 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
+  console.log("COMMISSION OBJECT:", JSON.stringify(commission));
+
   const params = new URLSearchParams({
     name: String(commission.name),
     contactMethod: String(commission.contactMethod),
@@ -66,6 +68,8 @@ export const POST: APIRoute = async ({ request }) => {
     paymentEmail: String(commission.paymentEmail),
     subtotal: String(commission.subtotal ?? "")
   });
+
+  console.log("PARAMS:", params.toString());
 
   const isNSFW = commission.source === "NSFW";
 
