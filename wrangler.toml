@@ -1,6 +1,7 @@
 name = "rsl-website"
 compatibility_date = "2026-04-13"
 pages_build_output_dir = "./dist"
+pages_functions_dir = "./functions"
 
 [vars]
 BOT_ENDPOINT = "https://rsl-commissions-bot.onrender.com"
