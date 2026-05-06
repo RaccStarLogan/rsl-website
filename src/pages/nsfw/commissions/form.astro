@@ -183,7 +183,7 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
         }
     </style>
     <script lang="js">
-        document.getElementByID("commission-form").addEventListener("submit", async (e) => {
+        document.getElementById("commission-form").addEventListener("submit", async (e) => {
             e.preventDefault();
 
             const form = e.target;
