@@ -12,48 +12,6 @@ const wikiEntries = await listWikiEntries(
   Astro.locals
 );
 
-const jesperThemeSource = await getWikiEntryBySlug("jesper-foster", "nsfw", Astro.locals);
-const jesperThemeFallback = {
-  primaryClr: "#ff9700",
-  secondaryClr: "#ffb347",
-  accentClr: "#ffa114",
-  primaryTxt: "#ffb347",
-  secondaryTxt: "#ffcb7a",
-  accentTxt: "#ff9700",
-  primaryBg: "rgba(58, 10, 10, 0.72)",
-  secondaryBg: "rgba(82, 16, 16, 0.78)",
-  tertiaryBg: "rgba(46, 8, 8, 0.54)",
-  hoverBg: "rgba(120, 24, 24, 0.46)",
-  warningClr: "#ff9700",
-  tabClr: "#A4203C",
-  tabHover: "#BE284B",
-  tabActive: "#ff9700",
-  font: "\"Lexend\", sans-serif",
-  fontUrl: null,
-  bodyClr: "#1f243d",
-  links: "#ff9700"
-};
-const jesperTheme = jesperThemeSource?.theme ?? jesperThemeFallback;
-const themeVars = [
-  ["--wiki-primary-color", jesperTheme.primaryClr],
-  ["--wiki-secondary-color", jesperTheme.secondaryClr],
-  ["--wiki-accent-color", jesperTheme.accentClr],
-  ["--wiki-text-primary", jesperTheme.primaryTxt],
-  ["--wiki-text-secondary", jesperTheme.secondaryTxt],
-  ["--wiki-text-accent", jesperTheme.accentTxt],
-  ["--wiki-bg-primary", jesperTheme.primaryBg],
-  ["--wiki-bg-secondary", jesperTheme.secondaryBg],
-  ["--wiki-bg-tertiary", jesperTheme.tertiaryBg],
-  ["--wiki-bg-hover", jesperTheme.hoverBg],
-  ["--wiki-warning-color", jesperTheme.warningClr],
-  ["--wiki-gallery-tab-color", jesperTheme.tabClr],
-  ["--wiki-gallery-tab-hover-color", jesperTheme.tabHover],
-  ["--wiki-gallery-tab-active-color", jesperTheme.tabActive],
-  ["--wiki-font-family", jesperTheme.font],
-  ["--wiki-body-bg-color", jesperTheme.bodyClr]
-].filter(([, value]) => Boolean(value)) as Array<[string, string]>;
-const themeCss = `:root {\n${themeVars.map(([key, value]) => `  ${key}: ${value};`).join("\n")}\n}`;
-
 const newestTimestamp = wikiEntries.reduce((latest, entry) => {
   const candidate = Date.parse(entry.updatedAt ?? entry.publishedAt);
   return Number.isFinite(candidate) ? Math.max(latest, candidate) : latest;
@@ -107,9 +65,7 @@ const tocGroups = [...groupedEntries.entries()]
   title="Wiki - Jesper Skulldragon"
   description="A simple place to browse characters and other bits of the world around them."
 >
-  <link rel="stylesheet" href="/wiki.css" />
-  {jesperTheme.fontUrl && <link rel="stylesheet" href={jesperTheme.fontUrl} />}
-  <style is:inline set:html={themeCss} />
+  <link rel="stylesheet" href="/styles/layouts/wiki.css" />
   <div class="wiki-page-grid">
   <h1 class="wiki-page-title">Welcome to the RSL NSFW Wiki!</h1>
     <aside class="wiki-sidebar">

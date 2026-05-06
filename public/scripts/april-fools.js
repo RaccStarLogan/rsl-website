@@ -58,7 +58,7 @@
 
     var link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/april-fools.css";
+    link.href = "/styles/other/april-fools.css";
     link.dataset.aprilFools = "true";
     document.head.appendChild(link);
 }());

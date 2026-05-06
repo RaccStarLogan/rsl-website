@@ -1,13 +1,11 @@
-/* TODO: Split Take the colors from this and make a color sheet and use the layout sheets made from main */
-
 html {
     height: 100%;
 }
 
 body {
     font-family: Lexend, sans-serif;
-    background-color: #241313;
-    color: #FF9500;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -15,12 +13,12 @@ body {
 }
 
 header {
-    background: linear-gradient(180deg, #791616, #400d0d);
-    border-bottom: 4px solid #FF9500;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(0deg, var(--bg-header-top), var(--bg-header-bottom));
+    border-bottom: 4px solid var(--border-strong);
+    box-shadow: 0px 10px 10px 0px var(--shadow-strong);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
 }
 
 nav {
@@ -43,28 +41,34 @@ main {
 hr {
     border: none;
     height: 4px;
-    background-color: #FF9500;
+    background-color: var(--border-strong);
     margin: 2rem 40%;
 }
 
 a {
-    color: #FF9500;
+    color: var(--link-default);
     text-decoration: none;
 }
 
 a:hover {
-    color: white;
+    color: var(--link-hover);
 }
 
 .hero p a,
 .article-section a {
-    color: #ffd7a6;
+    color: var(--text-error-soft);
     font-weight: 600;
     text-decoration: underline;
-    text-decoration-color: #FF9500;
+    text-decoration-color: var(--border-strong);
     text-decoration-thickness: 2px;
     text-underline-offset: 0.18em;
-    background: linear-gradient(180deg, transparent 0%, transparent 72%, rgba(255, 149, 0, 0.22) 72%, rgba(255, 149, 0, 0.22) 100%);
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        transparent 72%,
+        var(--highlight-subtle) 72%,
+        var(--highlight-subtle) 100%
+    );
     transition: color 0.2s ease, text-decoration-color 0.2s ease, background 0.2s ease;
 }
 
@@ -72,9 +76,15 @@ a:hover {
 .hero p a:focus-visible,
 .article-section a:hover,
 .article-section a:focus-visible {
-    color: white;
-    text-decoration-color: #ffffff;
-    background: linear-gradient(180deg, transparent 0%, transparent 64%, rgba(255, 255, 255, 0.18) 64%, rgba(255, 255, 255, 0.18) 100%);
+    color: var(--text-inverse);
+    text-decoration-color: var(--text-inverse);
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        transparent 64%,
+        var(--highlight-soft) 64%,
+        var(--highlight-soft) 100%
+    );
 }
 
 footer {
@@ -84,10 +94,10 @@ footer {
     align-items: center;
     padding: 1rem;
     gap: 1rem;
-    color: #ffbfcf;
-    background-color: #400e1a;
-    box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.4);
-    border-top: 4px solid #a4203c;
+    color: var(--footer-text);
+    background-color: var(--footer-bg);
+    box-shadow: 10px 0px 10px 10px var(--shadow-strong);
+    border-top: 4px solid var(--footer-border);
 }
 
 footer li {
@@ -95,7 +105,7 @@ footer li {
 }
 
 footer a {
-    color: #ffbfcf;
+    color: var(--footer-text);
 }
 
 .footer-links {
@@ -112,10 +122,10 @@ footer a {
     align-items: center;
 }
 
-.footer-links li+li::before {
+.footer-links li + li::before {
     content: "-";
     margin: 0 0.5rem;
-    color: #ffbfcf;
+    color: var(--footer-text);
 }
 
 .nav-links {
@@ -142,8 +152,8 @@ footer a {
 }
 
 .widget-card {
-    background-color: #530F0F;
-    border: 4px solid #FF9500;
+    background-color: var(--bg-surface);
+    border: 4px solid var(--border-strong);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -154,8 +164,8 @@ footer a {
 .widget-card img {
     max-width: 256px;
     height: auto;
-    border: 4px solid #FF9500;
-    background: linear-gradient(0deg, #2d0606, #241313);
+    border: 4px solid var(--border-strong);
+    background: linear-gradient(0deg, var(--bg-header-top), var(--bg-body));
 }
 
 .widgets {
@@ -167,13 +177,13 @@ footer a {
 
 .caption {
     font-size: 0.8rem;
-    color: #FF95007f;
+    color: var(--text-muted);
     margin-top: 0.5rem;
     text-align: center;
 }
 
 .caption a {
-    color: #FF95009f;
+    color: var(--text-muted-strong);
 }
 
 .links-page {
@@ -218,10 +228,10 @@ footer a {
 }
 
 .announcement {
-    background-color: #400e1a;
-    box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.4);
-    border-bottom: 4px solid #a4203c;
-    color: #ffbfcf;
+    background-color: var(--footer-bg);
+    box-shadow: 10px 0px 10px 10px var(--shadow-strong);
+    border-bottom: 4px solid var(--footer-border);
+    color: var(--footer-text);
     text-align: center;
     padding: 0.5rem;
     z-index: 1000;
@@ -229,7 +239,7 @@ footer a {
 }
 
 .announcement a {
-    color: #ffbfcf;
+    color: var(--footer-text);
 }
 
 .close-btn {
@@ -239,7 +249,7 @@ footer a {
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: #ffbfcf;
+    color: var(--footer-text);
     font-size: 1.2rem;
     cursor: pointer;
     line-height: 1;
@@ -257,9 +267,9 @@ footer a {
 .link-group {
     padding: 0.5rem;
     width: 80%;
-    background-color: #530F0F;
-    border: 4px solid #FF9500;
-    box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.4);
+    background-color: var(--bg-surface);
+    border: 4px solid var(--border-strong);
+    box-shadow: 0 4px 10px 0px var(--shadow-strong);
 }
 
 .link-category {
@@ -274,8 +284,8 @@ footer a {
     padding: 5px;
     margin: 0.25rem 0;
     text-align: center;
-    background-color: #241313;
-    border: 4px solid #FF9500;
+    background-color: var(--bg-body);
+    border: 4px solid var(--border-strong);
 }
 
 /* ================================
@@ -307,10 +317,10 @@ footer a {
     }
 
     .hamburger {
-        display:block;
+        display: block;
         cursor: pointer;
         font-size: 1.8rem;
-        color: #FF9500;
+        color: var(--text-primary);
         background: none;
         border: none;
     }
@@ -380,11 +390,5 @@ footer a {
 
     .link-list li {
         padding: 0.75rem 1rem;
-    }
-
-    .portrait-image {
-        max-width: 100%;
-        height: auto;
-        display: block;
     }
 }
