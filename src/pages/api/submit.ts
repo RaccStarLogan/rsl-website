@@ -89,7 +89,8 @@ export const POST: APIRoute = async ({ request }) => {
 
   try {
     console.log("REDIRECT URL:", `${basePath}?${params.toString()}`);
-    return Response.redirect(`${basePath}?${params.toString()}`, 303);
+    const url = new URL(`${basePath}?${params.toString()}`, request.url);
+    return Response.redirect(url.toString(), 303);
   } catch (err) {
     console.error("REDIRECT ERROR:", err);
     return new Response(JSON.stringify({ error: true, message: String(err) }), {
