@@ -2,7 +2,12 @@ import type { APIRoute } from "astro";
 import { env } from "cloudflare:workers";
 
 export const POST: APIRoute = async ({ request }) => {
+
+  console.log("HANDLER START");
+
   const form = await request.formData();
+
+  console.log("FORM PARSED");
 
   // Build commission object exactly how the bot expects it
   const commission = {
@@ -30,6 +35,9 @@ export const POST: APIRoute = async ({ request }) => {
     subtotal: form.get("subtotal") || null
   };
 
+  console.log("COMMISSION BUILT");
+  console.log("SENDING TO BOT");
+
   // Send to Render bot
   const response = await fetch(env.BOT_ENDPOINT + "/commission", {
     method: "POST",
@@ -45,7 +53,9 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
-  console.log("COMMISSION OBJECT:", JSON.stringify(commission));
+  console.log("BOT RESPONSE:", response.status);
+
+  console.log("BUILDING PARAMS");
 
   const params = new URLSearchParams({
     name: String(commission.name),
@@ -69,7 +79,7 @@ export const POST: APIRoute = async ({ request }) => {
     subtotal: String(commission.subtotal ?? "")
   });
 
-  console.log("PARAMS:", params.toString());
+  console.log("READY TO REDIRECT");
 
   const isNSFW = commission.source === "NSFW";
 
