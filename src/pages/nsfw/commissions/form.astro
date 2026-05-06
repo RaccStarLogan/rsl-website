@@ -290,8 +290,9 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                     subtotal += subtotal * prices.addons.rushFee;
                 }
 
-                document.getElementById("subtotal").textContent =
-                    subtotal.toFixed(2);
+                document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+
+                document.getElementById("subtotal-field").value = subtotal.toFixed(2);
             }
 
             // Recalculate whenever anything changes
@@ -303,7 +304,6 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                 });
 
             calculateSubtotal();
-            document.getElementById("subtotal-field").value = subtotal;
         });
     </script>
 </NSFWLayout>
