@@ -10,6 +10,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div class="commissions-form">
         <h1>Commission Form</h1>
         <form method="POST" action="/api/submit">
+            <input type="hidden" name="nsfw" value="false">
             <div class="form-section" id="name-section">
                 <label for="name">
                     Name/Username
@@ -290,8 +291,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     subtotal += subtotal * prices.addons.rushFee;
                 }
 
-                document.getElementById("subtotal").textContent =
-                    subtotal.toFixed(2);
+                document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+
+                document.getElementById("subtotal-field").value = subtotal.toFixed(2);
             }
 
             // Recalculate whenever anything changes
@@ -303,7 +305,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 });
 
             calculateSubtotal();
-            document.getElementById("subtotal-field").value = subtotal;
         });
     </script>
-</BaseLayout>
+</NSFWLayout>

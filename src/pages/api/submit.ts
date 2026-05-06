@@ -6,7 +6,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   // Detect SFW vs NSFW based on URL
   const url = new URL(request.url);
-  const isNSFW = url.pathname.includes("/nsfw/");
+  const isNSFW = form.get("nsfw") === "true";
 
   // Build commission object exactly how the bot expects it
   const commission = {
