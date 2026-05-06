@@ -5,6 +5,9 @@ pages_build_output_dir = "./dist"
 [vars]
 BOT_ENDPOINT = "https://rsl-commissions-bot.onrender.com"
 
+[pages]
+route = "/api/*"
+
 [[d1_databases]]
 binding = "PORTFOLIO_DB"
 database_name = "v3_portfolio"
