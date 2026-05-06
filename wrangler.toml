@@ -2,6 +2,9 @@ name = "rsl-website"
 compatibility_date = "2026-04-13"
 pages_build_output_dir = "./dist"
 
+[vars]
+BOT_ENDPOINT = "https://rsl-commissions-bot.onrender.com"
+
 [[d1_databases]]
 binding = "PORTFOLIO_DB"
 database_name = "v3_portfolio"
