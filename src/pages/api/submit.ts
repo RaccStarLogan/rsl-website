@@ -4,13 +4,9 @@ import { env } from "cloudflare:workers";
 export const POST: APIRoute = async ({ request }) => {
   const form = await request.formData();
 
-  // Detect SFW vs NSFW based on URL
-  const url = new URL(request.url);
-  const isNSFW = form.get("nsfw") === "true";
-
   // Build commission object exactly how the bot expects it
   const commission = {
-    source: isNSFW ? "NSFW" : "SFW",
+    source: form.get("nsfw") === "true" ? "NSFW" : "SFW",
     name: form.get("name"),
     contactMethod: form.get("contact-method"),
     contactDetails: form.get("contact-details"),
@@ -43,8 +39,37 @@ export const POST: APIRoute = async ({ request }) => {
 
   // If the bot errors, surface it
   if (!response.ok) {
-    return new Response("Bot error", { status: 500 });
+    return new Response(JSON.stringify({ error: true }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
   }
 
-  return new Response("OK", { status: 200 });
+  const params = new URLSearchParams({
+    name: String(commission.name),
+    contactMethod: String(commission.contactMethod),
+    contactDetails: String(commission.contactDetails),
+    category: String(commission.category),
+    type: String(commission.type ?? ""),
+    extraChars: String(commission.addons.extraChars),
+    background: String(commission.addons.background),
+    sequential: String(commission.addons.sequential),
+    animation: String(commission.addons.animation),
+    commercial: String(commission.addons.commercial),
+    rush: String(commission.addons.rush),
+    details: String(commission.details),
+    references: String(commission.references),
+    paymentMethod: String(commission.paymentMethod),
+    paymentEmail: String(commission.paymentEmail),
+    subtotal: String(commission.subtotal ?? "")
+  });
+
+  const isNSFW = commission.source === "NSFW";
+
+  const basePath = isNSFW
+    ? "/nsfw/commissions/submitted"
+    : "/commissions/submitted";
+
+  return Response.redirect(`${basePath}?${params.toString()}`, 303);
+
 };

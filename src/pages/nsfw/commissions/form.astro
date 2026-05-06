@@ -151,11 +151,66 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                         <h2 id="subtotal-amount">$<span id="subtotal">10.00</span> USD</h2>
                         <input type="hidden" name="subtotal" id="subtotal-field">
                     </label>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submit-btn">Submit</button>
                 </div>
+                <div id="loading" style="
+                    display: none;
+                    margin-top: 10px;
+                    font-size: 14px;
+                    opacity: 0.8;
+                ">
+                    Submitting your request, please wait... <span class="spinner"></span>
+                </div>
+                <p id="error-message" style="color: red; display: none;"></p>
             </div>
         </form>
     </div>
+    <style>
+        .spinner {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--border-faint);
+            border-top-color: var(--border-strong);
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script lang="js">
+        document.getElementByID("commission-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = new FormData(form);
+
+            document.getElementById("loading").style.display = "block";
+            document.getElementById("submit-btn").disabled = true;
+
+            const res = await fetch("/api/submit", {
+                method: "POST",
+                body: data
+            });
+
+            if (res.redirected) {
+                window.location = res.url;
+                return;
+            }
+
+            if (!res.ok) {
+                document.getElementById("error-message").textContent = "Something went wrong. If this keeps happening, please contact me via email with your commission details and let me know of this error.";
+                document.getElementById("error-message").style.display = "block";
+
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("submit-btn").disabled = false;
+            }
+        });
+    </script>
     <script lang="js">
         document.addEventListener("DOMContentLoaded", () => {
             const categorySelect =
