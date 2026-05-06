@@ -73,6 +73,16 @@ export const POST: APIRoute = async ({ request }) => {
     ? "/nsfw/commissions/submitted"
     : "/commissions/submitted";
 
-  return Response.redirect(`${basePath}?${params.toString()}`, 303);
+  try {
+    console.log("REDIRECT URL:", `${basePath}?${params.toString()}`);
+    return Response.redirect(`${basePath}?${params.toString()}`, 303);
+  } catch (err) {
+    console.error("REDIRECT ERROR:", err);
+    return new Response(JSON.stringify({ error: true, message: String(err) }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+
 
 };
