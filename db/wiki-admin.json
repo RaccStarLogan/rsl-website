@@ -18,7 +18,7 @@
       "visibility": "both",
       "sortOrder": 0,
       "publishedAt": "2026-04-16T00:00:00Z",
-      "updatedAt": "2026-04-21T11:10:49.203Z",
+      "updatedAt": "2026-05-14T06:24:02.548Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-CHR-LF-MAIN",
@@ -66,7 +66,11 @@
           "sortOrder": 4
         }
       ],
-      "infoSong": null,
+      "infoSong": {
+        "audioUrl": "https://media.raccstarlogan.com/wiki/assets/char/lf/m.mp3",
+        "streamUrl": null,
+        "streamLabel": null
+      },
       "infoRows": [
         {
           "id": "WIKI-ROW-LF-NKNM",
