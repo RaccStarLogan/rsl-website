@@ -1,6 +1,6 @@
 -- Migrated from db/old-nsfw-export.sql
 -- Visibility: nsfw
--- 66 rows
+-- 67 rows
 
 INSERT INTO
     portfolio_items (
@@ -2574,4 +2574,43 @@ VALUES
         0,
         '["trade","fullbody","art","skulldragon","fatfur","lito","plant","character","clip-studio-paint-ex","dragon","furry","gay","gift"]',
         '2026-05-02T00:00:00Z'
+    );
+
+INSERT INTO
+    portfolio_items (
+        id,
+        kind,
+        visibility,
+        title,
+        slug,
+        summary,
+        description,
+        thumbnail_url,
+        logo_url,
+        media_url,
+        external_url,
+        commission_type,
+        is_commission,
+        is_personal,
+        tags_json,
+        published_at
+    )
+VALUES
+    (
+        'NSFW-P-A-2026-05-17',
+        'art',
+        'nsfw',
+        'You Know What to Do~',
+        'you-know-what-to-do',
+        'You know what to do~',
+        replace('**"**Darn...~ Can''t reach... **You know what to do...~"**\n\nSelf indulgent piece I made, also first time I''ve actually drawn proper NSFW art that isn''t just fetish material. I struggled a little with the anatomy of the penis.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: May 2, 2025\n\nTime Spent: 5 hours\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2026/05/17/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2026/05/02/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        'https://media.raccstarlogan.com/nsfw/portfolio/art/2026/05/17/thumb.jpg',
+        NULL,
+        'https://media.raccstarlogan.com/nsfw/portfolio/art/2026/05/17/img.png',
+        NULL,
+        'Rendered',
+        0,
+        1,
+        '["art","character","clip-studio-paint-ex","dragon","cat","perspective","fatfur","furry","gay","halfbody","jesper-foster","personal","raccoon","skulldragon"]',
+        '2026-05-17T00:00:00R'
     );
