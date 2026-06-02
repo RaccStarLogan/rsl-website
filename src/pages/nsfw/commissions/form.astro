@@ -1,5 +1,20 @@
 ---
 import NSFWLayout from "../../../layouts/NSFWLayout.astro";
+import { listCommissionPricing } from "../../../lib/portfolio/repository";
+
+const pricingTiers = await listCommissionPricing(Astro.locals);
+const artPricing = pricingTiers.filter((tier) => tier.category === "art");
+const audioPricing = pricingTiers.filter((tier) => tier.category === "audio");
+
+function parsePrice(price: string) {
+  const match = String(price).match(/\$([0-9]+(?:\.[0-9]+)?)/);
+  return match ? Number(match[1]) : 0;
+}
+
+const pricingData = {
+  art: Object.fromEntries(artPricing.map((tier) => [tier.id, parsePrice(tier.price)])),
+  audio: Object.fromEntries(audioPricing.map((tier) => [tier.id, parsePrice(tier.price)])),
+};
 ---
 
 <NSFWLayout title="Commission Form - Jesper Skulldragon">
@@ -37,29 +52,21 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                     </select>
                 </label>
             </div>
-            <!-- TODO: make this automated via API -->
+            <!-- Pricing is loaded from the database via commission_pricing -->
             <div class="form-section" id="type-section">
                 <label for="type">
                     Commission Type
                     <!-- ART TYPES -->
                     <select id="type-art" name="type">
-                        <option value="doodle">Doodle ($10+)</option>
-                        <option value="sketch">Sketch ($20+)</option>
-                        <option value="flat">Flat Color ($40+)</option>
-                        <option value="shaded">Shaded ($60+)</option>
-                        <option value="rendered">Rendered ($90+)</option>
-                        <option value="emote">Emote ($20 each)</option>
-                        <option value="sticker">Sticker ($30 each)</option>
-                        <option value="icon">Icon ($40)</option>
-                        <option value="badge">Badge ($50 + shipping)</option>
-                        <option value="pngtuber">PNG-Tuber ($60+)</option>
-                        <option value="reference">Reference Sheet ($100+)</option>
+                        {artPricing.map((tier) => (
+                            <option value={tier.id}>{tier.label} ({tier.price})</option>
+                        ))}
                     </select>
                     <!-- AUDIO TYPES -->
                     <select id="type-audio" hidden="">
-                        <option value="music">Music Composition ($250+)</option>
-                        <option value="sound">Sound Design ($50+)</option>
-                        <option value="voice">Voice Acting ($20+ per line)</option>
+                        {audioPricing.map((tier) => (
+                            <option value={tier.id}>{tier.label} ({tier.price})</option>
+                        ))}
                     </select>
                     <!-- CUSTOM has no type selector -->
                 </label>
@@ -67,35 +74,37 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
             <div class="form-section" id="addons-section">
                 <label for="addons">
                     Add-ons (Select all that apply)
-                    <!-- category = art -->
-                    <div class="addon">
-                        <label>
-                            <input type="checkbox" name="addon-xtra-chars">
-                            Extra Character(s) (+50% base price)
-                        </label>
-                    </label>
-                    <input type="number" name="xtra-char-count" min="1">
-                </div>
-                <div class="addon">
-                    <label>
-                        <input type="checkbox" name="addon-bg">
-                        Detailed Background (+$15-60 depending on complexity)
-                    </label>
-                </div>
-                <div class="addon">
-                    <label>
-                        <input type="checkbox" name="addon-seq">
-                        Sequential Parts (+25% base price per additional part)
-                    </label>
-                    <input type="number" name="seq-part-count" min="1">
-                </div>
-                <div class="addon">
-                    <label>
-                        <input type="checkbox" name="addon-anim">
-                        Animation (+100% base price, may vary depending on length
-                        and complexity)
-                    </label>
-                </div>
+                    <div class="art-only-addons">
+                        <!-- category = art -->
+                        <div class="addon">
+                            <label>
+                                <input type="checkbox" name="addon-xtra-chars">
+                                Extra Character(s) (+50% base price)
+                            </label>
+                            <input type="number" name="xtra-char-count" min="1">
+                        </div>
+                        <div class="addon">
+                            <label>
+                                <input type="checkbox" name="addon-bg">
+                                Detailed Background (+$15-60 depending on complexity)
+                            </label>
+                        </div>
+                        <div class="addon">
+                            <label>
+                                <input type="checkbox" name="addon-seq">
+                                Sequential Parts (+25% base price per additional part)
+                            </label>
+                            <input type="number" name="seq-part-count" min="1">
+                        </div>
+                        <div class="addon">
+                            <label>
+                                <input type="checkbox" name="addon-anim">
+                                Animation (+100% base price, may vary depending on length
+                                and complexity)
+                            </label>
+                        </div>
+                    </div>
+                </label>
                 <!-- global -->
                  <div class="addon">
                     <label>
@@ -149,7 +158,8 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                     <label for="subtotal">
                         Estimated Subtotal:
                         <div class="price-summary">
-                            <h2 id="subtotal-amount">$<span id="subtotal">10.00</span> USD</h2>
+                            <h2 id="subtotal-amount-h2">$<span id="subtotal-h2">10.00</span> USD</h2>
+                            <p id="subtotal-amount-p" hidden>$<span id="subtotal-p">10.00</span> USD</p>
                             <h2 id="sale-amount" hidden>
                                 $<span id="sale-total">10.00</span> USD
                             </h2>
@@ -157,6 +167,7 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                         <input type="hidden" name="subtotal" id="subtotal-field">
                         <input type="hidden" name="sale-percent" id="sale-percent" value="20">
                         <input type="hidden" name="sale-total" id="sale-total-field" value="10.00">
+                        <input type="hidden" id="commission-pricing-data" value={JSON.stringify(pricingData)}>
                     </label>
                     <button type="submit" id="submit-btn">Submit</button>
                 </div>
@@ -189,7 +200,7 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
             }
         }
 
-        #subtotal-amount.sale-active {
+        #subtotal-amount-p.sale-active {
             text-decoration: line-through;
             opacity: 0.7;
         }
@@ -237,6 +248,7 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
 
             function updateTypeDropdown() {
                 const category = categorySelect.value; // ← THIS MUST BE FIRST
+                const artAddonSection = document.querySelector(".art-only-addons");
 
                 // Reset Names
                 artSelect.removeAttribute("name");
@@ -249,6 +261,18 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                 if (category === "art") {
                     artSelect.hidden = false;
                     artSelect.setAttribute("name", "type");
+                    artAddonSection?.removeAttribute("hidden");
+                } else {
+                    artAddonSection?.setAttribute("hidden", "");
+                    artAddonSection?.querySelectorAll("input, select").forEach((input) => {
+                        if (input instanceof HTMLInputElement) {
+                            if (input.type === "checkbox" || input.type === "radio") {
+                                input.checked = false;
+                            } else {
+                                input.value = "";
+                            }
+                        }
+                    });
                 }
 
                 if (category === "audio") {
@@ -262,27 +286,15 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
             categorySelect.addEventListener("change", updateTypeDropdown);
             updateTypeDropdown();
         });
-    </script> <script lang="js">
+    </script>
+    <script lang="js">
         document.addEventListener("DOMContentLoaded", () => {
+            const pricingData = JSON.parse(
+                document.getElementById("commission-pricing-data").value || "{}"
+            );
             const prices = {
-                art: {
-                    doodle: 10,
-                    sketch: 20,
-                    flat: 40,
-                    shaded: 60,
-                    rendered: 90,
-                    emote: 20,
-                    sticker: 30,
-                    icon: 40,
-                    badge: 50,
-                    pngtuber: 60,
-                    reference: 100,
-                },
-                audio: {
-                    music: 250,
-                    sound: 50,
-                    voice: 20,
-                },
+                art: pricingData.art || {},
+                audio: pricingData.audio || {},
                 addons: {
                     extraChar: 0.5,
                     detailedBg: 15,
@@ -369,18 +381,24 @@ import NSFWLayout from "../../../layouts/NSFWLayout.astro";
                     ? subtotal * (1 - salePercent / 100)
                     : subtotal;
 
-                document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+                document.getElementById("subtotal-h2").textContent = subtotal.toFixed(2);
+                document.getElementById("subtotal-p").textContent = subtotal.toFixed(2);
                 document.getElementById("sale-total").textContent = saleTotal.toFixed(2);
                 document.getElementById("sale-total-field").value = saleTotal.toFixed(2);
 
-                const subtotalAmountElement = document.getElementById("subtotal-amount");
+                const subtotalH2Element = document.getElementById("subtotal-amount-h2");
+                const subtotalPElement = document.getElementById("subtotal-amount-p");
                 const saleAmountElement = document.getElementById("sale-amount");
 
                 if (hasSale && saleTotal < subtotal) {
-                    subtotalAmountElement.classList.add("sale-active");
+                    subtotalH2Element.hidden = true;
+                    subtotalPElement.hidden = false;
+                    subtotalPElement.classList.add("sale-active");
                     saleAmountElement.hidden = false;
                 } else {
-                    subtotalAmountElement.classList.remove("sale-active");
+                    subtotalH2Element.hidden = false;
+                    subtotalPElement.hidden = true;
+                    subtotalPElement.classList.remove("sale-active");
                     saleAmountElement.hidden = true;
                 }
 
