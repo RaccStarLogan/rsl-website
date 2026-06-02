@@ -148,8 +148,15 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 <div class="form-section" id="finalize-section">
                     <label for="subtotal">
                         Estimated Subtotal:
-                        <h2 id="subtotal-amount">$<span id="subtotal">10.00</span> USD</h2>
+                        <div class="price-summary">
+                            <h2 id="subtotal-amount">$<span id="subtotal">10.00</span> USD</h2>
+                            <h2 id="sale-amount" hidden>
+                                $<span id="sale-total">10.00</span> USD
+                            </h2>
+                        </div>
                         <input type="hidden" name="subtotal" id="subtotal-field">
+                        <input type="hidden" name="sale-percent" id="sale-percent" value="20">
+                        <input type="hidden" name="sale-total" id="sale-total-field" value="10.00">
                     </label>
                     <button type="submit" id="submit-btn">Submit</button>
                 </div>
@@ -180,6 +187,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             to {
                 transform: rotate(360deg);
             }
+        }
+
+        #subtotal-amount.sale-active {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        #sale-amount {
+            margin-top: 0.25rem;
+            color: var(--text-strong);
         }
     </style>
     <script lang="js">
@@ -342,6 +359,29 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 // Rush fee
                 if (document.querySelector('[name="addon-rush"]').checked) {
                     subtotal += subtotal * prices.addons.rushFee;
+                }
+
+                const salePercent = Number(
+                    document.getElementById("sale-percent").value || 0,
+                );
+                const hasSale = salePercent > 0;
+                const saleTotal = hasSale
+                    ? subtotal * (1 - salePercent / 100)
+                    : subtotal;
+
+                document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+                document.getElementById("sale-total").textContent = saleTotal.toFixed(2);
+                document.getElementById("sale-total-field").value = saleTotal.toFixed(2);
+
+                const subtotalAmountElement = document.getElementById("subtotal-amount");
+                const saleAmountElement = document.getElementById("sale-amount");
+
+                if (hasSale && saleTotal < subtotal) {
+                    subtotalAmountElement.classList.add("sale-active");
+                    saleAmountElement.hidden = false;
+                } else {
+                    subtotalAmountElement.classList.remove("sale-active");
+                    saleAmountElement.hidden = true;
                 }
 
                 document.getElementById("subtotal").textContent = subtotal.toFixed(2);
