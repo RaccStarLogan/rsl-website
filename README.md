@@ -39,28 +39,6 @@ To test the full site with a local D1 database:
 
 This builds the site, seeds a local D1 instance, and starts `wrangler dev`.
 
-### Admin Panel
-
-The admin panel lets you manage portfolio items (CRUD, duplicate, copy/paste tags) by editing the SQL import files directly:
-
-```bash
-node scripts/admin-server.mjs
-```
-
-Then open `http://localhost:4400`.
-
-### Syncing to Remote D1
-
-After making changes in the admin panel, push them to the production database:
-
-```powershell
-./scripts/sync-d1.ps1
-```
-
-This drops and recreates the remote D1 tables, then re-imports all data from the SQL files.
-
-Astro looks for `.astro` files in `src/pages/`. Each page is exposed as a route based on its file name.
-
 ## Commands
 
 All commands are run from the root of the project:
@@ -71,8 +49,6 @@ All commands are run from the root of the project:
 | `npm run dev`                    | Starts local dev server at `localhost:4321`     |
 | `npm run build`                  | Build production site to `./dist/`             |
 | `./scripts/local-preview.ps1`   | Build, seed local D1, and start wrangler dev   |
-| `./scripts/sync-d1.ps1`         | Sync SQL files to remote Cloudflare D1         |
-| `node scripts/admin-server.mjs` | Start admin panel at `localhost:4400`           |
 
 Thank you for taking the time to look in here! If you notice any issues, feel free to let me know through an [Issues report](https://github.com/RaccStarLogan/rsl-website/issues).
 
