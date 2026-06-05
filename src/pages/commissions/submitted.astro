@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const data = Astro.url.searchParams;
+---
+<BaseLayout title="Commission Submitted - RaccStarLogan">
+    <link rel="stylesheet" href="/styles/layouts/commissions.css">
+    <div class="commissions-page">
+        <h1>Submission Received!</h1>
+        <div>
+            <p>Thank you for your commission request! I will review the details and get back to you as soon as possible.</p>
+            <p class="subtext">Look forward to a response from either logan-foster@raccstarlogan.com, @racc.star.logan on Discord, or RaccStarLogan on Telegram!</p>
+        </div>
+        <div>
+            <h2>Here's a quick summary of your submission:</h2>
+            <p><strong>Name:</strong> {data.get("name")}</p>
+            <p><strong>Contact:</strong> {data.get("contactMethod")} — {data.get("contactDetails")}</p>
+            <p><strong>Category:</strong> {data.get("category")}</p>
+            <p><strong>Type:</strong> {data.get("type")}</p>
+        </div>
+        <div>
+            <h2>Add-ons</h2>
+            <p>Extra Characters: {data.get("extraChars")}</p>
+            <p>Background: {data.get("background")}</p>
+            <p>Sequential: {data.get("sequential")}</p>
+            <p>Animation: {data.get("animation")}</p>
+            <p>Commercial: {data.get("commercial")}</p>
+            <p>Rush: {data.get("rush")}</p>
+        </div>
+        <div>
+            <h2>Details</h2>
+            <p>{data.get("details")}</p>
+            <h2>References</h2>
+            <p>{data.get("references")}</p>
+        </div>
+        <div>
+            <h2>Payment</h2>
+            <p>Method: {data.get("paymentMethod")}</p>
+            <p>Email: {data.get("paymentEmail")}</p>
+        </div>
+        <div>
+            <h2>Subtotal</h2>
+            <h1>${data.get("subtotal")} USD</h1>
+            <p class="subtext">This is an estimate based on the options you selected.</p>
+            <p class="subtext">Final price may vary after I review the details.</p>
+        </div>
+    </div>
+</BaseLayout>

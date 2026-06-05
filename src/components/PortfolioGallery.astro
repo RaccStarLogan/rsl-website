@@ -1,0 +1,244 @@
+---
+const {
+  title,
+  description,
+  kind,
+  visibility = "sfw",
+  containerId,
+  detailBasePath
+} = Astro.props;
+
+const apiUrl = `/api/portfolio/items.json?kind=${kind}&visibility=${visibility}`;
+---
+
+<section
+  class="portfolio-block"
+  data-gallery-root
+  data-api-url={apiUrl}
+  data-kind={kind}
+  data-detail-base={detailBasePath}
+  id={containerId}
+>
+  <header class="portfolio-block-header">
+    <h2>{title}</h2>
+    <p>{description}</p>
+  </header>
+
+  <form class="portfolio-filters" data-filter-form>
+    <label>
+      Show
+      <select name="status">
+        <option value="all">Show all</option>
+        <option value="personal">Show only personal</option>
+        <option value="commission">Show only commissions</option>
+      </select>
+    </label>
+
+    <label>
+      Type
+      <select name="commissionType" data-commission-type>
+        <option value="">All</option>
+      </select>
+    </label>
+
+    <label>
+      Sort
+      <select name="sort">
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+      </select>
+    </label>
+
+    <fieldset class="tag-fieldset" data-tag-fieldset>
+      <button type="button" class="tag-dropdown-toggle" data-tag-toggle aria-expanded="false">Tags</button>
+      <div class="tag-options" data-tag-options></div>
+    </fieldset>
+  </form>
+
+  <div class="portfolio-grid" data-results></div>
+  <p class="portfolio-empty" data-empty-message hidden>No entries match these filters yet.</p>
+</section>
+
+<script>
+  interface GalleryItem {
+    slug: string;
+    title: string;
+    summary: string;
+    thumbnailUrl: string;
+    externalUrl: string | null;
+    commissionType: string | null;
+    isCommission: boolean;
+    isPersonal: boolean;
+    tags: string[];
+    publishedAt: string;
+  }
+
+  interface GalleryFilters {
+    commissionTypes: string[];
+    tags: string[];
+  }
+
+  const roots = document.querySelectorAll<HTMLElement>("[data-gallery-root]");
+
+  for (const root of roots) {
+    if (root.dataset.ready === "true") {
+      continue;
+    }
+
+    root.dataset.ready = "true";
+
+    const form = root.querySelector<HTMLFormElement>("[data-filter-form]");
+    const resultsContainer = root.querySelector<HTMLElement>("[data-results]");
+    const emptyMessage = root.querySelector<HTMLElement>("[data-empty-message]");
+    const commissionTypeSelect = root.querySelector<HTMLSelectElement>("[data-commission-type]");
+    const tagOptions = root.querySelector<HTMLElement>("[data-tag-options]");
+    const tagToggle = root.querySelector<HTMLButtonElement>("[data-tag-toggle]");
+    const apiUrl = root.getAttribute("data-api-url");
+    const detailBasePath = root.getAttribute("data-detail-base") || "";
+
+    if (!form || !resultsContainer || !emptyMessage || !commissionTypeSelect || !tagOptions || !tagToggle || !apiUrl) {
+      continue;
+    }
+
+    // Tag dropdown toggle
+    tagToggle.addEventListener("click", () => {
+      const expanded = tagToggle.getAttribute("aria-expanded") === "true";
+      tagToggle.setAttribute("aria-expanded", String(!expanded));
+      tagOptions.classList.toggle("open", !expanded);
+    });
+
+    // Close tag dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!root.querySelector("[data-tag-fieldset]")?.contains(e.target as Node)) {
+        tagToggle.setAttribute("aria-expanded", "false");
+        tagOptions.classList.remove("open");
+      }
+    });
+
+    const renderItems = (items: GalleryItem[], sort: string = "newest") => {
+      resultsContainer.innerHTML = "";
+
+      if (!Array.isArray(items) || items.length === 0) {
+        emptyMessage.hidden = false;
+        return;
+      }
+
+      emptyMessage.hidden = true;
+
+      const showYearHeadings = sort !== "az" && sort !== "za";
+      let currentYear: string | null = null;
+
+      for (const item of items) {
+        if (showYearHeadings) {
+          const year = item.publishedAt ? new Date(item.publishedAt).getFullYear().toString() : "Unknown";
+
+          if (year !== currentYear) {
+            currentYear = year;
+            const heading = document.createElement("h3");
+            heading.className = "portfolio-year-heading";
+            heading.textContent = year;
+            resultsContainer.appendChild(heading);
+          }
+        }
+
+        const card = document.createElement("article");
+        card.className = "portfolio-card";
+        const detailUrl = detailBasePath ? `${detailBasePath}/${item.slug}` : "#";
+
+        card.innerHTML = `
+          <a class="portfolio-card-link" href="${detailUrl}" aria-label="Open ${item.title}">
+            <img src="${item.thumbnailUrl}" alt="${item.title}" loading="lazy" />
+            <span class="portfolio-card-hover-title">${item.title}</span>
+          </a>
+        `;
+
+        resultsContainer.appendChild(card);
+      }
+    };
+
+    const renderFilters = (filters?: GalleryFilters) => {
+      commissionTypeSelect.innerHTML = '<option value="">All</option>';
+
+      for (const type of filters?.commissionTypes || []) {
+        const option = document.createElement("option");
+        option.value = type;
+        option.textContent = type;
+        commissionTypeSelect.appendChild(option);
+      }
+
+      tagOptions.innerHTML = "";
+      for (const tag of filters?.tags || []) {
+        const label = document.createElement("label");
+        label.className = "tag-option";
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.name = "tag";
+        input.value = tag;
+        input.addEventListener("change", () => {
+          const checked = tagOptions.querySelectorAll<HTMLInputElement>("input:checked").length;
+          tagToggle.textContent = checked > 0 ? `Tags (${checked})` : "Tags";
+        });
+        label.appendChild(input);
+        label.append(` ${tag}`);
+        tagOptions.appendChild(label);
+      }
+    };
+
+    const buildQuery = () => {
+      const params = new URLSearchParams();
+      const data = new FormData(form);
+
+      for (const [key, value] of data.entries()) {
+        if (!value) {
+          continue;
+        }
+
+        if (key === "status") {
+          if (value === "personal") {
+            params.set("personal", "only");
+            params.set("commission", "exclude");
+          } else if (value === "commission") {
+            params.set("personal", "exclude");
+            params.set("commission", "only");
+          }
+          continue;
+        }
+
+        if (key === "tag") {
+          params.append("tag", String(value));
+          continue;
+        }
+
+        params.set(key, String(value));
+      }
+
+      return params.toString();
+    };
+
+    const run = async () => {
+      try {
+        const query = buildQuery();
+        const response = await fetch(query ? `${apiUrl}&${query}` : apiUrl);
+        if (!response.ok) {
+          throw new Error(`Gallery request failed with ${response.status}`);
+        }
+
+        const payload = (await response.json()) as {
+          items: GalleryItem[];
+          filters: GalleryFilters;
+        };
+        renderFilters(payload.filters);
+        const currentSort = (new FormData(form).get("sort") as string) || "newest";
+        renderItems(payload.items, currentSort);
+      } catch (error) {
+        console.error(error);
+        renderItems([]);
+      }
+    };
+
+    form.addEventListener("change", run);
+    void run();
+  }
+</script>

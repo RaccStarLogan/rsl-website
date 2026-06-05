@@ -1,0 +1,220 @@
+---
+const {
+  minimumAge = 18,
+  redirectUrl = "https://raccstarlogan.com/",
+  storageKey = "ageConfirmed",
+  title = "Age Confirmation",
+  message = "This section contains adult content and is only for visitors 18 years or older.",
+  yesLabel = "Yes, I am 18+",
+  noLabel = "No, take me back"
+} = Astro.props;
+---
+
+<div
+  id="age-confirm-overlay"
+  class="age-confirm-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="age-confirm-title"
+  aria-describedby="age-confirm-message"
+  data-redirect-url={redirectUrl}
+  data-storage-key={storageKey}
+  data-minimum-age={String(minimumAge)}
+>
+  <div class="age-confirm-dialog">
+    <h2 id="age-confirm-title">{title}</h2>
+    <p id="age-confirm-message">{message}</p>
+    <div class="age-confirm-actions">
+      <button id="age-confirm-yes" type="button">{yesLabel}</button>
+      <button id="age-confirm-no" type="button">{noLabel}</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const overlay = document.getElementById("age-confirm-overlay");
+    if (!overlay) {
+      return;
+    }
+
+    const shouldGate =
+      window.location.hostname.startsWith("nsfw.") || window.location.pathname.startsWith("/nsfw");
+    if (!shouldGate) {
+      overlay.remove();
+      return;
+    }
+
+    const body = document.body;
+    const storageKey = overlay.dataset.storageKey || "ageConfirmed";
+    const redirectUrl = overlay.dataset.redirectUrl || "https://raccstarlogan.com/";
+
+    const normalizedRedirect = (() => {
+      if (redirectUrl !== "https://raccstarlogan.com/") {
+        return redirectUrl;
+      }
+
+      const host = window.location.hostname;
+      if (host.startsWith("nsfw.")) {
+        return `${window.location.protocol}//${host.replace(/^nsfw\./, "")}/`;
+      }
+
+      return redirectUrl;
+    })();
+
+    const yesButton = document.getElementById("age-confirm-yes");
+    const noButton = document.getElementById("age-confirm-no");
+
+    const unlock = () => {
+      body.classList.remove("age-lock");
+      overlay.classList.remove("is-visible");
+      overlay.setAttribute("aria-hidden", "true");
+      window.setTimeout(() => {
+        overlay.remove();
+      }, 180);
+    };
+
+    const lock = () => {
+      body.classList.add("age-lock");
+      overlay.classList.add("is-visible");
+      overlay.setAttribute("aria-hidden", "false");
+    };
+
+    if (window.localStorage.getItem(storageKey) === "true") {
+      unlock();
+      return;
+    }
+
+    lock();
+
+    yesButton?.addEventListener("click", () => {
+      window.localStorage.setItem(storageKey, "true");
+      unlock();
+    });
+
+    noButton?.addEventListener("click", () => {
+      window.location.href = normalizedRedirect;
+    });
+  })();
+</script>
+
+<style>
+  .age-confirm-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 5, 5, 0.68);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 180ms ease;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .age-confirm-overlay.is-visible {
+    display: flex;
+    opacity: 1;
+  }
+
+  .age-confirm-dialog {
+    width: min(32rem, 100%);
+    border: 4px solid #ff9500;
+    background:
+      linear-gradient(180deg, hsla(0, 69%, 28%, 0.92), hsla(0, 67%, 15%, 0.95)),
+      linear-gradient(135deg, rgba(255, 179, 103, 0.08), rgba(0, 0, 0, 0));
+    color: #ff9500;
+    padding: 1.5rem;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-family: "Lexend", sans-serif;
+  }
+
+  .age-confirm-dialog h2 {
+    margin: 0 0 0.75rem;
+    color: #ff9500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .age-confirm-dialog p {
+    margin: 0 0 1.25rem;
+    color: #ffb367;
+  }
+
+  .age-confirm-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .age-confirm-actions button {
+    border: none;
+    padding: 0.6rem 1rem;
+    font: inherit;
+    cursor: pointer;
+    color: #fff;
+    background: #e0b037;
+    transition: background-color 140ms ease, color 140ms ease;
+  }
+
+  .age-confirm-actions button:hover {
+    background: #a4203c;
+    color: #fff;
+  }
+
+  .age-confirm-actions #age-confirm-no {
+    border-color: #ffb367;
+    color: #fff;
+    background: #a4203c;
+  }
+
+  .age-confirm-actions #age-confirm-no:hover {
+    background: #1d3356;
+    color: #fff;
+  }
+
+  body.age-lock > *:not(.age-confirm-overlay) {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  body.age-lock {
+    overflow: hidden;
+  }
+
+  @media (max-width: 600px) {
+    .age-confirm-dialog {
+      padding: 1rem;
+      max-width: 90%;
+      border-width: 3px;
+    }
+
+    .age-confirm-dialog h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .age-confirm-dialog p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .age-confirm-actions {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .age-confirm-actions button {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+    }
+  }
+  
+</style>

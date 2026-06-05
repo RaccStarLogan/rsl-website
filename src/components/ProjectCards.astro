@@ -1,0 +1,96 @@
+---
+const {
+  title = "Big Scale Projects",
+  description = "Long-form works, systems, and collaborations.",
+  visibility = "sfw",
+  linkPrefix = "/projects"
+} = Astro.props;
+
+const apiUrl = `/api/portfolio/projects.json?visibility=${visibility}`;
+---
+
+<section class="portfolio-block" data-project-root data-api-url={apiUrl} data-link-prefix={linkPrefix}>
+  <header class="portfolio-block-header">
+    <h2>{title}</h2>
+    <p>{description}</p>
+  </header>
+
+  <div class="project-card-grid" data-project-results></div>
+  <p class="portfolio-empty" data-project-empty hidden>No projects available yet.</p>
+</section>
+
+<script>
+  interface ProjectCardItem {
+    slug: string;
+    title: string;
+    summary: string;
+    thumbnailUrl: string;
+    logoUrl: string | null;
+  }
+
+  const roots = document.querySelectorAll<HTMLElement>("[data-project-root]");
+
+  for (const root of roots) {
+    if (root.dataset.ready === "true") {
+      continue;
+    }
+
+    root.dataset.ready = "true";
+
+    const apiUrl = root.getAttribute("data-api-url");
+    const linkPrefix = root.getAttribute("data-link-prefix") || "/projects";
+    const container = root.querySelector<HTMLElement>("[data-project-results]");
+    const empty = root.querySelector<HTMLElement>("[data-project-empty]");
+
+    if (!apiUrl || !container || !empty) {
+      continue;
+    }
+
+    const renderProjects = (items: ProjectCardItem[]) => {
+      container.innerHTML = "";
+
+      if (!Array.isArray(items) || items.length === 0) {
+        empty.hidden = false;
+        return;
+      }
+
+      empty.hidden = true;
+
+      for (const item of items) {
+        const card = document.createElement("a");
+        card.className = "project-card";
+        card.href = `${linkPrefix}/${item.slug}`;
+
+        card.innerHTML = `
+          <div class="project-card-thumb-wrap">
+            <img src="${item.thumbnailUrl}" alt="${item.title}" loading="lazy" class="project-card-thumb" />
+          </div>
+          <div class="project-card-body">
+            ${item.logoUrl ? `<img src="${item.logoUrl}" alt="${item.title} logo" class="project-card-logo" loading="lazy" />` : ""}
+            <h3>${item.title}</h3>
+            <p>${item.summary}</p>
+          </div>
+        `;
+
+        container.appendChild(card);
+      }
+    };
+
+    const run = async () => {
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`Project request failed with ${response.status}`);
+        }
+
+        const payload = (await response.json()) as { items: ProjectCardItem[] };
+        renderProjects(payload.items);
+      } catch (error) {
+        console.error(error);
+        renderProjects([]);
+      }
+    };
+
+    void run();
+  }
+</script>

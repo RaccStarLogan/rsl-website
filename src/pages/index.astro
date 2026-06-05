@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import placeholder from "../assets/placeholder.png";
+import { listPortfolioItems } from "../lib/portfolio/repository";
+
+const visibility = "sfw" as const;
+const [artItems, audioItems] = await Promise.all([
+  listPortfolioItems(
+    {
+      kind: "art",
+      visibility,
+      sort: "newest",
+      personal: "all",
+      commission: "all",
+    },
+    Astro.locals,
+  ),
+  listPortfolioItems(
+    {
+      kind: "audio",
+      visibility,
+      commissionType: "Music",
+      sort: "newest",
+      personal: "all",
+      commission: "all",
+    },
+    Astro.locals,
+  ),
+]);
+
+const latestArt = artItems[0] ?? null;
+const latestAudio = audioItems[0] ?? null;
+---
+<!-- Load Base Layout -->
+<BaseLayout title="Home - RaccStarLogan" description="Howdy! I'm RaccStarLogan, a raccoon on the internet that does stuff and people think that's cool :3">
+  <!-- Introduction -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Howdy!</h2>
+      <p>I'm RaccStarLogan, a raccoon on the internet that does stuff and people think that's cool :3</p>
+    </div>
+  </section>
+  <hr>
+  <!-- About Me -->
+  <section class="content-section">
+    <div class="portrait">
+      <img
+        src="https://media.raccstarlogan.com/portrait.png"
+        alt="Portrait of RaccStarLogan"
+        class="portrait-image"
+      />
+      <p class="caption">
+        Portrait by
+        <a href="https://vgen.co/constellist" target="_blank" rel="noopener noreferrer">constellist</a>
+        on VGen.
+      </p>
+    </div>
+    <div class="about">
+      <h2>About Me</h2>
+      <p>I'm just a guy on the internet that likes making things for people, whether it be art, music, or just some random bullshit.</p>
+      <p>I'm based in San Antonio, TX, and ever since I was little, I've always been interested in technology and creativity. That might just be the autism speaking, but this is genuinely my life and I am enjoying the hell out of it!</p>
+      <p>I'm self-taught in the majority of the things I do, and I take pride in that. I do tend to bounce between projects from time to time, but that's part of how I do things, so. Yeah.</p>
+      <p>Also if you haven't figured it out yet, yes I'm a furry :3</p>
+    </div>
+  </section>
+  <hr>
+  <!-- Latest Stuff -->
+  <section class="widgets">
+    <h2>Latest Stuff</h2>
+    <div class="widget-grid">
+      <article class="widget-card">
+        <h3>Latest Art</h3>
+        <img
+          src={latestArt?.thumbnailUrl ?? placeholder.src}
+          alt={latestArt ? `${latestArt.title} thumbnail` : "Latest art preview placeholder"}
+          width={placeholder.width}
+          height={placeholder.height}
+        />
+        <p>{latestArt?.title ?? "No art piece published yet."}</p>
+        <p>{latestArt?.summary ?? "Check back soon for new art uploads."}</p>
+        <a href={latestArt ? `/portfolio/art/${latestArt.slug}` : "/portfolio/art"}>
+          {latestArt ? "Open Piece" : "View Gallery"}
+        </a>
+      </article>
+      <article class="widget-card">
+        <h3>Latest Music</h3>
+        <img
+          src={latestAudio?.thumbnailUrl ?? placeholder.src}
+          alt={latestAudio ? `${latestAudio.title} cover art` : "Latest audio cover placeholder"}
+          width={placeholder.width}
+          height={placeholder.height}
+        />
+        <p>{latestAudio?.title ?? "No audio release published yet."}</p>
+        <p>{latestAudio?.summary ?? "Check back soon for new music and audio uploads."}</p>
+        <a href={latestAudio ? `/portfolio/audio/${latestAudio.slug}` : "/portfolio/audio"}>
+          {latestAudio ? "Listen Now" : "Browse Audio"}
+        </a>
+      </article>
+    </div>
+  </section>
+  <hr>
+  <!-- Contact Information -->
+  <section class="hero">
+    <div class="contact">
+      <h2>Contact Me</h2>
+      <p>
+        If you want to contact me, the best way to do so is through Discord (@racc.star.logan)
+        or Telegram (@RaccStarLogan), but I'm also available via email at
+        <a href="mailto:contact@raccstarlogan.com">contact@raccstarlogan.com</a>.
+      </p>
+    </div>
+  </section>
+  <br />
+</BaseLayout>

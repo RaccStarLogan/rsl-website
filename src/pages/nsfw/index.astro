@@ -1,0 +1,159 @@
+---
+import NSFWLayout from "../../layouts/NSFWLayout.astro";
+import placeholder from "../../assets/placeholder.png";
+import { listPortfolioItems } from "../../lib/portfolio/repository";
+
+const visibility = "nsfw" as const;
+const [artItems, audioItems] = await Promise.all([
+  listPortfolioItems(
+    {
+      kind: "art",
+      visibility,
+      sort: "newest",
+      personal: "all",
+      commission: "all",
+    },
+    Astro.locals,
+  ),
+  listPortfolioItems(
+    {
+      kind: "audio",
+      visibility,
+      commissionType: "Music",
+      sort: "newest",
+      personal: "all",
+      commission: "all",
+    },
+    Astro.locals,
+  ),
+]);
+
+const latestArt = artItems[0] ?? null;
+const latestAudio = audioItems[0] ?? null;
+---
+
+<!-- Load NSFW Layout -->
+<NSFWLayout title="Home - Jesper Skulldragon" description="Howdy! I'm Jesper Skulldragon, a raccoon on the internet that does stuff and people think that's cool :3">
+  <!-- Introduction -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Howdy!</h2>
+      <p>I'm Jesper Skulldragon, a fatass dragon on the internet that does stuff and people think that's cool :3</p>
+    </div>
+  </section>
+  <hr />
+  <!-- About Me -->
+  <section class="content-section">
+    <div class="portrait">
+      <img
+        src="https://media.raccstarlogan.com/nsfw/dragon.png"
+        alt="Illustration of Jesper Skulldragon"
+        class="portrait-image"
+      />
+      <p class="caption">
+        Illustration by
+        <a href="https://furaffinity.net/user/oshyfriend" target="_blank" rel="noopener noreferrer">OshyFriend</a>
+        on FurAffinity.
+      </p>
+    </div>
+    <div class="about">
+      <h2>About Me</h2>
+      <p>I'm just a guy on the internet that likes making things for people, whether it be art, music, or just some random bullshit.</p>
+      <p>I'm based in San Antonio, TX, and ever since I was little, I've always been interested in technology and creativity. That might just be the autism speaking, but this is genuinely my life and I am enjoying the hell out of it!</p>
+      <p>I'm self-taught in the majority of the things I do, and I take pride in that. I do tend to bounce between projects from time to time, but that's part of how I do things, so. Yeah.</p>
+      <p>Shoutout to Captain Bozo and Ranger for absolutely no reason whatsoever<span class="tooltip" tabindex="0">*<span class="tooltiptext" role="tooltip">Inspect the page for context lmao</span></span>.</p>
+      <!-- *Their ROM hack of Sonic the Hedgehog 2 directly resulted in giving me a fat fetish. I'm not kidding. -->
+    </div>
+  </section>
+  <hr />
+  <!-- Latest Stuff -->
+  <section class="widgets">
+    <h2>Latest Stuff</h2>
+    <div class="widget-grid">
+      <article class="widget-card">
+        <h3>Latest Art</h3>
+        <img
+          src={latestArt?.thumbnailUrl ?? placeholder.src}
+          alt={latestArt ? `${latestArt.title} thumbnail` : "Latest art preview placeholder"}
+          width={placeholder.width}
+          height={placeholder.height}
+        />
+        <p>{latestArt?.title ?? "No art piece published yet."}</p>
+        <p>{latestArt?.summary ?? "Check back soon for new art uploads."}</p>
+        <a href={latestArt ? `/nsfw/portfolio/art/${latestArt.slug}` : "/nsfw/portfolio/art"}>
+          {latestArt ? "Open Piece" : "View Gallery"}
+        </a>
+      </article>
+      <article class="widget-card">
+        <h3>Latest Music</h3>
+        <img
+          src={latestAudio?.thumbnailUrl ?? placeholder.src}
+          alt={latestAudio ? `${latestAudio.title} cover art` : "Latest audio cover placeholder"}
+          width={placeholder.width}
+          height={placeholder.height}
+        />
+        <p>{latestAudio?.title ?? "No audio release published yet."}</p>
+        <p>{latestAudio?.summary ?? "Check back soon for new music and audio uploads."}</p>
+        <a href={latestAudio ? `/nsfw/portfolio/audio/${latestAudio.slug}` : "/nsfw/portfolio/audio"}>
+          {latestAudio ? "Listen Now" : "Browse Audio"}
+        </a>
+      </article>
+    </div>
+  </section>
+  <hr />
+  <!-- Contact Information -->
+  <section class="hero">
+    <div class="contact">
+      <h2>Contact Me</h2>
+      <p>
+        If you want to contact me, the best way to do so is through Discord (@racc.star.logan)
+        or Telegram (@RaccStarLogan), but I'm also available via email at
+        <a href="mailto:contact@raccstarlogan.com">contact@raccstarlogan.com</a>.
+      </p>
+    </div>
+  </section>
+  <br />
+  <style>
+    .tooltip {
+      position: relative;
+      cursor: help;
+      display: inline-block;
+    }
+    .tooltip:focus {
+      outline: none;
+    } /* optional */
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 125%;
+      background: #530F0F;
+      color: #ff9500;
+      padding: 6px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      z-index: 10;
+      transition:
+        opacity 0.12s ease,
+        transform 0.12s ease;
+    }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #222;
+    }
+    .tooltip:hover .tooltiptext,
+    .tooltip:focus .tooltiptext,
+    .tooltip:focus-within .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-50%) translateY(-4px);
+    }
+  </style>
+</NSFWLayout>

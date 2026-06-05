@@ -1,0 +1,174 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WikiInfoBox from "../../components/WikiInfoBox.astro";
+import WikiAccordion from "../../components/WikiAccordion.astro";
+import { getWikiEntryHref, listWikiEntries } from "../../lib/wiki/repository";
+
+const wikiEntries = await listWikiEntries(
+  {
+    visibility: "sfw",
+    sort: "az"
+  },
+  Astro.locals
+);
+
+const newestTimestamp = wikiEntries.reduce((latest, entry) => {
+  const candidate = Date.parse(entry.updatedAt ?? entry.publishedAt);
+  return Number.isFinite(candidate) ? Math.max(latest, candidate) : latest;
+}, Number.NEGATIVE_INFINITY);
+const lastUpdatedLabel =
+  Number.isFinite(newestTimestamp)
+    ? new Date(newestTimestamp).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      })
+    : "Unknown";
+
+const featuredEntries = [...wikiEntries]
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 3);
+
+const typeOrder = ["Universe", "Character", "Location", "Business", "Organization"];
+const groupedEntries = wikiEntries.reduce((map, entry) => {
+  const type = entry.entryType?.trim() || "Other";
+
+  if (!map.has(type)) {
+    map.set(type, []);
+  }
+
+  map.get(type)?.push(entry);
+  return map;
+}, new Map<string, typeof wikiEntries>());
+
+const tocGroups = [...groupedEntries.entries()]
+  .map(([type, entries]) => [
+    type,
+    [...entries].sort((a, b) => a.label.localeCompare(b.label))
+  ] as const)
+  .sort(([a], [b]) => {
+    const indexA = typeOrder.indexOf(a);
+    const indexB = typeOrder.indexOf(b);
+    const rankA = indexA === -1 ? Number.MAX_SAFE_INTEGER : indexA;
+    const rankB = indexB === -1 ? Number.MAX_SAFE_INTEGER : indexB;
+
+    if (rankA !== rankB) {
+      return rankA - rankB;
+    }
+
+    return a.localeCompare(b);
+  });
+---
+
+<!-- Load Base Layout -->
+<BaseLayout
+  title="Wiki - RaccStarLogan"
+  description="A simple place to browse characters and other bits of the world around them."
+>
+  <link rel="stylesheet" href="/styles/layouts/wiki.css" />
+  <div class="wiki-page-grid">
+    <h1 class="wiki-page-title">Welcome to the RaccStarLogan Wiki!</h1>
+    <aside class="wiki-sidebar">
+      <h2>Quick Stuff</h2>
+
+      <WikiInfoBox title="At a Glance" variant="info">
+        <dl>
+          <dt>Total Entries</dt>
+          <dd>{wikiEntries.length}</dd>
+          <dt>Types</dt>
+          <dd>{tocGroups.length}</dd>
+          <dt>Last Updated</dt>
+          <dd>{lastUpdatedLabel}</dd>
+        </dl>
+      </WikiInfoBox>
+      
+      <h2>Explore More</h2>
+      <ul>
+        <li><button id="random-entry-btn" class="link-button" title="Jump to a random wiki entry">
+          Random Page
+        </button></li>
+        <li><a href="https://github.com/RaccStarLogan/rsl-website">Page Source</a></li>
+      </ul>
+    </aside>
+
+    <script define:vars={{ wikiEntriesData: wikiEntries }}>
+      const entries = wikiEntriesData;
+      document.getElementById('random-entry-btn')?.addEventListener('click', () => {
+        if (entries && entries.length > 0) {
+          const randomEntry = entries[Math.floor(Math.random() * entries.length)];
+          window.location.href = `/wiki/${randomEntry.slug}`;
+        }
+      });
+    </script>
+
+    <main id="wiki-content" class="article-section">
+      <WikiInfoBox title="What this is" variant="info">
+        This is a simple index for the people, stories, and bits of worldbuilding
+        collected across the site. If you want to look around, this is the place
+        to start.
+      </WikiInfoBox>
+
+      <div class="wiki-toc-wrapper">
+        <aside class="wiki-toc">
+          <details class="wiki-toc-details">
+            <summary>Table of Contents</summary>
+            <nav id="wiki-toc" aria-label="Wiki subpages">
+              {tocGroups.map(([type, entries]) => (
+                <details class="wiki-toc-group">
+                  <summary>
+                    {type}
+                    <span class="wiki-toc-count"> ({entries.length})</span>
+                  </summary>
+                  <div class="wiki-toc-group-links">
+                    {entries.map((page) => (
+                      <a href={getWikiEntryHref(page, "sfw")}>{page.label}</a>
+                    ))}
+                  </div>
+                </details>
+              ))}
+            </nav>
+          </details>
+        </aside>
+      </div>
+
+      <h2 id="getting-started">Getting Started</h2>
+      <p>
+        The table of contents above links to each page in the wiki. Pick a name,
+        click through, and browse from there.
+      </p>
+
+      <WikiAccordion summary="What you will find here">
+        <p>
+          Most of the pages here are character profiles, but this section can also
+          grow into a home for relationship notes, setting details, and anything
+          else tied to the project.
+        </p>
+        <ul>
+          <li>Character pages collect the basics in one place.</li>
+          <li>Some pages may focus more on story context or setting notes.</li>
+          <li>The list will keep growing over time.</li>
+        </ul>
+      </WikiAccordion>
+
+      <h2 id="featured-index">Featured Index</h2>
+      <table aria-label="Featured wiki entries">
+        <thead>
+          <tr>
+            <th>Entry</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            featuredEntries.map((entry) => (
+              <tr>
+                <td><a href={getWikiEntryHref(entry, "sfw")}>{entry.label}</a></td>
+                <td>{entry.entryType}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </main>
+  </div>
+</BaseLayout>

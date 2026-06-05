@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PortfolioGallery from "../../../components/PortfolioGallery.astro";
+---
+
+<BaseLayout title="Portfolio Audio - RaccStarLogan" description="Audio portfolio with filters.">
+  <link rel="stylesheet" href="/styles/layouts/portfolio.css" />
+
+  <div class="portfolio-page">
+    <section class="portfolio-hero">
+      <h1>Audio Portfolio</h1>
+      <p>Thumbnail gallery view. Hover for title, click for full info.</p>
+      <nav class="portfolio-jump-links" aria-label="Portfolio navigation">
+        <a href="/portfolio">All Sections</a>
+        <a href="/portfolio/art">Art</a>
+        <a href="/portfolio/projects">Big Scale Projects</a>
+      </nav>
+    </section>
+
+    <PortfolioGallery
+      title="Audio Gallery"
+      description="Hover a thumbnail to see title. Click to open full details."
+      kind="audio"
+      visibility="sfw"
+      detailBasePath="/portfolio/audio"
+      containerId="audio-gallery"
+    />
+  </div>
+</BaseLayout>

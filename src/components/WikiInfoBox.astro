@@ -1,0 +1,7 @@
+---
+const { title = "Info", hideTitle = false, variant = "info", class: className = "" } = Astro.props;
+---
+<div class={`wiki-infobox wiki-infobox--${variant} ${className}`.trim()}>
+  {!hideTitle && title && <div class="wiki-infobox-title">{title}</div>}
+  <div class="wiki-infobox-content"><slot/></div>
+</div>

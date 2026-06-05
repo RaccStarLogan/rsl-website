@@ -1,0 +1,100 @@
+---
+// Metadata for the page, with defaults
+const {
+    title = "Jesper Skulldragon",
+    description = "Jesper Skulldragon's personal website",
+    image = "/nsfw/default-embed.png",
+    url = "https://nsfw.raccstarlogan.com"
+} = Astro.props;
+// Imports
+import headerlogo from "../assets/nsfw/headerlogo.png";
+import RTA from "../assets/nsfw/RTA.png";
+import Announcement from "../components/Announcement.astro";
+import AgeConfirmationDialog from "../components/AgeConfirmationDialog.astro";
+const showAnnouncement = true; // Set to true to show the announcement banner
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    <slot name="head" />
+    <!-- Favicon and Stylesheet -->
+    <link rel="icon" type="image/x-icon" href="/nsfw/favicon.ico" />
+    <link rel="stylesheet" href="/styles/layouts/main.css" />
+    <link rel="stylesheet" href="/styles/colors/nsfw.css" />
+    <script src="/scripts/april-fools.js" defer></script>
+  </head>
+  <body>
+    <AgeConfirmationDialog />
+    <!-- Announcement Banner -->
+    {showAnnouncement && (
+      <Announcement text="PRIDE MONTH SALE: ALL COMMISSION SERVICES 20% OFF!" link="/nsfw/commissions" />
+    )}
+    <!-- Header and Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo-section">
+          <a href="/nsfw/">
+            <img src={headerlogo.src} alt="Jesper Skulldragon Logo" class="logo" height="92" loading="eager" style="width:auto;" />
+          </a>
+        </div>
+        <!-- Mobile Hamburger Menu -->
+         <button class="hamburger" aria-label="Toggle navigation menu">
+          &#9776;
+        </button>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="/nsfw/">Home</a></li>
+          <li><a href="/nsfw/links">Links</a></li>
+          <li><a href="/nsfw/portfolio">Portfolio</a></li>
+          <li><a href="/nsfw/commissions">Commissions</a></li>
+          <li><a href="/nsfw/wiki">Wiki</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <slot />
+    </main>
+    <!-- Footer -->
+    <footer>
+      <li>V3 ALPHA TESTING!!!</li>
+      <li>&copy; 2019-2026 RaccStarLogan</li>
+      <li>All rights reserved</li>
+      <li><a href="https://www.rtalabel.org/index.html" target="_blank" rel="noopener noreferrer"><img src={RTA.src} alt="RTA Label" width={RTA.width} height={RTA.height} /></a></li>
+      <li><a href="mailto:contact@raccstarlogan.com">Contact</a></li>
+      <li><a href="https://raccstarlogan.com">SFW Page</a></li>
+    </footer>
+  </body>
+
+  <script>
+    // Mobile Navigation Toggle (Hamburger Menu)
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav-links");
+
+      if (!btn || !nav) return; // stfu vscode
+
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    })
+  </script>
+
+</html>

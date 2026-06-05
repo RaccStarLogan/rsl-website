@@ -1,0 +1,29 @@
+---
+const { text, link } = Astro.props;
+---
+
+<div class="announcement" id="announcement">
+  <span>
+    {link ? <a href={link}>{text}</a> : text}
+  </span>
+  <button class="close-btn" id="close-announcement" type="button" aria-label="Close announcement">×</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("announcement");
+    const closeButton = document.getElementById("close-announcement");
+
+    if (!banner || !closeButton) return;
+
+    if (sessionStorage.getItem("announcementClosed") === "true") {
+      banner.style.display = "none";
+      return;
+    }
+
+    closeButton.addEventListener("click", () => {
+      banner.style.display = "none";
+      sessionStorage.setItem("announcementClosed", "true");
+    });
+  });
+</script>

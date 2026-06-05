@@ -1,0 +1,7 @@
+---
+const { summary = "Expand" } = Astro.props;
+---
+<details class="wiki-accordion">
+  <summary>{summary}</summary>
+  <div class="wiki-accordion-content"><slot/></div>
+</details>

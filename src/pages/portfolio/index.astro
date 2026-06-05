@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Portfolio - RaccStarLogan" description="Browse portfolio sections by category.">
+  <link rel="stylesheet" href="/styles/layouts/portfolio.css" />
+
+  <div class="portfolio-page">
+    <section class="portfolio-hero">
+      <h1>Portfolio</h1>
+      <p>
+        Pick a section to browse.
+      </p>
+      <nav class="portfolio-jump-links" aria-label="Portfolio section pages">
+        <a href="/portfolio/art">Art</a>
+        <a href="/portfolio/audio">Audio</a>
+        <a href="/portfolio/projects">Big Scale Projects</a>
+      </nav>
+    </section>
+  </div>
+</BaseLayout>

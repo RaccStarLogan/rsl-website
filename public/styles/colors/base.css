@@ -1,0 +1,119 @@
+:root {
+    /* ============================
+     CORE BACKGROUNDS
+     ============================ */
+    --bg-body: #1c2240;
+    --bg-surface: #1d3356;
+    --bg-surface-alt: #132a52;
+    --bg-surface-deep: #0d1b3a;
+
+    /* ============================
+     HEADER GRADIENT
+     ============================ */
+    --bg-header-top: #060e2b;
+    --bg-header-bottom: #1b203b;
+
+    /* ============================
+     TEXT COLORS
+     ============================ */
+    --text-primary: #c0e0ff;
+    --text-secondary: #a0c0ff;
+    --text-accent: #7eb8f0;
+    --text-muted: #c0e0ff7f;
+    --text-muted-strong: #c0e0ff9f;
+    --text-error-soft: #f6d3dc;
+    --text-sale: #ffbfcf;
+    --text-inverse: #ffffff;
+
+    /* ============================
+     BORDERS
+     ============================ */
+    --border-strong: #c0e0ff;
+    --border-faint: #c0e0ff4f;
+
+    /* ============================
+     BUTTONS & INTERACTIVE
+     ============================ */
+    --btn-primary-bg: #a4203c;
+    --btn-primary-hover: #ffffff;
+    --btn-muted-bg: #132a52;
+
+    /* ============================
+     LINKS
+     ============================ */
+    --link-default: #c0e0ff;
+    --link-hover: #ffffff;
+    --link-accent: #7eb8f0;
+
+    /* ============================
+     ACCENTS
+     ============================ */
+    --accent-electric: #4a6cff;
+    --accent-info: #8db9ff;
+    --accent-info-light: #9ed2ff;
+    --accent-info-pale: #a8d6ff;
+    --accent-warm: #f4b367;
+    --accent-success: #7cc67f;
+    --accent-alert: #be284b;
+    --accent-highlight: #0080ff;
+
+    /* ============================
+     FOOTER / SPECIAL SECTIONS
+     ============================ */
+    --footer-bg: #400e1a;
+    --footer-border: #a4203c;
+    --footer-text: #ffbfcf;
+
+    /* ============================
+     SHADOWS
+     ============================ */
+    --shadow-soft: #00000040;
+    --shadow-strong: #00000066;
+
+    /* ============================
+     OVERLAYS / TRANSLUCENT LAYERS
+     ============================ */
+    --overlay-panel-90: #0a1328e6;
+    --overlay-panel-80: #0c1630cc;
+    --overlay-panel-ink: #070f22e6;
+
+    --overlay-surface-60: #1c224099;
+    --overlay-surface-70: #2c3c64b3;
+    --overlay-surface-40: #141e377f;
+    --overlay-hover-40: #2a4b927f;
+
+    /* ============================
+     HIGHLIGHTS
+     ============================ */
+    --highlight-subtle: #c0e0ff38;
+    --highlight-soft: #ffffff2e;
+
+    /* ============================
+     MISC
+     ============================ */
+    --neutral-light: #cfdfef;
+
+    /* ============================
+     WIKI FALLBACK COLORS
+     ============================ */
+    --wiki-primary-color: #8db9ff;
+    --wiki-secondary-color: #c0e0ff;
+    --wiki-accent-color: #a8d6ff;
+    --wiki-text-primary: #c0e0ff;
+    --wiki-text-secondary: #9ed2ff;
+    --wiki-text-accent: #a8d6ff;
+    --wiki-bg-primary: #1c224099;
+    --wiki-bg-secondary: #2c3c64b3;
+    --wiki-bg-tertiary: #141e3766;
+    --wiki-bg-hover: #2a4b9266;
+    --wiki-border-width: 4px;
+    --wiki-border-radius: 0;
+    --wiki-warning-color: #f4b367;
+    --wiki-success-color: #7cc67f;
+    --wiki-gallery-tab-color: #A4203C;
+    --wiki-gallery-tab-hover-color: #BE284B;
+    --wiki-gallery-tab-active-color: #0080FF;
+    --wiki-font-family: "Lexend", sans-serif;
+    --wiki-body-bg-color: #1c2240;
+    --wiki-link-color: var(--wiki-primary-color);
+}

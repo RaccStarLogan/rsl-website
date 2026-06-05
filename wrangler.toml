@@ -1,18 +1,14 @@
 name = "rsl-website"
-compatibility_date = "2026-01-13"
-pages_build_output_dir = "public"
+compatibility_date = "2026-04-13"
+pages_build_output_dir = "./dist"
+
+[vars]
+BOT_ENDPOINT = "https://rsl-commissions-bot.onrender.com"
+
+[pages]
+route = "/api/*"
 
 [[d1_databases]]
-binding = "DB"
-database_name = "rsl_portfolio"
-database_id = "57fe2783-5c7b-4227-aa21-62972714acf7"
-migrations_dir = "migrations"
-
-[[d1_databases]]
-binding = "NSFW_DB"
-database_name = "rsl_nsfw_portfolio"
-database_id = "fe360155-f11f-4ae6-9fbc-cd803bc6c491"
-migrations_dir = "migrations"
-
-# NOTE: This file contains no secrets.
-# Credentials are stored as Cloudflare secrets.
+binding = "PORTFOLIO_DB"
+database_name = "v3_portfolio"
+database_id = "87fd65b2-747b-477d-b5d9-70663e4b961b"

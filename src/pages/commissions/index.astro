@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { listCommissionPricing, listPortfolioItems } from "../../lib/portfolio/repository";
+import type { CommissionPricingTier, PortfolioItem } from "../../lib/portfolio/types";
+
+const visibility = "sfw" as const;
+// Load samples used by pricing cards so each tier can show a recent example.
+const [artItems, audioItems, pricingTiers] = await Promise.all([
+  listPortfolioItems(
+    {
+      kind: "art",
+      visibility,
+      sort: "newest",
+      personal: "all",
+      commission: "all",
+    },
+    Astro.locals,
+  ),
+  listPortfolioItems(
+    {
+      kind: "audio",
+      visibility,
+      sort: "newest",
+      personal: "all",
+      commission: "all",
+    },
+    Astro.locals,
+  ),
+  listCommissionPricing(Astro.locals),
+]);
+
+function getItemUrl(item: PortfolioItem): string {
+  if (item.kind === "art") return `/portfolio/art/${item.slug}`;
+  if (item.kind === "audio" || item.kind === "music") return `/portfolio/audio/${item.slug}`;
+  return `/portfolio/projects/${item.slug}`;
+}
+
+function normalizeType(value: string | null | undefined): string {
+  if (!value) return "";
+  return value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-");
+}
+
+function getLatestExampleForTier(
+  tierId: string,
+  items: PortfolioItem[],
+): PortfolioItem | null {
+  // Match tier ids (e.g. "music-composition") against commissionType labels.
+  const normalizedTierId = normalizeType(tierId);
+  return (
+    items.find((item) => normalizeType(item.commissionType) === normalizedTierId) ??
+    null
+  );
+}
+
+const categoryOrder: CommissionPricingTier["category"][] = [
+  "art",
+  "audio",
+];
+
+function getCategoryLabel(category: CommissionPricingTier["category"]): string {
+  if (category === "audio") return "Audio";
+  return "Art";
+}
+
+const pricingByCategory = categoryOrder
+  .map((category) => ({
+    category,
+    label: getCategoryLabel(category),
+    tiers: pricingTiers.filter((tier) => tier.category === category),
+  }))
+  .filter((group) => group.tiers.length > 0);
+---
+
+<BaseLayout
+  title="Commissions - RaccStarLogan"
+  description="Interested in commissioning me? You've come to the right place! Here you can find all the information you need about my commission process, pricing, and how to get in touch."
+>
+  <link rel="stylesheet" href="/styles/layouts/commissions.css" />
+
+  <div class="commissions-page">
+    <section class="commissions-hero">
+      <p class="commissions-eyebrow">Open for Work</p>
+      <h1>Commissions</h1>
+      <p>
+        Thanks for your interest! This page covers what to expect from me, what I offer,
+        and how to reach out with your request.
+      </p>
+      <div class="commissions-actions">
+        <a class="commissions-btn" href="#contact">Start a Request</a>
+        <a class="commissions-btn commissions-btn-muted" href="#pricing"
+          >View Pricing</a
+        >
+        <a class="commissions-btn commissions-btn-muted" href="/terms"
+          >Terms of Service</a
+        >
+      </div>
+    </section>
+
+    <section class="commissions-panel" id="pricing">
+      <h2>Pricing</h2>
+      <p>Prices are listed in USD.</p>
+      {
+        pricingByCategory.map((group) => (
+          <div class="commissions-pricing-group">
+            <h3 class="commissions-pricing-group-title">{group.label}</h3>
+            <div class="commissions-cards">
+              {group.tiers.map((tier) => {
+                const tierExample =
+                  tier.category === "art"
+                    ? getLatestExampleForTier(tier.id, artItems)
+                    : tier.category === "audio"
+                      ? getLatestExampleForTier(tier.id, audioItems)
+                      : null;
+
+                return (
+                  <article class="commissions-card">
+                    <div class="commissions-card-main">
+                      <h3>{tier.label}</h3>
+                      <p class="commissions-price">
+                        {tier.salePrice ? tier.salePrice : tier.price}
+                        {tier.salePrice ? (
+                          <span class="commissions-old-price">{tier.price}</span>
+                        ) : null}
+                      </p>
+                      {tier.salePrice && tier.saleLabel ? (
+                        <p class="commissions-sale-label">{tier.saleLabel}</p>
+                      ) : null}
+                      <p>{tier.details}</p>
+                    </div>
+                    <div class="commissions-card-examples">
+                      {tierExample ? (
+                        <a
+                          class="commissions-example-thumb-link"
+                          href={getItemUrl(tierExample)}
+                        >
+                          <img
+                            src={tierExample.thumbnailUrl}
+                            alt={`${tierExample.title} thumbnail`}
+                            loading="lazy"
+                          />
+                        </a>
+                      ) : null}
+                      {!tierExample ? (
+                        <p class="commissions-example-empty">
+                          No sample published yet.
+                        </p>
+                      ) : null}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+            <br />
+            {
+              group.category === "art" && (
+                <div class="commissions-addons">
+                  <h3 class="commissions-pricing-group-title">Art Add-Ons</h3>
+                  <ul class="commissions-addons-list">
+                    <li><strong>Extra Character(s):</strong> +50% base price</li>
+                    <li><strong>Detailed Background:</strong> +$15-60 depending on complexity</li>
+                    <li><strong>Sequential Parts:</strong> +25% base price per additional part</li>
+                  </ul>
+                </div>
+              )
+            }
+          </div>
+        ))
+      }
+      <div class="commissions-addons">
+        <h3 class="commissions-pricing-group-title">Global Add-Ons</h3>
+        <ul class="commissions-addons-list">
+          <li><strong>Commercial License:</strong> +100% total price</li>
+          <li><strong>Rush Fee:</strong> varies by deadline and queue</li>
+        </ul>
+      </div>
+      <p class="asterisk">* May incur additional fees.</p>
+    </section>
+
+    <section class="commissions-panel" id="contact">
+      <h2>Commission Form</h2>
+      <p>This form is bare bones at the moment but it still should work for most requests. If you have any issues or questions, feel free to reach out via <a href="mailto:contact@raccstarlogan.com">email</a> or via Discord (@racc.star.logan) or <a href="https://t.me/raccstarlogan">Telegram</a>.</p>
+      <a class="commissions-btn" href="/commissions/form">Fill Out the Form</a>
+    </section>
+  </div>
+</BaseLayout>
