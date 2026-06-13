@@ -6,7 +6,7 @@
       "label": "Logan Foster",
       "relationIconSvg": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg id=\"Layer_2\" data-name=\"Layer 2\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 101.76\">\n  <path d=\"M42.89,26.14c4.29,13.2-4.05,20.21-13.24,23.2-9.19,2.98-20.11-5.29-24.4-18.49C.97,17.65,4.94,4.54,14.13,1.55c9.19-2.98,24.48,11.4,28.77,24.59Z\" style=\"fill: #657e89;\"/>\n  <path d=\"M30.61,29.53c3.06,9.42,2.54,17.9-3.45,19.84s-16.81-4.26-19.87-13.68-5.93-20,.06-21.94,20.19,6.36,23.25,15.78Z\" style=\"fill: #005b9c;\"/>\n  <path d=\"M73.77,26.14c-4.29,13.2,4.05,20.21,13.24,23.2s20.11-5.29,24.4-18.49c4.29-13.2.32-26.31-8.87-29.3-9.19-2.98-24.48,11.4-28.77,24.59Z\" style=\"fill: #657e89;\"/>\n  <path d=\"M86.06,29.53c-3.06,9.42-2.54,17.9,3.45,19.84,5.99,1.95,16.81-4.26,19.87-13.68,3.06-9.42,5.93-20-.06-21.94-5.99-1.95-20.19,6.36-23.25,15.78Z\" style=\"fill: #005b9c;\"/>\n  <path d=\"M27.87,5.76c-4.5,4.32-7.43,9.82-9.03,15.3-1.11,3.8-1.71,7.8-.41,11.56,1.3,3.76,4.82,7.24,9.66,8.23-4.29,1.63-8.81,3.24-13.42,4.52,3.49,2.94,7.41,4.6,11.24,4.56,2.69-.9,5.14-2.23,7.08-3.94-.42.86-.82,1.71-1.21,2.56,8.28-3.34,15.07-10.25,11.11-22.42-2.46-7.58-8.55-15.54-15.03-20.38Z\" style=\"opacity: .2;\"/>\n  <path d=\"M83.78,10.22c-4.44,4.59-8.2,10.36-10.01,15.92-3.82,11.75,2.38,18.59,10.26,22.06,2.32.6,4.67,1.17,7.01,1.73,4.99-.06,10.11-2.96,14.19-7.79-1.19-2.04-2.62-3.99-4.33-5.78,3.33-1.06,6.71-2.16,9.8-3.57.25-.63.49-1.27.7-1.92,1.9-5.84,2.17-11.67,1.1-16.61-7.15-.91-14.3-1.83-21.45-2.74-2.46-.31-4.92-.65-7.27-1.28Z\" style=\"opacity: .2;\"/>\n  <path d=\"M29.67,86.13c-12.63,2.77-19.12,6.16-29.67,12.94,2.67-15.64,11.45-29.17,23.82-38.07.47-.34.95-.68,1.42-1-.49.11-.97.23-1.46.36-5.6,1.34-11.08,3.01-16.4,4.96,4.96-5.06,10.69-9.38,16.98-12.79,3.04-15.99,17.09-28.07,33.96-28.07s30.92,12.08,33.96,28.07c6.29,3.41,12.01,7.73,16.98,12.79-5.32-1.96-10.8-3.62-16.4-4.96-.49-.13-.97-.24-1.46-.36.47.32.95.66,1.42,1,12.39,8.91,21.18,22.48,23.84,38.15-10.54-6.81-17.01-9.47-29.66-12.25,7.68,3.99,8.75,7.66,13.46,14.86-12.9-5.22-26.97-8.1-41.74-8.17h-.84c-14.73.05-28.8,2.93-41.69,8.12,4.71-7.18,5.81-11.59,13.47-15.58h0Z\" style=\"fill: #657e89;\"/>\n  <path d=\"M86.73,56.64c1.94,4.47,3.11,8.44,3.63,13.74-1.96-2.41-4.08-4.58-6.34-6.47-.16,3.54-.74,6.93-1.71,10.09-7.05-5.33-15.27-8.38-24.03-8.38s-16.98,3.06-24.03,8.38c-.97-3.18-1.57-6.6-1.71-10.15-2.3,1.91-4.45,4.1-6.44,6.53.52-5.28,1.78-8.02,3.72-12.49-2.62,1.77-3.61.89-5.99,3.12,3.2-5.22,5.64-9.06,10.02-12.62.4-.35.84-.69,1.26-1,6.79-5.16,14.72-8.11,23.17-8.11s16.38,2.95,23.17,8.11c.36.25.7.52,1.03.81,4.54,3.62,5.65,6.42,8.93,11.81-2.44-2.31-1.99-1.54-4.69-3.37Z\" style=\"fill: #bee3ff;\"/>\n  <path d=\"M56.47,57.91c0,6.31-5.81,11.43-12.12,11.43s-10.93-3.02-10.93-9.34,9.44-15.14,15.75-15.14,7.3,6.74,7.3,13.05Z\" style=\"fill: #03060a;\"/>\n  <path d=\"M60.2,57.45c0,6.31,5.81,11.43,12.12,11.43,6.31,0,10.93-3.02,10.93-9.34s-9.44-15.14-15.75-15.14-7.3,6.74-7.3,13.05Z\" style=\"fill: #03060a;\"/>\n  <path d=\"M71.23,69.55c0,4.08-7.03,10.93-12.86,10.93s-12.94-6.85-12.94-10.93,7.11-3.85,12.94-3.85,12.86-.23,12.86,3.85Z\" style=\"fill: #090c12;\"/>\n  <path d=\"M60.59,46.32c11.93,6.32,27.44,9.25,41.6,12.74-3.11-2.43-6.41-4.63-9.9-6.52-3.04-15.99-17.09-28.07-33.96-28.07-14.75,0-27.34,9.23-32.3,22.24.66.25,1.34.47,2.06.62-.85.32-1.72.65-2.59.97-.45,1.38-.85,2.79-1.13,4.25-2.78,1.51-5.43,3.22-7.98,5.07,1,.07,2,.1,2.99.05,5.17-.26,10.17-2.17,13.61-5.19-1.58,3.2-2.82,6.29-4.4,9.49,6.47-.33,11.4-4.48,15.61-8.32.67-.62,2.74-2.53,1.71-2.62,7.62,2.9,15.58,5.26,23.74,7.04-2.98-3.93-6-7.84-9.06-11.73Z\" style=\"opacity: .2;\"/>\n  <path d=\"M45.91,46.16c7.62,2.9,15.58,5.26,23.74,7.04-2.98-3.93-6-7.84-9.06-11.73,13.9,7.36,32.67,10.12,48.5,14.53-.43-6.44-3.27-12.84-8.18-18.03,5.59-1.78,11.34-3.64,15.59-6.99,4.84-3.82,7.59-8.71,11.51-13.13-12.32-1.58-24.63-3.15-36.95-4.73-2.74-.35-5.5-.71-8.09-1.49-1.87-.57-3.61-1.35-5.34-2.15-6.51-2.99-12.61-6.18-18.87-9.48-6.16,6.98-12.16,14.49-17.54,21.84-2.56-6.72-3.73-13.76-3.43-20.76-10.39,3.97-16.37,12.8-18.95,21.6-1.11,3.8-1.71,7.8-.41,11.56s4.82,7.24,9.66,8.23c-7.25,2.74-15.12,5.49-23.06,6.57,3.91,2.64,9.19,4.03,14.36,3.77,5.17-.26,10.17-2.17,13.61-5.19-1.58,3.2-2.82,6.29-4.4,9.49,6.47-.33,11.4-4.48,15.61-8.32.67-.62,2.74-2.53,1.71-2.62Z\" style=\"fill: #657e89;\"/>\n</svg>",
       "summary": "Logan is a clever but reckless raccoon who got pulled into something way over his head.",
-      "intro": "<strong>Logan</strong> is a clever but extremely reckless raccoon who stumbled into something way over his head. He's a bit of a dork, but he's got a good heart and a knack for getting out of tight situations... usually by the skin of his teeth, despite his near-total lack of self-restraint. If it weren't for that damn book, he probably would've just been a random tech-obsessed raccoon.\n\n[[NSFW]]During his later years, he goes down a bit of a dark path of self indulgence eventually leading to his downfall as a functioning member of society. Leaning too far hard down an addictive path of his weight gain fetish, he sits alone in his house, unable to move without assistance.[[/NSFW]]",
+      "intro": "<strong>Logan</strong> is a clever but extremely reckless raccoon who stumbled into something way over his head. He's a bit of a dork, but he's got a good heart and a knack for getting out of tight situations... usually by the skin of his teeth, despite his near-total lack of self-restraint. If it weren't for that damn book, he probably would've just been a random tech-obsessed raccoon.\n\n[[NSFW]]During his later years, he goes down a bit of a dark path of self-indulgence eventually leading to his downfall as a functioning member of society. Leaning too far hard down an addictive path of his weight gain fetish, he sits alone in his house, unable to move without assistance.[[/NSFW]]",
       "entryType": "Character",
       "tags": [
         "character",
@@ -18,14 +18,14 @@
       "visibility": "both",
       "sortOrder": 0,
       "publishedAt": "2026-04-16T00:00:00Z",
-      "updatedAt": "2026-05-14T06:24:02.548Z",
+      "updatedAt": "2026-06-13T07:33:06.672Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-CHR-LF-MAIN",
           "imageUrl": "https://media.raccstarlogan.com/wiki/assets/char/lf/1.png",
           "imageAlt": "Logan Foster Main Outfit",
           "tabLabel": "Main Outfit",
-          "caption": "Logan's default outfit consists of a red flannel hoodie, navy blue V-neck T-shirt, blue cuffed jeans, and red black and blue sneakers.",
+          "caption": "Logan's default outfit consists of a red flannel hoodie, navy blue V-neck T-shirt, blue cuffed jeans, and red, black and blue sneakers.",
           "nsfwOnly": false,
           "sortOrder": 0
         },
@@ -121,7 +121,7 @@
           "id": "WIKI-ROW-LF-ORTN",
           "rowKey": "orientation",
           "rowLabel": "Orientation",
-          "rowValue": "Demiromantic Bixexual",
+          "rowValue": "Demiromantic Bisexual",
           "rowFormat": "text",
           "nsfwOnly": false,
           "sortOrder": 5
@@ -219,7 +219,7 @@
           "id": "WIKI-SEC-LF-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Logan is a raccoon with fluffy, medium blue-gray fur, a puffed out tail, and sharp blue eyes. His hair is always swooped to his left, and he has a slit in his left eyebrow, of which the origin is unknown. He has a red heart-shaped marking on his chest, which is also of unknown origin.\n\nHe usually wears a navy blue t-shirt and blue jeans under a fairly thin red flannel hoodie with black sleeves, paired with red black and blue Converse sneakers that are worn from running around and getting into trouble. In colder weather, he swaps the flannel jacket for a thick, dark gray winter coat with a light gray lining, and an off-white cream t-shirt underneath.\n\n[[NSFW]]He has a humanoid penis with foreskin which is pretty small when soft, but around average sized if not slightly big when hardened.\n\nDuring his later years, he is on the extremely severe end of obesity, with a saggy belly hanging down over his knees, huge moobs protruding from his chest, thick thighs that could save lives, and an ass that could end them. His arms are notably flabby, and his pudgy hands make it hard to hold onto small objects. His face is noticeably a lot fluffier and unkempt than in his younger years.[[/NSFW]]",
+          "sectionBody": "Logan is a raccoon with fluffy, medium blue-gray fur, a puffed out tail, and sharp blue eyes. His hair is always swooped to his left, and he has a slit in his left eyebrow, of which the origin is unknown. He has a red heart-shaped marking on his chest, which is also of unknown origin.\n\nHe usually wears a navy-blue t-shirt and blue jeans under a fairly thin red flannel hoodie with black sleeves, paired with red, black and blue Converse sneakers that are worn from running around and getting into trouble. In colder weather, he swaps the flannel jacket for a thick, dark gray winter coat with a light gray lining, and an off-white cream t-shirt underneath.\n\n[[NSFW]]He has a humanoid penis with foreskin which is pretty small when soft, but around average sized if not slightly big when hardened.\n\nDuring his later years, he is on the extremely severe end of obesity, with a saggy belly hanging down over his knees, huge moobs protruding from his chest, thick thighs that could save lives, and an ass that could end them. His arms are notably flabby, and his pudgy hands make it hard to hold onto small objects. His face is noticeably a lot fluffier and unkempt than in his younger years.[[/NSFW]]",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -237,7 +237,7 @@
           "id": "WIKI-SEC-LF-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Logan spent most of his childhood in [EastUnder Valley](/wiki/eastunder-valley), a quiet suburb of [San Bandera](/wiki/san-bandera), living with his single mother, [Emily](/wiki/emily-foster). Life there was constantly shifting; Emily had a rough time finding a stable partner, and Logan ended up with a revilving door of \"new dads,\" each one sticking around for a few years/months before vanishing. One in particular seemed like he'd last, but a sudden midlife crisis tore things apart. The fallout left Logan and his mom without a home midway through his sophomore year of high school.\n\nThey relocated to [Ashford](/wiki/ashford), a rural town just up north that Logan wasn't used to, but it's where he first started digging into his interest in abandoned places. There, he met a friend named [Wyvern](/wiki/wyvern-embers), who introduced him to paranormal investigation, weird theories, and a general fascination with the unknown. The two spent a lot of time exploring the outskirts of town, which were rumored to be more than a little... off.\n\nEventually, financial strain forced another move, this time back to San Bandera. Logan and his mom ended up in [SouthPort](/wiki/southport), a neglected port-side district where Logan would eventually graduate high school. He hated that school; the staff were strict, the atmosphere was suffocating, but he made it through. After graduation, he found an old, abandoned mobile home and just... claimed it. Nobody stopped him, so he stayed.\n\nIn 2023, Logan met his long lost brother [Jesper](/wiki/jesper-foster) by chance at a bus stop. It didn't take long to piece together that they were related on his father [Kevin](/wiki/kevin-foster)'s side. Without hesitation, Logan offered him a place to stay. Jesper reluctantly accepted.\n\nNot long after, Logan stumbled across a strange book hidden deep within an abandoned forest library. It was old, written in some strange, bizzare and foreign language, and it hummed with an eerie energy. He brought it home. He shouldn't have. But he did.\n\n[And that's where things really start.](/portfolio/projects/redrift)\n\n[[NSFW]]In his later years, Logan began exploring long-standing \"adult\" interests he had previously kept to himself... mostly. What started as a quiet fascination with weight gain gradually turned into active experimentation, with him intentionally pushing his limits further and further as time progressed. At first, he treated it as something temporary, something he could stop or reverse whenever he felt like it, but that assumption slowly slipped out of his control.\n\nAs time went on, his habits became routine, and the line between curiosity and dependency blurred. By his mid-to-late 30s, his condition had escalated significantly, leaving him severely obese and largely confined to his home. The situation placed increasing strain on his relationship with Jesper, who eventually moved out, unable to handle both the responsibility and the emotional weight of watching Logan continue down that path. Left on his own, Logan was forced to face the weight of his actions he had long dismissed as manageable.[[/NSFW]]",
+          "sectionBody": "Logan spent most of his childhood in [EastUnder Valley](/wiki/eastunder-valley), a quiet suburb of [San Bandera](/wiki/san-bandera), living with his single mother, [Emily](/wiki/emily-foster). Life there was constantly shifting; Emily had a rough time finding a stable partner, and Logan ended up with a revolving door of \"new dads,\" each one sticking around for a few years/months before vanishing. One in particular seemed like he'd last, but a sudden midlife crisis tore things apart. The fallout left Logan and his mom without a home midway through his sophomore year of high school.\n\nThey relocated to [Ashford](/wiki/ashford), a rural town just up north that Logan wasn't used to, but it's where he first started digging into his interest in abandoned places. There, he met a friend named [Wyvern](/wiki/wyvern-embers), who introduced him to paranormal investigation, weird theories, and a general fascination with the unknown. The two spent a lot of time exploring the outskirts of town, which were rumored to be more than a little... off.\n\nEventually, financial strain forced another move, this time back to San Bandera. Logan and his mom ended up in [SouthPort](/wiki/southport), a neglected port-side district where Logan would eventually graduate high school. He hated that school; the staff were strict, the atmosphere was suffocating, but he made it through. After graduation, he found an old, abandoned mobile home and just... claimed it. Nobody stopped him, so he stayed.\n\nIn 2023, Logan met his long-lost brother [Jesper](/wiki/jesper-foster) by chance at a bus stop. It didn't take long to piece together that they were related on his father [Kevin](/wiki/kevin-foster)'s side. Without hesitation, Logan offered him a place to stay. Jesper reluctantly accepted.\n\nNot long after, Logan stumbled across a strange book hidden deep within an abandoned forest library. It was old, written in some strange, bizarre and foreign language, and it hummed with an eerie energy. He brought it home. He shouldn't have. But he did.\n\n[And that's where things really start.](/portfolio/projects/redrift)\n\n[[NSFW]]In his later years, Logan began exploring long-standing \"adult\" interests he had previously kept to himself... mostly. What started as a quiet fascination with weight gain gradually turned into active experimentation, with him intentionally pushing his limits further and further as time progressed. At first, he treated it as something temporary, something he could stop or reverse whenever he felt like it, but that assumption slowly slipped out of his control.\n\nAs time went on, his habits became routine, and the line between curiosity and dependency blurred. By his mid-to-late 30s, his condition had escalated significantly, leaving him severely obese and largely confined to his home. The situation placed increasing strain on his relationship with Jesper, who eventually moved out, unable to handle both the responsibility and the emotional weight of watching Logan continue down that path. Left on his own, Logan was forced to face the weight of his actions he had long dismissed as manageable.[[/NSFW]]",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -255,7 +255,7 @@
       "triviaItems": [
         {
           "id": "WIKI-TRIVIA-LF-DRNK",
-          "itemText": "He will drink anything as long as it's not bodily fluieds.",
+          "itemText": "He will drink anything as long as it's not bodily fluids.",
           "nsfwOnly": false,
           "sortOrder": 0
         },
@@ -445,14 +445,14 @@
       "visibility": "both",
       "sortOrder": 1,
       "publishedAt": "2026-04-16T09:42:44.285Z",
-      "updatedAt": "2026-04-30T05:19:01.966Z",
+      "updatedAt": "2026-06-13T07:33:08.511Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-JF-CLTH",
           "imageUrl": "https://media.raccstarlogan.com/wiki/assets/char/jf/1.png",
           "imageAlt": "Jesper Foster Clothed",
           "tabLabel": "Clothed",
-          "caption": "Jesper is usually shown wearing a black leather jacket, black jeans, steel-toed tactical boots. He also wears the skull of his father as a mask.",
+          "caption": "Jesper is usually shown wearing a black leather jacket, black jeans, steel-toed tactical boots. He also wears his father’s skull as a mask.",
           "nsfwOnly": false,
           "sortOrder": 0
         },
@@ -593,7 +593,7 @@
           "id": "WIKI-ROW-JF-DSLK",
           "rowKey": "dislikes",
           "rowLabel": "Dislikes",
-          "rowValue": "- Dishonesty\n- Threats to Loved Ones\n- Blind Obedience\n- Attention Seekers\n- Misjudgement\n- Cars",
+          "rowValue": "- Dishonesty\n- Threats to Loved Ones\n- Blind Obedience\n- Attention Seekers\n- Misjudgment\n- Cars",
           "rowFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 12
@@ -645,7 +645,7 @@
           "id": "WIKI-SEC-JF-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Jesper is a tall, undead raccoon-lynx hybrid with a lean, muscular build. His fur is deep charcoal black with reddish undertones, complimented by an unusually large and fluffy raccoon tail and tufted lynx ears. His hair is long, thick, and unkempt, reaching down past his shoulders. He has heterochromia with one red eye and one yellow eye. His body shows signs of wear: a large X-shaped scar over his chest, claw marks across his back, and a noticable scar around his lower side, all from past encounters.\n\nJesper's usual attire consists of a beat-up black leather jacket (usually unzipped and shirtless underneath, but if he has to wear a shirt he'll wear a deep burgundy tank top), black jeans, and steel-toed tactical combat boots. He wears a mask made from the skull of his father, which has been modified to fit his face. The mask is often cracked and chipped, showing signs of wear and tear from his various missions and encounters. He also wields a chain wallet and a knife holster, with the knife also chained.\n\n[[NSFW]]He has a hybrid humanoid/barbed penis which can be hidden pretty well, except for the rare off chance he gets hard, in which it sticks out like an exposed wire. I don't know how to expand this because I'm afraid of keylogging.[[/NSFW]]",
+          "sectionBody": "Jesper is a tall, undead raccoon-lynx hybrid with a lean, muscular build. His fur is deep charcoal black with reddish undertones, complimented by an unusually large and fluffy raccoon tail and tufted lynx ears. His hair is long, thick, and unkempt, reaching down past his shoulders. He has heterochromia with one red eye and one yellow eye. His body shows signs of wear: a large X-shaped scar over his chest, claw marks across his back, and a noticeable scar around his lower side, all from past encounters.\n\nJesper's usual attire consists of a beat-up black leather jacket (usually unzipped and shirtless underneath, but if he has to wear a shirt he'll wear a deep burgundy tank top), black jeans, and steel-toed tactical combat boots. He wears a mask made from his father’s skull, which has been modified to fit his face. The mask is often cracked and chipped, showing signs of wear and tear from his various missions and encounters. He also wields a chain wallet and a knife holster, with the knife also chained.\n\n[[NSFW]]He has a hybrid humanoid/barbed penis which can be hidden pretty well, except for the rare off chance he gets hard, in which it sticks out like an exposed wire. I don't know how to expand this because I'm afraid of keylogging.[[/NSFW]]",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -654,7 +654,7 @@
           "id": "WIKI-SEC-JF-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Jesper puts on a blunt, assertive attitude, but behind closed doors, he's surprisingly chill to be around. As an undead mercenary, he's used to people fearing him, and honestly, he's okay with that. It comes with the territory.\n\nHe tends to be immediately suspicious of newcomers, especially outside of work or family. If you're not someone he expects to be around, he straight up doesn't trust you at ALL.\n\nHowever, if you do manage to earn his trust, he's a loyal and protective friend who would go to great lengths to keep you safe. His sense of humor leans heavily dark, not out of malice, but it's just how he processes the world around him, given his past.\n\n[[NSFW]]Jesper has a strongly dominant disposition, though it's not something he expresses openly. He requires a significant level of trust before allowing that side of himself to surface, and even then, it tends to emerge quickly and decisively rather than gradually. His libido is typically low, but can increase sharply under the right conditions of which he actively tries to conceal. He is highly controlled in most aspects of his life, which makes that shift more pronounced when it does occur, though he remains reluctant to discuss it or acknowledge it outright.[[/NSFW]]",
+          "sectionBody": "Jesper puts on a blunt, assertive attitude, but behind closed doors, he's surprisingly chill to be around. As an undead mercenary, he's used to people fearing him, and honestly, he's okay with that. It comes with the territory.\n\nHe tends to be immediately suspicious of newcomers, especially outside of work or family. If you're not someone he expects to be around, he straight up doesn't trust you at ALL.\n\nHowever, if you do manage to earn his trust, he's a loyal and protective friend who would go to great lengths to keep you safe. His sense of humor leans heavily dark, not out of malice, but it's just how he processes the world around him, given his past.\n\n[[NSFW]]Jesper has a strongly dominant disposition, though it's not something he expresses openly. He requires a significant level of trust before allowing that side of himself to surface, and even then, it tends to emerge quickly and decisively rather than gradually. His libido is typically low but can increase sharply under the right conditions of which he actively tries to conceal. He is highly controlled in most aspects of his life, which makes that shift more pronounced when it does occur, though he remains reluctant to discuss it or acknowledge it outright.[[/NSFW]]",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -663,7 +663,7 @@
           "id": "WIKI-SEC-JF-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Jesper's childhood was split between two drastically different worlds. His mother, [Zelda](/wiki/zelda-voss), was strict and no-nonsense, while his father [Kevin](/wiki/kevin-foster) was a chaotic mess of a man clinging to what little control he had. The two shared custody with Zelda in [San Bandera](/wiki/san-bandera) and Kevin in [SouthPort](/wiki/southport), but Kevin was always fighting for full rights. Jesper was stuck in the middle, quietly enduring the emotional strain like it was just part of life.\n\nThe day Kevin finally won custody was the same day everything fell apart. On the drive home, their car hydroplaned and flew off the road into a ditch, bashing into oncoming traffic on the way, triggering an explosion. Kevin didn't make it out. Technically, Jesper didn't either, but something pulled him back.\n\nHe woke up undead, confused, alone, and missing huge pieces of who he used to be. The only thing he had from the wreck was a cracked raccoon skull he'd found near the site, Kevin's skull, but Jesper wouldn't realize that for a long time. He started wearing it like armor, more instinct than sentiment.\n\nWith no memory, no guidance, and no sense of belonging, Jesper wandered for a while, trying to piece together who and what he even was. Eventually, he was approached by [Alison Cross](/wiki/alison-cross), who offered him rehabilitation as long as he was willing to work as a mercenary for her. Jesper accepted, and over time, he became one of her most reliable and skilled operatives, taking on high-risk missions that others wouldn't dare touch.\n\n[[NSFW]]Much of Jesper's personal development was shaped by environments where control and discipline were prioritized above all else, leaving little room for vulnerability or self-exploration. As a result, he developed a tendency to suppress or compartmentalize more personal aspects of himself, relying heavily on control as a means of stability. This has made certain parts of his behavior feel unfamiliar or difficult to process, particularly when they conflict with the image he maintains.\n\nHe has made isolated attempts to understand certain aspects of himself, though most of the time these efforts were short-lived and rarely acknowledged afterward.[[/NSFW]]\n\nYears passed. Then one day, Jesper met his long-lost brother, [Logan](/wiki/logan-foster), at a random bus stop in southern Downtown San Bandera. Something about them felt off, yet familiar. Jesper couldn't explain it, but deep down, he knew this guy mattered to him. So when Logan offered to let him move into their place, he reluctantly accepted, not really sure what to expect. Life didn't get any simpler, especially with Logan around, but it started to feel a bit more real again.",
+          "sectionBody": "Jesper's childhood was split between two drastically different worlds. His mother, [Zelda](/wiki/zelda-voss), was strict and no-nonsense, while his father [Kevin](/wiki/kevin-foster) was a chaotic mess of a man clinging to what little control he had. The two shared custody with Zelda in [San Bandera](/wiki/san-bandera) and Kevin in [SouthPort](/wiki/southport), but Kevin was always fighting for full rights. Jesper was stuck in the middle, quietly enduring the emotional strain like it was just part of life.\n\nThe day Kevin finally won custody was the same day everything fell apart. On the drive home, their car hydroplaned and flew off the road into a ditch, bashing into oncoming traffic on the way, triggering an explosion. Kevin didn't make it out. Technically, Jesper didn't either, but something pulled him back.\n\nHe woke up undead, confused, alone, and missing huge pieces of who he used to be. The only thing he had from the wreck was a cracked raccoon skull he'd found near the site, Kevin's skull, but Jesper wouldn't realize that for a long time. He started wearing it like armor, more instinct than sentiment.\n\nWith no memory, no guidance, and no sense of belonging, Jesper wandered for a while, trying to piece together who and what he even was. Eventually, he was approached by [Alison Cross](/wiki/alison-cross), who offered him rehabilitation as long as he was willing to work as a mercenary for her. Jesper accepted, and over time, he became one of her most reliable and skilled operatives, taking on high-risk missions that others wouldn't dare touch.\n\n[[NSFW]]Much of Jesper's personal development was shaped by environments where control and discipline were prioritized above all else, leaving little room for vulnerability or self-exploration. As a result, he developed a tendency to suppress or compartmentalize more personal aspects of himself, relying heavily on control as a means of stability. This has made certain parts of his behavior feel unfamiliar or difficult to process, particularly when they conflict with the image he maintains.\n\nHe has made isolated attempts to understand certain aspects of himself, though most of the time these efforts were short-lived and rarely acknowledged afterward.[[/NSFW]]\n\nYears passed. Then one day, Jesper met his long-lost brother, [Logan](/wiki/logan-foster), at a random bus stop in southern Downtown San Bandera. Something about them felt off, yet familiar. Jesper couldn't explain it, but deep down, he knew this guy mattered to him. So, when Logan offered to let him move into their place, he reluctantly accepted, not sure what to expect. Life didn't get any simpler, especially with Logan around, but it started to feel a bit more real again.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -807,7 +807,7 @@
           "id": "WIKI-REL-JF-ZV",
           "relatedEntryId": "WIKI-CHR-ZV",
           "relationLabel": "Mother",
-          "notes": "Controling.",
+          "notes": "Controlling.",
           "sortOrder": 2
         },
         {
@@ -827,7 +827,7 @@
         {
           "id": "WIKI-REL-JF-JU",
           "relatedEntryId": "WIKI-CHR-JU",
-          "relationLabel": "Acquaintence",
+          "relationLabel": "Acquaintance",
           "notes": "Logan found this book and suddenly they're up my ass on everything.",
           "sortOrder": 5
         },
@@ -919,7 +919,7 @@
       "visibility": "nsfw",
       "sortOrder": 1,
       "publishedAt": "2026-04-22T10:37:07.923Z",
-      "updatedAt": "2026-04-22T11:12:03.075Z",
+      "updatedAt": "2026-06-13T07:33:09.677Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-JSD",
@@ -1090,7 +1090,7 @@
           "id": "WIKI-SEC-JSD-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "He’s a lot bigger now. Taller, heavier, softer. Not necessarily muscle, either.\n\nThere’s a red section across his belly that didn’t heal right after the change. It stretches more than it should and has a bright orange outline running along it and down his tail. It’s a weird texture, not quite skin.\n\nThe wings are small, bony, and don’t really work. They just hang there. The skull isn’t something he wears anymore. It’s part of his face now, with those sharp horns angling back.\n\nHe still has the heterochromia, however the yellow eye isn't just an outline. They stand out more now, even when half-lidded most of the time.",
+          "sectionBody": "He’s a lot bigger now. Taller, heavier, softer. Not necessarily muscle, either.\n\nThere’s a red section across his belly that didn’t heal right after the change. It stretches more than it should and has a bright orange outline running along it and down his tail. It’s a weird texture, not quite skin.\n\nThe wings are small, bony, and don’t really work. They just hang there. The skull isn’t something he wears anymore. It’s part of his face now, with those sharp horns angling back.\n\nHe still has the heterochromia; however, the yellow eye isn't just an outline. They stand out more now, even when half-lidded most of the time.",
           "sectionFormat": "markdown",
           "nsfwOnly": true,
           "sortOrder": 0
@@ -1144,7 +1144,7 @@
         },
         {
           "id": "WIKI-TRIVIA-JSD-RUBR",
-          "itemText": "His belly is a weird rubber/gel-like texture. Nobody understands what it is but when fractured it turns into a viscous paste.",
+          "itemText": "His belly has a weird rubber/gel-like texture. Nobody understands what it is but when fractured it turns into a viscous paste.",
           "nsfwOnly": true,
           "sortOrder": 3
         },
@@ -1181,7 +1181,7 @@
           "id": "WIKI-REL-JSD-XW",
           "relatedEntryId": "WIKI-TYP-XW",
           "relationLabel": "Mutual Crush",
-          "notes": "We're both kind of awkward around eachother.",
+          "notes": "We're both kind of awkward around each other.",
           "sortOrder": 3
         },
         {
@@ -1230,7 +1230,7 @@
       "visibility": "both",
       "sortOrder": 2,
       "publishedAt": "2026-04-20T05:36:44.465Z",
-      "updatedAt": "2026-05-14T07:43:12.819Z",
+      "updatedAt": "2026-06-13T07:33:10.937Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-JS-CLTH",
@@ -1418,7 +1418,7 @@
           "id": "WIKI-SEC-JS-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Jason is a lean shark with slate-blue skin and a muscular, slim build. His head features a sharp snout, angry purple eyes, and a dark navy mohawk with blue highlights. Three gill slits are visible on each side of his neck, but are often confused for the scars on his chest. A dorsal fin runs down his back into his tail.\n\nJason's most common outfit consists of a black denim vest with the sleeves ripped off and blue jeans. While on duty, he's seen carrying a trident slung over his shoulder, with a deep-purple gem at the base of the brass prongs.",
+          "sectionBody": "Jason is a lean shark with slate-blue skin and a muscular, slim build. His head features a sharp snout, angry purple eyes, and a dark navy mohawk with blue highlights. Three gill slits are visible on each side of his neck but are often confused for the scars on his chest. A dorsal fin runs down his back into his tail.\n\nJason's most common outfit consists of a black denim vest with the sleeves ripped off and blue jeans. While on duty, he's seen carrying a trident slung over his shoulder, with a deep-purple gem at the base of the brass prongs.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -1427,7 +1427,7 @@
           "id": "WIKI-SEC-JS-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Jason is fiercely competitive and always acts like he has something to prove, even if noboby's watching.\n\nHe's the type to insert himself into a challenge just to win, whether it's necessary or not. His opinions are LOUD, often unfiltered, and delivered with full chest regardless of how wrong he might be. He thrives off of attention, regardless of what kind, and seems to confuse confidence with correctness. He has a very black-and-white worldview, and is quick to judge people based on surface-level impressions. He's also very easily offended, and will hold grudges for a long time if he thinks he's been disrespected.\n\nOn the surface, Jason comes off as tough, cocky, and ready to fight, but if things don't go his way, that tough exterior cracks just enough to show how emotionally immature he can be. He doesn't throw tantrums so much as he gets defensive and combative, especially when called out or proven wrong. He's not used to being underestimated, and when it happens, he takes it personally.\n\nHe tries to act like the cool, edgy twin, but most people around him see right through it. His idea of subtlety is... very un-subtle. Underneath the bravado, there's a weird need for validation that he never really addresses.",
+          "sectionBody": "Jason is fiercely competitive and always acts like he has something to prove, even if nobody’s watching.\n\nHe's the type to insert himself into a challenge just to win, whether it's necessary or not. His opinions are LOUD, often unfiltered, and delivered with full chest regardless of how wrong he might be. He thrives off attention, regardless of what kind, and seems to confuse confidence with correctness. He has a very black-and-white worldview and is quick to judge people based on surface-level impressions. He's also very easily offended and will hold grudges for a long time if he thinks he's been disrespected.\n\nOn the surface, Jason comes off as tough, cocky, and ready to fight, but if things don't go his way, that tough exterior cracks just enough to show how emotionally immature he can be. He doesn't throw tantrums so much as he gets defensive and combative, especially when called out or proven wrong. He's not used to being underestimated, and when it happens, he takes it personally.\n\nHe tries to act like the cool, edgy twin, but most people around him see right through it. His idea of subtlety is... very un-subtle. Underneath the bravado, there's a weird need for validation that he never really addresses.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -1436,7 +1436,7 @@
           "id": "WIKI-SEC-JS-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Jason grew up in SouthPort along side his twin brother Zeke, though you wouldn't know they were related by how differently they act. In school, Jason was the loud one, the show-off, the guy who thought every hallway was his stage. He hit his personal peak in high school; star athlete, center of attention, and completely insufferable about it.\n\nDespite all the noise he made, he was constantly overshadowed by Zeke, whose quiet capability made more impact than Jason's constant bragging. That contrast stuck with Jason, and whether he admits it or not, it's one of the reasons he pushies himself so hard now, trying to outshine a shadow he pretends not to notice.\n\nAfter graduation, Jason was enlisted by his father [Vincent](/wiki/vincent-skank) to work as a mercenary, and he's been doing that ever since. He talks like he's top-class, but in reality, he's barely scraping by on sheer bravado and lucky breaks. Most of his \"successes\" come from charging in without a plan and somehow surviving. He's gotten into serious trouble numerous times, and there's a rumor that the only reason he's still enlisted is because someone higher up (probably his dad) keeps tugging strings to keep him involved.\n\nHe still insists he's better than his twin, even as Zeke quietly builds a real life with his husband [Azrian](/wiki/azrian-harborne) and leaves Jason behind in nearly every metric that matters.",
+          "sectionBody": "Jason grew up in SouthPort alongside his twin brother Zeke, though you wouldn't know they were related by how differently they act. In school, Jason was the loud one, the show-off, the guy who thought every hallway was his stage. He hit his personal peak in high school; star athlete, center of attention, and completely insufferable about it.\n\nDespite all the noise he made, he was constantly overshadowed by Zeke, whose quiet capability made more impact than Jason's constant bragging. That contrast stuck with Jason, and whether he admits it or not, it's one of the reasons he pushes himself so hard now, trying to outshine a shadow he pretends not to notice.\n\nAfter graduation, Jason was enlisted by his father [Vincent](/wiki/vincent-skank) to work as a mercenary, and he's been doing that ever since. He talks like he's top-class, but in reality, he's barely scraping by on sheer bravado and lucky breaks. Most of his \"successes\" come from charging in without a plan and somehow surviving. He's gotten into serious trouble numerous times, and there's a rumor that the only reason he's still enlisted is because someone higher up (probably his dad) keeps tugging strings to keep him involved.\n\nHe still insists he's better than his twin, even as Zeke quietly builds a real life with his husband [Azrian](/wiki/azrian-harborne) and leaves Jason behind in nearly every metric that matters.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -1648,7 +1648,7 @@
       "visibility": "both",
       "sortOrder": 3,
       "publishedAt": "2026-04-20T06:48:01.550Z",
-      "updatedAt": "2026-05-14T07:43:22.279Z",
+      "updatedAt": "2026-06-13T07:33:12.293Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-ZH-CLTH",
@@ -1845,7 +1845,7 @@
           "id": "WIKI-SEC-ZH-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Zeke is a very heavyset shark with a stocky build that reflects years of indulgence more than his former profession. His body is broad and imposing, with thick limbs, a wide belly, and distinct stretch marks around his midsection and sides. He has short, jagged stripes across his arms and tail.\n\nHis body is a cool gray with hints of blue, especially in the shadows. His stripes are a darker gray with a slight indigo tint. His hair is black with a faint blue shine. His belly and inner arms are lighter, but the contrast is subtle and keeps the whole palette feeling soft.\n\nHe typically wears a severely ill-fitting tank top that struggles to contain his size, often riding up due to his size, and a pair of brown cargo shorts that sit snugly around his hips. A golden key pendant always hangs from his neck, a sentimental keepsake he rarely speaks about. Despite his size, he carries himself with ease, unbothered and confident in how he looks.\n\nHis weight sits mostly around his middle, giving him a soft, rounded belly that leads the way wherever he goes. His chest follows suit, full and broad, while his arms and legs, though thick, carry less of the bulk. His backside is notably wide and heavy as well, rounding out his silhouette with an almost exaggerated balance. It's clear his body has adapted over time, settling into comfort rather than combat.",
+          "sectionBody": "Zeke is a very heavyset shark with a stocky build that reflects years of indulgence more than his former profession. His body is broad and imposing, with thick limbs, a wide belly, and distinct stretch marks around his midsection and sides. He has short, jagged stripes across his arms and tail.\n\nHis body is a cool gray with hints of blue, especially in the shadows. His stripes are darker gray with a slight indigo tint. His hair is black with a faint blue shine. His belly and inner arms are lighter, but the contrast is subtle and keeps the whole palette feeling soft.\n\nHe typically wears a severely ill-fitting tank top that struggles to contain his size, often riding up due to his size, and a pair of brown cargo shorts that sit snugly around his hips. A golden key pendant always hangs from his neck, a sentimental keepsake he rarely speaks about. Despite his size, he carries himself with ease, unbothered and confident in how he looks.\n\nHis weight sits mostly around his middle, giving him a soft, rounded belly that leads the way wherever he goes. His chest follows suit, full and broad, while his arms and legs, though thick, carry less of the bulk. His backside is notably wide and heavy as well, rounding out his silhouette with an almost exaggerated balance. It's clear his body has adapted over time, settling into comfort rather than combat.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -1854,7 +1854,7 @@
           "id": "WIKI-SEC-ZH-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Zeke is basically the opposite of his brother, Jason. He's a LOT more laid back, but still relatively cocky...just in a slower, more smug manner. He tends to speak in a calm, confident drawl, often teasing others with a smirk that says he knows exactly what he's doing. While he doesn't seek attention the same way Jason does, he has a habit of making his presence known with quiet swagger and a sharp wit. He's not easily rattled, rarely raises his voice, and has an annoying talent for getting under peoples' skin without lifting a finger. Despite this, he's approachable, easy to talk to, and surprisingly patient, especially with people he cares about. He enjoys pushing buttons, but usually knows where the line is. *Usually.*",
+          "sectionBody": "Zeke is basically the opposite of his brother, Jason. He's a LOT more laid back, but still relatively cocky...just in a slower, more smug manner. He tends to speak in a calm, confident drawl, often teasing others with a smirk that says he knows exactly what he's doing. While he doesn't seek attention the same way Jason does, he has a habit of making his presence known with quiet swagger and sharp wit. He's not easily rattled, rarely raises his voice, and has an annoying talent for getting under people’s skin without lifting a finger. Despite this, he's approachable, easy to talk to, and surprisingly patient, especially with people he cares about. He enjoys pushing buttons but usually knows where the line is. *Usually.*",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -1991,14 +1991,14 @@
         {
           "id": "WIKI-REL-MO8JJD5V-I0P4E",
           "relatedEntryId": "WIKI-CHR-JF",
-          "relationLabel": "Acquaintence",
+          "relationLabel": "Acquaintance",
           "notes": "Tony's nephew. He's a little intimidating, but eh, he's chill.",
           "sortOrder": 5
         },
         {
           "id": "WIKI-REL-MO8JKJL6-Y9GNB",
           "relatedEntryId": "WIKI-CHR-LF",
-          "relationLabel": "Acquaintence",
+          "relationLabel": "Acquaintance",
           "notes": "Tony's other nephew. Total goofball, bit of a dork... in a good way.",
           "sortOrder": 6
         }
@@ -2041,7 +2041,7 @@
       "visibility": "both",
       "sortOrder": 4,
       "publishedAt": "2026-04-20T08:10:13.671Z",
-      "updatedAt": "2026-05-14T07:43:29.527Z",
+      "updatedAt": "2026-06-13T07:33:13.771Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-AH-CLTH",
@@ -2167,7 +2167,7 @@
           "id": "WIKI-ROW-AH-FFDS",
           "rowKey": "favorite-foods",
           "rowLabel": "Favorite Foods",
-          "rowValue": "- Salted Fish\n- Dragonfruit\n- Whatever Zeke (somehow) Doesn't Finish",
+          "rowValue": "- Salted Fish\n- Dragon fruit\n- Whatever Zeke (somehow) Doesn't Finish",
           "rowFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 10
@@ -2213,7 +2213,7 @@
           "id": "WIKI-SEC-AH-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Azrian's wardrobe is minimal: he almost exclusively wears a pair of durable blue overalls, usually with the top half rolled down or clipped loose when off duty. They're practical, water-resistant, and patched in places from years of use. He rarely bothers with shirts underneath unless the weather demands it. The overalls are simply easier for him to work in, and he's long since stop pretending otherwise.\n\nHis skin tone is a dark aquamarine, fading to a gray underbelly that runs from his chin down his chest and abdomen. His body is mostly smooth and unmarked, though faint gradients deepen around his arms, tail, and back. The lack of strong patterning gives him a clean, uniform appearance that contrasts sharply with his glowing features.\n\nHis husband's mannerisms have rubbed off on him more than he'd like to admit, and Azzy has a habit of snacking throughout the day, whether that be taste testing his own cooking or just keeping some homemade snack mix nearby. This means he's not really skinny either, in fact he's pushing obesity, but he's not nearly as obese as Zeke. But I mean, you can't trust a skinny cook, am I right?\n\nHis eyes, lure, and fin edges emit a bright cyan-teal light, which stands out vividly in low light. Subtle veins of the same glow trace through parts of his fins and tail, giving them a bioluminescent shimmer without overpowering his main coloration.\n\nTwo small, curved fins sit on the sides of his head. Not really horns, just simple shapes that frame his face and keep him from looking too bare. They match his skin tone and blend naturally into his design without drawing too much attention.",
+          "sectionBody": "Azrian's wardrobe is minimal: he almost exclusively wears a pair of durable blue overalls, usually with the top half rolled down or clipped loose when off duty. They're practical, water-resistant, and patched in places from years of use. He rarely bothers with shirts underneath unless the weather demands it. The overalls are simply easier for him to work in, and he's long since stopped pretending otherwise.\n\nHis skin tone is a dark aquamarine, fading to a gray underbelly that runs from his chin down his chest and abdomen. His body is mostly smooth and unmarked, though faint gradients deepen around his arms, tail, and back. The lack of strong patterning gives him a clean, uniform appearance that contrasts sharply with his glowing features.\n\nHis husband's mannerisms have rubbed off on him more than he'd like to admit, and Azzy has a habit of snacking throughout the day, whether that be taste testing his own cooking or just keeping some homemade snack mix nearby. This means he's not skinny either, in fact he's pushing obesity, but he's not nearly as obese as Zeke. But I mean, you can't trust a skinny cook, am I right?\n\nHis eyes, lure, and fin edges emit a bright cyan-teal light, which stands out vividly in low light. Subtle veins of the same glow trace through parts of his fins and tail, giving them a bioluminescent shimmer without overpowering his main coloration.\n\nTwo small, curved fins sit on the sides of his head. Not really horns, just simple shapes that frame his face and keep him from looking too bare. They match his skin tone and blend naturally into his design without drawing too much attention.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -2222,7 +2222,7 @@
           "id": "WIKI-SEC-AH-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Azzy keeps a quiet, steady presence that makes him easy to underestimate at first glance. He isn't loud or flashy, and most people know him as reserved, thoughtful, and sometimes a little difficult to read. He doesn't open up quickly, preferring to let silence carry conversations until he has something worth saying.\n\nThat said, there's a warmer side to him once he relaxes. Azzy has a teasing streak that slips out in subtle ways, never sharp enough to sting but just enough to catch someone off guard. He enjoys small, everyday comforts (cooking, evening walks, collecting odd little maritime trinkets) and tends to show care through actions rather than words.\n\nHe avoids unnecessary conflict and rarely raises his voice, though that doesn't mean he's passive. When something matters to him, he holds firm. His patience makes him good at handling long hours, tedious tasks, or stubbortn people. While not the most expressive on the surface, Azzy's presence has a grounding effect, giving the sense of someone who sees more than he lets on.",
+          "sectionBody": "Azzy keeps a quiet, steady presence that makes him easy to underestimate at first glance. He isn't loud or flashy, and most people know him as reserved, thoughtful, and sometimes a little difficult to read. He doesn't open up quickly, preferring to let silence carry conversations until he has something worth saying.\n\nThat said, there's a warmer side to him once he relaxes. Azzy has a teasing streak that slips out in subtle ways, never sharp enough to sting but just enough to catch someone off guard. He enjoys small, everyday comforts (cooking, evening walks, collecting odd little maritime trinkets) and tends to show care through actions rather than words.\n\nHe avoids unnecessary conflict and rarely raises his voice, though that doesn't mean he's passive. When something matters to him, he holds firm. His patience makes him good at handling long hours, tedious tasks, or stubborn people. While not the most expressive on the surface, Azzy's presence has a grounding effect, giving the sense of someone who sees more than he lets on.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -2231,7 +2231,7 @@
           "id": "WIKI-SEC-AH-BHCD",
           "sectionKey": "behind-closed-doors",
           "sectionTitle": "Behind Closed Doors",
-          "sectionBody": "Azzy's affection shows itself in ways that are impossible to mistake once you see them. He doesn't just enjoy Zeke's size, he actively embraces and feeds into it. Cooking meals WAY bigger than necessary, always making sure food is close by, slipping in extra portions without comment... These aren't accidents. He actively encourages Zeke to indulge, sometimes teasingly, sometimes with a quiet push, but always with the intent of seeing him satisfied and heavier than before.\n\nWhat might look like simple spoiling from the outside is deliberate on Azzy's part. He takes pride in being the one who keeps Zeke full and then some, and in knowing his efforts show over time. It's not framed as a joke or a passing quirk, it's just how he loves.\n\nFor Azzy, there's a quiet satisfaction in this ritual. Watching Zeke soften, noticing shirts fit tighter, or seeing the way he sinks a little deeper into a chair, these are things Azzy quietly treasures. They're signs that his care is working, that his presence leaves a mark. It's a slow, ongoing process that he takes pride in, and it's a core part of how he expresses love. Each added pound feels like proof of his devotion: something visible, tangible, and deeply personal. Zeke himself doesn't always acknowledge the changes, but when he does, it's usually just a smrik. However, sometimes, it's a tug at his shirt to emphasize the stretch, a deliberate lean into Azzy that leaves no room to ignore it. Those moments always fluster him, though he hides it poorly, and Zeke, of course, knows *exactly* what he's doing.",
+          "sectionBody": "Azzy's affection shows itself in ways that are impossible to mistake once you see them. He doesn't just enjoy Zeke's size; he actively embraces and feeds into it. Cooking meals WAY bigger than necessary, always making sure food is close by, slipping in extra portions without comment... These aren't accidents. He actively encourages Zeke to indulge, sometimes teasingly, sometimes with a quiet push, but always with the intent of seeing him satisfied and heavier than before.\n\nWhat might look like simple spoiling from the outside is deliberate on Azzy's part. He takes pride in being the one who keeps Zeke full and then some, and in knowing his efforts show over time. It's not framed as a joke or a passing quirk, it's just how he loves.\n\nFor Azzy, there's a quiet satisfaction in this ritual. Watching Zeke soften, noticing shirts fit tighter, or seeing the way he sinks a little deeper into a chair, these are things Azzy quietly treasures. They're signs that his care is working, that his presence leaves a mark. It's a slow, ongoing process that he takes pride in, and it's a core part of how he expresses love. Each added pound feels like proof of his devotion: something visible, tangible, and deeply personal. Zeke himself doesn't always acknowledge the changes, but when he does, it's usually just a smirk. However, sometimes, it's a tug at his shirt to emphasize the stretch, a deliberate lean into Azzy that leaves no room to ignore it. Those moments always fluster him, though he hides it poorly, and Zeke, of course, knows *exactly* what he's doing.",
           "sectionFormat": "markdown",
           "nsfwOnly": true,
           "sortOrder": 2
@@ -2300,7 +2300,7 @@
         },
         {
           "id": "WIKI-TRIVIA-AH-AZOF",
-          "itemText": "He and Zeke run a paid subscription documenting Zeke's weight gain, which helps fund most of the food Azrian cooks for him.",
+          "itemText": "He and Zeke ran a paid subscription documenting Zeke's weight gain, which helps fund most of the food Azrian cooks for him.",
           "nsfwOnly": true,
           "sortOrder": 7
         },
@@ -2386,7 +2386,7 @@
       "visibility": "both",
       "sortOrder": 5,
       "publishedAt": "2026-04-20T08:11:28.985Z",
-      "updatedAt": "2026-05-14T07:43:40.574Z",
+      "updatedAt": "2026-06-13T07:33:15.184Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-XW-CLTH",
@@ -2540,7 +2540,7 @@
           "id": "WIKI-SEC-MO6YTJTS-8NA85",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Xor is tall and lean with a naturally serious expression and sharp, angular features that make him prepetually unimpressed even when he's not. His fur is mostly a pale tan with jagged, asymmetrical markings in gold and dark brown, especually along his tail and face. His hair follows a similar pattern, with blonde at the top but cutting into brown towards the lower half, naturally matching his fur coloration. It's swept to the side, layered with jagged sunburns, and extends into a short mullet that he clearly doesn't maintain for fashion purposes, but it works for him anyway.\n\nA defining feature is his thick, sharply split eyebrow, giving his resting glare a bit more weight than he probably intends. Combined with his posture (usually slouched and half done with the room) it adds to the aura of someone who'd rather be anywhere else.\n\nXor typically wears a natural-tone shirt, usually tan, with dark navy jeans, and a dark gray pullover hoodie. Around his neck is a turquoise pendant, a gift from his grandmother and one of the few sentimental items he keeps close.",
+          "sectionBody": "Xor is tall and lean with a naturally serious expression and sharp, angular features that make him perpetually unimpressed even when he's not. His fur is mostly a pale tan with jagged, asymmetrical markings in gold and dark brown, especially along his tail and face. His hair follows a similar pattern, with blonde at the top but cutting into brown towards the lower half, naturally matching his fur coloration. It's swept to the side, layered with jagged sunburns, and extends into a short mullet that he clearly doesn't maintain for fashion purposes, but it works for him anyway.\n\nA defining feature is his thick, sharply split eyebrow, giving his resting glare a bit more weight than he probably intends. Combined with his posture (usually slouched and half done with the room) it adds to the aura of someone who'd rather be anywhere else.\n\nXor typically wears a natural-tone shirt, usually tan, with dark navy jeans, and a dark gray pullover hoodie. Around his neck is a turquoise pendant, a gift from his grandmother and one of the few sentimental items he keeps close.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -2681,7 +2681,7 @@
       "visibility": "both",
       "sortOrder": 6,
       "publishedAt": "2026-04-20T08:12:13.499Z",
-      "updatedAt": "2026-05-14T07:43:48.849Z",
+      "updatedAt": "2026-06-13T07:33:17.044Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-WE-CLTH",
@@ -2835,7 +2835,7 @@
           "id": "WIKI-SEC-WE-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Wyvern is a cat-dragon hybrid with a digitigrade build, mixing feline proportions with more noticeable dragon traits. His overall shape leans more dragon-like, mainly due to his large bat-like wings and long, thick tail, while his face and general structure stay closer to a cat. He also has short horns that curve slightly back behind his ears.\n\nHe has sharp blood-red eyes with slit pupils and yellow sclera, usually giving him a tired or unimpressed look. His hair is a bright red and slightly messy, falling forward enough to partially cover one eye. His colors are mostly warm browns with darker limbs, broken up by strong red accents in his hair, claws, and the inner parts of his wings.\n\nWyvern usually wears a purple jacket with a darker torso over a black shirt, along with dark shorts. His clothing gives him a more casual, modern look that contrasts with his more “fantastical” features, keeping the design grounded overall.",
+          "sectionBody": "Wyvern is a cat-dragon hybrid with a digitigrade build, mixing feline proportions with more noticeable dragon traits. His overall shape leans more dragon-like, mainly due to his large bat-like wings and long, thick tail, while his face and general structure stay closer to a cat. He also has short horns that curve slightly back behind his ears.\n\nHe has sharp blood-red eyes with slit pupils and yellow sclera, usually giving him a tired or unimpressed look. His hair is bright red and slightly messy, falling forward enough to partially cover one eye. His colors are mostly warm browns with darker limbs, broken up by strong red accents in his hair, claws, and the inner parts of his wings.\n\nWyvern usually wears a purple jacket with a darker torso over a black shirt, along with dark shorts. His clothing gives him a more casual, modern look that contrasts with his more “fantastical” features, keeping the design grounded overall.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -2844,7 +2844,7 @@
           "id": "WIKI-SEC-WE-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Wyvern comes off loud, but he rarely says much about himself. He's quick with a joke, rarely serious, and usually has a sarcastic take ready for whatever's going on. If something awkward happens, odds are he's the one that caused it; either it be on purpose or because he wasn't paying attention.\n\nHe's the type to fill the silence with noise: commentary, side-eye, or a dry one-liner. But underneath it, he pays closer to attention than people give him credit for. He avoids vulnerability like the plague but cares more than he lets on. If you need someone to laugh with at 3 in the morning or walk into a haunted building just because, he's probably already outside waiting for you to catch up.",
+          "sectionBody": "Wyvern comes off loud, but he rarely says much about himself. He's quick with a joke, rarely serious, and usually has a sarcastic take ready for whatever's going on. If something awkward happens, odds are he's the one that caused it; either it be on purpose or because he wasn't paying attention.\n\nHe's the type to fill the silence with noise: commentary, side-eye, or a dry one-liner. But underneath it, he pays closer attention than people give him credit for. He avoids vulnerability like the plague but cares more than he lets on. If you need someone to laugh with at 3 in the morning or walk into a haunted building just because, he's probably already outside waiting for you to catch up.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -2853,7 +2853,7 @@
           "id": "WIKI-SEC-WE-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Wyvern was born in (note to self come up with an in universe equivelant of Brooklyn, NY) before moving down to Ashford, Texaria halfway through elementary school.\n\nBack in school, he had a brief stint as an internet troll. Not the malicious kind, just the \"spends too much time on forums pissing people off\" kind. He doesn't bring it up often, but every now and then someone recognizes his username and he has to deny everything with a straight face, at least as straight as he can keep it.\n\nHis history is unremarkable for the most part, other than the fact that he's always been drawn to the weird and spooky. He was the kid who would dare his friends to go into the woods at night, and as he got older, that curiosity only grew stronger. Joining the APS was a natural fit for him, and he's been an active member ever since, always on the lookout for the next big paranormal adventure.",
+          "sectionBody": "Wyvern was born in (note to self come up with an in universe equivalent of Brooklyn, NY) before moving down to Ashford, Texaria halfway through elementary school.\n\nBack in school, he had a brief stint as an internet troll. Not the malicious kind, just the \"spends too much time on forums pissing people off\" kind. He doesn't bring it up often, but every now and then someone recognizes his username, and he has to deny everything with a straight face, at least as straight as he can keep it.\n\nHis history is unremarkable for the most part, other than the fact that he's always been drawn to the weird and spooky. He was the kid who would dare his friends to go into the woods at night, and as he got older, that curiosity only grew stronger. Joining the APS was a natural fit for him, and he's been an active member ever since, always on the lookout for the next big paranormal adventure.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -2877,7 +2877,7 @@
         },
         {
           "id": "WIKI-TRIVIA-WE-WYJA",
-          "itemText": "He owns a Ouija board. He doesn't know how to spell or pronounce Ouija so he says it differently every time.",
+          "itemText": "He owns a Ouija board. He doesn't know how to spell or pronounce Ouija, so he says it differently every time.",
           "nsfwOnly": false,
           "sortOrder": 1
         },
@@ -2971,7 +2971,7 @@
       "label": "Judas Umbra",
       "relationIconSvg": null,
       "summary": "Judas is... complicated. They show up when you least expect them to, disappear without a trace, and know more about yourself than you do, probably.",
-      "intro": "<strong>Judas</strong> is... complicated. They show up when you least expect them to, dissapear without a trace, and know more about yourself than you do, probably. Despite this ominous aura, they're not evil, or at least they don't intend to be. They're just... weirdly condescending and cryptic. They play the long game, often keeping secrets \"for your own good,\" which is both irritating and endearing depending on who you ask.",
+      "intro": "<strong>Judas</strong> is... complicated. They show up when you least expect them to, disappear without a trace, and know more about yourself than you do, probably. Despite this ominous aura, they're not evil, or at least they don't intend to be. They're just... weirdly condescending and cryptic. They play the long game, often keeping secrets \"for your own good,\" which is both irritating and endearing depending on who you ask.",
       "entryType": "Character",
       "tags": [
         "judas-umbra",
@@ -2981,7 +2981,7 @@
       "visibility": "both",
       "sortOrder": 7,
       "publishedAt": "2026-04-20T08:13:17.982Z",
-      "updatedAt": "2026-04-21T12:28:18.016Z",
+      "updatedAt": "2026-06-13T07:33:18.603Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-JU-INIT",
@@ -3102,7 +3102,7 @@
           "id": "WIKI-ROW-JU-DSLK",
           "rowKey": "dislikes",
           "rowLabel": "Dislikes",
-          "rowValue": "- Underestimation\n- Privacy Invasion\n- Cheap Fast Food Imitations\n- Mansplaining\n- Being Perceived as a Villain",
+          "rowValue": "- Underestimation\n- Privacy Invasion\n- Cheap Fast-Food Imitations\n- Mansplaining\n- Being Perceived as a Villain",
           "rowFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 11
@@ -3139,7 +3139,7 @@
           "id": "WIKI-SEC-JU-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Judas is calm and deliverate, rarely raising their voice or losing composure. They prefer to keep people guessing, speaking in clipped truths or half-answers that often feel more like riddles. While they aren't intentionally cruel, their dry delivery and habit of witholding details can come across as condescending to those who don't know them well.\n\nDespite the connections to the libraries they're often seen near and their weird knowledge of magic and the occult, they refuse to act like a holier-than-thou oracle. They carry the weight of their role with resignation more than pride, treating it more like a side hobby than a responsibility. Away from that, they're unexpectedly approchable (sarcastic at times, even a little playful) and let their guard down enough to enjoy late-night outings or impromptu stage performances.",
+          "sectionBody": "Judas is calm and deliberate, rarely raising their voice or losing composure. They prefer to keep people guessing, speaking in clipped truths or half-answers that often feel more like riddles. While they aren't intentionally cruel, their dry delivery and habit of withholding details can come across as condescending to those who don't know them well.\n\nDespite the connections to the libraries they're often seen near and their weird knowledge of magic and the occult, they refuse to act like a holier-than-thou oracle. They carry the weight of their role with resignation more than pride, treating it more like a side hobby than a responsibility. Away from that, they're unexpectedly approachable (sarcastic at times, even a little playful) and let their guard down enough to enjoy late-night outings or impromptu stage performances.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -3148,7 +3148,7 @@
           "id": "WIKI-SEC-JU-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Judas was never truly \"born\" in the traditional sense, they simply began to exist. From their first moment of awareness, the only home they have known was the strange library they now reside in, of which the location remains a complete mystery. Much of their early life was spent exploring the library's endless shelves, absorbing whatever knowledge they could reach. Books on arcane theory and magical practice quickly became their favorites, shaping Judas into a fluent, if unorthodox, practitioner of magic.\n\nAmong these countless texts, one volume stood out: a manuscript that seemed to outline a prophecy. Some of its passages were inconsistent, as though it had been altered or rewritten at some point, but Judas never confirmed if this was intentional or accidental. They've kept its meaning close ever since, rarely sharing more than a vague mention of \"what's coming.\" For Judas, the prophecy feels less like destiny and more like an obligation they were saddled with.\n\nOutside the library, Judas once tried living a more ordinary life. During coolege, they fronted a band alongside Xor Wulff, taking the role of the lead vocalist. Their performances were intense and charismatic, but behind the scenes the group was volatile. Judas' stubborn streadk and habit of shutting down arguments with cryptic remarks clashed with other members, often leaving tensions unresolved. Their brief relationship with Xor only added to the strain, what began as creative chemistry quickly soured under the weight of the band's internal conflicts. The group eventually fell apart, with Judas often blamed as one of the sparks that set the breakup in motion.\n\nThough they rarely talk about this period, echoes of it remain. On rare nights out, Judas will step on stage at a local bar, singing with the same haunting energy that once defined them. It's one of the few glimpses into the life that they might've chosen, had the library not claimed them first.",
+          "sectionBody": "Judas was never truly \"born\" in the traditional sense, they simply began to exist. From their first moment of awareness, the only home they have known was the strange library they now reside in, of which the location remains a complete mystery. Much of their early life was spent exploring the library's endless shelves, absorbing whatever knowledge they could reach. Books on arcane theory and magical practice quickly became their favorites, shaping Judas into a fluent, if unorthodox, practitioner of magic.\n\nAmong these countless texts, one volume stood out: a manuscript that seemed to outline a prophecy. Some of its passages were inconsistent, as though it had been altered or rewritten at some point, but Judas never confirmed if this was intentional or accidental. They've kept its meaning close ever since, rarely sharing more than a vague mention of \"what's coming.\" For Judas, the prophecy feels less like destiny and more like an obligation they were saddled with.\n\nOutside the library, Judas once tried living a more ordinary life. During college, they fronted a band alongside Xor Wulff, taking the role of the lead vocalist. Their performances were intense and charismatic, but behind the scenes the group was volatile. Judas' stubborn streak and habit of shutting down arguments with cryptic remarks clashed with other members, often leaving tensions unresolved. Their brief relationship with Xor only added to the strain, what began as creative chemistry quickly soured under the weight of the band's internal conflicts. The group eventually fell apart, with Judas often blamed as one of the sparks that set the breakup in motion.\n\nThough they rarely talk about this period, echoes of it remain. On rare nights out, Judas will step on stage at a local bar, singing with the same haunting energy that once defined them. It's one of the few glimpses into the life that they might've chosen, had the library not claimed them first.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -3220,7 +3220,7 @@
         },
         {
           "id": "WIKI-TRIVIA-MO70X2ZV-I9V8H",
-          "itemText": "Despite being careful with magic in serious situations, they've been known to use small spells purely for mischief, like flickering street lamps or setting off automatic doors nearby.",
+          "itemText": "Despite being careful with magic in serious situations, they've been known to use small spells purely for mischief, like flickering streetlamps or setting off automatic doors nearby.",
           "nsfwOnly": false,
           "sortOrder": 9
         },
@@ -3264,7 +3264,7 @@
           "id": "WIKI-REL-JU-AH",
           "relatedEntryId": "WIKI-CHR-AH",
           "relationLabel": "The Balance",
-          "notes": "Corrects without asking, usually right. Also frequent patron of the Library.",
+          "notes": "Corrects without asking, usually right. Also, frequent patron of the Library.",
           "sortOrder": 4
         },
         {
@@ -3362,7 +3362,7 @@
           "id": "WIKI-REL-JU-LG",
           "relatedEntryId": "WIKI-CHR-LG",
           "relationLabel": "The Signal",
-          "notes": "Observant, but not involved. Distant, but still reachable.",
+          "notes": "Observant but not involved. Distant, but still reachable.",
           "sortOrder": 18
         }
       ],
@@ -3403,7 +3403,7 @@
       "visibility": "sfw",
       "sortOrder": 8,
       "publishedAt": "2026-04-20T10:04:59.087Z",
-      "updatedAt": "2026-04-21T13:25:59.699Z",
+      "updatedAt": "2026-06-13T07:33:20.366Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-L",
@@ -3430,7 +3430,7 @@
           "id": "WIKI-ROW-L-BDAY",
           "rowKey": "birthday",
           "rowLabel": "Birthday",
-          "rowValue": "march 3",
+          "rowValue": "March 3",
           "rowFormat": "text",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -3557,7 +3557,7 @@
           "id": "WIKI-SEC-L-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "i dont know what this is im gonna make logan write this for me\n\nLeo was created in a lab from a sample of Logan's DNA. The reasoning behind this has since been forgotten, but I don't remember giving them permission to use my DNA in that way. I just wanted to see if [Jesper](/wiki/jesper-foster) was indeed my brother; I guess I just clicked the checkbox allowing them to use it without actually reading into what it meant??? It's whatever, we don't worry about that.\n\nI'm giving this back to Leo. HOpefully he doesn't read this section, I don't think he'd take being an accident too well...\n\nhi its me leo again logan told me not to read that so yewah its probably sad :(",
+          "sectionBody": "i dont know what this is im gonna make logan write this for me\n\nLeo was created in a lab from a sample of Logan's DNA. The reasoning behind this has since been forgotten, but I don't remember giving them permission to use my DNA in that way. I just wanted to see if [Jesper](/wiki/jesper-foster) was indeed my brother; I guess I just clicked the checkbox allowing them to use it without actually reading into what it meant??? It's whatever, we don't worry about that.\n\nI'm giving this back to Leo. Hopefully he doesn't read this section, I don't think he'd take being an accident too well...\n\nhi its me leo again logan told me not to read that so yewah its probably sad :(",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -3705,7 +3705,7 @@
       "visibility": "both",
       "sortOrder": 9,
       "publishedAt": "2026-04-20T10:36:40.226Z",
-      "updatedAt": "2026-04-21T13:26:14.055Z",
+      "updatedAt": "2026-06-13T07:33:22.220Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-G",
@@ -3859,7 +3859,7 @@
           "id": "WIKI-SEC-G-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Gizmanta is a sleek, raccoon-like common protogen with cool gray fur and darker gray markings on his paws and tail. His displays show two colors, those being blue and red. His accents (inner ears, paw pads and claws) are asymmetrical, mirroring his screen colors opposite of each side.\n\nHe typically only wears a brown blazer alongside his usual protogen armor, which is a pearl white color. On his chestplate, you can see a very subtle power indicator light which flashes white when turned on, red when low on battery, and blue when charging.",
+          "sectionBody": "Gizmanta is a sleek, raccoon-like common protogen with cool gray fur and darker gray markings on his paws and tail. His displays show two colors, those being blue and red. His accents (inner ears, paw pads and claws) are asymmetrical, mirroring his screen colors opposite of each side.\n\nHe typically only wears a brown blazer alongside his usual protogen armor, which is a pearl white color. On his chest plate, you can see a very subtle power indicator light which flashes white when turned on, red when low on battery, and blue when charging.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -3868,7 +3868,7 @@
           "id": "WIKI-SEC-G-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Gizmanta is commonly described as a nerd, but that's no insult! He's very knowledgable and surprisingly fast with math. Which isn't surprising considering he's literally a computer and has the knowledge of the entire internet at his disposal.\n\nHe doesn't exactly get most jokes; he tends to take things too literally. His own jokes are about as cheesy as any \"personal assistant\" on your phone or computer or LLM would make.",
+          "sectionBody": "Gizmanta is commonly described as a nerd, but that's no insult! He's very knowledgeable and surprisingly fast with math. Which isn't surprising considering he's literally a computer and has the knowledge of the entire internet at his disposal.\n\nHe doesn't exactly get most jokes; he tends to take things too literally. His own jokes are about as cheesy as any \"personal assistant\" on your phone or computer or LLM would make.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -3913,13 +3913,13 @@
         },
         {
           "id": "WIKI-TRIVIA-MO72S6D4-ZDBWU",
-          "itemText": "His vavorite programming language is Assembly. How? Don't ask me.",
+          "itemText": "His favorite programming language is Assembly. How? Don't ask me.",
           "nsfwOnly": false,
           "sortOrder": 3
         },
         {
           "id": "WIKI-TRIVIA-MO72SHDZ-YVSH1",
-          "itemText": "He is surprisingly good at cooking, and often experiments with new recipes in his free time.",
+          "itemText": "He is surprisingly good at cooking and often experiments with new recipes in his free time.",
           "nsfwOnly": false,
           "sortOrder": 4
         }
@@ -4020,7 +4020,7 @@
       "visibility": "both",
       "sortOrder": 10,
       "publishedAt": "2026-04-20T10:57:31.279Z",
-      "updatedAt": "2026-04-30T05:21:36.908Z",
+      "updatedAt": "2026-06-13T07:33:23.925Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-KF-MAIN",
@@ -4201,7 +4201,7 @@
           "id": "WIKI-SEC-KF-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Kevin was a raccoon standing six feet tall, with a frame that leaned lanky but worn down from years of hard work behind the camera.His fur had once been bleached into a striking blonde, though by some time in his later years, it had faded unevenly, leaving washed-out streaks in his hair and beard against the natural grays and browns of his fur. Heavy-lidded hazel-green eyes and a perpetually tired expression gave him an air of someone who'd seen more long nights than good sleep.\n\nHis most recognizable outfit included a faded Rose Flow t-shirt, often layered with camo-print pants, occasionally a red-black flannel, and a pair of sandals. He was rarely without a cup of coffee in hand. His clothes weren't exactly flashy, but they were practical and comfortable for what he did.",
+          "sectionBody": "Kevin was a raccoon standing six feet tall, with a frame that leaned lanky but worn down from years of hard work behind the camera. His fur had once been bleached into a striking blonde, though by some time in his later years, it had faded unevenly, leaving washed-out streaks in his hair and beard against the natural grays and browns of his fur. Heavy-lidded hazel-green eyes and a perpetually tired expression gave him an air of someone who'd seen more long nights than good sleep.\n\nHis most recognizable outfit included a faded Rose Flow t-shirt, often layered with camo-print pants, occasionally a red-black flannel, and a pair of sandals. He was rarely without a cup of coffee in hand. His clothes weren't exactly flashy, but they were practical and comfortable for what he did.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -4219,7 +4219,7 @@
           "id": "WIKI-SEC-KF-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Kevin grew up chasing the idea of creativity without ever finding a way to make it fully sustainable. His self-appointed title of \"Media Director\" sounded respectable, but in practice he was a cameraman and low-budget producer, often juggling underpaid gigs that left him tired but stubbornly committed. His work gave him just enough reason to stay on the road and behind the lens, documenting life even if he wasn't being asked to.\n\nAt home, his passion for filming carried into his personal life. He developed a fixation on VHS technology, not just as a medium but as an identity, recording Jesper's childhood in detail, convinced that the tape preserved something digital never could. This habit was misunderstood by his then-wife, [Zelda](/wiki/zelda-voss), who often accused him of being invasive or obsessive. In truth, he wasn't invasive; he was simply trying to capture and preserve moments that mattered to him.\n\nNot long after Jesper's birth, Kevin complicated matters further. A one-night stand led to [Emily](/wiki/emily-reeves) conceiving a child, Logan, who was later born on New Years of 2005. Zelda learned of the affair pretty early on, and it only deepened the fracture between them. Kevin kept his distance, never stepping into Logan's life in any meaningful way. Had he lived, he likely would have remained avoidant, unwilling to reconcile that part of his past. For Logan, Kevin was never a father figure, only a name and a shadow cast over circumstances beyond his control.\n\nIn the mid 2010's, Kevin became embroiled in a bitter custody battle over Jesper with Zelda. Despite his exhaustion, his court appearances showed a rare sharpness; he fought hard to prove he could provide Jesper with stability. By December 2015, his demeanor had noticeably worn down, though his magic, subtle and largely unexplored, showed signs of improvement. The case concluded on March 1, 2016, with Kevin winning full custody.\n\nTODO: make this an accordian\nTitle: \"The Accident (Content Warning: depictions of death)\"\nContent: \"That same day, on their way home in heavy rain, Kevin's car hydroplaned and veered off the road into a ditch, running into oncoming traffic on the way. The impact in the ditch ruptured part of the vehicle's fuel system, igniting in a sudden explosion. Emergency crews described the wreck as catastrophic, with little left to recover. Kevin was killed instantly, and Jesper (only JUST turning thirteen) was officially presumed dead at the scene.\n\nIn reality, Jesper had survived against all odds, but with severe injuries and immense mental trauma. The accident left him with deep scars and partial amnesia, erasing much of his life before that day. His survival went unnoticed long enough that custody reverted to no one, leaving him to grow up disconnected from his mother entirely. The only physical remnant of Kevin to endure was his skull, later becoming the mask Jesper carries into adulthood.\"\n\nTo Jesper, Kevin was remembered as both warmth and disappointment, a flawed father who tried, but never enough. To Logan, Kevin remains a ghost: absent from the start, and unreachable long after.",
+          "sectionBody": "Kevin grew up chasing the idea of creativity without ever finding a way to make it fully sustainable. His self-appointed title of \"Media Director\" sounded respectable, but in practice he was a cameraman and low-budget producer, often juggling underpaid gigs that left him tired but stubbornly committed. His work gave him just enough reason to stay on the road and behind the lens, documenting life even if he wasn't asked to.\n\nAt home, his passion for filming carried into his personal life. He developed a fixation on VHS technology, not just as a medium but as an identity, recording Jesper's childhood in detail, convinced that the tape preserved something digital never could. This habit was misunderstood by his then-wife, [Zelda](/wiki/zelda-voss), who often accused him of being invasive or obsessive. In truth, he wasn't invasive; he was simply trying to capture and preserve moments that mattered to him.\n\nNot long after Jesper's birth, Kevin complicated matters further. A one-night stand led to [Emily](/wiki/emily-reeves) conceiving a child, Logan, who was later born on New Years of 2005. Zelda learned of the affair pretty early on, and it only deepened the fracture between them. Kevin kept his distance, never stepping into Logan's life in any meaningful way. Had he lived, he likely would have remained avoidant, unwilling to reconcile that part of his past. For Logan, Kevin was never a father figure, only a name and a shadow cast over circumstances beyond his control.\n\nIn the mid 2010's, Kevin became embroiled in a bitter custody battle over Jesper with Zelda. Despite his exhaustion, his court appearances showed a rare sharpness; he fought hard to prove he could provide Jesper with stability. By December 2015, his demeanor had noticeably worn down, though his magic, subtle and largely unexplored, showed signs of improvement. The case concluded on March 1, 2016, with Kevin winning full custody.\n\nTODO: make this an accordion\nTitle: \"The Accident (Content Warning: depictions of death)\"\nContent: \"That same day, on their way home in heavy rain, Kevin's car hydroplaned and veered off the road into a ditch, running into oncoming traffic on the way. The impact in the ditch ruptured part of the vehicle's fuel system, igniting in a sudden explosion. Emergency crews described the wreck as catastrophic, with little left to recover. Kevin was killed instantly, and Jesper (only JUST turning thirteen) was officially presumed dead at the scene.\n\nIn reality, Jesper had survived against all odds, but with severe injuries and immense mental trauma. The accident left him with deep scars and partial amnesia, erasing much of his life before that day. His survival went unnoticed long enough that custody reverted to no one, leaving him to grow up disconnected from his mother entirely. The only physical remnant of Kevin to endure was his skull, later becoming the mask Jesper carries into adulthood.\"\n\nTo Jesper, Kevin was remembered as both warmth and disappointment, a flawed father who tried, but never enough. To Logan, Kevin remains a ghost: absent from the start, and unreachable long after.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -4261,7 +4261,7 @@
         },
         {
           "id": "WIKI-TRIVIA-KF-VHST",
-          "itemText": "He insisted VHS tapes had a soul that digital media could never captyure, often defending the format in arguments long after it was deemed obsolete.",
+          "itemText": "He insisted VHS tapes had a soul that digital media could never capture, often defending the format in arguments long after it was deemed obsolete.",
           "nsfwOnly": false,
           "sortOrder": 4
         },
@@ -4355,7 +4355,7 @@
       "visibility": "none",
       "sortOrder": 11,
       "publishedAt": "2026-04-20T10:58:05.051Z",
-      "updatedAt": "2026-04-20T10:58:38.471Z",
+      "updatedAt": "2026-06-13T07:33:26.055Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [],
@@ -4398,7 +4398,7 @@
       "visibility": "none",
       "sortOrder": 12,
       "publishedAt": "2026-04-20T10:58:40.055Z",
-      "updatedAt": "2026-04-20T10:59:17.848Z",
+      "updatedAt": "2026-06-13T07:33:29.205Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [],
@@ -4441,7 +4441,7 @@
       "visibility": "none",
       "sortOrder": 13,
       "publishedAt": "2026-04-20T10:59:19.599Z",
-      "updatedAt": "2026-04-20T10:59:35.856Z",
+      "updatedAt": "2026-06-13T07:33:32.006Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [],
@@ -4484,7 +4484,7 @@
       "visibility": "none",
       "sortOrder": 14,
       "publishedAt": "2026-04-20T10:59:38.741Z",
-      "updatedAt": "2026-04-30T02:41:14.323Z",
+      "updatedAt": "2026-06-13T07:33:34.513Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-VS-MAIN",
@@ -4543,7 +4543,7 @@
       "visibility": "none",
       "sortOrder": 15,
       "publishedAt": "2026-04-20T10:59:57.311Z",
-      "updatedAt": "2026-04-30T02:42:44.932Z",
+      "updatedAt": "2026-06-13T07:33:36.925Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-AC-MAIN",
@@ -4596,7 +4596,7 @@
       "visibility": "none",
       "sortOrder": 16,
       "publishedAt": "2026-04-20T11:00:13.667Z",
-      "updatedAt": "2026-04-30T02:46:19.848Z",
+      "updatedAt": "2026-06-13T07:33:39.549Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-MH-MAIN",
@@ -4655,7 +4655,7 @@
       "visibility": "none",
       "sortOrder": 17,
       "publishedAt": "2026-04-20T11:01:17.801Z",
-      "updatedAt": "2026-04-20T11:01:37.660Z",
+      "updatedAt": "2026-06-13T07:33:42.073Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [],
@@ -4698,7 +4698,7 @@
       "visibility": "none",
       "sortOrder": 18,
       "publishedAt": "2026-04-20T11:01:38.654Z",
-      "updatedAt": "2026-04-30T02:48:41.497Z",
+      "updatedAt": "2026-06-13T07:33:44.425Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [],
@@ -4747,7 +4747,7 @@
       "visibility": "none",
       "sortOrder": 19,
       "publishedAt": "2026-04-20T11:01:52.961Z",
-      "updatedAt": "2026-04-20T11:02:09.455Z",
+      "updatedAt": "2026-06-13T07:33:46.715Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [],
@@ -4783,8 +4783,8 @@
       "slug": "marx-armstrong",
       "label": "Marx Armstrong",
       "relationIconSvg": null,
-      "summary": "Marx is a canary and commercial pilot, known for his unwavring love of aviation and equally unshakable dedication to rules.",
-      "intro": "<strong>Marx</strong> is a canary and commercial pilot, known for his unwavring love of aviation and equally unshakable dedication to rules. Growing up, Marx's fascination with flying turned into both a passion and a career, but his personality remained defined by a strict sense of order. To friends, he can seem stiff or overly literal, but beneath that obedience lies someone deeply passionate about the skies. Whether rattling off obscure military aircraft trivia or critiquing the smallest deviation from standard procedure, Marx's life revolves around structure, safety, and the comfort of knowing everything is in its right place.",
+      "summary": "Marx is a canary and commercial pilot, known for his unwavering love of aviation and equally unshakable dedication to rules.",
+      "intro": "<strong>Marx</strong> is a canary and commercial pilot, known for his unwavering love of aviation and equally unshakable dedication to rules. Growing up, Marx's fascination with flying turned into both a passion and a career, but his personality remained defined by a strict sense of order. To friends, he can seem stiff or overly literal, but beneath that obedience lies someone deeply passionate about skies. Whether rattling off obscure military aircraft trivia or critiquing the smallest deviation from standard procedure, Marx's life revolves around structure, safety, and the comfort of knowing everything is in its right place.",
       "entryType": "Character",
       "tags": [
         "marx-armstrong",
@@ -4795,7 +4795,7 @@
       "visibility": "both",
       "sortOrder": 20,
       "publishedAt": "2026-04-20T11:02:10.478Z",
-      "updatedAt": "2026-04-30T03:04:30.107Z",
+      "updatedAt": "2026-06-13T07:33:49.562Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-MA-MAIN",
@@ -4912,7 +4912,7 @@
           "id": "WIKI-ROW-MA-LIKE",
           "rowKey": "likes",
           "rowLabel": "Likes",
-          "rowValue": "- History\n- MIlitary Tech\n- Video Games",
+          "rowValue": "- History\n- Military Tech\n- Video Games",
           "rowFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 11
@@ -4949,7 +4949,7 @@
           "id": "WIKI-SEC-MA-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Marx has bright orange feathers and pale yellow legs that make his bird-like features stand out. His eyes are a muted reddish-brown, usually sharp and attentive, though sometimes dulled from long flights and lack of sleep. He wears a pair of old flight goggled perched on his head. It is a constant accessory, both practical and sentimental.\n\nLike many birds, his wings double as arms, giving him a somewhat unique silhouette compared to others. It's a feature he's long since adapted to, moving fluidly and naturally with them, though it occasionally makes tasks like carrying multiple items a bit awkward. But I mean hey, at least he's a good hugger!\n\nHe's usually seen wearing a traditional aviator's outfit: a heavy green-brown jacket with a fur collar, sturdy boots, and a scarf that adds both warmth and a touch of personal style. Sometimes you can see him wearing more casual clothing, like plain shirts and slacks, but it's usually just at home or during grocery runs.",
+          "sectionBody": "Marx has bright orange feathers and pale-yellow legs that make his bird-like features stand out. His eyes are a muted reddish-brown, usually sharp and attentive, though sometimes dulled from long flights and lack of sleep. He wears a pair of old flight goggled perched on his head. It is a constant accessory, both practical and sentimental.\n\nLike many birds, his wings double as arms, giving him a somewhat unique silhouette compared to others. It's a feature he's long since adapted to, moving fluidly and naturally with them, though it occasionally makes tasks like carrying multiple items a bit awkward. But I mean hey, at least he's a good hugger!\n\nHe's usually seen wearing a traditional aviator's outfit: a heavy green-brown jacket with a fur collar, sturdy boots, and a scarf that adds both warmth and a touch of personal style. Sometimes you can see him wearing more casual clothing, like plain shirts and slacks, but it's usually just at home or during grocery runs.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -4958,7 +4958,7 @@
           "id": "WIKI-SEC-MA-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Marx is obedient to a fault, the kind of person who follows instructions to the letter unless they directly contradict rules he already knows or go against his moral compass. It makes him dependable in high-pressure situations, especially in aviation where precision and adherence to protocol are crucial, but it can also make him rigid where flexibility would serve better. He prefers structure over improvization, leaning on procedure to keep both himself and others safe.\n\nThough disciplined, he isn't cold. He's earnest and thoughtful, with a genuine passion for aviation that bleeds into casual conversation whether anyone asked for it or not. His enthusiasm for planes and flying often borders on obsessive, but it comes from a place of deep respect for the craft rather than arrogance. Around friends, he's mild mannered, if occasionally prone to rambling about topics like military history or aircraft models.\n\nDespite his generally easygoing nature, Marx does not handle deviation from rules well. He can come across as stubborn when pushed outside his comfort zone, and he's especially uncomfortable with reckless behavior. Still, his loyalty to those he cares about is strong, and once he trusts someone, he'll follow them through nearly everything, provided they're not asking him to break the rules he holds dear.",
+          "sectionBody": "Marx is obedient to a fault, the kind of person who follows instructions to the letter unless they directly contradict rules he already knows or go against his moral compass. It makes him dependable in high-pressure situations, especially in aviation where precision and adherence to protocol are crucial, but it can also make him rigid where flexibility would serve better. He prefers structure over improvisation, leaning on procedure to keep both himself and others safe.\n\nThough disciplined, he isn't cold. He's earnest and thoughtful, with a genuine passion for aviation that bleeds into casual conversation whether anyone asked for it or not. His enthusiasm for planes and flying often borders on obsessive, but it comes from a place of deep respect for the craft rather than arrogance. Around friends, he's mild mannered, if occasionally prone to rambling about topics like military history or aircraft models.\n\nDespite his generally easygoing nature, Marx does not handle deviation from rules well. He can come across as stubborn when pushed outside his comfort zone, and he's especially uncomfortable with reckless behavior. Still, his loyalty to those he cares about is strong, and once he trusts someone, he'll follow them through nearly everything, provided they're not asking him to break the rules he holds dear.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -5058,7 +5058,7 @@
       "visibility": "none",
       "sortOrder": 21,
       "publishedAt": "2026-04-20T11:02:31.602Z",
-      "updatedAt": "2026-04-20T11:02:46.915Z",
+      "updatedAt": "2026-06-13T07:33:52.175Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [],
@@ -5101,7 +5101,7 @@
       "visibility": "none",
       "sortOrder": 22,
       "publishedAt": "2026-04-20T11:03:17.028Z",
-      "updatedAt": "2026-04-30T03:10:22.550Z",
+      "updatedAt": "2026-06-13T07:33:54.686Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5190,7 +5190,7 @@
       "visibility": "none",
       "sortOrder": 23,
       "publishedAt": "2026-04-20T11:03:53.593Z",
-      "updatedAt": "2026-04-30T03:15:00.234Z",
+      "updatedAt": "2026-06-13T07:33:57.577Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5279,7 +5279,7 @@
       "visibility": "none",
       "sortOrder": 24,
       "publishedAt": "2026-04-20T11:04:11.265Z",
-      "updatedAt": "2026-04-30T03:17:46.230Z",
+      "updatedAt": "2026-06-13T07:34:00.297Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5368,7 +5368,7 @@
       "visibility": "none",
       "sortOrder": 25,
       "publishedAt": "2026-04-20T11:04:33.940Z",
-      "updatedAt": "2026-04-30T03:21:23.113Z",
+      "updatedAt": "2026-06-13T07:34:03.503Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5457,7 +5457,7 @@
       "visibility": "none",
       "sortOrder": 26,
       "publishedAt": "2026-04-20T11:05:37.205Z",
-      "updatedAt": "2026-04-30T03:25:02.963Z",
+      "updatedAt": "2026-06-13T07:34:06.570Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5546,7 +5546,7 @@
       "visibility": "none",
       "sortOrder": 27,
       "publishedAt": "2026-04-20T11:06:00.063Z",
-      "updatedAt": "2026-04-30T03:28:38.039Z",
+      "updatedAt": "2026-06-13T07:34:09.909Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5635,7 +5635,7 @@
       "visibility": "none",
       "sortOrder": 28,
       "publishedAt": "2026-04-20T11:06:23.995Z",
-      "updatedAt": "2026-04-30T03:31:16.041Z",
+      "updatedAt": "2026-06-13T07:34:12.796Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5724,7 +5724,7 @@
       "visibility": "none",
       "sortOrder": 29,
       "publishedAt": "2026-04-20T11:06:39.744Z",
-      "updatedAt": "2026-04-30T04:56:19.139Z",
+      "updatedAt": "2026-06-13T07:34:15.524Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5813,7 +5813,7 @@
       "visibility": "none",
       "sortOrder": 30,
       "publishedAt": "2026-04-20T11:06:59.421Z",
-      "updatedAt": "2026-04-30T03:38:07.069Z",
+      "updatedAt": "2026-06-13T07:34:18.563Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5902,7 +5902,7 @@
       "visibility": "none",
       "sortOrder": 31,
       "publishedAt": "2026-04-20T11:07:32.020Z",
-      "updatedAt": "2026-04-30T03:41:08.685Z",
+      "updatedAt": "2026-06-13T07:34:21.439Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -5973,7 +5973,7 @@
       "visibility": "none",
       "sortOrder": 32,
       "publishedAt": "2026-04-20T11:08:02.480Z",
-      "updatedAt": "2026-04-30T03:44:49.096Z",
+      "updatedAt": "2026-06-13T07:34:24.334Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -6035,7 +6035,7 @@
       "visibility": "none",
       "sortOrder": 33,
       "publishedAt": "2026-04-20T11:08:28.559Z",
-      "updatedAt": "2026-04-30T03:48:24.756Z",
+      "updatedAt": "2026-06-13T07:34:27.484Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -6115,7 +6115,7 @@
       "visibility": "none",
       "sortOrder": 34,
       "publishedAt": "2026-04-20T11:09:12.815Z",
-      "updatedAt": "2026-04-30T03:52:51.650Z",
+      "updatedAt": "2026-06-13T07:34:30.565Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -6195,7 +6195,7 @@
       "visibility": "none",
       "sortOrder": 35,
       "publishedAt": "2026-04-20T11:09:34.646Z",
-      "updatedAt": "2026-04-30T04:55:58.378Z",
+      "updatedAt": "2026-06-13T07:34:33.975Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [
@@ -6275,7 +6275,7 @@
       "visibility": "none",
       "sortOrder": 36,
       "publishedAt": "2026-04-20T11:10:10.266Z",
-      "updatedAt": "2026-04-20T11:10:39.929Z",
+      "updatedAt": "2026-06-13T07:34:37.363Z",
       "infoImages": [],
       "infoSong": null,
       "infoRows": [],
