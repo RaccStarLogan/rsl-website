@@ -2612,7 +2612,7 @@ VALUES
         0,
         1,
         '["art","character","clip-studio-paint-ex","dragon","cat","perspective","fatfur","furry","gay","halfbody","jesper-foster","personal","raccoon","skulldragon"]',
-        '2026-05-17T00:00:00R'
+        '2026-05-17T00:00:00Z'
     );
 
 INSERT INTO
@@ -2651,7 +2651,7 @@ VALUES
         1,
         0,
         '["art","commission","sketch","skulldragon","flare","blaze","compression-suit","fatfur"]',
-        '2026-05-24T00-00-00Z'
+        '2026-05-24T00:00:00Z'
     );
 
 INSERT INTO
@@ -2690,5 +2690,5 @@ VALUES
         0,
         1,
         '["fatfur","skulldragon","jesper-foster","clip-studio-paint-ex","personal","art","inflate-a-dragon-day"]',
-        '2026-06-14T00-00-00Z'
+        '2026-06-14T00:00:00Z'
     );
