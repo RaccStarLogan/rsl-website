@@ -1,6 +1,6 @@
 -- Migrated from db/old-nsfw-export.sql
 -- Visibility: nsfw
--- 68 rows
+-- 69 rows
 
 INSERT INTO
     portfolio_items (
@@ -2652,4 +2652,43 @@ VALUES
         0,
         '["art","commission","sketch","skulldragon","flare","blaze","compression-suit","fatfur"]',
         '2026-05-24T00-00-00Z'
+    );
+
+INSERT INTO
+    portfolio_items (
+        id,
+        kind,
+        visibility,
+        title,
+        slug,
+        summary,
+        description,
+        thumbnail_url,
+        logo_url,
+        media_url,
+        external_url,
+        commission_type,
+        is_commission,
+        is_personal,
+        tags_json,
+        published_at
+    )
+VALUES
+    (
+        'NSFW-P-A-2026-06-14',
+        'art',
+        'nsfw',
+        'Inflate A Dragon Day',
+        'inflate-a-dragon-day',
+        'Inflate A Dragon Day',
+        replace('happy inflate a dragon day\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: June 14, 2026\n\nTime Spent: 2 hours 56 minutes\n\nNo timelapse yet because I''m lazy.','\n',char(10)),
+        'https://media.raccstarlogan.com/nsfw/portfolio/art/2026/06/14/thumb.jpg',
+        NULL,
+        'https://media.raccstarlogan.com/nsfw/portfolio/art/2026/06/14/img.png',
+        NULL,
+        'Rendered',
+        0,
+        1,
+        '["fatfur","skulldragon","jesper-foster","clip-studio-paint-ex","personal","art","inflate-a-dragon-day"]',
+        '2026-06-14T00-00-00Z'
     );
