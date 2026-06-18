@@ -4020,7 +4020,7 @@
       "visibility": "both",
       "sortOrder": 10,
       "publishedAt": "2026-04-20T10:57:31.279Z",
-      "updatedAt": "2026-06-13T07:33:23.925Z",
+      "updatedAt": "2026-06-17T05:00:42.429Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-KF-MAIN",
@@ -4187,6 +4187,14 @@
           "isDownload": false,
           "nsfwOnly": false,
           "sortOrder": 0
+        },
+        {
+          "id": "WIKI-LINK-KF-REFS",
+          "label": "Download References (.zip)",
+          "url": "https://media.raccstarlogan.com/wiki/assets/char/kf/kevin-foster-references.zip",
+          "isDownload": true,
+          "nsfwOnly": false,
+          "sortOrder": 1
         }
       ],
       "quote": {
