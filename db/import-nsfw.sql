@@ -1,6 +1,6 @@
 -- Migrated from db/old-nsfw-export.sql
 -- Visibility: nsfw
--- 69 rows
+-- 66 rows
 
 INSERT INTO
     portfolio_items (
@@ -146,7 +146,7 @@ VALUES
         '[Fattytober 2025] 26. Too Heavy',
         'ft25-26',
         '[Fattytober 2025] 26. Too Heavy',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 26 is "Too Heavy." Yep, the floor was giving. Now Jesper finds himself in Azrian''s apartment. How embarrassing...\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 29, 2025\n\nTime Spent: 2 hours 31 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/26/1/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/26/1/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 26 is "Too Heavy." Yep, the floor was giving. Now Jesper finds himself in Azrian''s apartment. How embarrassing...\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 29, 2025\n\nTime Spent: 2 hours 31 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/26/1/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/26/1/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/26/1/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/26/1/img.png',
@@ -155,7 +155,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift","azrian-harborne","anglerfish"]',
-        '2025-10-26T00:00:00Z'
+        '2025-10-26T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -185,7 +185,7 @@ VALUES
         '[Fattytober 2025] 25. Cheeks',
         'ft25-25',
         '[FT25] 25. Cheeks',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 25 is "Cheeks." The floor of their hotel room seems to be giving. Whoever''s downstairs must be seeing some huge ass cheeks.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 29, 2025\n\nTime Spent: 2 hours 9 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/25/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/25/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 25 is "Cheeks." The floor of their hotel room seems to be giving. Whoever''s downstairs must be seeing some huge ass cheeks.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 29, 2025\n\nTime Spent: 2 hours 9 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/25/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/25/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/25/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/25/img.png',
@@ -194,7 +194,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift","azrian-harborne","anglerfish"]',
-        '2025-10-25T00:00:00Z'
+        '2025-10-25T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -224,7 +224,7 @@ VALUES
         '[Fattytober 2025] 24. A Little Bit More',
         'ft25-24',
         '[FT25] 24. A Little Bit More',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 24 is "A Little Bit More." Looks like Reese overdid it a little, but Jesper insists he can take a little more.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 29, 2025\n\nTime Spent: 2 hours 7 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/24/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/24/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 24 is "A Little Bit More." Looks like Reese overdid it a little, but Jesper insists he can take a little more.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 29, 2025\n\nTime Spent: 2 hours 7 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/24/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/24/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/24/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/24/img.png',
@@ -233,7 +233,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-24T00:00:00Z'
+        '2025-10-24T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -263,7 +263,7 @@ VALUES
         '[Fattytober 2025] 23. Help Me',
         'ft25-23',
         '[FT25] 23. Help Me',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 23 is "Help Me." It was bound to happen eventually. Jesper''s too fat to help him up, so I guess Reese is considered immobile from now on too.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 23, 2025\n\nTime Spent: 1 hour 19 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/23/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/23/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 23 is "Help Me." It was bound to happen eventually. Jesper''s too fat to help him up, so I guess Reese is considered immobile from now on too.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 23, 2025\n\nTime Spent: 1 hour 19 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/23/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/23/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/23/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/23/img.png',
@@ -272,7 +272,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-23T00:00:00Z'
+        '2025-10-23T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -302,7 +302,7 @@ VALUES
         '[Fattytober 2025] 22. Back',
         'ft25-22',
         '[FT25] 22. Back',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 22 is "Back." After that wild day yesterday, they needed to take a step back. I don''t know what to put here honestly.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 22, 2025\n\nTime Spent: 1 hour 40 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/22/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/22/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 22 is "Back." After that wild day yesterday, they needed to take a step back. I don''t know what to put here honestly.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 22, 2025\n\nTime Spent: 1 hour 40 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/22/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/22/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/22/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/22/img.png',
@@ -311,7 +311,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-22T00:00:00Z'
+        '2025-10-22T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -341,7 +341,7 @@ VALUES
         '[Fattytober 2025] 21. Frenzy',
         'ft25-21',
         '[FT25] 21. Frenzy',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 21 is "Frenzy." They forgot to actually get anything to eat so they ended up going into frenzy. [And you know how skulldragon frenzies are...](https://www.furaffinity.net/view/48194821/)\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 21, 2025\n\nTime Spent: 1 hour 16 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/21/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/21/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 21 is "Frenzy." They forgot to actually get anything to eat so they ended up going into frenzy. [And you know how skulldragon frenzies are...](https://www.furaffinity.net/view/48194821/)\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 21, 2025\n\nTime Spent: 1 hour 16 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/21/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/21/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/21/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/21/img.png',
@@ -350,7 +350,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift","logan-foster","vore"]',
-        '2025-10-21T00:00:00Z'
+        '2025-10-21T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -380,7 +380,7 @@ VALUES
         '[Fattytober 2025] 20. Fitting',
         'ft25-20',
         '[FT25] 20. Fitting',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 20 is "Fitting." Reese seems to be having trouble fitting through the doorways now.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 21, 2025\n\nTime Spent: 36 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/20/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/20/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 20 is "Fitting." Reese seems to be having trouble fitting through the doorways now.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 21, 2025\n\nTime Spent: 36 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/20/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/20/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/20/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/20/img.png',
@@ -389,7 +389,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","reese","oonracc","raccoon","skulldragon","redrift"]',
-        '2025-10-20T00:00:00Z'
+        '2025-10-20T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -419,7 +419,7 @@ VALUES
         '[Fattytober 2025] 19. Arms',
         'ft25-19',
         '[FT25] 19. Arms',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 19 is "Arms." Who knew just how plump their arms would get? Especially Jesper''s...\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 21, 2025\n\nTime Spent: 1 hour\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/19/1/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/19/1/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 19 is "Arms." Who knew just how plump their arms would get? Especially Jesper''s...\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 21, 2025\n\nTime Spent: 1 hour\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/19/1/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/19/1/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/19/1/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/19/1/img.png',
@@ -428,7 +428,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-19T00:00:00Z'
+        '2025-10-19T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -458,7 +458,7 @@ VALUES
         '[Fattytober 2025] 18. Waiting',
         'ft25-18',
         '[FT25] 18. Waiting',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 18 is "Waiting." Jesper''s _still_ asleep... It''s already noon...\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 18, 2025\n\nTime Spent: 1 hour 34 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/18/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/18/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 18 is "Waiting." Jesper''s _still_ asleep... It''s already noon...\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 18, 2025\n\nTime Spent: 1 hour 34 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/18/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/18/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/18/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/18/img.png',
@@ -467,7 +467,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-18T00:00:00Z'
+        '2025-10-18T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -497,7 +497,7 @@ VALUES
         '[Fattytober 2025] 17. Tail',
         'ft25-17',
         '[FT25] 17. Tail',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 17 is "Tail." He''s the only one who doesn''t look away. Maybe that''s what happens when you both carry the same curse.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 17, 2025\n\nTime Spent: 1 hour 7 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/17/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/17/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 17 is "Tail." He''s the only one who doesn''t look away. Maybe that''s what happens when you both carry the same curse.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 17, 2025\n\nTime Spent: 1 hour 7 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/17/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/17/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/17/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/17/img.png',
@@ -506,7 +506,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-17T00:00:00Z'
+        '2025-10-17T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -536,7 +536,7 @@ VALUES
         '[Fattytober 2025] 16. Surprise',
         'ft25-16',
         '[FT25] 16. Surprise',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 16 is "Surprise." Reese snuck some mints into one of Jesper''s sodas. That''ll sure be a fun surprise once he opens it up, eh?\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 16, 2025\n\nTime Spent: 1 hour 51 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/16/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/16/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 16 is "Surprise." Reese snuck some mints into one of Jesper''s sodas. That''ll sure be a fun surprise once he opens it up, eh?\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 16, 2025\n\nTime Spent: 1 hour 51 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/16/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/16/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/16/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/16/img.png',
@@ -545,7 +545,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","monster","cat","skulldragon","redrift","raccoon"]',
-        '2025-10-16T00:00:00Z'
+        '2025-10-16T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -614,7 +614,7 @@ VALUES
         '[Fattytober 2025] 14. Path',
         'ft25-14',
         '[FT25] 14. Path',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 14 is "Path." Reese is still quite dizzy after Jesper sat on his face. Now Jesper has to guide him through the crowd to get their third breakfast.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 15, 2025\n\nTime Spent: 2 hours 25 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/14/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/14/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 14 is "Path." Reese is still quite dizzy after Jesper sat on his face. Now Jesper has to guide him through the crowd to get their third breakfast.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 15, 2025\n\nTime Spent: 2 hours 25 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/14/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/14/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/14/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/14/img.png',
@@ -623,7 +623,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","logan-foster","wyvern-embers","azuronian","marx-armstrong","canary"]',
-        '2025-10-14T00:00:00Z'
+        '2025-10-14T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -653,7 +653,7 @@ VALUES
         '[Fattytober 2025] 13. Seat',
         'ft25-13',
         '[FT25] 13. Seat',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 13 is "Seat." This is genuinely the most flirtatious thing I''ve drawn with Jesper up to this point. Nothing else to say.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 13, 2025\n\nTime Spent: 1 hour 25 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/13/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/13/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 13 is "Seat." This is genuinely the most flirtatious thing I''ve drawn with Jesper up to this point. Nothing else to say.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 13, 2025\n\nTime Spent: 1 hour 25 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/13/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/13/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/13/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/13/img.png',
@@ -662,7 +662,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-13T00:00:00Z'
+        '2025-10-13T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -731,7 +731,7 @@ VALUES
         '[Fattytober 2025] 11. Folds',
         'ft25-11',
         '[FT25] 11. Folds',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 11 is "Folds." It''s kind of hard to reach certain areas when you''re as big as these two, especially Jesper. He might need help from Reese sooner or later.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 11, 2025\n\nTime Spent: 1 hour 23 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/11/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/11/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 11 is "Folds." It''s kind of hard to reach certain areas when you''re as big as these two, especially Jesper. He might need help from Reese sooner or later.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 11, 2025\n\nTime Spent: 1 hour 23 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/11/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/11/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/11/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/11/img.png',
@@ -740,7 +740,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-11T00:00:00Z'
+        '2025-10-11T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -770,7 +770,7 @@ VALUES
         '[Fattytober 2025] 10. Bloated',
         'ft25-10',
         '[FT25] 10. Bloated',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 10 is "Bloated." Xor walked into his local fast food place for a drink and... what?! Jesper''s hogging the soda machine all to himself! He looks quite bloated from all the soda.\n\nHopefully, this one will be the last one with an offset date.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 11, 2025\n\nTime Spent: 1 hour 31 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/10/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/10/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 10 is "Bloated." Xor walked into his local fast food place for a drink and... what?! Jesper''s hogging the soda machine all to himself! He looks quite bloated from all the soda.\n\nHopefully, this one will be the last one with an offset date.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 11, 2025\n\nTime Spent: 1 hour 31 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/10/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/10/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/10/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/10/img.png',
@@ -779,7 +779,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","xor-wulff","redrift"]',
-        '2025-10-10T00:00:00Z'
+        '2025-10-10T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -809,7 +809,7 @@ VALUES
         '[Fattytober 2025] 09. Forest',
         'ft25-09',
         '[FT25] 09. Forest',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 9 is "Forest." Genuinely can''t think of a description for this, it''s just Reese picking berries off a bush.\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 10, 2025\n\nTime Spent: 25 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/09/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/09/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 9 is "Forest." Genuinely can''t think of a description for this, it''s just Reese picking berries off a bush.\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 10, 2025\n\nTime Spent: 25 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/09/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/09/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/09/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/09/img.png',
@@ -818,7 +818,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","reese","oonracc","raccoon","skulldragon","redrift"]',
-        '2025-10-09T00:00:00Z'
+        '2025-10-09T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -848,7 +848,7 @@ VALUES
         '[Fattytober 2025] 08. Curves',
         'ft25-08',
         '[FT25] 08. Curves',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 8 is "Curves." It seems we''ve caught Reese in a bit of a flirtatious mood. Par for the course for them, honestly. I mean, how could you not with curves like those?~\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 9, 2025\n\nTime Spent: About 1 hour 28 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/08/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/08/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 8 is "Curves." It seems we''ve caught Reese in a bit of a flirtatious mood. Par for the course for them, honestly. I mean, how could you not with curves like those?~\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 9, 2025\n\nTime Spent: About 1 hour 28 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/08/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/08/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/08/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/08/img.png',
@@ -857,7 +857,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-08T00:00:00Z'
+        '2025-10-08T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -887,7 +887,7 @@ VALUES
         '[Fattytober 2025] 07. Watching',
         'ft25-07',
         '[FT25] 07. Watching',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 7 is "Watching." Decided I wanted to do this on [Marce](https://www.twitch.tv/marcecatfish)''s drawpile stream since it just so happened to coincide with me drawing this lol. But yea Reese and Jesper are watching Marge stream gup\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Magma.com](https://magma.com/d/INRbzZpjoc/)\n\nDate Completed: October 8, 2025\n\nTime Spent: About 1 hour 50 minutes','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 7 is "Watching." Decided I wanted to do this on [Marce](https://www.twitch.tv/marcecatfish)''s drawpile stream since it just so happened to coincide with me drawing this lol. But yea Reese and Jesper are watching Marge stream gup\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Magma.com](https://magma.com/d/INRbzZpjoc/)\n\nDate Completed: October 8, 2025\n\nTime Spent: About 1 hour 50 minutes','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/07/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/07/img.png',
@@ -896,7 +896,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","magma.com","marcecatfish","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-07T00:00:00Z'
+        '2025-10-07T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -926,7 +926,7 @@ VALUES
         '[Fattytober 2025] 06. Challenge',
         'ft25-06',
         '[FT25] 06. Challenge',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 6 is "Challenge." Reese placed a bet to see who could eat the most in one sitting... looks like he lost.\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 7, 2025\n\nTime Spent: 2 hour 6 minutes minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/06/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/06/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 6 is "Challenge." Reese placed a bet to see who could eat the most in one sitting... looks like he lost.\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 7, 2025\n\nTime Spent: 2 hour 6 minutes minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/06/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/06/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/06/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/06/img.png',
@@ -935,7 +935,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-06T00:00:00Z'
+        '2025-10-06T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -965,7 +965,7 @@ VALUES
         '[Fattytober 2025] 05. Park',
         'ft25-05',
         '[FT25] 05. Park',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 5 is "Park." Jesper and Reese are just chilling at the park, so much so that Reese ended up falling asleep. Looks like they might be too heavy for the bench...\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 6, 2025\n\nTime Spent: 1 hour 5 minutes minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/05/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/05/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 5 is "Park." Jesper and Reese are just chilling at the park, so much so that Reese ended up falling asleep. Looks like they might be too heavy for the bench...\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 6, 2025\n\nTime Spent: 1 hour 5 minutes minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/05/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/05/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/05/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/05/img.png',
@@ -974,7 +974,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-05T00:00:00Z'
+        '2025-10-05T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -1004,7 +1004,7 @@ VALUES
         '[Fattytober 2025] 04. Where Did It Go?',
         'ft25-04',
         '[FT25] 04. Where Did It Go?',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 4 is "Where did it go?" Here we see Reese digging in the couch cushins trying to find the TV remote. Little does he know he''s sitting on it...\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 5, 2025\n\nTime Spent: 38 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/04/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/04/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 4 is "Where did it go?" Here we see Reese digging in the couch cushins trying to find the TV remote. Little does he know he''s sitting on it...\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 5, 2025\n\nTime Spent: 38 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/04/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/04/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/04/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/04/img.png',
@@ -1013,7 +1013,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","reese","oonracc","raccoon","skulldragon","redrift"]',
-        '2025-10-04T00:00:00Z'
+        '2025-10-04T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -1043,7 +1043,7 @@ VALUES
         '[Fattytober 2025] 03. Fun',
         'ft25-03',
         '[FT25] 03. Fun',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 3 is "Fun." Here we see Jesper and Reese playing some video games together. Seems like the past two days had an effect on their bodies...\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 4, 2025\n\nTime Spent: 1 hour 15 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/03/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/03/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 3 is "Fun." Here we see Jesper and Reese playing some video games together. Seems like the past two days had an effect on their bodies...\n\nI accidentally missed a day so you might notice the completion date is different than the entry date.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 4, 2025\n\nTime Spent: 1 hour 15 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/03/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/03/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/03/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/03/img.png',
@@ -1052,7 +1052,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-03T00:00:00Z'
+        '2025-10-03T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -1082,7 +1082,7 @@ VALUES
         '[Fattytober 2025] 02. Extra',
         'ft25-02',
         '[FT25] 02. Extra',
-        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 2 is "Extra." Here we see Jesper seems to have recieved more food than he ordered. Little does he know, Reese ordered some extra!\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 2, 2025\n\nTime Spent: 55 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/02/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/02/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Done for the drawing challenge "[Fattytober](https://www.furaffinity.net/view/62347573/)"\n\nPart 2 is "Extra." Here we see Jesper seems to have recieved more food than he ordered. Little does he know, Reese ordered some extra!\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 2, 2025\n\nTime Spent: 55 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/02/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/02/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/02/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/02/img.png',
@@ -1091,7 +1091,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fattytober","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift"]',
-        '2025-10-02T00:00:00Z'
+        '2025-10-02T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -1121,7 +1121,7 @@ VALUES
         '[Fattytober 2025] 01. Awaiting',
         'ft25-01',
         '[FT25] 01. Awaiting',
-        replace('With October just rolling around the corner, I thought I might as well take another shot at [Fattytober](https://www.furaffinity.net/view/62347573/), but this time with skulldragons because why the hell not :3\n\nPart 1 is "Awaiting." Here we see Jesper and Reese awaiting their food delivery in the hotel lobby.\n\nFeaturing my boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 1, 2025\n\nTime Spent: 1 hour 2 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/01/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/01/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('With October just rolling around the corner, I thought I might as well take another shot at [Fattytober](https://www.furaffinity.net/view/62347573/), but this time with skulldragons because why the hell not :3\n\nPart 1 is "Awaiting." Here we see Jesper and Reese awaiting their food delivery in the hotel lobby.\n\nFeaturing my ex-boyfriend [Reese](https://twitter.com/SnaccoRacco) as a skulldragon.\n\nSkulldragon species by [CamuuShamuu](https://twitter.com/CamuuShamuu).\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: October 1, 2025\n\nTime Spent: 1 hour 2 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/01/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/01/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/01/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/10/01/img.png',
@@ -1130,7 +1130,7 @@ VALUES
         0,
         1,
         '["personal","art","fattytober2025","fatfur","clip-studio-paint-ex","challenge","sketch","furry","gay","jesper-foster","reese","oonracc","raccoon","monster","cat","skulldragon","redrift","fattytober"]',
-        '2025-10-01T00:00:00Z'
+        '2025-10-01T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -1193,84 +1193,6 @@ INSERT INTO
     )
 VALUES
     (
-        'NSFW-P-A-2025-08-13',
-        'art',
-        'nsfw',
-        'GOING NOWHERE (literally)',
-        'going-nowhere-literally',
-        'GOING NOWHERE (literally)',
-        replace('Little indulgent piece I wanted to make featuring my partner at the bottom.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: August 13, 2025\n\nTime Spent: 4 hours 2 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/08/13/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/08/13/tl.mp4">Download</a>\n</video>','\n',char(10)),
-        'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/08/13/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/08/13/img.png',
-        NULL,
-        'Rendered',
-        0,
-        1,
-        '["personal","art","jesper-foster","skulldragon","raccoon","cat","monster","reese","oonracc","fatfur","size-difference","character","clip-studio-paint-ex","fullbody","furry","gay","gift","redrift","rendered"]',
-        '2025-08-13T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'NSFW-P-A-2025-08-08',
-        'art',
-        'nsfw',
-        'Vore Day 2025',
-        'vore-day-2025',
-        'Vore Day 2025',
-        replace('Really wanted to make something for vore day this year.\n\nMy partner insisted I use Logan for this.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: August 8, 2025\n\nTime Spent: 1 hour 45 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/08/08/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2025/08/08/tl.mp4">Download</a>\n</video>','\n',char(10)),
-        'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/08/08/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/08/08/img.png',
-        NULL,
-        'Flat Color',
-        0,
-        1,
-        '["personal","art","vore","logan-foster","reese","oonracc","raccoon","redrift","character","clip-studio-paint-ex","comic","furry","gay","fullbody","flat-color"]',
-        '2025-08-08T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
         'NSFW-P-A-2025-07-19',
         'art',
         'nsfw',
@@ -1287,45 +1209,6 @@ VALUES
         1,
         '["personal","art","sneeve","snivy","pokemon","snivycontrarian","nintendo","artfight","artfight2025","character","clip-studio-paint-ex","skulldragon","fanart","fatfur","fullbody","furry","rendered"]',
         '2025-07-19T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'NSFW-P-A-2025-06-28',
-        'art',
-        'nsfw',
-        'Reese Skulldragon',
-        'reese-skulldragon',
-        'Reese Skulldragon',
-        replace('My boyfriend Reese as a skulldragon.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: July 28, 2025\n\nTime Spent: 3 hours 7 minutes','\n',char(10)),
-        'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/06/28/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/nsfw/portfolio/art/2025/06/28/img.png',
-        NULL,
-        'Reference',
-        0,
-        1,
-        '["personal","art","reese","oonracc","skulldragon","raccoon","gift","clip-studio-paint-ex","character","reference","concept","fatfur","fullbody","furry","flat-color"]',
-        '2025-06-28T00:00:00Z'
     );
 
 INSERT INTO
@@ -1823,7 +1706,7 @@ VALUES
         'Skulldragon Bed',
         'skulldragon-bed',
         'Skulldragon Bed',
-        replace('Something I wanted to draw with skulldragon Jesper. Thought it''d be a cute idea if me and my partner used him as a bed.\n\nI still use this as my banner on some adult social media platforms.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: August 26, 2024\n\nTime Spent: 8 hours 44 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2024/08/26/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2024/08/26/tl.mp4">Download</a>\n</video>','\n',char(10)),
+        replace('Something I wanted to draw with skulldragon Jesper. Thought it''d be a cute idea if me and my now ex-partner used him as a bed.\n\nI still use this as my banner on some adult social media platforms.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: August 26, 2024\n\nTime Spent: 8 hours 44 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/nsfw/portfolio/art/2024/08/26/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/nsfw/portfolio/art/2024/08/26/tl.mp4">Download</a>\n</video>','\n',char(10)),
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2024/08/26/thumb.jpg',
         NULL,
         'https://media.raccstarlogan.com/nsfw/portfolio/art/2024/08/26/img.png',
@@ -1832,7 +1715,7 @@ VALUES
         0,
         1,
         '["personal","art","skulldragon","jesper-foster","logan-foster","reese","oonracc","redrift","raccoon","cat","monster","clip-studio-paint-ex","fatfur","rendered","size-difference","scene","furry","fullbody","character"]',
-        '2024-08-26T00:00:00Z'
+        '2024-08-26T00:00:00.000Z'
     );
 
 INSERT INTO

@@ -18,7 +18,7 @@
       "visibility": "both",
       "sortOrder": 0,
       "publishedAt": "2026-04-16T00:00:00Z",
-      "updatedAt": "2026-06-13T07:33:06.672Z",
+      "updatedAt": "2026-07-06T19:13:30.699Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-CHR-LF-MAIN",
@@ -291,7 +291,7 @@
         },
         {
           "id": "WIKI-TRIVIA-LF-LAMA",
-          "itemText": "He's *extremely* afraid of llama plushies... [for some reason](https://www.youtube.com/shorts/2HF6Ahrxqes).",
+          "itemText": "He's *extremely* afraid of llama plushies... for some reason.",
           "nsfwOnly": false,
           "sortOrder": 6
         },
@@ -4803,7 +4803,7 @@
       "visibility": "both",
       "sortOrder": 20,
       "publishedAt": "2026-04-20T11:02:10.478Z",
-      "updatedAt": "2026-06-13T07:33:49.562Z",
+      "updatedAt": "2026-07-06T19:13:46.574Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-MA-MAIN",
@@ -4947,9 +4947,9 @@
       ],
       "quote": {
         "quoteText": "I-I know it sounds... strict, I guess, but rules are there kinda to stop you from, y'know, exploding, or crashing, or... whatever it is people do when they don't listen, eh?",
-        "audioUrl": "https://media.raccstarlogan.com/wiki/assets/char/ma/q.mp3",
+        "audioUrl": null,
         "attribution": "Marx",
-        "voiceCredit": "voiced by [Dankm8](https://dankm8.com)",
+        "voiceCredit": null,
         "nsfwOnly": false
       },
       "sections": [

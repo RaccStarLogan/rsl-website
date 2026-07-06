@@ -9,7 +9,7 @@ const {
 // Imports
 import headerLogoRaw from "../assets/headerlogo.svg?raw";
 import Announcement from "../components/Announcement.astro";
-const showAnnouncement = true; // Set to true to show the announcement banner
+const showAnnouncement = false; // Set to true to show the announcement banner
 const headerLogoMarkup = headerLogoRaw.replace(
   "<svg ",
   '<svg class="site-header-logo" aria-hidden="true" focusable="false" '
@@ -46,7 +46,7 @@ const headerLogoMarkup = headerLogoRaw.replace(
   <body>
     <!-- Announcement Banner -->
     {showAnnouncement && (
-      <Announcement text="PRIDE MONTH SALE: ALL COMMISSION SERVICES 20% OFF!" link="/commissions" />
+      <Announcement text="dummy text" link="#" />
     )}
     <!-- Header and Navigation -->
     <header>
