@@ -18,7 +18,7 @@
       "visibility": "both",
       "sortOrder": 0,
       "publishedAt": "2026-04-16T00:00:00Z",
-      "updatedAt": "2026-07-06T19:13:30.699Z",
+      "updatedAt": "2026-07-15T11:55:36.385Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-CHR-LF-MAIN",
@@ -40,12 +40,12 @@
         },
         {
           "id": "WIKI-IMG-CHR-LF-NUDE",
-          "imageUrl": "https://media.raccstarlogan.com/wiki/assets/char/lf/3.png",
+          "imageUrl": "https://media.raccstarlogan.com/wiki/assets/char/lf/4.png",
           "imageAlt": "Logan Foster Nude",
           "tabLabel": "Nude",
           "caption": "Underneath his clothing, Logan has a heart marking right above where his heart would be. The significance is unknown, but it looks like it could be a scar of some sort.",
           "nsfwOnly": false,
-          "sortOrder": 2
+          "sortOrder": 3
         },
         {
           "id": "WIKI-IMG-CHR-LF-NSFW",
@@ -54,7 +54,7 @@
           "tabLabel": "NSFW",
           "caption": "TBA",
           "nsfwOnly": true,
-          "sortOrder": 3
+          "sortOrder": 4
         },
         {
           "id": "WIKI-IMG-CHR-LF-OBSE",
@@ -63,7 +63,16 @@
           "tabLabel": "Middle Aged",
           "caption": null,
           "nsfwOnly": true,
-          "sortOrder": 4
+          "sortOrder": 5
+        },
+        {
+          "id": "WIKI-IMG-CHR-LF-SMMR",
+          "imageUrl": "https://media.raccstarlogan.com/wiki/assets/char/lf/3.png",
+          "imageAlt": "Logan Foster Summer Outfit",
+          "tabLabel": "Summer Outfit",
+          "caption": "Logan wears a Hawaiian shirt and swim trunks with flip flops during the summer.",
+          "nsfwOnly": false,
+          "sortOrder": 5
         }
       ],
       "infoSong": {
