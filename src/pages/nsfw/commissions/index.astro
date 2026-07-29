@@ -1,5 +1,6 @@
 ---
 import NSFWLayout from "../../../layouts/NSFWLayout.astro";
+import { isBlacklistedPreviewItem } from "../../../lib/portfolio/previewBlacklist";
 import { listCommissionPricing, listPortfolioItems } from "../../../lib/portfolio/repository";
 import type { CommissionPricingTier, PortfolioItem } from "../../../lib/portfolio/types";
 
@@ -44,10 +45,14 @@ function getLatestExampleForTier(
   items: PortfolioItem[],
 ): PortfolioItem | null {
   const normalizedTierId = normalizeType(tierId);
-  return (
-    items.find((item) => normalizeType(item.commissionType) === normalizedTierId) ??
-    null
-  );
+
+  for (const item of items) {
+    if (normalizeType(item.commissionType) !== normalizedTierId) continue;
+    if (isBlacklistedPreviewItem(item)) continue;
+    return item;
+  }
+
+  return null;
 }
 
 const categoryOrder: CommissionPricingTier["category"][] = [
