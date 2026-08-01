@@ -403,13 +403,6 @@
           "relationLabel": "Old Friend",
           "notes": "Friends since Middle School. We've drifted apart.",
           "sortOrder": 6
-        },
-        {
-          "id": "WIKI-REL-LF-LG",
-          "relatedEntryId": "WIKI-CHR-LG",
-          "relationLabel": "Online Friend",
-          "notes": "Met on a forum regarding a cartoony rhythm game.",
-          "sortOrder": 7
         }
       ],
       "theme": {
@@ -3366,13 +3359,6 @@
           "relationLabel": "The Vector",
           "notes": "Knows where he's going. Rarely questions it.",
           "sortOrder": 17
-        },
-        {
-          "id": "WIKI-REL-JU-LG",
-          "relatedEntryId": "WIKI-CHR-LG",
-          "relationLabel": "The Signal",
-          "notes": "Observant but not involved. Distant, but still reachable.",
-          "sortOrder": 18
         }
       ],
       "theme": {
