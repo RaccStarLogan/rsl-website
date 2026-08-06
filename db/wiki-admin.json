@@ -4493,7 +4493,7 @@
       "visibility": "both",
       "sortOrder": 14,
       "publishedAt": "2026-04-20T10:59:38.741Z",
-      "updatedAt": "2026-08-06T08:24:01.193Z",
+      "updatedAt": "2026-08-06T08:33:37.917Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-VS-MAIN",
@@ -4651,9 +4651,25 @@
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
+        },
+        {
+          "id": "WIKI-SEC-VS-ABLT",
+          "sectionKey": "abilities",
+          "sectionTitle": "Abilities",
+          "sectionBody": "TODO",
+          "sectionFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 3
         }
       ],
-      "triviaItems": [],
+      "triviaItems": [
+        {
+          "id": "WIKI-TRIVIA-MSH9DNKX-7XYN5",
+          "itemText": "Placeholder",
+          "nsfwOnly": false,
+          "sortOrder": 0
+        }
+      ],
       "relationships": [
         {
           "id": "WIKI-REL-VS-JS",
@@ -4729,22 +4745,22 @@
       "theme": {
         "primaryClr": "#1a2340",
         "secondaryClr": "#5c2433",
-        "accentClr": "#8a9aa8",
+        "accentClr": "#bfcfea",
         "primaryTxt": "#c9d4e8",
-        "secondaryTxt": "#9aa6b8",
-        "accentTxt": "#be284b",
+        "secondaryTxt": "#bfcfea",
+        "accentTxt": "#d14a63",
         "primaryBg": "#0e1328",
         "secondaryBg": "#1c2249",
         "tertiaryBg": "#141e37aa",
         "hoverBg": "#5c243366",
-        "warningClr": "#be284b",
+        "warningClr": "#d14a63",
         "tabClr": "#1a2340",
         "tabHover": "#5c2433",
-        "tabActive": "#8a9aa8",
+        "tabActive": "#bfcfea",
         "font": null,
         "fontUrl": null,
         "bodyClr": "#0e1328",
-        "links": "#8a9aa8",
+        "links": "#9ec7ff",
         "customCss": null
       }
     },
