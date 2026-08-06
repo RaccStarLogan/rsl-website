@@ -4486,14 +4486,14 @@
       "slug": "vincent-skank",
       "label": "Vincent Skank",
       "relationIconSvg": null,
-      "summary": "Vincent is Texaria's Regional Director of the Regional Interference Field & Tactics (RIFT) Agency, a private mercenary organization known for covert operations and strict internal hierarchy. He runs the agency with a calm, predatory authority that makes most people uneasy without knowing why.",
+      "summary": "Vincent is Texaria's Regional Director of the Regional Interference Field & Tactics (RIFT) Agency, overseeing all mercenary operations across the province's districts. He's known for his blunt, unforgiving leadership style and complete lack of subtlety.",
       "intro": "<strong>Vincent</strong> is [Texaria](/wiki/texaria)'s Regional Director of the [Regional Interference Field & Tactics (RIFT) Agency](/wiki/rift), overseeing all mercenary operations across the province's districts. He's known for his blunt, unforgiving leadership style and complete lack of subtlety. Vincent doesn't hide his opinions, even when they're insulting, and he expects everyone around him to follow orders without hesitation. His presence is intimidating not because he's theatrical, but because he's direct, literal, and unapologetically harsh.",
       "entryType": "Character",
       "tags": [],
       "visibility": "both",
       "sortOrder": 14,
       "publishedAt": "2026-04-20T10:59:38.741Z",
-      "updatedAt": "2026-08-06T08:59:41.898Z",
+      "updatedAt": "2026-08-06T09:03:35.119Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-VS-MAIN",
