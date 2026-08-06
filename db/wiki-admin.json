@@ -1639,8 +1639,8 @@
       "slug": "zeke-harborne",
       "label": "Zeke Harborne-Skank",
       "relationIconSvg": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg id=\"a\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128.01 128.69\"><path d=\"M25.76,43.34s-10.85,23.48-11.85,37.21c2.55-3.25,5.37-5.01,5.37-5.01,0,0-1.79,20.4,4.48,29.02,2.29-4.22,5.54-4.37,5.54-4.37,0,0,6.28,15.65,10.52,20.23.85-2.91,6.32-9.89,6.32-9.89,0,0,13.13,14.21,24.58,17.81,1.43-5.58,3.02-13.93,3.02-13.93,0,0,15.06,13,18.02,13.57,1.77-5.23,4.32-15.42,3.27-19.61,5.19,1.64,23.78,6.49,23.78,6.49,0,0-2.1-12.62-7.34-22.8,8.67-1.17,16.05-2.8,16.05-2.8,0,0-2.19-10.56-15.14-28.83,7.97-.19,8.72-1.32,8.72-1.32,0,0-4.69-8.27-13.33-12.62s-20.99-12.61-39.25-12.61-35.1-.44-42.78,9.45Z\" style=\"fill:#100f33;\"/><path d=\"M25.76,43.34s-10.85,23.48-11.85,37.21c2.55-3.25,5.37-5.01,5.37-5.01,0,0-1.79,20.4,4.48,29.02,2.29-4.22,5.54-4.37,5.54-4.37,0,0,6.28,15.65,10.52,20.23.85-2.91,6.32-9.89,6.32-9.89,0,0,13.13,14.21,24.58,17.81,1.43-5.58,3.02-13.93,3.02-13.93,0,0,15.06,13,18.02,13.57,1.77-5.23,4.32-15.42,3.27-19.61,5.19,1.64,23.78,6.49,23.78,6.49,0,0-2.1-12.62-7.34-22.8,8.67-1.17,16.05-2.8,16.05-2.8,0,0-2.19-10.56-15.14-28.83,7.97-.19,8.72-1.32,8.72-1.32,0,0-4.69-8.27-13.33-12.62s-20.99-12.61-39.25-12.61-35.1-.44-42.78,9.45Z\" style=\"opacity:.4;\"/><path d=\"M66.47,25.77C65.48,15.81,44.98,1.63,33.88.48,11.9-1.79-1.23,24.82.66,29.43c1.32,3.24,12.49-2.11,21.12,4.87,6.55,5.3,4.43,11.86,9.4,14.75,9.82,5.71,36.73-9.02,35.3-23.28Z\" style=\"fill:#535282;\"/><path d=\"M103.47,97.5c-3.48,2.05-7.54,3.23-11.88,3.23-.22,0-.43,0-.66-.02-6.5,4.39-14.37,6.96-22.84,6.96s-16.34-2.57-22.84-6.96c-.23.02-.45.02-.66.02-4.34,0-8.4-1.18-11.88-3.23-.33-.43-3.13-4.06-1.97-8.52,1.03-3.94,4.69-6.89,9.13-7.24,5.59,2.37,14.85,5.47,26.67,5.72,13.46.3,23.95-3.25,29.78-5.72,4.44.35,8.1,3.3,9.13,7.24,1.16,4.46-1.64,8.09-1.97,8.52Z\" style=\"fill:#7877a3;\"/><path d=\"M115.03,77.25c0,8.62-4.64,16.16-11.57,20.25.33-.43,3.13-4.06,1.97-8.52-1.03-3.94-4.69-6.89-9.13-7.24-5.83,2.47-16.32,6.02-29.78,5.72-11.82-.25-21.08-3.35-26.67-5.72-4.44.35-8.1,3.3-9.13,7.24-1.16,4.46,1.64,8.09,1.97,8.52-6.93-4.09-11.57-11.63-11.57-20.25,0-3.91.94-7.59,2.64-10.84l.02-.02c.35-.66.73-1.31,1.14-1.94,1.16-2.14,2.97-5.68,4.06-9.86,5.19-16.66,20.72-28.82,39.09-28.82s33.91,12.16,39.09,28.82c1.09,4.18,2.9,7.72,4.06,9.86.41.63.8,1.28,1.14,1.94l.02.02c1.69,3.25,2.64,6.93,2.64,10.84Z\" style=\"fill:#535282;\"/><path d=\"M68.08,100.73s-6.06.35-10.57-2.2c4.21,3.21,10.57,3.58,10.57,3.58,0,0,6.36-.37,10.57-3.58-4.51,2.55-10.57,2.2-10.57,2.2Z\" style=\"opacity:.2;\"/><polygon points=\"49.05 88.98 54.17 94.52 57.52 91.75 49.05 88.98\" style=\"fill:#b5b9c3;\"/><polygon points=\"87.12 88.98 82 94.52 78.65 91.75 87.12 88.98\" style=\"fill:#b5b9c3;\"/><path d=\"M90.92,100.72c.18-.4,5.09-4.03,5.42-16.52s-6.9-16.84-6.9-16.84c0,0,9.75,3.08,9.75,17.72,0,14.64-1.99,14.93-2.45,15.09-1.17.26-2.72.6-5.81.55Z\" style=\"opacity:.2;\"/><path d=\"M45.2,100.72c-.18-.4-5.09-4.03-5.42-16.52-.33-12.5,6.9-16.84,6.9-16.84,0,0-9.75,3.08-9.75,17.72s1.99,14.93,2.45,15.09c1.17.26,2.72.6,5.81.55Z\" style=\"opacity:.2;\"/><polygon points=\"46.69 72.89 48.16 72.4 51.41 75.06 46.69 72.89\" style=\"opacity:.2;\"/><polygon points=\"87.12 72.89 85.64 72.4 82.4 75.06 87.12 72.89\" style=\"opacity:.2;\"/><path d=\"M25.76,53.9s1.04-2.47,3.4-4.32c-1.62,5.62,4.35,8.36,4.35,8.36,0,0,.82-4.58,2.6-9.61,1.3,4.44,10.63,5.57,10.63,5.57,0,0-1.03-3.94,1.66-8.66,11.7,1.48,22.33,7.08,22.33,7.08,0,0-.66-2.66-2.64-6.94,4.6,5.5,23.54,9.85,23.54,9.85,0,0-2.22-.98-4.5-5.08,10.62,4.96,30.64,7.49,35.81,3.65-4.87-2.36-11.37-8.12-19.05-13.44,2.22-.3,10.93,2.22,15.51,4.29-4.28-9.89-13.59-23.78-25.08-24.51,3.13-2.07,6.62-1.18,12.26-2.22-11.48-9.16-44.78-14.47-52.66-6.18,1.14-4.02,4.18-6.51,4.93-8.88-7.23,0-12.11,6.35-12.11,6.35,0,0,0-3.69,0-7.24-3.54,1.33-6.2,9.93-6.2,9.93-8.27.93-16.88,4.54-18.76,9.41,3.98-1.67,7.14-2.57,7.14-2.57,0,0-8.7,8.77-8.88,17.04,1.74-1.48,3.71-2.54,3.71-2.54,0,0-3.75,4.08,2.01,20.66Z\" style=\"fill:#100f33;\"/></svg>",
-      "summary": "Zeke is a retired harbor security officer and longtime resident of SouthPort, best known for his imposing frame, sharp tongue, and unshakable confidence.",
-      "intro": "<strong>Zeke</strong> is a retired harbor security officer and longtime resident of [SouthPort](/wiki/southport), best known for his imposing frame, sharp tongue, and unshakable confidence. Once tasked with keeping order along the port-side, he now lives a slower-paced life with his husband, [Azrian](/wiki/azrian-harborne). Whether it's by choice or by consequence depends on who you ask. Beneath his smug exterior is a surprisingly thoughtful (if somewhat lazy) shark with a taste for the finer things in life, including food, attention, and the occasional teasing remark. Despite stepping away from the job, Zeke remains a familiar face in SouthPort and an enigma to those trying to figure out just how seriously to take him.",
+      "summary": "Zeke is a retired harbor security officer and longtime SouthPort local, recognized for his broad build, dry humor, and steady confidence.",
+      "intro": "<strong>Zeke</strong> is a retired harbor security officer and longtime [SouthPort](/wiki/southport) local, recognized for his broad build, dry humor, and steady confidence. He spent years keeping order along the docks before stepping away from the job, settling into a slower routine with his husband, [Azrian](/wiki/azrian-harborne). Ask around and you'll hear different stories about why he retired, but Zeke doesn't bother correcting any of them.\n\nHe comes off smug at first glance, but there's a thoughtful streak under the surface - the kind that shows up in quiet moments, not grand gestures. He enjoys good food, good company, and the kind of teasing that keeps people guessing whether he's joking or serious. Even after leaving harbor security, he remains a familiar presence in SouthPort: calm, unhurried, and impossible to read unless he wants you to.",
       "entryType": "Character",
       "tags": [
         "zeke-harborne",
@@ -1650,7 +1650,7 @@
       "visibility": "both",
       "sortOrder": 3,
       "publishedAt": "2026-04-20T06:48:01.550Z",
-      "updatedAt": "2026-06-13T07:33:12.293Z",
+      "updatedAt": "2026-08-06T06:02:42.476Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-ZH-CLTH",
@@ -1734,7 +1734,7 @@
           "rowValue": "Gay",
           "rowFormat": "text",
           "nsfwOnly": false,
-          "sortOrder": 5
+          "sortOrder": 6
         },
         {
           "id": "WIKI-ROW-ZH-SPCS",
@@ -1847,7 +1847,7 @@
           "id": "WIKI-SEC-ZH-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Zeke is a very heavyset shark with a stocky build that reflects years of indulgence more than his former profession. His body is broad and imposing, with thick limbs, a wide belly, and distinct stretch marks around his midsection and sides. He has short, jagged stripes across his arms and tail.\n\nHis body is a cool gray with hints of blue, especially in the shadows. His stripes are darker gray with a slight indigo tint. His hair is black with a faint blue shine. His belly and inner arms are lighter, but the contrast is subtle and keeps the whole palette feeling soft.\n\nHe typically wears a severely ill-fitting tank top that struggles to contain his size, often riding up due to his size, and a pair of brown cargo shorts that sit snugly around his hips. A golden key pendant always hangs from his neck, a sentimental keepsake he rarely speaks about. Despite his size, he carries himself with ease, unbothered and confident in how he looks.\n\nHis weight sits mostly around his middle, giving him a soft, rounded belly that leads the way wherever he goes. His chest follows suit, full and broad, while his arms and legs, though thick, carry less of the bulk. His backside is notably wide and heavy as well, rounding out his silhouette with an almost exaggerated balance. It's clear his body has adapted over time, settling into comfort rather than combat.",
+          "sectionBody": "Zeke is a heavyset shark with a wide, solid frame shaped by years of physical work followed by years of unapologetic comfort. His middle is round and soft, his shoulders broad, and his limbs thick and steady. Stretch marks trace along his sides and stomach, subtle but noticeable up close.\n\nHis coloration leans cool gray with a faint blue undertone, depending in shadow. Dark stripes cut across his arms and tail in uneven, jagged patterns. His hair is black with a slight blue sheen, and the lighter tones along his belly and inner arms soften the overall look without standing out.\n\nHe dresses for ease rather than style. Most days he wears an old tank top that's been stretched and sun-faded from years on the docks, paired with brown cargo shorts that can handle whatever he stuffs into the pockets. A golden key pendant hangs from his neck, something he keeps close but rarely talks about.\n\nZeke moves with a relaxed confidence. His weight sits mostly around his middle, giving him a rounded silhouette, but he carries himself like someone who knows exactly how much space he takes up and doesn't mind it. His posture is loose, his steps unhurried, and his presence steady enough to make people notice him even when he's trying not to.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -1856,7 +1856,7 @@
           "id": "WIKI-SEC-ZH-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Zeke is basically the opposite of his brother, Jason. He's a LOT more laid back, but still relatively cocky...just in a slower, more smug manner. He tends to speak in a calm, confident drawl, often teasing others with a smirk that says he knows exactly what he's doing. While he doesn't seek attention the same way Jason does, he has a habit of making his presence known with quiet swagger and sharp wit. He's not easily rattled, rarely raises his voice, and has an annoying talent for getting under people’s skin without lifting a finger. Despite this, he's approachable, easy to talk to, and surprisingly patient, especially with people he cares about. He enjoys pushing buttons but usually knows where the line is. *Usually.*",
+          "sectionBody": "Zeke is the quieter half of the Skank twins. Jason chases attention; Zeke lets it come to him. He speaks in a slow, confident drawl, often with a smirk that suggests he's already decided how the conversation will end.\n\nHe enjoys teasing people, especially when he can get a reaction without raising his voice. Despite the sharp tongue, he's approachable and patient, especially with friends and anyone who isn't trying too hard to impress him. He's hard to rattle, hard to rush, and harder to read, which is a combo that makes him strangely magnetic in social settings.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -1865,7 +1865,7 @@
           "id": "WIKI-SEC-ZH-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Zeke grew up in Southport with his twin brother Jason, though you wouldn't guess they were related at first glance. Where Jason was loud and desperate to be seen, Zeke was quiet, grounded, and effortlessly competent. He didn't care much for popularity, but that didn't stop people from noticing him anyway, especially teachers, coaches, and the occasional crush Jason couldn't quite win over.\n\nHe never chased the spotlight, but he didn't avoid it either. Zeke made his way into harbor security not long after graduation, quickly earning a reputation for readability and strength. He rarely talked about his job, but those close to him knew he took it seriously. When he began developing health issues that made the job unsustainable, it hit him harder than he'd ever admit. For a while, he felt lost, like he had nothing left to prove, but also nothing left to do.\n\nThat changed when he met Azrian. The two first crossed paths during a routine harbor patrol. Azrian had been sketching the old dockyards for an art project and wasn't exactly supposed to be there. Zeke nearly wrote him up, but Azrian's flustered charm and quick wit made an impression. What started as an awkward warning turned into a casual conversation, then a coffee date, then something neither of them expected.\n\nIt was the first time Zeke felt truly seen, not for what he could do or how he measured up to others, but for who he already was. With Azrian, he didn't have to perform, prove, or pretend. The connection gave Zeke a reason to slow down, to start prioritizing comfort, intimacy, and long ignored desires he'd kept tucked away for years.\n\nNow retired and living with his husband, Zeke found comfort in simplicity. He doesn't chase attention, doesn't seek validation, and (unlike Jason) no longer needs to prove anything to anyone...except for how much fried shrimp he can stuff into his mouth at once.",
+          "sectionBody": "Zeke grew up in SouthPort with his twin brother Jason, though the two rarely seemed alike. Jason wanted eyes on him at all times; Zeke preferred being the dependable one people quietly relied on. Teachers and coaches often gravitated toward Zeke's steadiness, something Jason never quite understood.\n\nAfter finishing school, Zeke joined harbor security and quickly earned a reputation for being reliable, strong, and level-headed. He didn't brag about the job, but he took it seriously. That reputation held until a dock accident changed the way he moved. A snapped hoist line sent a crate swinging into him, knocking him off balance and leaving him with a hip injury that never healed the way the doctors promised.\n\nInstead of slowing down, Zeke pushed through it, a stubborn Skank-family habit he never quite escaped. The more he worked, the worse the joint became, and the gradual weight he put on only made the strain harder to ignore. He kept insisting he was fine long after everyone else could see he wasn't. Patrols took longer, stairs felt steeper, and the uneven concrete along the docks turned every shift into a quiet battle he refused to acknowledge.\n\nHe met Aziran during this slow decline. What started as a routine patrol (and a warning to an artist sketching where he shouldn't be) turned into a conversation that stuck with both of them. Azrian didn't care about Zeke's reputation or his physical presence; he cared about the person underneath. Their quiet evenings and shared meals didn't necessarily cause Zeke's retirement, but they made it easier for him to finally admit he couldn't keep pushing himself the way he used to.\n\nBy the time he stepped away from harbor security, the decision wasn't dramatic. It was simply the point where his body and his life both told him it was time to stop.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -1907,7 +1907,7 @@
         },
         {
           "id": "WIKI-TRIVIA-ZH-ORDR",
-          "itemText": "He has a habit of ordering for two, even when he's alone. (No leftovers, obviously.)",
+          "itemText": "He tends to order more food than he needs and somehow never leaves leftovers.",
           "nsfwOnly": false,
           "sortOrder": 4
         },
@@ -1919,7 +1919,7 @@
         },
         {
           "id": "WIKI-TRIVIA-ZH-RCRD",
-          "itemText": "Zeke holds the provincial record for the most fried shrimp held in one mouth: 211. He beat the previous record by just one, supposedly out of spite. ",
+          "itemText": "He once won a local shrimp-eating contest by a single shrimp, supposedly out of spite.",
           "nsfwOnly": false,
           "sortOrder": 5
         },
@@ -2032,8 +2032,8 @@
       "slug": "azrian-harborne",
       "label": "Azrian Harborne",
       "relationIconSvg": null,
-      "summary": "Azrian is a quiet, steady presence in SouthPort, best known for his work maintaining the harbor and his tendency to appear where no one expects him.",
-      "intro": "<strong>Azrian</strong> is a quiet, steady presence in [SouthPort](/wiki/southport), best known for his work maintaining the harbor and his tendency to appear where no one expects him. Tall and unassuming with the faint glow of an angler-fish's lure, he carries an air of mystery that makes it hard to tell whether he's simply private or keeping something unspoken. Married to [Zeke](/wiki/zeke-harborne), Azzy balances his husband's larger-than-life energy with patience and quiet indulgence, often letting Zeke take center stage while he lingers just out of focus. Most people see him as the maintenance man who keeps the harbor running, but there are whispers that Azzy has a way of knowing and/or being more than he ever admits out loud.",
+      "summary": "Azrian is a quiet, steady presence in SouthPort, known for keeping the harbor running and for appearing in places most people don't expect.",
+      "intro": "<strong>Azrian</strong> is a quiet, steady presence in [SouthPort](/wiki/southport), known for keeping the harbor running and for appearing in places most people don't expect. With the faint glow of an angler-fish's lure and a calm, unreadable expression, he carries an air of mystery that makes people unsure whether he's simply private or holding back with something deeper. Married to [Zeke](/wiki/zeke-harborne), Azzy balances his husband's larger-than-life energy with patience and subtle humor, often letting Zeke take the spotlight while he stays comfortably in the background.\n\nMost locals know him as the maintenance worker who fixes things before anyone notices they were broken. Those who've spent extended time with him (especially [Judas](/wiki/judas-umbra)) know there's more beneath the surface. Azrian has a quiet intuition, a way of listening that makes people feel understood even when he says very little. He's not dramatic, flashy, or interested in attention, but he leaves an impression that lingers.",
       "entryType": "Character",
       "tags": [
         "azrian-harborne",
@@ -2043,7 +2043,7 @@
       "visibility": "both",
       "sortOrder": 4,
       "publishedAt": "2026-04-20T08:10:13.671Z",
-      "updatedAt": "2026-06-13T07:33:13.771Z",
+      "updatedAt": "2026-08-06T05:59:46.668Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-AH-CLTH",
@@ -2204,7 +2204,7 @@
         }
       ],
       "quote": {
-        "quoteText": "He *says* he doesn't need seconds, but somehow there's always room when I'm around.~",
+        "quoteText": "... You *sure* that's how it's supposed to work?",
         "audioUrl": null,
         "attribution": "Azrian",
         "voiceCredit": null,
@@ -2215,7 +2215,7 @@
           "id": "WIKI-SEC-AH-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Azrian's wardrobe is minimal: he almost exclusively wears a pair of durable blue overalls, usually with the top half rolled down or clipped loose when off duty. They're practical, water-resistant, and patched in places from years of use. He rarely bothers with shirts underneath unless the weather demands it. The overalls are simply easier for him to work in, and he's long since stopped pretending otherwise.\n\nHis skin tone is a dark aquamarine, fading to a gray underbelly that runs from his chin down his chest and abdomen. His body is mostly smooth and unmarked, though faint gradients deepen around his arms, tail, and back. The lack of strong patterning gives him a clean, uniform appearance that contrasts sharply with his glowing features.\n\nHis husband's mannerisms have rubbed off on him more than he'd like to admit, and Azzy has a habit of snacking throughout the day, whether that be taste testing his own cooking or just keeping some homemade snack mix nearby. This means he's not skinny either, in fact he's pushing obesity, but he's not nearly as obese as Zeke. But I mean, you can't trust a skinny cook, am I right?\n\nHis eyes, lure, and fin edges emit a bright cyan-teal light, which stands out vividly in low light. Subtle veins of the same glow trace through parts of his fins and tail, giving them a bioluminescent shimmer without overpowering his main coloration.\n\nTwo small, curved fins sit on the sides of his head. Not really horns, just simple shapes that frame his face and keep him from looking too bare. They match his skin tone and blend naturally into his design without drawing too much attention.",
+          "sectionBody": "Azrian's wardrobe is simple and practical. He almost always wears durable blue overalls, patched from years of work and usually rulled down or clipped loose when he's off duty. Shirts are optional unless the weather demands it. He dresses for comfort and utility, not style, and he's long since stopped pretending otherwise.\n\nHis skin is a deep aquamarine that fades into a gray underbelly running from his chin down his torso. The gradients along his arms, back, and tail deepen in the low light, giving him a smooth understated palette that contrasts with his bioluminescent features. His eyes, lure, and fin edges glow in cyan-teal tones, bright enough to stand out but soft enough to not overwhelm.\n\nAzzy isn't thin - years of taste-testing his own cooking and keeping snacks on hand have given him a rounder, softer build. He's not nearly as large as his husband, but he's comfortably heavyset in a way that suits his lifestyle. His weight isn't a spectacle; it's simply a part of who he is, shaped by long nights, good meals, and a habit of feeding others as much as himself.\n\nTwo short, ragged horn-like fins rise from his forehead, subtle enough not to dominate his silhouette but distinct enough to frame his face. They match his skin tone and bend naturally into his design.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -2224,7 +2224,7 @@
           "id": "WIKI-SEC-AH-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Azzy keeps a quiet, steady presence that makes him easy to underestimate at first glance. He isn't loud or flashy, and most people know him as reserved, thoughtful, and sometimes a little difficult to read. He doesn't open up quickly, preferring to let silence carry conversations until he has something worth saying.\n\nThat said, there's a warmer side to him once he relaxes. Azzy has a teasing streak that slips out in subtle ways, never sharp enough to sting but just enough to catch someone off guard. He enjoys small, everyday comforts (cooking, evening walks, collecting odd little maritime trinkets) and tends to show care through actions rather than words.\n\nHe avoids unnecessary conflict and rarely raises his voice, though that doesn't mean he's passive. When something matters to him, he holds firm. His patience makes him good at handling long hours, tedious tasks, or stubborn people. While not the most expressive on the surface, Azzy's presence has a grounding effect, giving the sense of someone who sees more than he lets on.",
+          "sectionBody": "Azzy keeps a quiet, steady presence that makes him easy to underestimate. He isn't loud or attention-seeking, and most people know him as reserved, thoughtful, and a little difficult to read. He doesn't open up quickly, preferring silence over small talk until he has something worth saying.\n\nOnce he relaxes, a warmer side comes through. He has a subtle teasing streak - subtle, dry, and perfectly timed. He enjoys small comforts like cooking, late-night walks, collecting odd maritime trinkets, and listening to old radio shows while he works. He shows care through actions rather than words, often in ways people don't notice until later.\n\nAzrian avoids conflict and rarely raises his voice, but he isn't passive. When something matters to him, he holds firm. His patience makes him good at handling long hours, tedious tasks, and stubborn people. There's a grounding quality to him, a sense that he sees more than he lets on and chooses carefully what he shares.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -2242,7 +2242,7 @@
           "id": "WIKI-SEC-AH-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Azzy grew up in SouthPort, spending most of his life near the harbor where work was steady but rarely glamorous. He developed a quiet reputation as someone who could fix what others left broken, from machinery to minor infrastructure, and found comfort in the solitude of late-night shifts. While others might have seen harbor maintenance as thankless work, Azrian valued its rhythm and the small freedoms it gave him.\n\nFor years, he kept to himself, more comfortable with tools and tide charts than with conversation. He wasn't unfriendly, but his tendency to deflect personal questions with humor or silence kept most people at arm's length. That changed when he crossed paths with Zeke during a routine harbor patrol. Azrian hadn't exactly been where he was supposed to be, sketching at the old dockyards under poor lighting, and nearly earned himself a write-up. Instead, the awkward warning turned into an unexpected conversation. Zeke's grounded presence and straightforward nature drew Azrian out of his shell in a way nobody else had.\n\nWhat began as small talk stretched into shared coffee, then regular meetups, and eventually something deeper. With Zeke, Azrian discovered a kind of companionship that didn't demand he hide his quirks or his quiet habits. Their bond grew steadily, and over time, marriage followed.\n\nNow settled with his husband, Aziran still works in and around the harbor, though his focus has shifted. He finds joy in the mundane: cooking meals, maintaining their home, and providing the sort of stability that allows Zeke to slow down. For Azzy, fulfillment lies not in recognition, but in the quiet life they've built together.",
+          "sectionBody": "Azrian grew up in SouthPort and spent most of his life near the harbor, where work was steady and quiet. He built a reputation as someone who could fix what others left broken, like machinery, infrastructure, or the odd problem nobody else wanted to deal with. He found comfort in late-night shifts, tide charts, and the quiet rhythm of maintenance work. While others saw harbor upkeep as thankless, Azzy valued the solitude and the freedom it gave him.\n\nFor years, he kept to himself. He wasn't unfriendly, but he deflected personal questions with humor or silence, keeping people at arm's length. That changed when he crossed paths with Zeke during a routine harbor patrol. Azzy had wandered into an off-limits dockyard to sketch under poor lighting and nearly earned himself a write-up. Instead, the awkward warning turned into a conversation that neither expected. Zeke's grounded presence and straightforward nature drew Azzy out of his shell in a way nobody else had. Small talk became shared coffee, then regular meetups, then something deeper. Their bond grew steadily, and marriage followed.\n\nAzzy'd world didn't stay small. During one of his late night walks (the kind he took when the harbor was quiet and the air felt clean) he stumbled across a library he didn't quite remember being there. It wasn't on any map, and the building looked older than the street around it. Curiosity won out, and he stepped inside.\n\nThat's where he met Judas.\n\nMost people would've been intimidated by a shadowy almost-eight-foot-tall dragon with glowing purple eyes standing alone in an abandoned library that seemed to exist in more places than one. Azzy wasn't. He treated Jude the same way he treated everyone else: calm, polite, and quietly observant. Jude expected fear; Azzy offered conversation. That was enough to start something.\n\nOver time, Azrian started showing up at the library often enough that Judas stopped reacting to it. He'd fix a lantern, adjust a shelf, or just sit somewhere and read without bothering anyone. Judas didn't think of it as friendship at first, just someone who didn't disrupt the place, but Azzy's presence had a way of keeping the library quiet in a good way. No pressure, no expectations, no prophecy talk unless Jude brought it up. Eventually, they realized they talked more around Azzy than anyone else, even if half of it was just dry comments or small observations. It wasn't sentimental, it was just... easy.\n\nNow settled with his husband, Azrian still works around the harbor, but his life is shaped as much by the people he's chosen by the work he does. He finds joy in the mundane: cooking meals, maintaining their home, and offering the kind of stability that helps Zeke slow down. And in the background, his connection with Jude remains one of the quiet pillars of his life, a friendship that matters more than most people realize.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 3
@@ -2296,7 +2296,7 @@
         },
         {
           "id": "WIKI-TRIVIA-AH-MTWG",
-          "itemText": "At one point he had a phase where he tried gaining weight himself, alongside Zeke, but he stopped after realizing how hard things would become in the long run.",
+          "itemText": "At one point he had a phase where he tried gaining weight himself, alongside Zeke, but he stopped after realizing that it just wasn't for him.",
           "nsfwOnly": true,
           "sortOrder": 6
         },
@@ -2972,8 +2972,8 @@
       "slug": "judas-umbra",
       "label": "Judas Umbra",
       "relationIconSvg": null,
-      "summary": "Judas is... complicated. They show up when you least expect them to, disappear without a trace, and know more about yourself than you do, probably.",
-      "intro": "<strong>Judas</strong> is... complicated. They show up when you least expect them to, disappear without a trace, and know more about yourself than you do, probably. Despite this ominous aura, they're not evil, or at least they don't intend to be. They're just... weirdly condescending and cryptic. They play the long game, often keeping secrets \"for your own good,\" which is both irritating and endearing depending on who you ask.",
+      "summary": "Judas is... complicated. They're a strange mix of laid-back charm and quiet cosmic pressure - a dragon raised inside a prophecy they never asked for.",
+      "intro": "<strong>Judas</strong> is... complicated. They're a strange mix of laid-back charm and quiet cosmic pressure - a dragon raised inside a prophecy they never asked for. They appear in unexpected places, vanish just as easily, and carry an aura that makes people assume they know more than they're saying. Sometimes they do, sometimes they absolutely don't.\n\nThey're not omniscient, not divine, and definitely not trying to be anyone's oracle. Jude is simple someone who grew up surrounded by forbidden texts and assumed that meant they were supposed to act like they understood them. They play the part because it's the only part they've ever known.\n\nDespite their cryptic habits, Judas isn't malicious. They're sarcastic, tired, and occasionally smug, but their intentions are rarely harmful. They want to help, they just don't always help the right people, in the right way, at the right time.",
       "entryType": "Character",
       "tags": [
         "judas-umbra",
@@ -2983,7 +2983,7 @@
       "visibility": "both",
       "sortOrder": 7,
       "publishedAt": "2026-04-20T08:13:17.982Z",
-      "updatedAt": "2026-06-13T07:33:18.603Z",
+      "updatedAt": "2026-08-06T06:33:11.816Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-JU-INIT",
@@ -3068,7 +3068,7 @@
           "id": "WIKI-ROW-JU-RSDC",
           "rowKey": "residence",
           "rowLabel": "Residence",
-          "rowValue": "Currently Unknown",
+          "rowValue": "Variable",
           "rowFormat": "text",
           "nsfwOnly": false,
           "sortOrder": 7
@@ -3095,7 +3095,7 @@
           "id": "WIKI-ROW-JU-LIKE",
           "rowKey": "likes",
           "rowLabel": "Likes",
-          "rowValue": "- Magic\n- Late Night Walks\n- Singing\n- Dim Lighting\n- Neon Signs",
+          "rowValue": "- Magic\n- Late Night Walks\n- Dim Lighting\n- Neon Signs",
           "rowFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 10
@@ -3132,7 +3132,7 @@
           "id": "WIKI-SEC-JU-APRC",
           "sectionKey": "appearance",
           "sectionTitle": "Appearance",
-          "sectionBody": "Judas has dark gray scales marked with black striping. Their eyes glow a vivid violet, contrasting against their swept black hair streaked with a pastel purple. Curved horns, clawed hands, and three distinct tails make their silhouette immediately recognizable. Their bat-like wings are black with sharp purple striping along the edge, matching the lavender tones of their claws and hair streaks.\n\nThey're most often seen wearing a spiked black choker and bracelets that reinforce their punk aesthetic. They also sometimes wear a dark purple vest with the sleeves ripped off. It's absolutely a stylistic choice, no denying that.",
+          "sectionBody": "Judas has dark gray scales marked with black striping, giving their silhouette a sharp, angular look. Their eyes glow a vivid violet, bright enough to catch attention even in dim light. Their swept black hair carries streaks of pastel purple, matching the lavender tones in their claws and wing accents.\n\nCurved horns frame their head, and three distinct tails trail behind them, each moving with a mind of its own. Their wings are bat-like, black with purple striping along the edges. Dramatic, but not theatrical.\n\nTheir clothing leans into a practical punk look rather than anything theatrical. Jude usually wears a spiked black choker and matching bracelets, plus a dark purple vest with the sleeves torn off. Their pants are worn black and tucked into heavy boots. Nothing fancy, just durable. They also have a small cross charm hanging from one horn. It doesn't mean anything; they just liked how it looked.\n\nTLDR; They dress like someone who doesn't care what people think.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 0
@@ -3141,7 +3141,7 @@
           "id": "WIKI-SEC-JU-PRSN",
           "sectionKey": "personality",
           "sectionTitle": "Personality",
-          "sectionBody": "Judas is calm and deliberate, rarely raising their voice or losing composure. They prefer to keep people guessing, speaking in clipped truths or half-answers that often feel more like riddles. While they aren't intentionally cruel, their dry delivery and habit of withholding details can come across as condescending to those who don't know them well.\n\nDespite the connections to the libraries they're often seen near and their weird knowledge of magic and the occult, they refuse to act like a holier-than-thou oracle. They carry the weight of their role with resignation more than pride, treating it more like a side hobby than a responsibility. Away from that, they're unexpectedly approachable (sarcastic at times, even a little playful) and let their guard down enough to enjoy late-night outings or impromptu stage performances.",
+          "sectionBody": "Jude is calm, deliberate, and quietly sardonic. They rarely raise their voice, preferring clipped truths and half-answers that sound like riddles even when they're not trying to be cryptic. They keep people guessing because they've never properly learned how to be straightforward.\n\nThey're not condescending out of superiority, they're that way out of exhaustion. They've spent their entire existence being treated like a walking omen, and it's worn them down. Their dry delivery often reads sharper than intended, but those who know them understand the difference.\n\nDespite their mythical background, Judas doesn't act like a prophet. They treat their role with resignation, not reverence. They'd rather talk about music, astronomy, or weird neon signs than destiny. They enjoy late-night outings, impromptu singing, and quiet conversations with people who don't expect them to be mystical.\n\nUnderneath the cryptic exterior is someone who wants connection but doesn't know how to initiate it without sounding like they're quoting prophecy.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 1
@@ -3150,7 +3150,7 @@
           "id": "WIKI-SEC-JU-HSTR",
           "sectionKey": "history",
           "sectionTitle": "History",
-          "sectionBody": "Judas was never truly \"born\" in the traditional sense, they simply began to exist. From their first moment of awareness, the only home they have known was the strange library they now reside in, of which the location remains a complete mystery. Much of their early life was spent exploring the library's endless shelves, absorbing whatever knowledge they could reach. Books on arcane theory and magical practice quickly became their favorites, shaping Judas into a fluent, if unorthodox, practitioner of magic.\n\nAmong these countless texts, one volume stood out: a manuscript that seemed to outline a prophecy. Some of its passages were inconsistent, as though it had been altered or rewritten at some point, but Judas never confirmed if this was intentional or accidental. They've kept its meaning close ever since, rarely sharing more than a vague mention of \"what's coming.\" For Judas, the prophecy feels less like destiny and more like an obligation they were saddled with.\n\nOutside the library, Judas once tried living a more ordinary life. During college, they fronted a band alongside Xor Wulff, taking the role of the lead vocalist. Their performances were intense and charismatic, but behind the scenes the group was volatile. Judas' stubborn streak and habit of shutting down arguments with cryptic remarks clashed with other members, often leaving tensions unresolved. Their brief relationship with Xor only added to the strain, what began as creative chemistry quickly soured under the weight of the band's internal conflicts. The group eventually fell apart, with Judas often blamed as one of the sparks that set the breakup in motion.\n\nThough they rarely talk about this period, echoes of it remain. On rare nights out, Judas will step on stage at a local bar, singing with the same haunting energy that once defined them. It's one of the few glimpses into the life that they might've chosen, had the library not claimed them first.",
+          "sectionBody": "Judas was never truly \"born\" in the traditional sense, they simply began to exist. From their first moment of awareness, the only home they have known was the strange library they now reside in, of which the location remains a complete mystery. They grew up assuming that was normal.\n\nThey spent their early life reading everything they could reach. [REDRIFT](/wiki/redrift)'s magic is built on a linguistic system, built on forgotten languages, symbolic structures, and books containing knowledge nobody was meant to translate. Jude learned this magic the way other kids learnt handwriting: slowly, imperfectly, and with a lot of assumptions.\n\nAmong the texts was a manuscript outlining a prophecy. Jude studied it obsessively, taking notes, cross-referencing passages, and building their understanding of \"what's coming.\" Their notes became their guide, and they trusted them more than the original script. Not out of arrogance, but because they grew up confident that their interpretations were accurate.\n\nThey left the library briefly during college, trying to live a more normal life. They joined a band with [Xor](/wiki/xor-wulff), becoming the lead vocalist. Their performances were intense, magnetic, and a little unsettling. Behind the scenes, tensions rose. Jude's cryptic communication clashed with the group, and their relationship with Xor strained under the weight of unspoken expectations. The band fell apart, and Jude returned to the library, not defeated, just disillusioned.\n\nSince then, Jude has drifted between the library and the outside world, offering guidance to people they believe are connected to the things they've studied. They're earnest in their efforts, even if their delivery is cryptic or their timing is questionable. Jude isn't necessarily bad or good, just someone trying to make sense of a role they never asked for, using the tools they grew up with and the notes they trust a little too much.\n\nThey're flawed, stubborn, and occasionally misguided, but never malicious. If anything, Jude's simply navigating the world they only way they know how: quietly, cautiously, and with the strange confidence of someone who's spent their entire life believing they're supposed to understand everything when they don't.",
           "sectionFormat": "markdown",
           "nsfwOnly": false,
           "sortOrder": 2
@@ -3231,6 +3231,12 @@
           "itemText": "Across [Avalona](/wiki/upa), bus drivers trade stories about Judas appearing on their routes. They'll ride quietly for a few stops with no clear destination, then vanish without anyone noticing when they get on or off. Some swear the seat is empty the moment they glance back.",
           "nsfwOnly": false,
           "sortOrder": 10
+        },
+        {
+          "id": "WIKI-TRIVIA-MSH4Y6G9-SMU1D",
+          "itemText": "They don't have any sexual genitalia, due to not being biologically born, likely a consequence of an ancestor going to town with a civilian which led to the birth of their \"cousin\", Wyvern.",
+          "nsfwOnly": true,
+          "sortOrder": 11
         }
       ],
       "relationships": [
@@ -4480,14 +4486,14 @@
       "slug": "vincent-skank",
       "label": "Vincent Skank",
       "relationIconSvg": null,
-      "summary": "",
-      "intro": "",
+      "summary": "Vincent is Texaria's Regional Director of the Regional Interference Field & Tactics (RIFT) Agency, a private mercenary organization known for covert operations and strict internal hierarchy. He runs the agency with a calm, predatory authority that makes most people uneasy without knowing why.",
+      "intro": "<strong>Vincent</strong> is [Texaria](/wiki/texaria)'s Regional Director of the [Regional Interference Field & Tactics (RIFT) Agency](/wiki/rift), overseeing all mercenary operations across the province's districts. He's known for his blunt, unforgiving leadership style and complete lack of subtlety. Vincent doesn't hide his opinions, even when they're insulting, and he expects everyone around him to follow orders without hesitation. His presence is intimidating not because he's theatrical, but because he's direct, literal, and unapologetically harsh.",
       "entryType": "Character",
       "tags": [],
-      "visibility": "none",
+      "visibility": "both",
       "sortOrder": 14,
       "publishedAt": "2026-04-20T10:59:38.741Z",
-      "updatedAt": "2026-06-13T07:33:34.513Z",
+      "updatedAt": "2026-08-06T08:24:01.193Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-VS-MAIN",
@@ -4500,7 +4506,116 @@
         }
       ],
       "infoSong": null,
-      "infoRows": [],
+      "infoRows": [
+        {
+          "id": "WIKI-ROW-VS-BDAY",
+          "rowKey": "birthday",
+          "rowLabel": "Birthday",
+          "rowValue": "December 2, 1970",
+          "rowFormat": "text",
+          "nsfwOnly": false,
+          "sortOrder": 1
+        },
+        {
+          "id": "WIKI-ROW-VS-GNDR",
+          "rowKey": "gender",
+          "rowLabel": "Gender",
+          "rowValue": "Male",
+          "rowFormat": "text",
+          "nsfwOnly": false,
+          "sortOrder": 2
+        },
+        {
+          "id": "WIKI-ROW-VS-PRNS",
+          "rowKey": "pronouns",
+          "rowLabel": "Pronouns",
+          "rowValue": "he/him",
+          "rowFormat": "text",
+          "nsfwOnly": false,
+          "sortOrder": 3
+        },
+        {
+          "id": "WIKI-ROW-VS-HGHT",
+          "rowKey": "height",
+          "rowLabel": "Height",
+          "rowValue": "6 ft 10 in / 208 cm",
+          "rowFormat": "text",
+          "nsfwOnly": false,
+          "sortOrder": 4
+        },
+        {
+          "id": "WIKI-ROW-VS-ORTN",
+          "rowKey": "orientation",
+          "rowLabel": "Orientation",
+          "rowValue": "Straight",
+          "rowFormat": "text",
+          "nsfwOnly": false,
+          "sortOrder": 5
+        },
+        {
+          "id": "WIKI-ROW-VS-SPCS",
+          "rowKey": "species",
+          "rowLabel": "Species",
+          "rowValue": "Night Shark",
+          "rowFormat": "text",
+          "nsfwOnly": false,
+          "sortOrder": 6
+        },
+        {
+          "id": "WIKI-ROW-VS-OCPN",
+          "rowKey": "occupation",
+          "rowLabel": "Occupation",
+          "rowValue": "[Texaria](/wiki/texaria) Regional Director of [RIFT Agency](/wiki/rift)",
+          "rowFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 7
+        },
+        {
+          "id": "WIKI-ROW-VS-RSDC",
+          "rowKey": "residence",
+          "rowLabel": "Residence",
+          "rowValue": "[Austyn](/wiki/austyn), [Texaria](/wiki/texaria), [UPA](/wiki/upa)",
+          "rowFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 8
+        },
+        {
+          "id": "WIKI-ROW-VS-HBBS",
+          "rowKey": "hobbies",
+          "rowLabel": "Hobbies",
+          "rowValue": "- Work\n- Monitoring Agents\n- Internal Audits\n- Control",
+          "rowFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 9
+        },
+        {
+          "id": "WIKI-ROW-VS-FFDS",
+          "rowKey": "favorite-foods",
+          "rowLabel": "Favorite Foods",
+          "rowValue": "- Strong Coffee\n- Salted Fish\n- Anything Quick",
+          "rowFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 10
+        },
+        {
+          "id": "WIKI-ROW-VS-LIKE",
+          "rowKey": "likes",
+          "rowLabel": "Likes",
+          "rowValue": "- Compliance\n- Order\n- Efficiency\n- [Jason](/wiki/jason-skank)",
+          "rowFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 11
+        },
+        {
+          "id": "WIKI-ROW-VS-DSLK",
+          "rowKey": "dislikes",
+          "rowLabel": "Dislikes",
+          "rowValue": "- Disobedience\n- Wasted Time\n- Emotional Appeals\n- [Zeke](/wiki/zeke-harborne)\n- Former Spouse (Unknown)",
+          "rowFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 12
+        }
+      ],
       "infoLinks": [],
       "quote": {
         "quoteText": "If anyone asks, this operation never existed. Clear?",
@@ -4509,28 +4624,127 @@
         "voiceCredit": "voiced by Joel Butler",
         "nsfwOnly": false
       },
-      "sections": [],
+      "sections": [
+        {
+          "id": "WIKI-SEC-VS-APRC",
+          "sectionKey": "appearance",
+          "sectionTitle": "Appearance",
+          "sectionBody": "Vincent resembles both Jason and Zeke, but with an older build shaped by years of field work followed by a long stretch of office command. He has a military buzz-cut and a scar over his right eye, leaving the sclera permanently blackened. His posture is confrontational and evaluative, and he tends to stand in ways that make people feel like they're being judged.\n\nHis silhouette is broad and imposing, with an unintentionally bulky \"muscle-gut\" build that reflects strength layered over age. He moves slowly and intentionally, never wasting motion. His expression rarely changes, and when it does, it's usually to signal disapproval.\n\nVincent typically wears dark tactical clothing suited for both command and intimidation. His usual outfit includes a maroon reinforced military jacket, heavy blue work-jeans, and black steel-toe boots. ",
+          "sectionFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 0
+        },
+        {
+          "id": "WIKI-SEC-VS-PRSN",
+          "sectionKey": "personality",
+          "sectionTitle": "Personality",
+          "sectionBody": "Vincent is blunt to the point of cruelty. He doesn't sugarcoat anything, and he doesn't bother hiding his opinions, even when they're insulting. He speaks plainly and directly, and when he raises his voice, it's controlled and intentional, the kind of raised voice that shuts down a room. If he thinks someone is useless, he says it. If he thinks someone is slow, he says it. If he thinks someone's wasting his time, HE SAYS IT.\n\nHe shows blatant favoritism towards his son [Jason](/jason-skank) and doesn't care who notice. Jason's \"the only one worth a damn,\" even though he's widely regarded as the biggest nuisance in the Texaria branch. Vincent excuses Jason's failures, ignores his mistakes, and praises him in front of other agents just to make a point. [Zeke](/wiki/zeke-harborne), on the other hand, is openly fat-shamed and dismissed as \"unfit,\" with Vincent never bothering to learn about the injury that led to it. He assumes incompetence and treats it as fact.\n\nVincent doesn't use metaphors or coded language. He says exactly what he means, even when it's harsh. He doesn't care about morale, professionalism, or diplomacy. He cares about control, results, and making sure everyone knows he's in charge.",
+          "sectionFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 1
+        },
+        {
+          "id": "WIKI-SEC-VS-HSTR",
+          "sectionKey": "history",
+          "sectionTitle": "History",
+          "sectionBody": "Vincent oversees the Texaria branch of the RIFT Agency, a private mercenary organization known for covert operations and strict internal hierarchy. Whether he founded the Texaria division or took control of it early on is intentionally unclear. Under his leadership, the region became known for operations that \"never existed,\" enforced through rigid command and unforgiving expectations.\n\nHe played very little role in raising Jason or Zeke, keeping his distance until they were old enough to be evaluated. Jason was enlisted into RIFT immediately after graduating, largely because Vincent saw potential in him as a controllable asset. Zeke was dismissed early due to physical limitations, and Vincent never reconsidered the decision. His favoritism towards Jason is obvious and often used against other agents, even though Jason is widely regarded as the biggest nuisance.\n\nVery little is known about Vincent’s personal life outside of his sons. He never stayed married for long, and he openly referred to relationships as “distractions” that interfered with his work. Any details about his past were either never shared, dismissed as irrelevant, or quietly expunged from existing records, leaving most people with the impression that Vincent simply doesn’t care enough to remember them.",
+          "sectionFormat": "markdown",
+          "nsfwOnly": false,
+          "sortOrder": 2
+        }
+      ],
       "triviaItems": [],
-      "relationships": [],
+      "relationships": [
+        {
+          "id": "WIKI-REL-VS-JS",
+          "relatedEntryId": "WIKI-CHR-JS",
+          "relationLabel": "Favorite Son / Agent",
+          "notes": "He's the only one that actually does anything.",
+          "sortOrder": 0
+        },
+        {
+          "id": "WIKI-REL-VS-ZH",
+          "relatedEntryId": "WIKI-CHR-ZH",
+          "relationLabel": "Worthless",
+          "notes": "Fatass failure undeserving of being my son.",
+          "sortOrder": 1
+        },
+        {
+          "id": "WIKI-REL-VS-ZV",
+          "relatedEntryId": "WIKI-CHR-ZV",
+          "relationLabel": "Lawyer",
+          "notes": "Takes too much time with legal mumbo-jumbo.",
+          "sortOrder": 2
+        },
+        {
+          "id": "WIKI-REL-VS-JF",
+          "relatedEntryId": "WIKI-CHR-JF",
+          "relationLabel": "Agent",
+          "notes": "Could be better if he wasn't a z*mbie.",
+          "sortOrder": 3
+        },
+        {
+          "id": "WIKI-REL-VS-AC",
+          "relatedEntryId": "WIKI-CHR-AC",
+          "relationLabel": "District Leader",
+          "notes": "Okay, but could be better. She keeps recruiting lunatics.",
+          "sortOrder": 4
+        },
+        {
+          "id": "WIKI-REL-VS-MH",
+          "relatedEntryId": "WIKI-CHR-MH",
+          "relationLabel": "Agent",
+          "notes": "Too scared of everything. Need work.",
+          "sortOrder": 5
+        },
+        {
+          "id": "WIKI-REL-VS-FC",
+          "relatedEntryId": "WIKI-CHR-FC",
+          "relationLabel": "Rookie",
+          "notes": "Too slow. Needs work.",
+          "sortOrder": 6
+        },
+        {
+          "id": "WIKI-REL-VS-GV",
+          "relatedEntryId": "WIKI-CHR-GV",
+          "relationLabel": "Agent",
+          "notes": "Could be better if she wasn't a z*mbie.",
+          "sortOrder": 7
+        },
+        {
+          "id": "WIKI-REL-VS-TD",
+          "relatedEntryId": "WIKI-CHR-TD",
+          "relationLabel": "Agent / Old Boss",
+          "notes": "I'm better than him. He's a good agent, but people actually listen to me. I was always the boss here.",
+          "sortOrder": 8
+        },
+        {
+          "id": "WIKI-REL-VS-JU",
+          "relatedEntryId": "WIKI-CHR-JU",
+          "relationLabel": "External Liability",
+          "notes": "They think they're a god. There is no god. ",
+          "sortOrder": 9
+        }
+      ],
       "theme": {
-        "primaryClr": null,
-        "secondaryClr": null,
-        "accentClr": null,
-        "primaryTxt": null,
-        "secondaryTxt": null,
-        "accentTxt": null,
-        "primaryBg": null,
-        "secondaryBg": null,
-        "tertiaryBg": null,
-        "hoverBg": null,
-        "warningClr": null,
-        "tabClr": null,
-        "tabHover": null,
-        "tabActive": null,
+        "primaryClr": "#1a2340",
+        "secondaryClr": "#5c2433",
+        "accentClr": "#8a9aa8",
+        "primaryTxt": "#c9d4e8",
+        "secondaryTxt": "#9aa6b8",
+        "accentTxt": "#be284b",
+        "primaryBg": "#0e1328",
+        "secondaryBg": "#1c2249",
+        "tertiaryBg": "#141e37aa",
+        "hoverBg": "#5c243366",
+        "warningClr": "#be284b",
+        "tabClr": "#1a2340",
+        "tabHover": "#5c2433",
+        "tabActive": "#8a9aa8",
         "font": null,
         "fontUrl": null,
-        "bodyClr": null,
-        "links": null,
+        "bodyClr": "#0e1328",
+        "links": "#8a9aa8",
         "customCss": null
       }
     },
