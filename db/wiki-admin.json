@@ -4493,7 +4493,7 @@
       "visibility": "both",
       "sortOrder": 14,
       "publishedAt": "2026-04-20T10:59:38.741Z",
-      "updatedAt": "2026-08-06T08:39:25.087Z",
+      "updatedAt": "2026-08-06T08:59:41.898Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-VS-MAIN",
@@ -4664,10 +4664,40 @@
       ],
       "triviaItems": [
         {
-          "id": "WIKI-TRIVIA-MSH9DNKX-7XYN5",
-          "itemText": "Placeholder",
+          "id": "WIKI-TRIVIA-VS-IDBD",
+          "itemText": "He's memorized every agent's ID number but not a single birthday.",
           "nsfwOnly": false,
           "sortOrder": 0
+        },
+        {
+          "id": "WIKI-TRIVIA-VS-NOFN",
+          "itemText": "He refuses to use first names in meetings unless referring to Jason.",
+          "nsfwOnly": false,
+          "sortOrder": 1
+        },
+        {
+          "id": "WIKI-TRIVIA-VS-TPEN",
+          "itemText": "He has a habit of tapping his pen when someone's wasting his time. Agents know it as his \"patience countdown.\"",
+          "nsfwOnly": false,
+          "sortOrder": 2
+        },
+        {
+          "id": "WIKI-TRIVIA-VS-DOOR",
+          "itemText": "He tends to barge into rooms without knocking.",
+          "nsfwOnly": false,
+          "sortOrder": 3
+        },
+        {
+          "id": "WIKI-TRIVIA-VS-JSON",
+          "itemText": "He keeps a framed photo of Jason in his office. It's from a disciplinary report, but he chooses to ignore that.",
+          "nsfwOnly": false,
+          "sortOrder": 4
+        },
+        {
+          "id": "WIKI-TRIVIA-VS-ZEKE",
+          "itemText": "He blames Zeke's weight on his old job, saying \"security guards get paid to watch TV.\" He's unaware SouthPort Harbor never had security cameras due to lack-of-funding.",
+          "nsfwOnly": false,
+          "sortOrder": 5
         }
       ],
       "relationships": [
