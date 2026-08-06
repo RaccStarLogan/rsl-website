@@ -4493,7 +4493,7 @@
       "visibility": "both",
       "sortOrder": 14,
       "publishedAt": "2026-04-20T10:59:38.741Z",
-      "updatedAt": "2026-08-06T08:33:37.917Z",
+      "updatedAt": "2026-08-06T08:39:25.087Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-VS-MAIN",
@@ -4743,7 +4743,7 @@
         }
       ],
       "theme": {
-        "primaryClr": "#1a2340",
+        "primaryClr": "#D14A63",
         "secondaryClr": "#5c2433",
         "accentClr": "#bfcfea",
         "primaryTxt": "#c9d4e8",
