@@ -1,6 +1,6 @@
 -- Migrated from db/old-sfw-export.sql
 -- Visibility: sfw
--- 116 rows
+-- 108 rows
 
 INSERT INTO
     portfolio_items (
@@ -117,45 +117,6 @@ VALUES
         1,
         '["personal","art","pyo","rabbit","furry","gay","icon","rendered","character","clip-studio-paint-ex","gift","headshot"]',
         '2025-09-05T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'P-A-2025-09-01',
-        'art',
-        'sfw',
-        'Reese_oonRacc Reference Sheet',
-        'reese-ref',
-        'Reese_oonRacc Reference Sheet',
-        replace('This is a reference sheet I decided to make for my ex-partner, Reese\_oonRacc, of his raccoon/dog character, Reese.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: September 1, 2025\n\nTime Spent: 16 hours 53 minutes','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2025/09/01/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2025/09/01/img.png',
-        NULL,
-        'Reference',
-        0,
-        1,
-        '["personal","art","reference","reese","oonracc","raccoon","character","clip-studio-paint-ex","fullbody","furry","gay","gift","flat-color"]',
-        '2025-09-01T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -413,162 +374,6 @@ INSERT INTO
     )
 VALUES
     (
-        'P-A-2025-03-18',
-        'art',
-        'sfw',
-        'Logan and Reese Fursona Badges',
-        'rsl-reese-2025-badges',
-        'Logan and Reese Fursona Badges',
-        replace('Two badges I made for me and my ex-partner before going to [Texas Furry Fiesta](https://furryfiesta.org) 2025. I had fun making them!\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: March 18, 2025\n\nTime Spent: 2 hours 28 minutes on Logan, 2 hours 14 minutes on Reese','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2025/03/18/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2025/03/18/img.jpg',
-        NULL,
-        'Badge',
-        0,
-        1,
-        '["personal","art","badge","character","clip-studio-paint-ex","furry","bust","gay","gift","logan-foster","oonracc","raccoon","redrift","reese","flat-color"]',
-        '2025-03-18T00:00:00.000Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'P-A-2025-02-14-1',
-        'art',
-        'sfw',
-        'Experimentation Doodles',
-        'experimentation-doodles',
-        'Experimentation Doodles',
-        replace('A few doodles I made just to experiment with art styles.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: February 14, 2025\n\nTime Spent: Unknown','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2025/02/14/1/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2025/02/14/1/img.png',
-        NULL,
-        'Doodle',
-        0,
-        1,
-        '["personal","art","character","clip-studio-paint-ex","concept","furry","fullbody","gay","logan-foster","oonracc","raccoon","redrift","reese","sketch","doodle"]',
-        '2025-02-14T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'P-A-2025-02-14-2',
-        'art',
-        'sfw',
-        'SKIBIDI REESE',
-        'skibidi-reese',
-        'SKIBIDI REESE',
-        replace('I''m sorry.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: February 14, 2025\n\nTime Spent: Unknown','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2025/02/14/2/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2025/02/14/2/img.png',
-        NULL,
-        'Doodle',
-        0,
-        1,
-        '["personal","art","sketch","doodle","why","character","clip-studio-paint-ex","furry","fullbody","horror","logan-foster","reese","oonracc","raccoon","redrift"]',
-        '2025-02-14T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'P-A-2025-01-07',
-        'art',
-        'sfw',
-        'Draw Your OC In This Pose',
-        'draw-your-oc-in-this-pose',
-        'Draw Your OC In This Pose',
-        replace('This was a meme on social media where artists were supposed to draw their characters in the pose pictured. It started from [this post](https://x.com/art_retr0/status/1873304900798714212) from @art\_retr0 on Twitter/X before spreading to other platforms like BlueSky, where I found it.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: January 7, 2025\n\nTime Spent: 3 hours 9 minutes','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2025/01/07/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2025/01/07/img.png',
-        NULL,
-        'Rendered',
-        0,
-        1,
-        '["personal","art","challenge","character","clip-studio-paint-ex","furry","gay","halfbody","logan-foster","oonracc","shaded","shitpost","size-difference","raccoon","reese"]',
-        '2025-01-07T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
         'P-A-2024-12-29',
         'art',
         'sfw',
@@ -780,45 +585,6 @@ VALUES
         1,
         '["personal","art","shitpost","furry-funkers","raeal","protogen","character","clip-studio-paint-ex","fanart","fnf","bust","furry","shaded"]',
         '2024-08-16T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'P-A-2024-07-26',
-        'art',
-        'sfw',
-        'Cute',
-        'cute',
-        'Cute',
-        replace('This is a drawing I made for my now ex-boyfriend not too long after we confessed our love for eachother.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: July 26, 2024\n\nTime Spent: 7 hours 13 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/portfolio/art/2024/07/26/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/portfolio/art/2024/07/26/tl.mp4">Download</a>\n</video>','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2024/07/26/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2024/07/26/img.png',
-        NULL,
-        'Rendered',
-        0,
-        1,
-        '["personal","art","reese","oonracc","gift","character","clip-studio-paint-ex","gay","furry","logan-foster","redrift","raccoon","rendered","size-difference"]',
-        '2024-07-26T00:00:00.000Z'
     );
 
 INSERT INTO
@@ -2987,45 +2753,6 @@ INSERT INTO
     )
 VALUES
     (
-        'C-A-2024-09-30',
-        'art',
-        'sfw',
-        'Reese Icon',
-        'reese-icon',
-        'Reese Icon',
-        replace('Icon commission for my ex-boyfriend Reese\_oonRacc. I tried to replicate the smooth shading style of [constellist](https://vgen.co/constellist)''s older icons.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: September 30, 2024\n\nTime Spent: 1 hour 31 minutes\n\nTimelapse:\n\n<video controls preload="metadata">\n    <source src="https://media.raccstarlogan.com/portfolio/art/2024/09/30/1/tl.mp4" type="video/mp4">\n    Your browser does not support the video tag. <a href="https://media.raccstarlogan.com/portfolio/art/2024/09/30/1/tl.mp4">Download</a>\n</video>','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2024/09/30/1/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2024/09/30/1/img.png',
-        NULL,
-        'Icon',
-        1,
-        0,
-        '["commissions","art","reese","oonracc","icon","bust","character","clip-studio-paint-ex","rendered"]',
-        '2024-09-30T00:00:00.000Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
         'C-A-2024-04-21',
         'art',
         'sfw',
@@ -3549,45 +3276,6 @@ VALUES
         1,
         '["personal","art","crypto","jams","png-tuber","character","clip-studio-paint-ex","animated","halfbody","flat-color","gift","furry"]',
         '2024-12-11T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'P-A-2024-12-11-1',
-        'art',
-        'both',
-        'Reese_oonRacc PNG-tuber',
-        'oonracc-png',
-        'Reese_oonRacc PNG-tuber',
-        replace('A PNG-tuber avatar I made for my ex-boyfriend.\n\nSoftware Used: [Clip Studio Paint](https://www.clipstudio.net/en/purchase/) EX\n\nDate Completed: December 11, 2024\n\nTime Spent: 59 minutes','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2024/12/11/1/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2024/12/11/1/img.gif',
-        NULL,
-        'PNG-Tuber',
-        0,
-        1,
-        '["personal","art","reese","oonracc","png-tuber","halfbody","flat-color","character","clip-studio-paint-ex","animated","furry","gift"]',
-        '2024-12-11T00:00:00.000Z'
     );
 
 INSERT INTO
