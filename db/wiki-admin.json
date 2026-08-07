@@ -4493,7 +4493,7 @@
       "visibility": "both",
       "sortOrder": 14,
       "publishedAt": "2026-04-20T10:59:38.741Z",
-      "updatedAt": "2026-08-06T09:03:35.119Z",
+      "updatedAt": "2026-08-07T04:06:49.225Z",
       "infoImages": [
         {
           "id": "WIKI-IMG-VS-MAIN",
@@ -4740,7 +4740,7 @@
           "id": "WIKI-REL-VS-MH",
           "relatedEntryId": "WIKI-CHR-MH",
           "relationLabel": "Agent",
-          "notes": "Too scared of everything. Need work.",
+          "notes": "Too scared of everything. Needs work.",
           "sortOrder": 5
         },
         {
