@@ -1,6 +1,6 @@
 -- Migrated from db/old-sfw-export.sql
 -- Visibility: sfw
--- 119 rows
+-- 116 rows
 
 INSERT INTO
     portfolio_items (
@@ -3923,45 +3923,6 @@ INSERT INTO
     )
 VALUES
     (
-        'P-A-2026-02-03',
-        'art',
-        'sfw',
-        'Last Chance RaccStarMix',
-        'last-chance-raccstarmix',
-        'Last Chance RaccStarMix',
-        'PLACEHOLDER',
-        'https://media.raccstarlogan.com/portfolio/art/2026/02/03/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2026/02/03/img.png',
-        NULL,
-        'Flat Color',
-        0,
-        1,
-        '["art","background","character","clip-studio-paint-ex","fanart","fnf","furry","halfbody","logan-foster","oonracc","personal","raccoon","redrift","reese","remix","tabi","scene"]',
-        '2026-02-04T01:32:31Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
         'P-A-2026-03-15',
         'art',
         'sfw',
@@ -4095,45 +4056,6 @@ VALUES
         1,
         '["badge","furry","flat-color","halfbody","character","logan-foster","raccoon","redrift"]',
         '2026-03-19T02:58:48Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'P-A-2026-03-20',
-        'art',
-        'sfw',
-        'Reese Badge (2026)',
-        'reese-badge-2026',
-        'Reese Badge (2026)',
-        'PLACEHOLDER',
-        'https://media.raccstarlogan.com/portfolio/art/2026/03/20/1/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2026/03/20/1/img.png',
-        NULL,
-        'Badge',
-        0,
-        1,
-        '["badge","furry","flat-color","halfbody","character","reese","oonracc","raccoon"]',
-        '2026-03-20T11:02:05Z'
     );
 
 INSERT INTO
@@ -4329,45 +4251,6 @@ VALUES
         1,
         '["adobe-illustrator","background","art","character","logan-foster","scene","flat-color","half-body","human"]',
         '2020-03-06T00:00:00Z'
-    );
-
-INSERT INTO
-    portfolio_items (
-        id,
-        kind,
-        visibility,
-        title,
-        slug,
-        summary,
-        description,
-        thumbnail_url,
-        logo_url,
-        media_url,
-        external_url,
-        commission_type,
-        is_commission,
-        is_personal,
-        tags_json,
-        published_at
-    )
-VALUES
-    (
-        'P-M-2026-02-03',
-        'audio',
-        'both',
-        'Last Chance RaccStarMix',
-        'last-chance-raccstarmix-music',
-        'Last Chance RaccStarMix',
-        replace('PLACEHOLDER\n\nTHIS IS THE MUSIC ONE','\n',char(10)),
-        'https://media.raccstarlogan.com/portfolio/art/2026/02/03/thumb.jpg',
-        NULL,
-        'https://media.raccstarlogan.com/portfolio/art/2026/02/03/img.png',
-        NULL,
-        'Music',
-        0,
-        1,
-        '["art","background","character","clip-studio-paint-ex","fanart","fnf","furry","halfbody","logan-foster","oonracc","personal","raccoon","redrift","reese","remix","tabi","scene"]',
-        '2026-02-04T01:32:31Z'
     );
 
 INSERT INTO
